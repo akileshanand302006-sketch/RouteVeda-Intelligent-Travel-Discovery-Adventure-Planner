@@ -1,6 +1,7 @@
 🏕️ TripForge — Intelligent-Travel-Discovery-Adventure-Planner
 
 “Discover India. Design your journey. Create memories.”
+
 [![Angular](https://img.shields.io/badge/Angular-20%2B-DD0031.svg?logo=angular&logoColor=white)](https://angular.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
