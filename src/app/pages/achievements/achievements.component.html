@@ -1,0 +1,40 @@
+<div class="page-container achievements-page">
+  <div class="achieve-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <span class="hero-badge animate-fade-in-up"><i class="bi bi-trophy-fill"></i> Explorer Trophies</span>
+      <h1 class="animate-fade-in-up">Travel Achievements & <span class="gradient-text">Badges</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Unlock badges as you visit more destinations, hill stations, beaches, and Indian states.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+      @for (ach of achievementService.achievements(); track ach.id) {
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card p-4 h-100 badge-card" [class.unlocked]="ach.unlocked">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="badge-icon-box" [class.unlocked-icon]="ach.unlocked">
+                <i [class]="'bi ' + ach.badgeIcon + ' fs-2'"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 fw-bold">{{ ach.title }}</h5>
+                <span class="badge-tf" [class.badge-tf-success]="ach.unlocked" [class.badge-tf-glass]="!ach.unlocked">
+                  {{ ach.unlocked ? '✓ Unlocked' : 'Locked' }}
+                </span>
+              </div>
+            </div>
+
+            <p class="small text-tf-secondary mb-3">{{ ach.description }}</p>
+
+            <div class="progress mb-1" style="height: 6px;">
+              <div class="progress-bar bg-tf-primary" [style.width.%]="ach.progressPercent"></div>
+            </div>
+            <small class="text-tf-muted extra-small">{{ ach.progressPercent }}% Completed</small>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

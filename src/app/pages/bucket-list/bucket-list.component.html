@@ -1,0 +1,80 @@
+<div class="page-container bucket-list-page">
+  <div class="bucket-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <span class="hero-badge animate-fade-in-up"><i class="bi bi-check2-square"></i> Gamified Travel Tracker</span>
+      <h1 class="animate-fade-in-up">My India <span class="gradient-text">Bucket List & Exploration</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Track destinations and states visited across India. Unlock achievement badges as your India exploration coverage grows.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Progress Dashboard -->
+    <div class="row g-4 mb-4">
+      <div class="col-lg-4">
+        <div class="glass-card p-4 text-center h-100">
+          <i class="bi bi-globe-asia-australia text-tf-primary display-4 mb-2"></i>
+          <h2 class="fw-bold mb-0">{{ achievementService.indiaExplorationPercent() }}%</h2>
+          <small class="text-tf-muted d-block mb-2">India Exploration Coverage</small>
+          <div class="progress mb-2" style="height: 8px;">
+            <div class="progress-bar bg-tf-primary" [style.width.%]="achievementService.indiaExplorationPercent()"></div>
+          </div>
+          <small class="text-tf-secondary extra-small">{{ achievementService.totalVisitedStates() }} of 36 States & UTs Explored</small>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="glass-card p-4 text-center h-100">
+          <i class="bi bi-geo-alt-fill text-tf-accent display-4 mb-2"></i>
+          <h2 class="fw-bold mb-0">{{ achievementService.totalVisitedDestinations() }}</h2>
+          <small class="text-tf-muted d-block mb-2">Destinations Marked Visited</small>
+          <a routerLink="/achievements" class="btn btn-sm btn-tf-outline mt-2">
+            <i class="bi bi-trophy text-tf-warning me-1"></i> View Badges ({{ achievementService.achievements().length }})
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="glass-card p-4 text-center h-100">
+          <i class="bi bi-map-fill text-tf-success display-4 mb-2"></i>
+          <h2 class="fw-bold mb-0">{{ achievementService.totalVisitedStates() }}</h2>
+          <small class="text-tf-muted d-block mb-2">Visited Indian States</small>
+          <div class="d-flex flex-wrap gap-1 justify-content-center mt-2">
+            @for (st of achievementService.visitedStates(); track st) {
+              <span class="badge-tf badge-tf-success extra-small">✓ {{ st }}</span>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination Checklist Grid -->
+    <h3 class="mb-3"><i class="bi bi-check-circle text-tf-primary me-2"></i> Destination Checklist</h3>
+    <div class="row g-3">
+      @for (dest of destinationService.destinations(); track dest.id) {
+        <div class="col-lg-4 col-md-6">
+          <div class="glass-card p-3 d-flex align-items-center justify-content-between gap-3" [class.border-success]="achievementService.isVisited(dest.id)">
+            <div class="d-flex align-items-center gap-3">
+              <img [src]="dest.image" [alt]="dest.name" class="rounded bucket-thumb">
+              <div>
+                <strong class="d-block">{{ dest.name }}</strong>
+                <small class="text-tf-muted extra-small">{{ dest.state }} ({{ dest.category }})</small>
+              </div>
+            </div>
+
+            <button
+              class="btn btn-sm rounded-circle p-2 icon-btn"
+              [class.btn-success]="achievementService.isVisited(dest.id)"
+              [class.btn-tf-glass]="!achievementService.isVisited(dest.id)"
+              (click)="toggleVisited(dest)"
+              [title]="achievementService.isVisited(dest.id) ? 'Mark Unvisited' : 'Mark Visited'"
+            >
+              <i [class]="'bi ' + (achievementService.isVisited(dest.id) ? 'bi-check-lg' : 'bi-plus-lg')"></i>
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

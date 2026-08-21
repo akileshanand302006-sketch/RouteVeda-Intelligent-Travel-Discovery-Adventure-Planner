@@ -1,0 +1,87 @@
+<div class="page-container settings-page">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="glass-card p-4">
+          <h2 class="gradient-text mb-4"><i class="bi bi-gear"></i> Application Settings</h2>
+
+          <!-- Section 1: Appearance -->
+          <div class="setting-section mb-4 pb-4 border-bottom border-secondary border-opacity-25">
+            <h5 class="mb-3"><i class="bi bi-palette text-tf-primary"></i> Appearance</h5>
+            <div class="d-flex align-items-center justify-content-between">
+              <div>
+                <strong>Theme Mode</strong>
+                <p class="text-tf-muted small mb-0">Switch between dark futuristic mode and bright frosted light mode.</p>
+              </div>
+              <button class="btn-tf-glass" (click)="themeService.toggle()">
+                <i [class]="'bi ' + themeService.themeIcon()"></i> {{ themeService.themeLabel() }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 2: Notifications -->
+          <div class="setting-section mb-4 pb-4 border-bottom border-secondary border-opacity-25">
+            <h5 class="mb-3"><i class="bi bi-bell text-tf-primary"></i> Notification Preferences</h5>
+
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="reminders" [(ngModel)]="tripReminders">
+              <label class="form-check-label ms-2" for="reminders">
+                <strong>Trip Reminders</strong>
+                <span class="d-block text-tf-muted small">Receive upcoming trip countdown alerts and itinerary reminders.</span>
+              </label>
+            </div>
+
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="budget" [(ngModel)]="budgetAlerts">
+              <label class="form-check-label ms-2" for="budget">
+                <strong>Budget Warning Alerts</strong>
+                <span class="d-block text-tf-muted small">Alert me when estimated trip cost exceeds 90% of set budget.</span>
+              </label>
+            </div>
+
+            <div class="form-check form-switch mb-3">
+              <input class="form-check-input" type="checkbox" id="recs" [(ngModel)]="recommendations">
+              <label class="form-check-label ms-2" for="recs">
+                <strong>Destination Recommendations</strong>
+                <span class="d-block text-tf-muted small">Get personalized travel suggestions based on your wishlist.</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Section 3: Preferences -->
+          <div class="setting-section mb-4">
+            <h5 class="mb-3"><i class="bi bi-sliders text-tf-primary"></i> Travel Preferences</h5>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="currency" class="form-label-tf">Currency</label>
+                <select id="currency" class="form-select-tf" [(ngModel)]="preferredCurrency">
+                  <option value="INR (₹)">INR (₹)</option>
+                  <option value="USD ($)">USD ($)</option>
+                  <option value="EUR (€)">EUR (€)</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="travelStyle" class="form-label-tf">Preferred Travel Style</label>
+                <select id="travelStyle" class="form-select-tf" [(ngModel)]="preferredTravelStyle">
+                  <option value="Adventure">Adventure</option>
+                  <option value="Relaxation">Relaxation</option>
+                  <option value="Nature">Nature</option>
+                  <option value="Luxury">Luxury</option>
+                  <option value="Budget">Budget</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-end pt-3 border-top border-secondary border-opacity-25">
+            <button class="btn-tf-primary" (click)="saveSettings()">
+              <i class="bi bi-check-lg"></i> Save Preferences
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

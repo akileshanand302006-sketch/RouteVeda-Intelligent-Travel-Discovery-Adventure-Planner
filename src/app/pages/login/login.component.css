@@ -1,0 +1,142 @@
+.cinematic-login-wrapper {
+  position: relative;
+  min-height: 100vh;
+  background-color: #0b0f19;
+  overflow-x: hidden;
+}
+
+.cinematic-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 60%);
+  filter: blur(40px);
+  z-index: 1;
+}
+
+.aurora-glow {
+  position: absolute;
+  top: -10%;
+  left: 30%;
+  width: 50vw;
+  height: 40vh;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.2));
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.login-content-container {
+  position: relative;
+  z-index: 10;
+}
+
+.login-glass-box {
+  background: var(--tf-glass-bg);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--tf-glass-border);
+  border-radius: var(--tf-radius-xl);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.showcase-panel {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.showcase-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--tf-gradient-primary);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 8px 20px rgba(var(--tf-primary-rgb), 0.4);
+}
+
+.showcase-brand {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.form-panel {
+  background: var(--tf-surface-glass);
+}
+
+.auth-tabs {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--tf-border-light);
+}
+
+.tab-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: var(--tf-radius-full);
+  color: var(--tf-text-secondary);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--tf-gradient-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(var(--tf-primary-rgb), 0.3);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--tf-text-muted);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.input-wrapper .form-control-tf {
+  padding-left: 42px;
+  padding-right: 42px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--tf-text-muted);
+  cursor: pointer;
+  padding: 4px;
+  font-size: 1.1rem;
+}
+
+.password-toggle:hover {
+  color: var(--tf-primary);
+}
+
+.demo-select-box {
+  background: rgba(var(--tf-primary-rgb), 0.05);
+  border: 1px solid rgba(var(--tf-primary-rgb), 0.15);
+}
+
+.demo-select-box .btn-tf-glass:hover {
+  border-color: var(--tf-primary);
+  background: rgba(var(--tf-primary-rgb), 0.15);
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "exp-adventure",
+    "category": "Adventure",
+    "title": "Himalayan & Coastal High-Adrenaline Sports",
+    "description": "White-water rafting in Rishikesh, paragliding in Solang Valley, scuba diving off Havelock Island, and skiing in Gulmarg.",
+    "image": "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800&q=80",
+    "states": ["Uttarakhand", "Himachal Pradesh", "Andaman and Nicobar Islands", "Jammu and Kashmir", "Goa"],
+    "highlightTag": "Adrenaline Rush",
+    "popularSpotsCount": 42
+  },
+  {
+    "id": "exp-spiritual",
+    "category": "Spiritual",
+    "title": "Sacred Pilgrimages & River Aarti Rituals",
+    "description": "Evening Ganga Aarti in Varanasi & Rishikesh, Golden Temple Amritsar, Meenakshi Temple Madurai, and Spiti cliff monasteries.",
+    "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=800&q=80",
+    "states": ["Uttar Pradesh", "Uttarakhand", "Tamil Nadu", "Punjab", "Himachal Pradesh", "Odisha"],
+    "highlightTag": "Inner Peace",
+    "popularSpotsCount": 58
+  },
+  {
+    "id": "exp-heritage",
+    "category": "Heritage",
+    "title": "UNESCO Monuments, Forts & Royal Palaces",
+    "description": "Rajasthan desert hillforts, Taj Mahal Agra, Hampi boulder ruins, Chola temples of Tanjore, and Khajuraho sculptures.",
+    "image": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80",
+    "states": ["Rajasthan", "Uttar Pradesh", "Karnataka", "Tamil Nadu", "Madhya Pradesh", "Maharashtra"],
+    "highlightTag": "Royal History",
+    "popularSpotsCount": 64
+  },
+  {
+    "id": "exp-wildlife",
+    "category": "Wildlife",
+    "title": "Tiger Safaris, One-Horned Rhinos & Marine Sanctuaries",
+    "description": "Bengal Tiger tracking in Corbett & Bandhavgarh, one-horned rhino safaris in Kaziranga, and Gir Asiatic lions.",
+    "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80",
+    "states": ["Assam", "Madhya Pradesh", "Gujarat", "Uttarakhand", "Kerala", "West Bengal"],
+    "highlightTag": "Wild India",
+    "popularSpotsCount": 35
+  },
+  {
+    "id": "exp-food",
+    "category": "Food",
+    "title": "Regional Culinary Trails & Street Food Safaris",
+    "description": "Chettinad spicy curries, Lucknowi Awadhi biryanis, Rajasthani Dal Baati, Goan seafood shacks, and Bengali sweets.",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    "states": ["Tamil Nadu", "Uttar Pradesh", "Rajasthan", "Goa", "West Bengal", "Punjab", "Kerala"],
+    "highlightTag": "Flavors of India",
+    "popularSpotsCount": 80
+  },
+  {
+    "id": "exp-nature",
+    "category": "Nature",
+    "title": "Misty Hill Estates, Backwaters & Living Root Bridges",
+    "description": "Kerala houseboat backwaters, Munnar & Coorg tea estates, Living Root Bridges of Meghalaya, and Valley of Flowers.",
+    "image": "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=800&q=80",
+    "states": ["Kerala", "Karnataka", "Meghalaya", "Tamil Nadu", "Himachal Pradesh", "Sikkim"],
+    "highlightTag": "Scenic Wonders",
+    "popularSpotsCount": 50
+  }
+]

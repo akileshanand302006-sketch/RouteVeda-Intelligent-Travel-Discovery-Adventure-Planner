@@ -1,0 +1,168 @@
+<div class="page-container find-destination-page">
+  <div class="quiz-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <span class="hero-badge animate-fade-in-up"><i class="bi bi-magic"></i> Smart Matching Algorithm</span>
+      <h1 class="animate-fade-in-up">Find My <span class="gradient-text">Perfect Indian Destination</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Answer 4 quick questions about your budget, region preference, and travel style to get personalized destination recommendations.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    @if (!hasCalculated()) {
+      <div class="glass-card quiz-card p-4 max-w-700 mx-auto animate-scale-in">
+        <!-- Progress bar -->
+        <div class="d-flex justify-content-between align-items-center mb-2 small text-tf-muted">
+          <span>Step <strong>{{ currentStep() }}</strong> of {{ totalSteps }}</span>
+          <span>{{ (currentStep() / totalSteps) * 100 }}% Completed</span>
+        </div>
+        <div class="progress mb-4" style="height: 6px;">
+          <div class="progress-bar bg-tf-primary" [style.width.%]="(currentStep() / totalSteps) * 100"></div>
+        </div>
+
+        <!-- Step 1: Region -->
+        @if (currentStep() === 1) {
+          <div class="quiz-step">
+            <h4 class="mb-3"><i class="bi bi-geo-alt text-tf-primary me-2"></i> Which region of India would you like to explore?</h4>
+            <div class="row g-3">
+              @for (r of ['Any', 'North', 'South', 'West', 'East', 'Central', 'North East']; track r) {
+                <div class="col-6 col-md-4">
+                  <button
+                    class="quiz-option-btn w-100"
+                    [class.selected]="prefs.preferredRegion === r"
+                    (click)="prefs.preferredRegion = r"
+                  >
+                    <span class="d-block fw-bold mb-1">{{ r === 'Any' ? '🇮🇳 Any Region' : r + ' India' }}</span>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Step 2: Budget -->
+        @if (currentStep() === 2) {
+          <div class="quiz-step">
+            <h4 class="mb-3"><i class="bi bi-wallet2 text-tf-success me-2"></i> What is your maximum budget per person?</h4>
+            <div class="text-center py-4">
+              <span class="display-5 fw-bold text-tf-success">₹{{ prefs.budgetPerPerson | number }}</span>
+              <small class="d-block text-tf-muted mt-1">Per person estimated travel expense</small>
+
+              <div class="px-4 mt-4">
+                <input
+                  type="range"
+                  class="form-range"
+                  min="3000"
+                  max="35000"
+                  step="1000"
+                  [(ngModel)]="prefs.budgetPerPerson"
+                >
+                <div class="d-flex justify-content-between extra-small text-tf-muted mt-1">
+                  <span>Budget (₹3,000)</span>
+                  <span>Mid-range (₹15,000)</span>
+                  <span>Luxury (₹35,000+)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+        <!-- Step 3: Travel Style -->
+        @if (currentStep() === 3) {
+          <div class="quiz-step">
+            <h4 class="mb-3"><i class="bi bi-compass text-tf-accent me-2"></i> What type of experience are you seeking?</h4>
+            <div class="row g-3">
+              @for (style of ['Nature', 'Hill Station', 'Beach', 'Heritage', 'Adventure', 'Spiritual']; track style) {
+                <div class="col-6 col-md-4">
+                  <button
+                    class="quiz-option-btn w-100"
+                    [class.selected]="prefs.travelStyle === style"
+                    (click)="prefs.travelStyle = style"
+                  >
+                    <span class="d-block fw-bold mb-1">{{ style }}</span>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Step 4: Climate -->
+        @if (currentStep() === 4) {
+          <div class="quiz-step">
+            <h4 class="mb-3"><i class="bi bi-brightness-high text-tf-warning me-2"></i> Weather & Climate Preference?</h4>
+            <div class="row g-3">
+              @for (clim of ['Cool / Mountains', 'Warm / Beach', 'Moderate', 'Any']; track clim) {
+                <div class="col-6">
+                  <button
+                    class="quiz-option-btn w-100"
+                    [class.selected]="prefs.climatePreference === clim"
+                    (click)="prefs.climatePreference = clim"
+                  >
+                    <span class="d-block fw-bold mb-1">{{ clim }}</span>
+                  </button>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Navigation Buttons -->
+        <div class="d-flex justify-content-between mt-4 pt-3 border-top border-secondary border-opacity-25">
+          <button class="btn btn-tf-glass" (click)="prevStep()" [disabled]="currentStep() === 1">
+            <i class="bi bi-arrow-left me-1"></i> Back
+          </button>
+          <button class="btn-tf-primary" (click)="nextStep()">
+            {{ currentStep() === totalSteps ? 'See Matches ✨' : 'Next Step →' }}
+          </button>
+        </div>
+      </div>
+    } @else {
+      <!-- Results View -->
+      <div class="results-header d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3 class="mb-1"><i class="bi bi-stars text-tf-accent me-2"></i> Your Top Destination Matches</h3>
+          <p class="text-tf-secondary mb-0">Ranked by score based on your budget, region, and climate preferences.</p>
+        </div>
+        <button class="btn btn-sm btn-tf-glass" (click)="resetQuiz()">
+          <i class="bi bi-arrow-counterclockwise"></i> Retake Quiz
+        </button>
+      </div>
+
+      <div class="row g-4">
+        @for (rec of recommendations(); track rec.destination.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.05) + 's'">
+            <div class="position-relative">
+              <span class="match-score-badge position-absolute top-0 end-0 m-3 badge rounded-pill bg-tf-accent shadow z-2">
+                {{ rec.score }}% Match
+              </span>
+              <app-destination-card
+                [destination]="rec.destination"
+                (addToTrip)="onAddToTrip($event)"
+                (openCalculator)="openCalculatorFor($event)"
+              />
+
+              <!-- Match Reasons Card -->
+              <div class="glass-card p-3 mt-2 small">
+                <strong class="d-block text-tf-primary mb-1 extra-small">Why it's a match:</strong>
+                <ul class="ps-3 mb-0 text-tf-secondary extra-small">
+                  @for (reason of rec.matchReasons; track reason) {
+                    <li>{{ reason }}</li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- Expense Calculator Modal -->
+  <app-expense-calculator-modal
+    [isOpen]="showCalcModal()"
+    [destination]="selectedDestForCalc()"
+    (close)="closeCalculator()"
+  />
+</div>

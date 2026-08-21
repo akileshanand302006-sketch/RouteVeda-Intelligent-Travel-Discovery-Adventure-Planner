@@ -1,0 +1,275 @@
+<div class="cinematic-login-wrapper">
+  <!-- Atmospheric Cinematic Background -->
+  <div class="cinematic-bg"></div>
+  <div class="aurora-glow"></div>
+  <div class="ambient-stars"></div>
+
+  <div class="container login-content-container d-flex align-items-center justify-content-center min-vh-100 py-4">
+    <div class="row g-0 login-glass-box shadow-lg animate-scale-in">
+      
+      <!-- LEFT COLUMN: Cinematic Travel Showcase -->
+      <div class="col-lg-6 d-none d-lg-flex flex-column justify-content-between p-5 showcase-panel" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.6) 100%), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80')">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <div class="showcase-icon">
+              <i class="bi bi-compass-fill"></i>
+            </div>
+            <span class="showcase-brand gradient-text">TripForge</span>
+          </div>
+          <span class="badge-tf badge-tf-primary mb-3"><i class="bi bi-stars"></i> Incredible India Explorer</span>
+          <h2 class="display-6 fw-bold text-white mb-3">Forge your journey.<br><span class="gradient-text">Explore more.</span></h2>
+          <p class="text-white-50 leading-relaxed mb-4">
+            Smart multi-destination travel planning across all 28 Indian States & 8 Union Territories with dynamic budget estimation and curated itineraries.
+          </p>
+        </div>
+
+        <div class="showcase-stats glass-card p-3 rounded-4">
+          <div class="row g-2 text-center text-white">
+            <div class="col-4">
+              <strong class="d-block fs-5 text-tf-primary">36</strong>
+              <small class="text-white-50 extra-small">States & UTs</small>
+            </div>
+            <div class="col-4 border-start border-end border-secondary border-opacity-25">
+              <strong class="d-block fs-5 text-tf-accent">100+</strong>
+              <small class="text-white-50 extra-small">Destinations</small>
+            </div>
+            <div class="col-4">
+              <strong class="d-block fs-5 text-tf-success">100%</strong>
+              <small class="text-white-50 extra-small">Client Scoped</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Floating Liquid Glass Form -->
+      <div class="col-lg-6 p-4 p-md-5 form-panel d-flex flex-column justify-content-center">
+        <!-- Header -->
+        <div class="text-center mb-3">
+          <h3 class="fw-bold text-tf mb-1">{{ activeTab() === 'login' ? 'Sign In to TripForge' : 'Create an Account' }}</h3>
+          <p class="text-tf-secondary small mb-0">Enter your credentials to access your isolated travel hub.</p>
+        </div>
+
+        <!-- Tab Switcher -->
+        <div class="auth-tabs d-flex p-1 mb-3 glass-card rounded-pill">
+          <button
+            type="button"
+            class="tab-btn flex-grow-1"
+            [class.active]="activeTab() === 'login'"
+            (click)="setTab('login')"
+          >
+            <i class="bi bi-box-arrow-in-right me-1"></i> Sign In
+          </button>
+          <button
+            type="button"
+            class="tab-btn flex-grow-1"
+            [class.active]="activeTab() === 'register'"
+            (click)="setTab('register')"
+          >
+            <i class="bi bi-person-plus me-1"></i> Register
+          </button>
+        </div>
+
+        <!-- Error Alert -->
+        @if (authService.loginError()) {
+          <div class="login-error alert alert-danger py-2 px-3 small rounded-3 mb-3 d-flex align-items-center gap-2">
+            <i class="bi bi-exclamation-triangle-fill flex-shrink-0"></i>
+            <div>{{ authService.loginError() }}</div>
+          </div>
+        }
+
+        <!-- SIGN IN FORM -->
+        @if (activeTab() === 'login') {
+          <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+            <div class="form-group mb-3">
+              <label for="email" class="form-label-tf">Email Address</label>
+              <div class="input-wrapper">
+                <i class="bi bi-envelope input-icon"></i>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control-tf"
+                  placeholder="name@tripforge.com"
+                  [(ngModel)]="email"
+                  #emailField="ngModel"
+                  required
+                  email
+                >
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="password" class="form-label-tf">Password</label>
+              <div class="input-wrapper">
+                <i class="bi bi-lock input-icon"></i>
+                <input
+                  [type]="showPassword() ? 'text' : 'password'"
+                  id="password"
+                  name="password"
+                  class="form-control-tf"
+                  placeholder="Enter password"
+                  [(ngModel)]="password"
+                  #passwordField="ngModel"
+                  required
+                >
+                <button
+                  type="button"
+                  class="password-toggle"
+                  (click)="togglePasswordVisibility($event)"
+                  aria-label="Toggle password"
+                >
+                  <i [class]="showPassword() ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <label class="d-flex align-items-center gap-2 small text-tf-secondary mb-0 cursor-pointer">
+                <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe" class="form-check-input mt-0">
+                <span>Remember me</span>
+              </label>
+              <span class="badge-tf badge-tf-glass extra-small">Encrypted Demo Session</span>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-tf-primary w-100 justify-content-center py-2 mb-3"
+              [disabled]="authService.isLoading()"
+            >
+              @if (authService.isLoading()) {
+                <span class="spinner-border spinner-border-sm me-2"></span>
+                Authenticating...
+              } @else {
+                <i class="bi bi-box-arrow-in-right"></i> Sign In to Dashboard
+              }
+            </button>
+          </form>
+
+          <!-- 3 DEMO ACCOUNTS QUICK SELECT -->
+          <div class="demo-select-box p-3 glass-card rounded-4">
+            <span class="small fw-bold d-block text-tf mb-2 text-center">
+              <i class="bi bi-person-badge text-tf-primary"></i> Quick Demo Users (Isolated Data)
+            </span>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-sm btn-tf-glass text-start d-flex align-items-center justify-content-between py-2" (click)="quickFillUser(1)">
+                <div>
+                  <strong class="d-block small text-tf">1. Akilesh Sharma</strong>
+                  <small class="extra-small text-tf-muted">demo1&#64;tripforge.com (Explorer)</small>
+                </div>
+                <span class="badge-tf badge-tf-primary small">Select</span>
+              </button>
+
+              <button type="button" class="btn btn-sm btn-tf-glass text-start d-flex align-items-center justify-content-between py-2" (click)="quickFillUser(2)">
+                <div>
+                  <strong class="d-block small text-tf">2. Priya Patel</strong>
+                  <small class="extra-small text-tf-muted">demo2&#64;tripforge.com (Photographer)</small>
+                </div>
+                <span class="badge-tf badge-tf-accent small">Select</span>
+              </button>
+
+              <button type="button" class="btn btn-sm btn-tf-glass text-start d-flex align-items-center justify-content-between py-2" (click)="quickFillUser(3)">
+                <div>
+                  <strong class="d-block small text-tf">3. Rahul Verma</strong>
+                  <small class="extra-small text-tf-muted">demo3&#64;tripforge.com (Road Tripper)</small>
+                </div>
+                <span class="badge-tf badge-tf-success small">Select</span>
+              </button>
+            </div>
+          </div>
+        }
+
+        <!-- REGISTER FORM -->
+        @if (activeTab() === 'register') {
+          <form #regForm="ngForm" (ngSubmit)="onRegister(regForm)">
+            <div class="form-group mb-2">
+              <label for="regName" class="form-label-tf">Full Name *</label>
+              <div class="input-wrapper">
+                <i class="bi bi-person input-icon"></i>
+                <input
+                  type="text"
+                  id="regName"
+                  name="regName"
+                  class="form-control-tf"
+                  placeholder="e.g. Anand Kumar"
+                  [(ngModel)]="regName"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="regEmail" class="form-label-tf">Email Address *</label>
+              <div class="input-wrapper">
+                <i class="bi bi-envelope input-icon"></i>
+                <input
+                  type="email"
+                  id="regEmail"
+                  name="regEmail"
+                  class="form-control-tf"
+                  placeholder="anand@example.com"
+                  [(ngModel)]="regEmail"
+                  required
+                  email
+                >
+              </div>
+            </div>
+
+            <div class="form-group mb-2">
+              <label for="regStyle" class="form-label-tf">Travel Preference</label>
+              <select id="regStyle" name="regTravelStyle" class="form-select-tf" [(ngModel)]="regTravelStyle">
+                @for (style of travelStyles; track style) {
+                  <option [value]="style">{{ style }}</option>
+                }
+              </select>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="regPassword" class="form-label-tf">Password *</label>
+              <div class="input-wrapper">
+                <i class="bi bi-lock input-icon"></i>
+                <input
+                  [type]="showRegPassword() ? 'text' : 'password'"
+                  id="regPassword"
+                  name="regPassword"
+                  class="form-control-tf"
+                  placeholder="At least 6 characters"
+                  [(ngModel)]="regPassword"
+                  required
+                  minlength="6"
+                >
+                <button type="button" class="password-toggle" (click)="toggleRegPasswordVisibility($event)">
+                  <i [class]="showRegPassword() ? 'bi bi-eye-slash' : 'bi bi-eye'"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="regConfirmPassword" class="form-label-tf">Confirm Password *</label>
+              <div class="input-wrapper">
+                <i class="bi bi-shield-lock input-icon"></i>
+                <input
+                  type="password"
+                  id="regConfirmPassword"
+                  name="regConfirmPassword"
+                  class="form-control-tf"
+                  placeholder="Re-enter password"
+                  [(ngModel)]="regConfirmPassword"
+                  required
+                >
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn-tf-primary w-100 justify-content-center py-2"
+              [disabled]="authService.isLoading()"
+            >
+              <i class="bi bi-person-check-fill"></i> Create Account
+            </button>
+          </form>
+        }
+
+      </div>
+    </div>
+  </div>
+</div>

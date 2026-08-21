@@ -1,0 +1,287 @@
+[
+  {
+    "id": "1",
+    "name": "Hornbill Festival",
+    "state": "Nagaland",
+    "stateName": "Nagaland",
+    "stateId": "nagaland",
+    "location": "Nagaland",
+    "region": "North East",
+    "month": "December",
+    "duration": "10 Days",
+    "category": "Cultural",
+    "description": "The Festival of Festivals showcasing the rich warrior heritage, dance, music, and cuisine of 17 Naga tribes.",
+    "keyAttractions": [
+      "Naga Tribal Dance",
+      "Traditional Archery",
+      "Rock Concert"
+    ],
+    "image": "https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?w=1200&q=80"
+  },
+  {
+    "id": "2",
+    "name": "Pushkar Camel Fair",
+    "state": "Rajasthan",
+    "stateName": "Rajasthan",
+    "stateId": "rajasthan",
+    "location": "Rajasthan",
+    "region": "North",
+    "month": "November",
+    "duration": "8 Days",
+    "category": "Fair",
+    "description": "World-famous livestock and camel fair on the sacred sands of Pushkar with folk dances and races.",
+    "keyAttractions": [
+      "Decorated Camel Parades",
+      "Folk Music & Kalbelia",
+      "Hot Air Ballooning"
+    ],
+    "image": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=1200&q=80"
+  },
+  {
+    "id": "3",
+    "name": "Rann Utsav",
+    "state": "Gujarat",
+    "stateName": "Gujarat",
+    "stateId": "gujarat",
+    "location": "Gujarat",
+    "region": "West",
+    "month": "November - February",
+    "duration": "3 Months",
+    "category": "Cultural",
+    "description": "Vibrant cultural carnival in the glowing white salt desert of Kutch under moonlit skies.",
+    "keyAttractions": [
+      "Full Moon White Desert Walks",
+      "Kutchi Garba",
+      "Tent City Glamping"
+    ],
+    "image": "https://images.unsplash.com/photo-1609137144820-7f2868205b38?w=1200&q=80"
+  },
+  {
+    "id": "4",
+    "name": "Durga Puja",
+    "state": "West Bengal",
+    "stateName": "West Bengal",
+    "stateId": "west-bengal",
+    "location": "West Bengal",
+    "region": "East",
+    "month": "October",
+    "duration": "5 Days",
+    "category": "Religious",
+    "description": "UNESCO Intangible Cultural Heritage grand carnival celebrating Goddess Durga with spectacular artistic pandals.",
+    "keyAttractions": [
+      "Illuminated Pandals",
+      "Dhunuchi Naach",
+      "Sindoor Khela"
+    ],
+    "image": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=1200&q=80"
+  },
+  {
+    "id": "5",
+    "name": "Onam",
+    "state": "Kerala",
+    "stateName": "Kerala",
+    "stateId": "kerala",
+    "location": "Kerala",
+    "region": "South",
+    "month": "August - September",
+    "duration": "10 Days",
+    "category": "Folk & Harvest",
+    "description": "Grand harvest festival featuring traditional Kathakali, pookalam flower carpets, and grand Sadya feasts.",
+    "keyAttractions": [
+      "Vallam Kali Boat Race",
+      "26-Dish Onasadya Feast",
+      "Pulikkali Tiger Dance"
+    ],
+    "image": "https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1200&q=80"
+  },
+  {
+    "id": "6",
+    "name": "Ratha Yatra",
+    "state": "Odisha",
+    "stateName": "Odisha",
+    "stateId": "odisha",
+    "location": "Odisha",
+    "region": "East",
+    "month": "June - July",
+    "duration": "9 Days",
+    "category": "Religious",
+    "description": "Grand chariot procession of Lord Jagannath, Balabhadra, and Subhadra through the grand avenue of Puri.",
+    "keyAttractions": [
+      "Giant Chariot Pull",
+      "Royal Sweeping Ritual",
+      "Gundicha Temple Procession"
+    ],
+    "image": "https://images.unsplash.com/photo-1620052581237-5d36667be337?w=1200&q=80"
+  },
+  {
+    "id": "7",
+    "name": "Bihu",
+    "state": "Assam",
+    "stateName": "Assam",
+    "stateId": "assam",
+    "location": "Assam",
+    "region": "North East",
+    "month": "April, January, October",
+    "duration": "7 Days",
+    "category": "Folk & Harvest",
+    "description": "The soul of Assamese culture celebrating harvest cycles with energetic Bihu dance and buffalo horn music.",
+    "keyAttractions": [
+      "Husori Folk Dance",
+      "Pepa & Dhol Music",
+      "Pitha Feasts"
+    ],
+    "image": "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?w=1200&q=80"
+  },
+  {
+    "id": "8",
+    "name": "Khajuraho Dance Festival",
+    "state": "Madhya Pradesh",
+    "stateName": "Madhya Pradesh",
+    "stateId": "madhya-pradesh",
+    "location": "Madhya Pradesh",
+    "region": "Central",
+    "month": "February",
+    "duration": "7 Days",
+    "category": "Music & Art",
+    "description": "Mesmerizing week-long classical Indian dance festival set against the illuminated 10th-century temples.",
+    "keyAttractions": [
+      "Classical Dance Recitals",
+      "Illuminated Temples",
+      "Art Mart"
+    ],
+    "image": "https://images.unsplash.com/photo-1599818968008-a42e5668b598?w=1200&q=80"
+  },
+  {
+    "id": "9",
+    "name": "Ziro Festival of Music",
+    "state": "Arunachal Pradesh",
+    "stateName": "Arunachal Pradesh",
+    "stateId": "arunachal-pradesh",
+    "location": "Arunachal Pradesh",
+    "region": "North East",
+    "month": "September",
+    "duration": "4 Days",
+    "category": "Music & Art",
+    "description": "India's greatest outdoor indie music festival in the picturesque emerald valley of the Apatani tribe.",
+    "keyAttractions": [
+      "Indie Bands",
+      "Bamboo Stages",
+      "Valley Camping"
+    ],
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&q=80"
+  },
+  {
+    "id": "10",
+    "name": "Dev Deepawali",
+    "state": "Uttar Pradesh",
+    "stateName": "Uttar Pradesh",
+    "stateId": "uttar-pradesh",
+    "location": "Uttar Pradesh",
+    "region": "North",
+    "month": "November",
+    "duration": "1 Night",
+    "category": "Religious",
+    "description": "The Ghats of Varanasi illuminated with more than one million earthen oil lamps on the holy Ganges.",
+    "keyAttractions": [
+      "1 Million Diyas",
+      "Ganga Maha Aarti",
+      "Ganges Boat Rides"
+    ],
+    "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1200&q=80"
+  },
+  {
+    "id": "11",
+    "name": "Mysuru Dasara",
+    "state": "Karnataka",
+    "stateName": "Karnataka",
+    "stateId": "karnataka",
+    "location": "Karnataka",
+    "region": "South",
+    "month": "October",
+    "duration": "10 Days",
+    "category": "Cultural",
+    "description": "Grand royal procession of caparisoned elephants carrying the golden idol of Goddess Chamundeshwari.",
+    "keyAttractions": [
+      "Illuminated Mysore Palace",
+      "Jumboo Savari Elephants",
+      "Torchlight Parade"
+    ],
+    "image": "https://images.unsplash.com/photo-1600100397608-f010f443b740?w=1200&q=80"
+  },
+  {
+    "id": "12",
+    "name": "Hemis Festival",
+    "state": "Ladakh",
+    "stateName": "Ladakh",
+    "stateId": "ladakh",
+    "location": "Ladakh",
+    "region": "North",
+    "month": "June - July",
+    "duration": "2 Days",
+    "category": "Religious",
+    "description": "Vibrant masked Cham dances in the courtyard of the historic Hemis Gompa celebrating Guru Padmasambhava.",
+    "keyAttractions": [
+      "Masked Cham Dances",
+      "Silk Thangka Display",
+      "Ladakhi Music"
+    ],
+    "image": "https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?w=1200&q=80"
+  },
+  {
+    "id": "13",
+    "name": "Goa Carnival",
+    "state": "Goa",
+    "stateName": "Goa",
+    "stateId": "goa",
+    "location": "Goa",
+    "region": "West",
+    "month": "February",
+    "duration": "4 Days",
+    "category": "Cultural",
+    "description": "Electrifying pre-Lenten carnival with King Momo, street parades, colorful floats, and beach parties.",
+    "keyAttractions": [
+      "King Momo Parade",
+      "Samba Music",
+      "Street Masquerade"
+    ],
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1200&q=80"
+  },
+  {
+    "id": "14",
+    "name": "Bastar Dussehra",
+    "state": "Chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "stateId": "chhattisgarh",
+    "location": "Chhattisgarh",
+    "region": "Central",
+    "month": "October",
+    "duration": "75 Days",
+    "category": "Cultural",
+    "description": "The world's longest festival lasting 75 days, dedicated to Goddess Danteshwari with massive chariot pulls.",
+    "keyAttractions": [
+      "8-Wheeled Ratha Pull",
+      "Tribal Dances",
+      "Goddess Danteshwari Ceremonies"
+    ],
+    "image": "https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1200&q=80"
+  },
+  {
+    "id": "15",
+    "name": "Kullu Dussehra",
+    "state": "Himachal Pradesh",
+    "stateName": "Himachal Pradesh",
+    "stateId": "himachal-pradesh",
+    "location": "Himachal Pradesh",
+    "region": "North",
+    "month": "October",
+    "duration": "7 Days",
+    "category": "Cultural",
+    "description": "Week-long international congregation of over 200 local mountain deities in the Dhalpur grounds.",
+    "keyAttractions": [
+      "200+ Hill Deities",
+      "Rath Yatra of Lord Raghunath",
+      "Nati Folk Dance"
+    ],
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200&q=80"
+  }
+]

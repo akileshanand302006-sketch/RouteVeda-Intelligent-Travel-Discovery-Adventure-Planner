@@ -1,0 +1,112 @@
+<div class="page-container india-explorer-page">
+  <!-- Hero Banner -->
+  <div class="explorer-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <span class="hero-badge animate-fade-in-up"><i class="bi bi-globe-asia-australia"></i> Incredible India Explorer</span>
+      <h1 class="animate-fade-in-up">Discover All <span class="gradient-text">28 States & 8 Union Territories</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Explore North, South, East, West, Central and North East India. From Himalayan snow peaks to Kerala backwaters and Rajasthani desert forts.
+      </p>
+
+      <!-- Stats pill row -->
+      <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <div class="glass-card px-3 py-2 rounded-pill small"><i class="bi bi-map-fill text-tf-primary"></i> <strong>28</strong> States</div>
+        <div class="glass-card px-3 py-2 rounded-pill small"><i class="bi bi-geo-alt-fill text-tf-accent"></i> <strong>8</strong> Union Territories</div>
+        <div class="glass-card px-3 py-2 rounded-pill small"><i class="bi bi-compass-fill text-tf-warning"></i> <strong>6</strong> Geographical Regions</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Region Selector Chips -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+      <button
+        class="category-chip"
+        [class.active]="selectedRegion === 'All'"
+        (click)="selectRegion('All')"
+      >
+        🇮🇳 All Regions
+      </button>
+      @for (r of stateService.regions; track r) {
+        <button
+          class="category-chip"
+          [class.active]="selectedRegion === r"
+          (click)="selectRegion(r)"
+        >
+          {{ r }} India
+        </button>
+      }
+    </div>
+
+    <!-- Search Control Bar -->
+    <div class="glass-card p-3 mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-8">
+          <div class="input-wrapper">
+            <i class="bi bi-search input-icon"></i>
+            <input
+              type="text"
+              class="form-control-tf"
+              placeholder="Search State, UT, Capital, Food, or Attraction..."
+              [(ngModel)]="searchQuery"
+              (input)="onSearchChange()"
+            >
+          </div>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <span class="text-tf-secondary small me-2">Showing <strong>{{ stateService.filteredStates().length }}</strong> States & UTs</span>
+          <button class="btn btn-sm btn-tf-glass" (click)="resetFilters()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- State Cards Grid -->
+    @if (stateService.isLoading()) {
+      <app-loading-spinner message="Loading India tourism database..." />
+    } @else if (stateService.filteredStates().length === 0) {
+      <app-empty-state
+        icon="bi-geo-alt"
+        title="No States or UTs match your search"
+        message="Try broadening your search term or select another region filter."
+        actionLabel="Reset Explorer"
+        (action)="resetFilters()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (state of stateService.filteredStates(); track state.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.04) + 's'">
+            <div class="glass-card state-card h-100 d-flex flex-column overflow-hidden">
+              <div class="state-card-img-wrapper">
+                <img [src]="state.heroImage" [alt]="state.name" class="state-img">
+                <span class="region-badge badge-tf badge-tf-primary">{{ state.region }} India</span>
+                <span class="type-badge badge-tf" [class.badge-tf-info]="state.type === 'Union Territory'">{{ state.type }}</span>
+              </div>
+
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h4 class="mb-0 fw-bold">{{ state.name }}</h4>
+                  <span class="code-badge font-monospace">{{ state.code }}</span>
+                </div>
+                <small class="text-tf-primary fw-semibold mb-2"><i class="bi bi-building"></i> Capital: {{ state.capital }}</small>
+                <p class="small text-tf-secondary line-clamp-3 mb-3">{{ state.description }}</p>
+
+                <!-- Highlights tags -->
+                <div class="mt-auto">
+                  <div class="d-flex flex-wrap gap-1 mb-3">
+                    @for (att of state.topAttractions.slice(0, 3); track att) {
+                      <span class="badge-tf badge-tf-glass extra-small"># {{ att }}</span>
+                    }
+                  </div>
+
+                  <a [routerLink]="['/state', state.id]" class="btn-tf-primary w-100 text-center text-decoration-none">
+                    Explore {{ state.name }} <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

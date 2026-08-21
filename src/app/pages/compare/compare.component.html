@@ -1,0 +1,143 @@
+<div class="page-container compare-page">
+  <div class="compare-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <h1 class="animate-fade-in-up">Destination <span class="gradient-text">Comparison Matrix</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Compare up to 3 Indian destinations side-by-side on budget, weather season, elevation, top attractions, and transportation access.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Selector bar -->
+    <div class="glass-card p-3 mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-7">
+          <label class="form-label small text-tf-muted mb-1">Add Destination to Compare (Max 3):</label>
+          <div class="d-flex gap-2">
+            <select class="form-select-tf" [(ngModel)]="selectedDestId">
+              <option value="">-- Choose a Destination --</option>
+              @for (d of destinationService.destinations(); track d.id) {
+                <option [value]="d.id" [disabled]="comparisonService.isSelected(d.id)">
+                  {{ d.name }} ({{ d.state }} - {{ d.category }})
+                </option>
+              }
+            </select>
+            <button class="btn-tf-primary" (click)="addSelected()" [disabled]="!selectedDestId || comparisonService.isFull()">
+              <i class="bi bi-plus-lg"></i> Add
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-5 text-md-end pt-md-4">
+          <button class="btn btn-sm btn-tf-danger me-2" (click)="clear()" [disabled]="comparisonService.count() === 0">
+            <i class="bi bi-trash"></i> Clear All
+          </button>
+          <span class="badge-tf badge-tf-info">Comparing {{ comparisonService.count() }} / 3</span>
+        </div>
+      </div>
+    </div>
+
+    @if (comparisonService.count() === 0) {
+      <div class="glass-card p-5 text-center my-4">
+        <i class="bi bi-bar-chart-steps text-tf-primary display-3 mb-3"></i>
+        <h4>No Destinations Selected for Comparison</h4>
+        <p class="text-tf-secondary max-w-500 mx-auto mb-4">Select at least 2 destinations from the dropdown above to view side-by-side comparative analysis.</p>
+      </div>
+    } @else {
+      <!-- Comparison Table -->
+      <div class="glass-card p-0 overflow-hidden mb-5">
+        <div class="table-responsive">
+          <table class="table table-dark table-hover mb-0 compare-table">
+            <thead>
+              <tr>
+                <th style="width: 220px;" class="bg-tf-surface">Feature / Metric</th>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <th class="text-center align-top p-3" style="min-width: 240px;">
+                    <div class="position-relative">
+                      <button class="btn btn-sm btn-danger position-absolute top-0 end-0 p-1 line-height-1" (click)="remove(d.id)" title="Remove">
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                      <img [src]="d.image" [alt]="d.name" class="rounded mb-2 compare-img">
+                      <h5 class="mb-0 fw-bold">{{ d.name }}</h5>
+                      <small class="text-tf-primary d-block">{{ d.location }}, {{ d.state }}</small>
+                    </div>
+                  </th>
+                }
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-star-fill text-warning me-1"></i> Rating</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center fw-bold text-warning fs-5">★ {{ d.rating }} / 5</td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-currency-rupee me-1"></i> Est. Cost / Person</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center fw-bold text-tf-success">₹{{ d.pricePerPerson | number }}</td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-tags me-1"></i> Category</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center"><span class="badge-tf badge-tf-primary">{{ d.category }}</span></td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-geo-alt me-1"></i> Region</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center">{{ d.region }} India</td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-calendar3 me-1"></i> Best Season</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center small">{{ d.bestSeason }}</td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-clock me-1"></i> Ideal Duration</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center small fw-semibold">{{ d.idealDuration || '3-4 days' }}</td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-graph-up-arrow me-1"></i> Elevation</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="text-center small">{{ d.elevation || 'N/A' }}</td>
+                }
+              </tr>
+              <tr>
+                <td class="fw-semibold text-tf-muted"><i class="bi bi-award me-1"></i> Key Highlights</td>
+                @for (d of comparisonService.selectedDestinations(); track d.id) {
+                  <td class="small">
+                    <ul class="ps-3 mb-0">
+                      @for (h of d.highlights?.slice(0, 3); track h) {
+                        <li>{{ h }}</li>
+                      }
+                    </ul>
+                  </td>
+                }
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      @if (getWinner()) {
+        <div class="glass-card p-4 text-center border-tf">
+          <span class="badge-tf badge-tf-warning mb-2">🏆 Highest Rated Pick</span>
+          <h4 class="mb-1 fw-bold">{{ getWinner()?.name }}</h4>
+          <p class="text-tf-secondary small max-w-600 mx-auto mb-3">
+            Based on overall ratings and guest reviews, {{ getWinner()?.name }} in {{ getWinner()?.state }} ranks highest among your selections with {{ getWinner()?.rating }}/5 stars.
+          </p>
+          <a [routerLink]="['/destination', getWinner()?.id]" class="btn-tf-primary">
+            Explore {{ getWinner()?.name }} Details →
+          </a>
+        </div>
+      }
+    }
+  </div>
+</div>

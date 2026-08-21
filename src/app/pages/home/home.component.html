@@ -1,0 +1,262 @@
+<!-- HERO SECTION -->
+<section class="hero-section hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80')">
+  <div class="container">
+    <div class="hero-content animate-fade-in-up text-center max-w-800 mx-auto">
+      <span class="hero-badge mb-3"><i class="bi bi-compass-fill text-tf-primary"></i> India Travel Planner</span>
+      <h1 class="display-3 fw-extrabold text-white mb-2">TripForge</h1>
+      <p class="hero-subtitle text-white-50 fs-5 mb-4">Smart India Tourism & Adventure Trip Planning Platform</p>
+
+      <div class="hero-actions d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <a routerLink="/trip-builder" class="btn-tf-primary btn-lg">
+          <i class="bi bi-rocket-takeoff-fill"></i> Start Trip Builder
+        </a>
+        <a routerLink="/india" class="btn-tf-glass btn-lg">
+          <i class="bi bi-globe-asia-australia"></i> Explore 36 States & UTs
+        </a>
+        <a routerLink="/recommend" class="btn-tf-accent btn-lg">
+          <i class="bi bi-magic"></i> Find Destination Quiz
+        </a>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="hero-stats d-flex flex-wrap justify-content-center gap-4 py-3 glass-card rounded-pill">
+        <div class="stat-item text-center">
+          <strong class="fs-4 text-tf-primary">36</strong>
+          <span class="small text-tf-muted">States & UTs</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item text-center">
+          <strong class="fs-4 text-tf-accent">6</strong>
+          <span class="small text-tf-muted">Regions</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item text-center">
+          <strong class="fs-4 text-tf-warning">{{ destinationService.stats().total }}+</strong>
+          <span class="small text-tf-muted">Destinations</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item text-center">
+          <strong class="fs-4 text-tf-success">{{ activityService.activities().length }}+</strong>
+          <span class="small text-tf-muted">Activities</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PERSONAL USER DASHBOARD BAR & TRAVEL METRICS
+     ============================================================ -->
+<section class="user-dashboard-banner py-4 bg-tf">
+  <div class="container">
+    <div class="glass-card p-4 rounded-4 shadow-lg mb-4 animate-fade-in-up">
+      <div class="row g-3 align-items-center justify-content-between">
+        <div class="col-lg-6 d-flex align-items-center gap-3">
+          <img [src]="authService.avatarUrl()" [alt]="authService.displayName()" class="rounded-circle user-avatar-banner shadow border-primary">
+          <div>
+            <div class="d-flex align-items-center gap-2">
+              <h4 class="mb-0 fw-bold text-tf">Good day, {{ authService.displayName() }} 👋</h4>
+              <span class="badge-tf badge-tf-primary small text-capitalize">{{ authService.currentUser()?.role || 'Traveler' }}</span>
+            </div>
+            <p class="text-tf-secondary small mb-0 mt-1">
+              <i class="bi bi-geo-alt-fill text-tf-primary"></i> Exploring from {{ authService.currentUser()?.location || 'India' }} • Preference: <span class="fw-semibold text-tf-accent">{{ authService.currentUser()?.preferences?.travelStyle || 'Adventure' }}</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row g-2 text-center">
+            <div class="col-3">
+              <div class="p-2 glass-card rounded-3">
+                <strong class="d-block fs-5 text-tf-primary">{{ tripService.trips().length }}</strong>
+                <small class="extra-small text-tf-muted">My Trips</small>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="p-2 glass-card rounded-3">
+                <strong class="d-block fs-5 text-tf-danger">{{ wishlistService.count() }}</strong>
+                <small class="extra-small text-tf-muted">Wishlist</small>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="p-2 glass-card rounded-3">
+                <strong class="d-block fs-5 text-tf-success">{{ achievementService.totalVisitedStates() }}</strong>
+                <small class="extra-small text-tf-muted">States</small>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="p-2 glass-card rounded-3">
+                <strong class="d-block fs-5 text-tf-accent">{{ achievementService.indiaExplorationPercent() }}%</strong>
+                <small class="extra-small text-tf-muted">India %</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MASTER FUNCTIONAL DASHBOARD HUB (ALL WORKING PAGES)
+     ============================================================ -->
+<section class="section-padding bg-tf-secondary">
+  <div class="container">
+    <div class="section-header text-center animate-fade-in-up mb-5">
+      <span class="section-badge">⚡ Platform Command Center</span>
+      <h2 class="display-5 fw-bold">All Working Tools & Features</h2>
+      <p class="text-tf-secondary">Access all 16 interactive modules of the TripForge tourism and travel planning platform.</p>
+    </div>
+
+    @for (cat of categories; track cat) {
+      <div class="mb-5 animate-fade-in-up">
+        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+          <h4 class="mb-0 fw-bold text-tf-primary">{{ cat }}</h4>
+          <span class="badge-tf badge-tf-glass small">{{ getModulesByCategory(cat).length }} Modules</span>
+        </div>
+
+        <div class="row g-4">
+          @for (mod of getModulesByCategory(cat); track mod.id) {
+            <div class="col-lg-3 col-md-6">
+              <a [routerLink]="mod.route" class="text-decoration-none d-block h-100">
+                <div class="glass-card dashboard-tool-card h-100 p-4 d-flex flex-column">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div class="tool-icon-box" [style.color]="mod.accentColor" [style.background]="'rgba(' + (mod.accentColor.includes('primary') ? '99, 102, 241' : (mod.accentColor.includes('success') ? '16, 185, 129' : (mod.accentColor.includes('warning') ? '245, 158, 11' : (mod.accentColor.includes('danger') ? '239, 68, 68' : '59, 130, 246')))) + ', 0.12)'">
+                      <i [class]="'bi ' + mod.icon + ' fs-4'"></i>
+                    </div>
+                    <span [class]="'badge-tf ' + mod.badgeClass">{{ mod.badge }}</span>
+                  </div>
+
+                  <h5 class="fw-bold mb-2 text-tf">{{ mod.title }}</h5>
+                  <p class="small text-tf-secondary mb-3 flex-grow-1">{{ mod.description }}</p>
+
+                  <div class="d-flex align-items-center text-tf-primary fw-semibold small mt-auto pt-2 border-top border-secondary border-opacity-25">
+                    <span>Open Module</span>
+                    <i class="bi bi-arrow-right ms-auto"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- EXPLORE INDIA BY REGIONS -->
+<section class="section-padding bg-tf">
+  <div class="container">
+    <div class="section-header text-center animate-fade-in-up mb-5">
+      <span class="section-badge">🗺️ Geographical Regions</span>
+      <h2 class="display-5 fw-bold">Explore India by Region</h2>
+      <p class="text-tf-secondary">Select a region to discover states, hill stations, heritage monuments, and coastal escapes.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="glass-card p-4 h-100 region-box" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80')">
+          <span class="badge-tf badge-tf-primary mb-2">North India</span>
+          <h3 class="text-white fw-bold">Himalayas & Royal Empires</h3>
+          <p class="small text-white-50">Himachal, Uttarakhand, Kashmir, Ladakh, Rajasthan, Delhi, UP, Punjab.</p>
+          <a routerLink="/india" [queryParams]="{ region: 'North' }" class="btn btn-sm btn-tf-primary mt-auto">Explore North India →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="glass-card p-4 h-100 region-box" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80')">
+          <span class="badge-tf badge-tf-accent mb-2">South India</span>
+          <h3 class="text-white fw-bold">Temples, Backwaters & Coffee Hills</h3>
+          <p class="small text-white-50">Tamil Nadu, Kerala, Karnataka, Goa, Andhra Pradesh, Telangana, Andaman.</p>
+          <a routerLink="/india" [queryParams]="{ region: 'South' }" class="btn btn-sm btn-tf-accent mt-auto">Explore South India →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="glass-card p-4 h-100 region-box" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80')">
+          <span class="badge-tf badge-tf-warning mb-2">North East India</span>
+          <h3 class="text-white fw-bold">Rhinos, Root Bridges & Tea Estates</h3>
+          <p class="small text-white-50">Assam, Meghalaya, Sikkim, Nagaland, Arunachal, Manipur, Mizoram, Tripura.</p>
+          <a routerLink="/india" [queryParams]="{ region: 'North East' }" class="btn btn-sm btn-tf-warning mt-auto">Explore North East →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED DESTINATIONS (TOP PICKS FOR DASHBOARD) -->
+<section class="section-padding bg-tf-secondary">
+  <div class="container">
+    <div class="section-header text-center animate-fade-in-up mb-5">
+      <span class="section-badge">🌟 Top Picks</span>
+      <h2>Top Featured Destinations</h2>
+      <p class="text-tf-secondary">Hand-picked iconic destinations across India. Click below to explore all 247 destinations.</p>
+    </div>
+    <div class="row g-4">
+      @for (dest of topPicks(); track dest.id; let i = $index) {
+        <div class="col-lg-3 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.1) + 's'">
+          <app-destination-card
+            [destination]="dest"
+            (addToTrip)="onAddToTrip($event)"
+            (openCalculator)="openCalculatorFor($event)"
+          />
+        </div>
+      }
+    </div>
+    <div class="text-center mt-5">
+      <a routerLink="/explore" class="btn btn-tf-primary btn-lg px-5 py-3 shadow-lg rounded-pill">
+        <i class="bi bi-compass-fill me-2 fs-5"></i> View All 247 Destinations <i class="bi bi-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Expense Calculator Modal -->
+  <app-expense-calculator-modal
+    [isOpen]="showCalcModal()"
+    [destination]="selectedDestForCalc()"
+    (close)="closeCalculator()"
+  />
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section-padding bg-tf">
+  <div class="container">
+    <div class="section-header text-center animate-fade-in-up mb-5">
+      <span class="section-badge">🛠️ Simple Process</span>
+      <h2>How TripForge Works</h2>
+      <p class="text-tf-secondary">Plan your perfect adventure in four easy steps.</p>
+    </div>
+    <div class="row g-4">
+      @for (step of howItWorks; track step.step; let i = $index) {
+        <div class="col-lg-3 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.15) + 's'">
+          <div class="step-card glass-card text-center h-100">
+            <div class="step-number">{{ step.step }}</div>
+            <div class="step-icon-lg">
+              <i [class]="'bi ' + step.icon"></i>
+            </div>
+            <h5>{{ step.title }}</h5>
+            <p>{{ step.desc }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80')">
+  <div class="container text-center">
+    <div class="cta-content animate-fade-in-up max-w-700 mx-auto">
+      <h2 class="text-white fw-bold mb-3">Ready to <span class="gradient-text">Forge</span> Your Indian Journey?</h2>
+      <p class="text-white-50 fs-5 mb-4">Start planning with live budget calculation, dynamic itineraries, and all 36 States & UTs.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a routerLink="/trip-builder" class="btn-tf-primary btn-lg">
+          <i class="bi bi-rocket-takeoff-fill"></i> Open Smart Trip Builder
+        </a>
+        <a routerLink="/bucket-list" class="btn-tf-glass btn-lg">
+          <i class="bi bi-check2-square"></i> View My India Bucket List
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

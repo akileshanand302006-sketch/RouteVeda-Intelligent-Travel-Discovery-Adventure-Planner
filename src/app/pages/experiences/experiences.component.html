@@ -1,0 +1,52 @@
+<div class="page-container experiences-page">
+  <div class="experiences-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <span class="hero-badge animate-fade-in-up"><i class="bi bi-stars"></i> Incredible India Themes</span>
+      <h1 class="animate-fade-in-up">Thematic <span class="gradient-text">Tourism Experiences</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Discover India by theme: High-adrenaline adventure, spiritual retreats, royal heritage, tiger safaris, regional food trails, and pristine nature.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    @if (experienceService.isLoading()) {
+      <app-loading-spinner message="Loading tourism themes..." />
+    } @else {
+      <div class="row g-4">
+        @for (exp of experienceService.experiences(); track exp.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.05) + 's'">
+            <div class="glass-card h-100 d-flex flex-column p-4 exp-card">
+              <div class="exp-img-wrapper rounded overflow-hidden mb-3">
+                <img [src]="exp.image" [alt]="exp.title" class="exp-img">
+                <span class="badge-tf badge-tf-primary exp-badge">{{ exp.highlightTag }}</span>
+              </div>
+
+              <div class="d-flex flex-column flex-grow-1">
+                <span class="text-tf-accent small fw-bold mb-1">{{ exp.category }} Experience</span>
+                <h4 class="fw-bold mb-2">{{ exp.title }}</h4>
+                <p class="small text-tf-secondary mb-3 leading-relaxed">{{ exp.description }}</p>
+
+                <div class="mb-3">
+                  <small class="text-tf-muted d-block mb-1 extra-small">Key States:</small>
+                  <div class="d-flex flex-wrap gap-1">
+                    @for (st of exp.states; track st) {
+                      <span class="badge-tf badge-tf-glass extra-small">{{ st }}</span>
+                    }
+                  </div>
+                </div>
+
+                <div class="mt-auto pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                  <small class="text-tf-muted"><i class="bi bi-geo-alt text-tf-primary"></i> {{ exp.popularSpotsCount }}+ Locations</small>
+                  <a routerLink="/explore" [queryParams]="{ category: exp.category }" class="btn btn-sm btn-tf-primary">
+                    Explore Theme <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,54 @@
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--tf-primary);
+  box-shadow: var(--tf-shadow-glow);
+}
+
+.avatar-option {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.avatar-option:hover {
+  transform: scale(1.1);
+  border-color: var(--tf-primary-light);
+}
+
+.avatar-option.selected {
+  border-color: var(--tf-primary);
+  box-shadow: 0 0 12px rgba(var(--tf-primary-rgb), 0.5);
+  transform: scale(1.15);
+}
+
+.bio-text {
+  font-size: 0.9rem;
+  color: var(--tf-text-secondary);
+  line-height: 1.5;
+}
+
+.p-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--tf-border-light);
+}
+
+.p-label {
+  color: var(--tf-text-secondary);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.p-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+}

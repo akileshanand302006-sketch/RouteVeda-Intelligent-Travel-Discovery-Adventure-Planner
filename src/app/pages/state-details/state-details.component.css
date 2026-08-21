@@ -1,0 +1,28 @@
+.state-hero {
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  transition: background-image 0.5s ease;
+  padding: 80px 0 40px;
+}
+
+.state-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.state-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.attraction-thumb {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.max-w-800 {
+  max-width: 800px;
+}

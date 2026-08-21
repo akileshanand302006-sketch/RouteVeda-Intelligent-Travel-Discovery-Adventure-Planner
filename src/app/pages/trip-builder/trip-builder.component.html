@@ -1,0 +1,487 @@
+<div class="page-container trip-builder-page">
+  <div class="container py-4">
+    <!-- Header -->
+    <div class="text-center mb-4">
+      <h1 class="gradient-text"><i class="bi bi-tools"></i> Smart Trip Builder</h1>
+      <p class="text-tf-secondary">Design your dream itinerary in 7 simple steps.</p>
+    </div>
+
+    <!-- Step Progress Bar (1 -> 7) -->
+    <div class="step-indicator mb-4">
+      @for (s of [1,2,3,4,5,6,7]; track s) {
+        <div class="step-item">
+          <div
+            class="step-circle"
+            [class.active]="currentStep() === s"
+            [class.completed]="currentStep() > s"
+            (click)="goToStep(s)"
+          >
+            @if (currentStep() > s) {
+              <i class="bi bi-check-lg"></i>
+            } @else {
+              {{ s }}
+            }
+          </div>
+          @if (s < 7) {
+            <div class="step-line" [class.active]="currentStep() > s"></div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="row g-4">
+      <!-- Main Form / Wizard Area -->
+      <div class="col-lg-8">
+        <div class="glass-card p-4">
+          <form #builderForm="ngForm" (ngSubmit)="generateAdventure()">
+
+            <!-- STEP 1: Traveler Details -->
+            @if (currentStep() === 1) {
+              <div class="step-pane animate-fade-in-up">
+                <h4 class="mb-3"><i class="bi bi-person-badge text-tf-primary"></i> Step 1: Traveler Information</h4>
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label for="tripName" class="form-label-tf">Trip Title (Optional)</label>
+                    <input
+                      type="text"
+                      id="tripName"
+                      name="tripName"
+                      class="form-control-tf"
+                      placeholder="e.g. Summer Himalayan Escape 2026"
+                      [(ngModel)]="tripName"
+                      (input)="syncCurrentTripState()"
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="travelerName" class="form-label-tf">Primary Traveler Name *</label>
+                    <input
+                      type="text"
+                      id="travelerName"
+                      name="travelerName"
+                      class="form-control-tf"
+                      placeholder="Enter full name"
+                      [(ngModel)]="travelerName"
+                      #nameField="ngModel"
+                      required
+                      minlength="3"
+                      (input)="syncCurrentTripState()"
+                    >
+                    @if (nameField.invalid && nameField.touched) {
+                      <div class="validation-error">
+                        <i class="bi bi-exclamation-circle"></i> Name is required (at least 3 characters).
+                      </div>
+                    }
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="travelerEmail" class="form-label-tf">Contact Email *</label>
+                    <input
+                      type="email"
+                      id="travelerEmail"
+                      name="travelerEmail"
+                      class="form-control-tf"
+                      placeholder="name@domain.com"
+                      [(ngModel)]="travelerEmail"
+                      #emailField="ngModel"
+                      required
+                      email
+                      (input)="syncCurrentTripState()"
+                    >
+                    @if (emailField.invalid && emailField.touched) {
+                      <div class="validation-error">
+                        <i class="bi bi-exclamation-circle"></i> Please enter a valid email address.
+                      </div>
+                    }
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="numberOfTravelers" class="form-label-tf">Number of Travelers *</label>
+                    <input
+                      type="number"
+                      id="numberOfTravelers"
+                      name="numberOfTravelers"
+                      class="form-control-tf"
+                      min="1"
+                      max="20"
+                      [(ngModel)]="numberOfTravelers"
+                      (input)="syncCurrentTripState()"
+                      required
+                    >
+                  </div>
+                </div>
+              </div>
+            }
+
+            <!-- STEP 2: Select Destinations (Categorized by State) -->
+            @if (currentStep() === 2) {
+              <div class="step-pane animate-fade-in-up">
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+                  <div>
+                    <h4 class="mb-1"><i class="bi bi-geo-alt-fill text-tf-primary"></i> Step 2: Select Destinations</h4>
+                    <p class="text-tf-muted small mb-0">Browse and pick destinations categorized by Indian States & UTs.</p>
+                  </div>
+                  <div class="badge-tf badge-tf-primary">
+                    {{ (tripService.currentTrip().destinations ?? []).length }} Selected
+                  </div>
+                </div>
+
+                <!-- State Filter & Search Controls -->
+                <div class="glass-card p-3 mb-3">
+                  <div class="row g-2 align-items-center">
+                    <div class="col-md-7">
+                      <div class="input-wrapper">
+                        <i class="bi bi-search input-icon"></i>
+                        <input
+                          type="text"
+                          class="form-control-tf"
+                          placeholder="Search destination, city, or place..."
+                          [ngModel]="searchDestQuery()"
+                          (ngModelChange)="onSearchDestChange($event)"
+                        >
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <select
+                        class="form-select-tf"
+                        [ngModel]="selectedStateFilter()"
+                        (ngModelChange)="onStateFilterChange($event)"
+                      >
+                        <option value="All">All States & UTs</option>
+                        @for (st of stateService.states(); track st.id) {
+                          <option [value]="st.name">{{ st.name }}</option>
+                        }
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Categorized State Groups -->
+                <div class="dest-picker-grid">
+                  @if (destinationsByState().length === 0) {
+                    <div class="p-4 text-center text-tf-muted">
+                      <i class="bi bi-geo-alt fs-2 d-block mb-2 text-tf-muted opacity-50"></i>
+                      No destinations found matching your filter criteria.
+                    </div>
+                  } @else {
+                    @for (group of destinationsByState(); track group.stateName) {
+                      <div [id]="getStateSlug(group.stateName)" class="state-category-section mb-4">
+                        <div class="state-header d-flex align-items-center gap-2 mb-2 pb-1 border-bottom border-secondary border-opacity-25">
+                          <span class="badge-tf badge-tf-primary small"><i class="bi bi-pin-map-fill"></i> {{ group.stateName }}</span>
+                          <span class="extra-small text-tf-muted">({{ group.destinations.length }} places)</span>
+                        </div>
+
+                        <div class="row g-3">
+                          @for (dest of group.destinations; track dest.id) {
+                            <div class="col-md-6">
+                              <div
+                                class="selectable-card"
+                                [class.selected]="isDestinationSelected(dest.id)"
+                                (click)="toggleDestination(dest.id)"
+                              >
+                                <img [src]="dest.image" [alt]="dest.name" class="card-thumb">
+                                <div class="card-info">
+                                  <h6>{{ dest.name }}</h6>
+                                  <small class="text-tf-muted">{{ dest.location }}, {{ dest.state }}</small>
+                                  <div class="mt-1 fw-bold text-tf-primary">₹{{ dest.pricePerPerson.toLocaleString() }}/person</div>
+                                </div>
+                                <div class="select-check">
+                                  <i [class]="isDestinationSelected(dest.id) ? 'bi bi-check-circle-fill text-tf-primary' : 'bi bi-circle'"></i>
+                                </div>
+                              </div>
+                            </div>
+                          }
+                        </div>
+                      </div>
+                    }
+                  }
+                </div>
+              </div>
+            }
+
+            <!-- STEP 3: Travel Dates -->
+            @if (currentStep() === 3) {
+              <div class="step-pane animate-fade-in-up">
+                <h4 class="mb-3"><i class="bi bi-calendar-range text-tf-primary"></i> Step 3: Select Dates</h4>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="startDate" class="form-label-tf">Start Date *</label>
+                    <input
+                      type="date"
+                      id="startDate"
+                      name="startDate"
+                      class="form-control-tf"
+                      [(ngModel)]="startDate"
+                      (change)="syncCurrentTripState()"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="endDate" class="form-label-tf">End Date *</label>
+                    <input
+                      type="date"
+                      id="endDate"
+                      name="endDate"
+                      class="form-control-tf"
+                      [(ngModel)]="endDate"
+                      (change)="syncCurrentTripState()"
+                      required
+                    >
+                  </div>
+
+                  <div class="col-12 mt-3">
+                    <div class="alert glass-card d-flex align-items-center gap-3">
+                      <i class="bi bi-clock-history fs-2 text-tf-primary"></i>
+                      <div>
+                        <strong>Calculated Duration:</strong> {{ tripService.calculateDuration(startDate, endDate) }} Days
+                        <div class="small text-tf-muted">Dates automatically drive your budget breakdown and itinerary days.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            }
+
+            <!-- STEP 4: Travel Style -->
+            @if (currentStep() === 4) {
+              <div class="step-pane animate-fade-in-up">
+                <h4 class="mb-3"><i class="bi bi-compass text-tf-primary"></i> Step 4: Choose Travel Style</h4>
+                <div class="row g-3">
+                  @for (style of travelStyles; track style) {
+                    <div class="col-md-4 col-6">
+                      <div
+                        class="style-card text-center"
+                        [class.active]="travelStyle === style"
+                        (click)="travelStyle = style; syncCurrentTripState()"
+                      >
+                        <i class="bi bi-stars fs-3 mb-2 text-tf-primary d-block"></i>
+                        <h6>{{ style }}</h6>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+
+            <!-- STEP 5: Select Activities -->
+            @if (currentStep() === 5) {
+              <div class="step-pane animate-fade-in-up">
+                <h4 class="mb-2"><i class="bi bi-lightning text-tf-primary"></i> Step 5: Select Activities</h4>
+                <p class="text-tf-muted small mb-3">Add activities to enrich your day-by-day itinerary.</p>
+
+                <div class="row g-3 activity-picker-grid">
+                  @for (act of activityService.activities(); track act.id) {
+                    <div class="col-md-6">
+                      <div
+                        class="selectable-card"
+                        [class.selected]="isActivitySelected(act.id)"
+                        (click)="toggleActivity(act.id)"
+                      >
+                        <img [src]="act.image" [alt]="act.name" class="card-thumb">
+                        <div class="card-info">
+                          <h6>{{ act.name }}</h6>
+                          <small class="text-tf-muted">{{ act.category }} • {{ act.duration }}</small>
+                          <div class="mt-1 fw-bold text-tf-accent">₹{{ act.price.toLocaleString() }}</div>
+                        </div>
+                        <div class="select-check">
+                          <i [class]="isActivitySelected(act.id) ? 'bi bi-check-circle-fill text-tf-primary' : 'bi bi-circle'"></i>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            }
+
+            <!-- STEP 6: Budget Setting -->
+            @if (currentStep() === 6) {
+              <div class="step-pane animate-fade-in-up">
+                <h4 class="mb-3"><i class="bi bi-wallet2 text-tf-primary"></i> Step 6: Set Target Budget</h4>
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label for="budgetInput" class="form-label-tf">Total Budget (₹): {{ budget.toLocaleString() }}</label>
+                    <input
+                      type="range"
+                      id="budgetInput"
+                      name="budget"
+                      class="form-range"
+                      min="5000"
+                      max="150000"
+                      step="2500"
+                      [(ngModel)]="budget"
+                      (input)="syncCurrentTripState()"
+                    >
+                  </div>
+
+                  <div class="col-md-12">
+                    <label for="notes" class="form-label-tf">Additional Notes / Preferences</label>
+                    <textarea
+                      id="notes"
+                      name="notes"
+                      rows="3"
+                      class="form-control-tf"
+                      placeholder="Special dietary needs, preferred transport type, hotel preferences..."
+                      [(ngModel)]="notes"
+                      (input)="syncCurrentTripState()"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            }
+
+            <!-- STEP 7: Generate Trip -->
+            @if (currentStep() === 7) {
+              <div class="step-pane animate-fade-in-up text-center py-4">
+                @if (isGenerating()) {
+                  <div class="py-5">
+                    <div class="spinner-border text-tf-primary mb-3" style="width: 3rem; height: 3rem;"></div>
+                    <h4>Forging your adventure...</h4>
+                    <p class="text-tf-muted">Calculating optimal routes, itinerary timeline, and budget breakdowns.</p>
+                  </div>
+                } @else if (generatedTrip()) {
+                  <div class="generated-success animate-scale-in">
+                    <div class="success-icon mb-3">
+                      <i class="bi bi-check-circle-fill text-tf-success display-1"></i>
+                    </div>
+                    <h3>Your Trip is Ready!</h3>
+                    <p class="text-tf-secondary mb-4">"{{ generatedTrip()?.name }}" has been saved to your dashboard.</p>
+
+                    <!-- Itinerary Vertical Timeline -->
+                    <div class="text-start mt-4">
+                      <h4 class="mb-4"><i class="bi bi-calendar-week text-tf-primary"></i> Generated Day-by-Day Itinerary</h4>
+                      <div class="timeline">
+                        @for (day of generatedTrip()?.itinerary; track day.day) {
+                          <div class="timeline-item">
+                            <h5 class="text-tf-primary mb-1">Day {{ day.day }}: {{ day.title }}</h5>
+                            <p class="mb-2">{{ day.description }}</p>
+                            <div class="d-flex flex-wrap gap-2 mb-2">
+                              @for (act of day.activities; track act) {
+                                <span class="badge-tf badge-tf-info"><i class="bi bi-check2"></i> {{ act }}</span>
+                              }
+                            </div>
+                            <small class="text-tf-muted"><i class="bi bi-building"></i> Stay: {{ day.accommodation }}</small>
+                          </div>
+                        }
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+                      <button type="button" class="btn btn-tf-glass" (click)="exportGeneratedPdf()">
+                        <i class="bi bi-file-earmark-pdf-fill text-tf-danger me-1"></i> Download PDF Itinerary
+                      </button>
+                      <button type="button" class="btn-tf-primary" (click)="viewSavedTrips()">
+                        <i class="bi bi-map me-1"></i> View Saved Trips
+                      </button>
+                    </div>
+                  </div>
+                } @else {
+                  <div class="py-4">
+                    <i class="bi bi-rocket-takeoff display-1 text-tf-primary d-block mb-3 animate-float"></i>
+                    <h3>Ready to Forge Your Adventure?</h3>
+                    <p class="text-tf-secondary mb-4">Click below to generate a tailored itinerary and live budget estimate.</p>
+                    <button
+                      type="submit"
+                      class="btn-tf-accent btn-lg"
+                      [disabled]="builderForm.invalid"
+                    >
+                      <i class="bi bi-stars"></i> GENERATE MY ADVENTURE
+                    </button>
+                  </div>
+                }
+              </div>
+            }
+
+            <!-- Step Navigation Buttons -->
+            @if (currentStep() < 7) {
+              <div class="d-flex justify-content-between mt-4 pt-3 border-top border-secondary border-opacity-25">
+                <button
+                  type="button"
+                  class="btn-tf-glass"
+                  [disabled]="currentStep() === 1"
+                  (click)="prevStep()"
+                >
+                  <i class="bi bi-arrow-left"></i> Previous
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-tf-primary"
+                  (click)="nextStep()"
+                >
+                  Next Step <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            }
+          </form>
+        </div>
+      </div>
+
+      <!-- Live Budget Calculator & Smart Insights Sidebar -->
+      <div class="col-lg-4">
+        <!-- Live Budget Breakdown -->
+        <div class="glass-card p-4 mb-4 sticky-top" style="top: 90px; z-index: 10;">
+          <h5 class="mb-3"><i class="bi bi-calculator text-tf-primary"></i> Live Budget Calculator</h5>
+
+          <div class="budget-stat mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-tf-secondary">Budget Used</span>
+              <span class="fw-bold" [class.text-tf-danger]="tripService.isOverBudget()">
+                ₹{{ tripService.estimatedCost().toLocaleString() }} / ₹{{ (tripService.currentTrip().budget ?? 0).toLocaleString() }}
+              </span>
+            </div>
+            <div class="tf-progress">
+              <div
+                class="tf-progress-bar"
+                [class.over-budget]="tripService.isOverBudget()"
+                [style.width.%]="tripService.budgetPercentage()"
+              ></div>
+            </div>
+          </div>
+
+          @if (tripService.isOverBudget()) {
+            <div class="alert alert-danger py-2 px-3 small mb-3">
+              <i class="bi bi-exclamation-triangle-fill"></i> Budget Exceeded by ₹{{ Math.abs(tripService.budgetRemaining()).toLocaleString() }}
+            </div>
+          }
+
+          <div class="budget-breakdown-list">
+            <div class="b-row">
+              <span><i class="bi bi-building"></i> Accommodation</span>
+              <strong>₹{{ tripService.currentBudgetBreakdown().accommodation.toLocaleString() }}</strong>
+            </div>
+            <div class="b-row">
+              <span><i class="bi bi-cup-hot"></i> Food & Dining</span>
+              <strong>₹{{ tripService.currentBudgetBreakdown().food.toLocaleString() }}</strong>
+            </div>
+            <div class="b-row">
+              <span><i class="bi bi-bus-front"></i> Transport</span>
+              <strong>₹{{ tripService.currentBudgetBreakdown().transportation.toLocaleString() }}</strong>
+            </div>
+            <div class="b-row">
+              <span><i class="bi bi-lightning"></i> Activities</span>
+              <strong>₹{{ tripService.currentBudgetBreakdown().activities.toLocaleString() }}</strong>
+            </div>
+            <div class="b-row">
+              <span><i class="bi bi-box"></i> Miscellaneous</span>
+              <strong>₹{{ tripService.currentBudgetBreakdown().miscellaneous.toLocaleString() }}</strong>
+            </div>
+          </div>
+
+          <!-- Smart Insights -->
+          <div class="mt-4 pt-3 border-top border-secondary border-opacity-25">
+            <h6 class="mb-3"><i class="bi bi-cpu text-tf-accent"></i> Smart Trip Insights</h6>
+            @for (insight of tripService.tripInsights(); track insight) {
+              <div class="insight-card mb-2">
+                <i class="bi bi-lightbulb text-tf-accent"></i>
+                <span>{{ insight }}</span>
+              </div>
+            } @empty {
+              <p class="text-tf-muted small">Add destinations and activities to receive smart recommendations.</p>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

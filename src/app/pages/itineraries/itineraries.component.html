@@ -1,0 +1,66 @@
+<div class="page-container itineraries-page">
+  <div class="itin-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <span class="hero-badge animate-fade-in-up"><i class="bi bi-journal-bookmark-fill"></i> Curated Travel Routes</span>
+      <h1 class="animate-fade-in-up">Sample <span class="gradient-text">Itinerary Library</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Browse hand-crafted tour itineraries across India. View day-by-day plans and customize them directly inside the Smart Trip Builder.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    @if (itineraryService.isLoading()) {
+      <app-loading-spinner message="Loading sample itineraries..." />
+    } @else {
+      <div class="row g-4">
+        @for (itin of itineraryService.itineraries(); track itin.id; let i = $index) {
+          <div class="col-lg-6 animate-fade-in-up" [style.animation-delay]="(i * 0.06) + 's'">
+            <div class="glass-card h-100 p-4 d-flex flex-column">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <img [src]="itin.coverImage" [alt]="itin.title" class="rounded itin-cover">
+                <div>
+                  <span class="badge-tf badge-tf-primary mb-1">{{ itin.durationDays }} Days • {{ itin.travelStyle }}</span>
+                  <h4 class="mb-0 fw-bold">{{ itin.title }}</h4>
+                  <small class="text-tf-muted d-block">{{ itin.subtitle }}</small>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center p-2 glass-card rounded-3 mb-3 small">
+                <span><i class="bi bi-currency-rupee text-tf-success"></i> Est. Cost: <strong>₹{{ itin.estimatedBudgetPerPerson | number }}</strong> / person</span>
+                <span><i class="bi bi-geo-alt text-tf-primary"></i> {{ itin.destinationNames.join(' → ') }}</span>
+              </div>
+
+              <h6 class="text-tf-primary mb-2">Highlights:</h6>
+              <div class="d-flex flex-wrap gap-1 mb-3">
+                @for (h of itin.highlights; track h) {
+                  <span class="badge-tf badge-tf-glass extra-small">✦ {{ h }}</span>
+                }
+              </div>
+
+              <!-- Day by Day Plan Accordion -->
+              <div class="day-plan-box glass-card p-3 rounded mb-3 flex-grow-1">
+                <h6 class="fw-bold mb-2">Day-by-Day Summary:</h6>
+                @for (day of itin.dayByDayPlan; track day.day) {
+                  <div class="mb-2 pb-2 border-bottom border-secondary border-opacity-25 last-no-border">
+                    <small class="text-tf-warning fw-bold d-block">Day {{ day.day }}: {{ day.title }}</small>
+                    <p class="extra-small text-tf-secondary mb-0">{{ day.description }}</p>
+                  </div>
+                }
+              </div>
+
+              <div class="d-flex gap-2 mt-auto">
+                <button class="btn-tf-primary flex-grow-1 text-center" (click)="saveDirectlyToTrips(itin)">
+                  <i class="bi bi-bookmark-plus me-1"></i> Save to My Trips
+                </button>
+                <button class="btn-tf-glass text-center" (click)="loadIntoTripBuilder(itin)" title="Customize in Trip Builder">
+                  <i class="bi bi-sliders"></i> Customize
+                </button>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

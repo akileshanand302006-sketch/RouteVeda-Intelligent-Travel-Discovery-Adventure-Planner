@@ -1,0 +1,131 @@
+<div class="page-container explore-page">
+  <!-- Header Banner -->
+  <div class="explore-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <h1 class="animate-fade-in-up">Discover Incredible <span class="gradient-text">Destinations</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary">Filter by region, state, price, category, or difficulty to find your next great Indian adventure.</p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Controls Row -->
+    <div class="glass-card p-3 mb-4 filter-bar animate-fade-in-up">
+      <div class="row g-3 align-items-center">
+        <!-- Real-time Search -->
+        <div class="col-lg-3 col-md-6">
+          <div class="input-wrapper">
+            <i class="bi bi-search input-icon"></i>
+            <input
+              type="text"
+              class="form-control-tf"
+              placeholder="Search destination, location, tag..."
+              [(ngModel)]="searchQuery"
+              (input)="onSearchChange()"
+            >
+          </div>
+        </div>
+
+        <!-- Region Dropdown -->
+        <div class="col-lg-2 col-md-3 col-6">
+          <select class="form-select-tf" [(ngModel)]="selectedRegion" (change)="onFilterChange()">
+            <option value="All">All Regions</option>
+            <option value="North">North India</option>
+            <option value="South">South India</option>
+            <option value="West">West India</option>
+            <option value="East">East India</option>
+            <option value="Central">Central India</option>
+            <option value="North East">North East India</option>
+          </select>
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="col-lg-2 col-md-3 col-6">
+          <select class="form-select-tf" [(ngModel)]="selectedCategory" (change)="onFilterChange()">
+            <option value="">All Categories</option>
+            @for (cat of destinationService.categories(); track cat) {
+              <option [value]="cat">{{ cat }}</option>
+            }
+          </select>
+        </div>
+
+        <!-- State Dropdown -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <select class="form-select-tf" [(ngModel)]="selectedState" (change)="onFilterChange()">
+            <option value="">All States</option>
+            @for (st of destinationService.states(); track st) {
+              <option [value]="st">{{ st }}</option>
+            }
+          </select>
+        </div>
+
+        <!-- Sort Option -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <select class="form-select-tf" [(ngModel)]="sortOption" (change)="onSortChange()">
+            <option value="recommended">Recommended</option>
+            <option value="rating">Highest Rated</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name-asc">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Secondary Filter Row -->
+      <div class="row g-3 align-items-center mt-2 pt-2 border-top border-secondary border-opacity-25">
+        <div class="col-md-6 d-flex align-items-center gap-3">
+          <label class="form-label-tf mb-0 text-nowrap">Max Price: ₹{{ maxPrice.toLocaleString() }}</label>
+          <input
+            type="range"
+            class="form-range"
+            min="4000"
+            max="50000"
+            step="1000"
+            [(ngModel)]="maxPrice"
+            (change)="onFilterChange()"
+          >
+        </div>
+
+        <div class="col-md-6 d-flex align-items-center justify-content-md-end gap-3">
+          <span class="text-tf-secondary small">
+            Showing <strong>{{ destinationService.filteredDestinations().length }}</strong> of {{ destinationService.destinations().length }} destinations
+          </span>
+          <button class="btn btn-sm btn-tf-glass" (click)="resetAllFilters()">
+            <i class="bi bi-arrow-counterclockwise"></i> Reset Filters
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    @if (destinationService.isLoading()) {
+      <app-loading-spinner message="Finding destinations..." />
+    } @else if (destinationService.filteredDestinations().length === 0) {
+      <app-empty-state
+        icon="bi-geo-alt"
+        title="No destinations found"
+        message="No destinations match your search or filter criteria. Try broadening your parameters."
+        actionLabel="Clear Filters"
+        (action)="resetAllFilters()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (dest of destinationService.filteredDestinations(); track dest.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.05) + 's'">
+            <app-destination-card
+              [destination]="dest"
+              (addToTrip)="onAddToTrip($event)"
+              (openCalculator)="openCalculatorFor($event)"
+            />
+          </div>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- Expense Calculator Modal -->
+  <app-expense-calculator-modal
+    [isOpen]="showCalcModal()"
+    [destination]="selectedDestForCalc()"
+    (close)="closeCalculator()"
+  />
+</div>

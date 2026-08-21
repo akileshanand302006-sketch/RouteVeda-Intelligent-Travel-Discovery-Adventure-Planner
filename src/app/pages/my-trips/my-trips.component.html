@@ -1,0 +1,229 @@
+<div class="page-container my-trips-page">
+  <div class="container py-4">
+    <!-- Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div>
+        <h1 class="gradient-text mb-1"><i class="bi bi-map-fill"></i> My Travel Dashboard</h1>
+        <p class="text-tf-secondary mb-0">Manage, edit, track saved itineraries, and access all travel planning tools.</p>
+      </div>
+      <div class="d-flex gap-2 flex-wrap">
+        <a routerLink="/trip-builder" class="btn-tf-primary">
+          <i class="bi bi-plus-lg"></i> Create New Trip
+        </a>
+        <a routerLink="/bucket-list" class="btn-tf-glass">
+          <i class="bi bi-check2-square text-tf-success"></i> Bucket List
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Tool Access Strip -->
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3 col-lg-2">
+        <a routerLink="/trip-builder" class="text-decoration-none">
+          <div class="glass-card p-3 text-center h-100 quick-link-card">
+            <i class="bi bi-rocket-takeoff text-tf-primary fs-3 d-block mb-1"></i>
+            <span class="small fw-bold d-block text-tf">Trip Builder</span>
+            <small class="text-tf-muted extra-small">Custom Routes</small>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a routerLink="/recommend" class="text-decoration-none">
+          <div class="glass-card p-3 text-center h-100 quick-link-card">
+            <i class="bi bi-magic text-tf-accent fs-3 d-block mb-1"></i>
+            <span class="small fw-bold d-block text-tf">Finder Quiz</span>
+            <small class="text-tf-muted extra-small">Smart Match</small>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a routerLink="/compare" class="text-decoration-none">
+          <div class="glass-card p-3 text-center h-100 quick-link-card">
+            <i class="bi bi-bar-chart-steps text-tf-info fs-3 d-block mb-1"></i>
+            <span class="small fw-bold d-block text-tf">Compare</span>
+            <small class="text-tf-muted extra-small">Side-by-Side</small>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a routerLink="/india" class="text-decoration-none">
+          <div class="glass-card p-3 text-center h-100 quick-link-card">
+            <i class="bi bi-globe-asia-australia text-tf-primary fs-3 d-block mb-1"></i>
+            <span class="small fw-bold d-block text-tf">India 36</span>
+            <small class="text-tf-muted extra-small">States & UTs</small>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a routerLink="/itineraries" class="text-decoration-none">
+          <div class="glass-card p-3 text-center h-100 quick-link-card">
+            <i class="bi bi-journal-bookmark text-tf-warning fs-3 d-block mb-1"></i>
+            <span class="small fw-bold d-block text-tf">Itineraries</span>
+            <small class="text-tf-muted extra-small">Ready Routes</small>
+          </div>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a routerLink="/achievements" class="text-decoration-none">
+          <div class="glass-card p-3 text-center h-100 quick-link-card">
+            <i class="bi bi-trophy text-tf-warning fs-3 d-block mb-1"></i>
+            <span class="small fw-bold d-block text-tf">Badges</span>
+            <small class="text-tf-muted extra-small">Trophies</small>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Status Tabs -->
+    <div class="d-flex flex-wrap gap-2 mb-4">
+      <button
+        class="category-chip"
+        [class.active]="selectedStatus() === 'All'"
+        (click)="filterByStatus('All')"
+      >
+        All Saved Trips ({{ tripService.trips().length }})
+      </button>
+      <button
+        class="category-chip"
+        [class.active]="selectedStatus() === 'Planning'"
+        (click)="filterByStatus('Planning')"
+      >
+        Planning ({{ tripService.tripsByStatus().planning.length }})
+      </button>
+      <button
+        class="category-chip"
+        [class.active]="selectedStatus() === 'Confirmed'"
+        (click)="filterByStatus('Confirmed')"
+      >
+        Confirmed ({{ tripService.tripsByStatus().confirmed.length }})
+      </button>
+      <button
+        class="category-chip"
+        [class.active]="selectedStatus() === 'Completed'"
+        (click)="filterByStatus('Completed')"
+      >
+        Completed ({{ tripService.tripsByStatus().completed.length }})
+      </button>
+    </div>
+
+    <!-- Trip Cards Grid -->
+    @if (filteredTrips.length === 0) {
+      <app-empty-state
+        icon="bi-map"
+        title="Your next adventure starts here"
+        message="You don't have any saved trips matching this filter. Start building your custom trip now!"
+        actionLabel="Build My Trip"
+        (action)="onBuildTrip()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (trip of filteredTrips; track trip.id) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up">
+            <div class="tf-card trip-card h-100 d-flex flex-column" appGlowOnHover>
+              <div class="card-img-wrapper">
+                <img [src]="trip.coverImage" [alt]="trip.name" class="card-img-top">
+                <span class="status-badge badge-tf"
+                  [class.badge-tf-warning]="trip.status === 'Planning'"
+                  [class.badge-tf-success]="trip.status === 'Confirmed'"
+                  [class.badge-tf-info]="trip.status === 'Completed'"
+                >{{ trip.status }}</span>
+                <span class="duration-badge"><i class="bi bi-clock"></i> {{ trip.duration }} Days</span>
+              </div>
+
+              <div class="card-body d-flex flex-column flex-grow-1">
+                <h5 class="card-title fw-bold mb-1">{{ trip.name }}</h5>
+                <p class="small text-tf-secondary mb-2">
+                  <i class="bi bi-geo-alt-fill text-tf-primary"></i>
+                  {{ trip.destinationNames?.join(', ') }}
+                </p>
+
+                <div class="meta-grid my-3">
+                  <div class="meta-cell">
+                    <small class="text-tf-muted extra-small">Dates</small>
+                    <div class="fw-semibold small">{{ trip.startDate }}</div>
+                  </div>
+                  <div class="meta-cell">
+                    <small class="text-tf-muted extra-small">Travelers</small>
+                    <div class="fw-semibold small">{{ trip.numberOfTravelers }} People</div>
+                  </div>
+                  <div class="meta-cell">
+                    <small class="text-tf-muted extra-small">Style</small>
+                    <div class="fw-semibold small">{{ trip.travelStyle }}</div>
+                  </div>
+                  <div class="meta-cell">
+                    <small class="text-tf-muted extra-small">Est. Cost</small>
+                    <div class="fw-bold text-tf-primary small">₹{{ trip.estimatedCost.toLocaleString() }}</div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25 mt-auto">
+                  <div class="btn-group btn-group-sm">
+                    <button class="btn btn-tf-glass" (click)="viewTrip(trip)" title="View Itinerary">
+                      <i class="bi bi-eye"></i> View
+                    </button>
+                    <button class="btn btn-tf-glass" (click)="duplicateTrip(trip)" title="Duplicate">
+                      <i class="bi bi-copy"></i>
+                    </button>
+                    <button class="btn btn-tf-glass" (click)="exportTripUI(trip)" title="Export PDF">
+                      <i class="bi bi-download"></i>
+                    </button>
+                  </div>
+                  <button class="btn btn-sm btn-tf-danger" (click)="openDeleteModal(trip)" title="Delete Trip">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>
+
+<!-- Trip Details View Modal -->
+@if (tripToView()) {
+  <div class="modal-backdrop d-flex align-items-center justify-content-center" (click)="closeView()">
+    <div class="modal-card modal-lg animate-scale-in p-4" (click)="$event.stopPropagation()">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0 fw-bold">{{ tripToView()?.name }}</h4>
+        <button class="btn-close" (click)="closeView()"></button>
+      </div>
+
+      <div class="row text-start mb-3 g-2 small">
+        <div class="col-md-3"><strong>Status:</strong> {{ tripToView()?.status }}</div>
+        <div class="col-md-3"><strong>Dates:</strong> {{ tripToView()?.startDate }} to {{ tripToView()?.endDate }}</div>
+        <div class="col-md-3"><strong>Duration:</strong> {{ tripToView()?.duration }} Days</div>
+        <div class="col-md-3"><strong>Cost:</strong> ₹{{ tripToView()?.estimatedCost?.toLocaleString() }}</div>
+      </div>
+
+      <h5 class="text-start mb-3"><i class="bi bi-calendar-week text-tf-primary"></i> Day-by-Day Itinerary</h5>
+      <div class="timeline text-start mb-4" style="max-height: 350px; overflow-y: auto;">
+        @for (day of tripToView()?.itinerary; track day.day) {
+          <div class="timeline-item">
+            <h6 class="fw-bold">Day {{ day.day }}: {{ day.title }}</h6>
+            <p class="small mb-1 text-tf-secondary">{{ day.description }}</p>
+            <div class="small text-tf-muted"><i class="bi bi-house-door"></i> Stay: {{ day.accommodation }}</div>
+          </div>
+        }
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top border-secondary border-opacity-25">
+        <button class="btn btn-tf-glass" (click)="tripToView() && exportTripUI(tripToView()!)">
+          <i class="bi bi-file-earmark-pdf-fill text-tf-danger me-1"></i> Download PDF Itinerary
+        </button>
+        <button class="btn-tf-primary px-4" (click)="closeView()">Close</button>
+      </div>
+    </div>
+  </div>
+}
+
+<!-- Delete Confirmation Modal -->
+<app-confirm-modal
+  [isOpen]="!!tripToDelete()"
+  title="Delete Trip?"
+  [message]="'Are you sure you want to delete ' + (tripToDelete()?.name ?? '') + '? This action cannot be undone.'"
+  confirmLabel="Delete Trip"
+  (confirm)="confirmDelete()"
+  (cancel)="cancelDelete()"
+/>

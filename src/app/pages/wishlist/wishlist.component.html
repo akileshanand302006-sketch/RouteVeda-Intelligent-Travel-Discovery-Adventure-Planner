@@ -1,0 +1,39 @@
+<div class="page-container wishlist-page">
+  <div class="container py-4">
+    <!-- Header -->
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+      <div>
+        <h1 class="gradient-text mb-1"><i class="bi bi-heart-fill text-danger"></i> My Wishlist</h1>
+        <p class="text-tf-secondary mb-0">Your collection of favorite dream destinations.</p>
+      </div>
+
+      @if (wishlistedDestinations().length > 0) {
+        <div class="d-flex gap-2">
+          <button class="btn-tf-glass" (click)="clearAllWishlist()">
+            <i class="bi bi-trash"></i> Clear All
+          </button>
+          <a routerLink="/explore" class="btn-tf-outline">
+            <i class="bi bi-plus-lg"></i> Explore More
+          </a>
+        </div>
+      }
+    </div>
+
+    @if (wishlistedDestinations().length === 0) {
+      <app-empty-state
+        icon="bi-heart"
+        title="Your adventure list is empty"
+        message="Save your favorite destinations by clicking the heart icon on any destination card."
+        actionLabel="Explore Destinations"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (dest of wishlistedDestinations(); track dest.id) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up">
+            <app-destination-card [destination]="dest" (addToTrip)="onAddToTrip($event)" />
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

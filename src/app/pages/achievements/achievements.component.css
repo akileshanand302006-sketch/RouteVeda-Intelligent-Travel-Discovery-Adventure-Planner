@@ -1,0 +1,37 @@
+.achieve-hero {
+  padding: 70px 0 40px;
+  margin-bottom: 2rem;
+}
+
+.achieve-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+.badge-card {
+  opacity: 0.75;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.badge-card.unlocked {
+  opacity: 1;
+  border-color: var(--tf-success);
+  box-shadow: var(--tf-shadow-glow);
+}
+
+.badge-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--tf-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tf-text-muted);
+}
+
+.badge-icon-box.unlocked-icon {
+  background: var(--tf-gradient-primary);
+  color: white;
+}

@@ -1,0 +1,1994 @@
+[
+  {
+    "id": "andhra-pradesh",
+    "name": "Andhra Pradesh",
+    "code": "AP",
+    "region": "South",
+    "type": "State",
+    "capital": "Amaravati",
+    "description": "Land of the sacred Tirumala Venkateswara Temple, scenic Eastern Ghats valleys in Araku, Gandikota Grand Canyon of India, and historic Buddhist monuments along the Bay of Bengal coastline.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/INS%20Tarmugli%20(T91)%20near%20Visakhapatnam%20port.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/INS%20Tarmugli%20(T91)%20near%20Visakhapatnam%20port.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 10,
+    "topAttractions": [
+      "Tirupati Venkateswara Temple",
+      "Araku Valley Coffee Gardens",
+      "Gandikota Fort & Canyon",
+      "Borra Caves",
+      "Lepakshi Veerbhadra Temple"
+    ],
+    "foodSpecialties": [
+      "Andhra Spicy Biryani",
+      "Gongura Pachadi",
+      "Pootharekulu Sweet",
+      "Pesarattu Dosa",
+      "Nellore Chepala Pulusu"
+    ],
+    "cultureHighlights": [
+      "Kuchipudi Classical Dance",
+      "Kalamkari Hand-painted Fabric",
+      "Kondapalli Wooden Toys",
+      "Leather Puppetry (Tholu Bommalata)"
+    ],
+    "festivals": [
+      "Ugadi",
+      "Sankranti",
+      "Brahmotsavam Tirupati",
+      "Visakha Utsav",
+      "Flamingo Festival"
+    ],
+    "coordinates": {
+      "lat": 15.9129,
+      "lng": 79.74
+    },
+    "popularDestinationsCount": 8,
+    "destinationsCount": 8,
+    "totalDestinations": 8,
+    "placesCount": 8,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/INS%20Tarmugli%20(T91)%20near%20Visakhapatnam%20port.jpg?width=800"
+  },
+  {
+    "id": "karnataka",
+    "name": "Karnataka",
+    "code": "KA",
+    "region": "South",
+    "type": "State",
+    "capital": "Bengaluru",
+    "description": "One state, many worlds: Featuring the Vijayanagara UNESCO ruins of Hampi, coffee hills of Coorg & Chikmagalur, royal palaces of Mysuru, and pristine beaches of Gokarna.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Grand%20Stone%20chariot%20in%20the%20midst%20of%20Mantapas%20at%20Vittala%20Temple%2C%20Hampi.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Grand%20Stone%20chariot%20in%20the%20midst%20of%20Mantapas%20at%20Vittala%20Temple%2C%20Hampi.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 12,
+    "topAttractions": [
+      "Virupaksha Temple Hampi",
+      "Mysore Palace",
+      "Abbey Falls Coorg",
+      "Gokarna Om Beach",
+      "Badami Cave Temples"
+    ],
+    "foodSpecialties": [
+      "Bisi Bele Bath",
+      "Mysore Pak",
+      "Neer Dosa with Chutney",
+      "Coorg Pandi Curry",
+      "Dharwad Peda"
+    ],
+    "cultureHighlights": [
+      "Yakshagana Dance Drama",
+      "Channapatna Toys",
+      "Mysore Silk Weaving",
+      "Carnatic Music"
+    ],
+    "festivals": [
+      "Mysore Dasara",
+      "Kambala Buffalo Race",
+      "Hampi Utsav",
+      "Karaga"
+    ],
+    "coordinates": {
+      "lat": 15.3173,
+      "lng": 75.7139
+    },
+    "popularDestinationsCount": 9,
+    "destinationsCount": 9,
+    "totalDestinations": 9,
+    "placesCount": 9,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Grand%20Stone%20chariot%20in%20the%20midst%20of%20Mantapas%20at%20Vittala%20Temple%2C%20Hampi.jpg?width=800"
+  },
+  {
+    "id": "kerala",
+    "name": "Kerala",
+    "code": "KL",
+    "region": "South",
+    "type": "State",
+    "capital": "Thiruvananthapuram",
+    "description": "God's Own Country, famed for emerald backwaters, tea plantation hills in Munnar, cliff beaches in Varkala, Ayurvedic wellness, and Kathakali cultural performances.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Mattupetty%20Lake%20View.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Mattupetty%20Lake%20View.jpg?width=1200",
+    "bestTimeToVisit": [
+      "September",
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 12,
+    "topAttractions": [
+      "Alleppey Backwaters",
+      "Munnar Tea Gardens",
+      "Varkala Cliff Beach",
+      "Periyar National Park",
+      "Athirappilly Waterfalls"
+    ],
+    "foodSpecialties": [
+      "Appam with Stew",
+      "Kerala Sadya on Banana Leaf",
+      "Fish Molee",
+      "Malabar Parotta",
+      "Karimeen Pollichathu"
+    ],
+    "cultureHighlights": [
+      "Kathakali",
+      "Theyyam Ritual Dance",
+      "Kalaripayattu Martial Arts",
+      "Snake Boat Races",
+      "Ayurveda"
+    ],
+    "festivals": [
+      "Onam",
+      "Vishu",
+      "Thrissur Pooram",
+      "Nehru Trophy Boat Race"
+    ],
+    "coordinates": {
+      "lat": 10.8505,
+      "lng": 76.2711
+    },
+    "popularDestinationsCount": 9,
+    "destinationsCount": 9,
+    "totalDestinations": 9,
+    "placesCount": 9,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mattupetty%20Lake%20View.jpg?width=800"
+  },
+  {
+    "id": "tamil-nadu",
+    "name": "Tamil Nadu",
+    "code": "TN",
+    "region": "South",
+    "type": "State",
+    "capital": "Chennai",
+    "description": "Land of ancient Dravidian temples, misty Nilgiri hill stations in Ooty & Kodaikanal, UNESCO Shore Temple Mahabalipuram, rich silk weaving, and vibrant carnatic heritage.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Steam%20Locomotive%2C%20Nilgiri%20Mountain%20Railway%2C%20May%202010.JPG?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Steam%20Locomotive%2C%20Nilgiri%20Mountain%20Railway%2C%20May%202010.JPG?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 14,
+    "topAttractions": [
+      "Meenakshi Amman Temple",
+      "Brihadeeswarar Temple Thanjavur",
+      "Nilgiri Mountain Railway Ooty",
+      "Shore Temple Mahabalipuram",
+      "Rameshwaram Temple & Pamban Bridge"
+    ],
+    "foodSpecialties": [
+      "Chettinad Chicken",
+      "Filter Coffee",
+      "Crispy Masala Dosa",
+      "Jigarthanda Madurai",
+      "Kothu Parotta"
+    ],
+    "cultureHighlights": [
+      "Bharatanatyam Dance",
+      "Carnatic Classical Music",
+      "Kanchipuram Silk Weaving",
+      "Chola Bronze Sculptures"
+    ],
+    "festivals": [
+      "Pongal & Jallikattu",
+      "Chithirai Festival Madurai",
+      "Natyanjali Dance Festival",
+      "Mamallapuram Dance Festival"
+    ],
+    "coordinates": {
+      "lat": 11.1271,
+      "lng": 78.6569
+    },
+    "popularDestinationsCount": 10,
+    "destinationsCount": 10,
+    "totalDestinations": 10,
+    "placesCount": 10,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Steam%20Locomotive%2C%20Nilgiri%20Mountain%20Railway%2C%20May%202010.JPG?width=800"
+  },
+  {
+    "id": "telangana",
+    "name": "Telangana",
+    "code": "TS",
+    "region": "South",
+    "type": "State",
+    "capital": "Hyderabad",
+    "description": "Land of the historic Charminar, Golconda Fort, UNESCO Ramappa Temple, Kakatiya stone gateways in Warangal, and aromatic Hyderabadi Biryani.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe%20Niloufer%20Hitech%20City%20Hyderabad%20Telangana%204.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe%20Niloufer%20Hitech%20City%20Hyderabad%20Telangana%204.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 8,
+    "topAttractions": [
+      "Charminar Hyderabad",
+      "Golconda Fort",
+      "UNESCO Ramappa Temple",
+      "Warangal Thousand Pillar Temple",
+      "Nagarjuna Sagar Dam"
+    ],
+    "foodSpecialties": [
+      "Hyderabadi Dum Biryani",
+      "Haleem",
+      "Mirchi Ka Salan",
+      "Qubani Ka Meetha",
+      "Sarva Pindi"
+    ],
+    "cultureHighlights": [
+      "Pochampally Ikat Silk",
+      "Bidri Metal Craft",
+      "Perini Sivatandavam Dance",
+      "Dokra Crafts"
+    ],
+    "festivals": [
+      "Bathukamma Floral Festival",
+      "Bonalu",
+      "Sammakka Saralamma Jatara",
+      "Milad-un-Nabi"
+    ],
+    "coordinates": {
+      "lat": 18.1124,
+      "lng": 79.0193
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cafe%20Niloufer%20Hitech%20City%20Hyderabad%20Telangana%204.jpg?width=800"
+  },
+  {
+    "id": "goa",
+    "name": "Goa",
+    "code": "GA",
+    "region": "West",
+    "type": "State",
+    "capital": "Panaji",
+    "description": "India's coastal haven of golden sand beaches, Latin Quarter mansions, seafood beach shacks, scuba diving, Dudhsagar Waterfalls, and Portuguese cathedrals.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bw%20(225071167).jpeg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Bw%20(225071167).jpeg?width=1200",
+    "bestTimeToVisit": [
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 8,
+    "topAttractions": [
+      "Basilica of Bom Jesus",
+      "Dudhsagar Waterfalls",
+      "Calangute Beach",
+      "Palolem Beach",
+      "Fort Aguada"
+    ],
+    "foodSpecialties": [
+      "Goan Fish Curry Thali",
+      "Pork Vindaloo",
+      "Bebinca Cake",
+      "Prawn Balchao",
+      "Feni"
+    ],
+    "cultureHighlights": [
+      "Portuguese Architecture",
+      "Fado Music",
+      "Brass Bands",
+      "Carnival Processions"
+    ],
+    "festivals": [
+      "Goa Carnival",
+      "Shigmo",
+      "Sunburn Festival",
+      "Feast of St. Francis Xavier"
+    ],
+    "coordinates": {
+      "lat": 15.2993,
+      "lng": 74.124
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bw%20(225071167).jpeg?width=800"
+  },
+  {
+    "id": "maharashtra",
+    "name": "Maharashtra",
+    "code": "MH",
+    "region": "West",
+    "type": "State",
+    "capital": "Mumbai",
+    "description": "A dynamic state featuring financial capital Mumbai, UNESCO Ajanta & Ellora cave art, Shivaji Maharaj hillforts, Lonavala retreats, and Tadoba tiger reserve.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/CST-Mumbai-Maharashtra-DSC0001.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/CST-Mumbai-Maharashtra-DSC0001.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 12,
+    "topAttractions": [
+      "Gateway of India Mumbai",
+      "Ajanta & Ellora Caves",
+      "Sinhagad Fort Pune",
+      "Mahabaleshwar Viewpoints",
+      "Tadoba Tiger Reserve"
+    ],
+    "foodSpecialties": [
+      "Vada Pav",
+      "Puneri Misal Pav",
+      "Puran Poli",
+      "Pav Bhaji",
+      "Modak"
+    ],
+    "cultureHighlights": [
+      "Ganesh Chaturthi Festivities",
+      "Lavani Folk Dance",
+      "Warli Tribal Art",
+      "Maratha Fort Architecture"
+    ],
+    "festivals": [
+      "Ganesh Chaturthi",
+      "Gudi Padwa",
+      "Elephanta Festival",
+      "Kala Ghoda Arts Festival"
+    ],
+    "coordinates": {
+      "lat": 19.7515,
+      "lng": 75.7139
+    },
+    "popularDestinationsCount": 9,
+    "destinationsCount": 9,
+    "totalDestinations": 9,
+    "placesCount": 9,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/CST-Mumbai-Maharashtra-DSC0001.jpg?width=800"
+  },
+  {
+    "id": "gujarat",
+    "name": "Gujarat",
+    "code": "GJ",
+    "region": "West",
+    "type": "State",
+    "capital": "Gandhinagar",
+    "description": "Land of the White Rann of Kutch, Asiatic lions of Gir, Statue of Unity, ancient Indus Valley city Dholavira, Somnath Temple, and vibrant Navratri Garba.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rann%20utsav%2003.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rann%20utsav%2003.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 10,
+    "topAttractions": [
+      "Statue of Unity",
+      "White Rann of Kutch",
+      "Gir National Park",
+      "Somnath Temple",
+      "Rani Ki Vav Stepwell Patan"
+    ],
+    "foodSpecialties": [
+      "Gujarati Thali",
+      "Dhokla & Khandvi",
+      "Fafda Jalebi",
+      "Undhiyu",
+      "Shrikhand"
+    ],
+    "cultureHighlights": [
+      "Garba & Dandiya Raas",
+      "Bandhani Tie-Dye Textile",
+      "Patola Silk Weaving",
+      "Rann Utsav Crafts"
+    ],
+    "festivals": [
+      "Navratri",
+      "International Kite Festival (Uttarayan)",
+      "Rann Utsav",
+      "Modhera Dance Festival"
+    ],
+    "coordinates": {
+      "lat": 22.2587,
+      "lng": 71.1924
+    },
+    "popularDestinationsCount": 8,
+    "destinationsCount": 8,
+    "totalDestinations": 8,
+    "placesCount": 8,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rann%20utsav%2003.jpg?width=800"
+  },
+  {
+    "id": "rajasthan",
+    "name": "Rajasthan",
+    "code": "RJ",
+    "region": "North",
+    "type": "State",
+    "capital": "Jaipur",
+    "description": "Land of Kings, renowned for majestic desert hillforts, royal palaces, Thar desert camel safaris, vibrant folk music, and colorful bazaars.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/East%20facade%20Hawa%20Mahal%20Jaipur%20from%20ground%20level%20(July%202022)%20-%20img%2001.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/East%20facade%20Hawa%20Mahal%20Jaipur%20from%20ground%20level%20(July%202022)%20-%20img%2001.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 12,
+    "topAttractions": [
+      "Amber Fort Jaipur",
+      "City Palace Udaipur",
+      "Jaisalmer Golden Fort",
+      "Mehrangarh Fort Jodhpur",
+      "Pushkar Lake"
+    ],
+    "foodSpecialties": [
+      "Dal Baati Churma",
+      "Laal Maas",
+      "Gatte Ki Sabzi",
+      "Ghevar Sweet",
+      "Pyaaz Kachori"
+    ],
+    "cultureHighlights": [
+      "Ghoomar Dance",
+      "Kalbelia Folk Dance",
+      "Kathputli Puppet Shows",
+      "Block Printing & Blue Pottery"
+    ],
+    "festivals": [
+      "Pushkar Camel Fair",
+      "Desert Festival Jaisalmer",
+      "Teej Festival",
+      "Mewar Festival Udaipur"
+    ],
+    "coordinates": {
+      "lat": 27.0238,
+      "lng": 74.2179
+    },
+    "popularDestinationsCount": 9,
+    "destinationsCount": 9,
+    "totalDestinations": 9,
+    "placesCount": 9,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/East%20facade%20Hawa%20Mahal%20Jaipur%20from%20ground%20level%20(July%202022)%20-%20img%2001.jpg?width=800"
+  },
+  {
+    "id": "himachal-pradesh",
+    "name": "Himachal Pradesh",
+    "code": "HP",
+    "region": "North",
+    "type": "State",
+    "capital": "Shimla",
+    "description": "The Abode of Snow, home to soaring Himalayan peaks, Buddhist monasteries of Spiti, apple orchards, snow adventure sports, and colonial hill stations.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaks%20on%20Manali%2C%20Himachal%20Pradesh.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaks%20on%20Manali%2C%20Himachal%20Pradesh.jpg?width=1200",
+    "bestTimeToVisit": [
+      "March",
+      "April",
+      "May",
+      "June",
+      "September",
+      "October",
+      "November",
+      "December"
+    ],
+    "famousDestinationsCount": 10,
+    "topAttractions": [
+      "Rohtang Pass Snow Point",
+      "Key Monastery Spiti",
+      "Mall Road Shimla",
+      "McLeod Ganj Dharamshala",
+      "Parvati Valley Kasol"
+    ],
+    "foodSpecialties": [
+      "Himachali Dham",
+      "Siddu with Ghee",
+      "Chha Gosht",
+      "Trout Fish Fry",
+      "Babru"
+    ],
+    "cultureHighlights": [
+      "Tibetan Buddhist Tradition",
+      "Himachali Caps & Kullu Shawls",
+      "Nati Folk Dance",
+      "Apple Harvest Traditions"
+    ],
+    "festivals": [
+      "Kullu Dussehra",
+      "Minjar Mela",
+      "Losar Tibetan New Year",
+      "Lahaul Festival"
+    ],
+    "coordinates": {
+      "lat": 31.1048,
+      "lng": 77.1734
+    },
+    "popularDestinationsCount": 9,
+    "destinationsCount": 9,
+    "totalDestinations": 9,
+    "placesCount": 9,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Yaks%20on%20Manali%2C%20Himachal%20Pradesh.jpg?width=800"
+  },
+  {
+    "id": "uttarakhand",
+    "name": "Uttarakhand",
+    "code": "UK",
+    "region": "North",
+    "type": "State",
+    "capital": "Dehradun",
+    "description": "Devbhoomi (Land of Gods), featuring Char Dham pilgrimage shrines, holy Ganges river ghats in Rishikesh & Haridwar, Jim Corbett tiger reserve, and Naini Lake.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Kundalini%20Yoga%20Teacher%20Training%20in%20Rishikesh.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Kundalini%20Yoga%20Teacher%20Training%20in%20Rishikesh.jpg?width=1200",
+    "bestTimeToVisit": [
+      "March",
+      "April",
+      "May",
+      "June",
+      "September",
+      "October",
+      "November"
+    ],
+    "famousDestinationsCount": 10,
+    "topAttractions": [
+      "Triveni Ghat Ganga Aarti",
+      "Naini Lake Nainital",
+      "Kedarnath Temple",
+      "Valley of Flowers",
+      "Jim Corbett National Park"
+    ],
+    "foodSpecialties": [
+      "Kafuli",
+      "Bhang Ki Chutney",
+      "Aloo Ke Gutke",
+      "Singodi",
+      "Bal Mithai Almora"
+    ],
+    "cultureHighlights": [
+      "Ganga Aarti Rituals",
+      "Garhwali & Kumaoni Folk Songs",
+      "Yoga & Ashram Living",
+      "Pahadi Architecture"
+    ],
+    "festivals": [
+      "Kumbh Mela Haridwar",
+      "International Yoga Festival Rishikesh",
+      "Nanda Devi Raj Jat",
+      "Phool Dei"
+    ],
+    "coordinates": {
+      "lat": 30.0668,
+      "lng": 79.0193
+    },
+    "popularDestinationsCount": 9,
+    "destinationsCount": 9,
+    "totalDestinations": 9,
+    "placesCount": 9,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Kundalini%20Yoga%20Teacher%20Training%20in%20Rishikesh.jpg?width=800"
+  },
+  {
+    "id": "uttar-pradesh",
+    "name": "Uttar Pradesh",
+    "code": "UP",
+    "region": "North",
+    "type": "State",
+    "capital": "Lucknow",
+    "description": "Heartland of Indian heritage featuring Taj Mahal Agra, spiritual Varanasi ghats, Ayodhya Ram Mandir, Mathura Vrindavan, and Awadhi royal cuisine of Lucknow.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Evening%20Ganga%20Aarti%20Assi%20Ghat%2C%20Varanasi%209.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Evening%20Ganga%20Aarti%20Assi%20Ghat%2C%20Varanasi%209.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 12,
+    "topAttractions": [
+      "Taj Mahal Agra",
+      "Varanasi Ghats & Ganga Aarti",
+      "Ayodhya Ram Mandir",
+      "Fatehpur Sikri",
+      "Bara Imambara Lucknow"
+    ],
+    "foodSpecialties": [
+      "Tunday Kababi Paratha",
+      "Lucknowi Biryani",
+      "Banarasi Paan",
+      "Petha Agra",
+      "Mathura Peda"
+    ],
+    "cultureHighlights": [
+      "Kathak Classical Dance",
+      "Chikan Embroidery Lucknow",
+      "Classical Hindustani Music",
+      "Zardozi Craftsmanship"
+    ],
+    "festivals": [
+      "Kumbh Mela Prayagraj",
+      "Lathmar Holi Barsana",
+      "Dev Deepawali Varanasi",
+      "Taj Mahotsav Agra"
+    ],
+    "coordinates": {
+      "lat": 26.8467,
+      "lng": 80.9462
+    },
+    "popularDestinationsCount": 8,
+    "destinationsCount": 8,
+    "totalDestinations": 8,
+    "placesCount": 8,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Evening%20Ganga%20Aarti%20Assi%20Ghat%2C%20Varanasi%209.jpg?width=800"
+  },
+  {
+    "id": "punjab",
+    "name": "Punjab",
+    "code": "PB",
+    "region": "North",
+    "type": "State",
+    "capital": "Chandigarh",
+    "description": "Land of the Golden Temple in Amritsar, Wagah Border beating retreat ceremony, rich agricultural heritage, vibrant Bhangra dance, and hearty Punjabi cuisine.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Harmandir%20Sahib%2C%20Amritsar%2C%20India.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Harmandir%20Sahib%2C%20Amritsar%2C%20India.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Golden Temple (Harmandir Sahib)",
+      "Wagah Border Ceremony",
+      "Jallianwala Bagh",
+      "Qila Mubarak Patiala",
+      "Anandpur Sahib Takht"
+    ],
+    "foodSpecialties": [
+      "Makki Di Roti & Sarson Da Saag",
+      "Amritsari Kulcha",
+      "Butter Chicken",
+      "Lassi",
+      "Pinni Sweet"
+    ],
+    "cultureHighlights": [
+      "Bhangra & Giddha Folk Dance",
+      "Phulkari Embroidery",
+      "Sikh Martial Art (Gatka)",
+      "Punjabi Jutti Crafts"
+    ],
+    "festivals": [
+      "Baisakhi",
+      "Lohri",
+      "Hola Mohalla Anandpur Sahib",
+      "Gurpurab"
+    ],
+    "coordinates": {
+      "lat": 31.1471,
+      "lng": 75.3412
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Harmandir%20Sahib%2C%20Amritsar%2C%20India.jpg?width=800"
+  },
+  {
+    "id": "haryana",
+    "name": "Haryana",
+    "code": "HR",
+    "region": "North",
+    "type": "State",
+    "capital": "Chandigarh",
+    "description": "Land of the sacred Mahabharata battleground Kurukshetra, scenic Morni Hills, Mughal gardens of Pinjore, and millennium tech hub Gurugram.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/THE%20MAHA%20GEETA%20AARTI.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/THE%20MAHA%20GEETA%20AARTI.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Brahma Sarovar Kurukshetra",
+      "Morni Hills & Tikkar Taal",
+      "Pinjore Yadavindra Gardens",
+      "Sultanpur Bird Sanctuary",
+      "Surajkund Crafts Mela"
+    ],
+    "foodSpecialties": [
+      "Bajra Khichdi with Ghee",
+      "Kachri Ki Sabzi",
+      "Ghevar",
+      "Kadhi Pakora",
+      "Lassi & White Butter"
+    ],
+    "cultureHighlights": [
+      "Haryanvi Ragini Folk Music",
+      "Surajkund International Crafts Mela",
+      "Wrestling & Sports Traditions"
+    ],
+    "festivals": [
+      "Gita Jayanti Kurukshetra",
+      "Surajkund Crafts Fair",
+      "Teej",
+      "Baisakhi"
+    ],
+    "coordinates": {
+      "lat": 29.0588,
+      "lng": 76.0856
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/THE%20MAHA%20GEETA%20AARTI.jpg?width=800"
+  },
+  {
+    "id": "west-bengal",
+    "name": "West Bengal",
+    "code": "WB",
+    "region": "East",
+    "type": "State",
+    "capital": "Kolkata",
+    "description": "Cultural heartland of India, home to colonial heritage Kolkata, Darjeeling tea railways, Sundarbans mangrove tiger habitat, and UNESCO Durga Puja.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Batasia%20Loop%20of%20Darjeeling%20Himalayan%20Railway.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Batasia%20Loop%20of%20Darjeeling%20Himalayan%20Railway.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 10,
+    "topAttractions": [
+      "Victoria Memorial Kolkata",
+      "Darjeeling Toy Train",
+      "Sundarbans National Park",
+      "Howrah Bridge",
+      "Santiniketan Ashram"
+    ],
+    "foodSpecialties": [
+      "Rosogolla",
+      "Kosha Mangsho",
+      "Macher Jhol",
+      "Mishti Doi",
+      "Kolkata Kathi Roll"
+    ],
+    "cultureHighlights": [
+      "Durga Puja Pandals",
+      "Rabindra Sangeet",
+      "Terracotta Temple Art Bishnupur",
+      "Baul Mystic Folk Music"
+    ],
+    "festivals": [
+      "Durga Puja",
+      "Dolyatra (Holi)",
+      "Poush Mela Santiniketan",
+      "Kolkata International Film Festival"
+    ],
+    "coordinates": {
+      "lat": 22.9868,
+      "lng": 87.855
+    },
+    "popularDestinationsCount": 8,
+    "destinationsCount": 8,
+    "totalDestinations": 8,
+    "placesCount": 8,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Batasia%20Loop%20of%20Darjeeling%20Himalayan%20Railway.jpg?width=800"
+  },
+  {
+    "id": "odisha",
+    "name": "Odisha",
+    "code": "OR",
+    "region": "East",
+    "type": "State",
+    "capital": "Bhubaneswar",
+    "description": "Land of the Sun Temple Konark, Jagannath Puri temple chariot processions, Chilika Lake dolphin sanctuary, and Odissi classical dance.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Decorated%20one-humped%20Camel%2C%20Camelus%20dromedarius%2C%20at%20Puri%20Sea%20Beach%2C%20Odisha%2C%20India.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Decorated%20one-humped%20Camel%2C%20Camelus%20dromedarius%2C%20at%20Puri%20Sea%20Beach%2C%20Odisha%2C%20India.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 8,
+    "topAttractions": [
+      "Konark Sun Temple",
+      "Jagannath Temple Puri",
+      "Chilika Lake Sanctuary",
+      "Udayagiri & Khandagiri Caves",
+      "Simlipal Tiger Reserve"
+    ],
+    "foodSpecialties": [
+      "Pakhala Bhata",
+      "Chhena Poda Sweet",
+      "Dalma",
+      "Puri Mahaprasad",
+      "Pahala Rasagola"
+    ],
+    "cultureHighlights": [
+      "Odissi Classical Dance",
+      "Pattachitra Scroll Painting",
+      "Silver Filigree (Tarakasi)",
+      "Stone Carvings"
+    ],
+    "festivals": [
+      "Rath Yatra Puri",
+      "Konark Dance Festival",
+      "Raja Parba",
+      "Nuakhai"
+    ],
+    "coordinates": {
+      "lat": 20.9517,
+      "lng": 85.0985
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Decorated%20one-humped%20Camel%2C%20Camelus%20dromedarius%2C%20at%20Puri%20Sea%20Beach%2C%20Odisha%2C%20India.jpg?width=800"
+  },
+  {
+    "id": "bihar",
+    "name": "Bihar",
+    "code": "BR",
+    "region": "East",
+    "type": "State",
+    "capital": "Patna",
+    "description": "Cradle of Buddhism and Jainism, featuring the Mahabodhi Temple in Bodh Gaya, ancient ruins of Nalanda University, Rajgir hills, and sacred Ganges ghats.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Worshipper%20at%20Mahabodhi%20Temple%20Bodh%20Gaya%20India.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Worshipper%20at%20Mahabodhi%20Temple%20Bodh%20Gaya%20India.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 7,
+    "topAttractions": [
+      "Mahabodhi Temple Bodh Gaya",
+      "Nalanda University Ruins",
+      "Vishwa Shanti Stupa Rajgir",
+      "Golghar Patna",
+      "Barabar Ancient Caves"
+    ],
+    "foodSpecialties": [
+      "Litti Chokha with Ghee",
+      "Sattu Paratha",
+      "Khaja of Silao",
+      "Thekua",
+      "Tilkut Gaya"
+    ],
+    "cultureHighlights": [
+      "Madhubani Painting",
+      "Bhojpuri & Maithili Folk",
+      "Sujani Embroidery",
+      "Sikki Grass Crafts"
+    ],
+    "festivals": [
+      "Chhath Puja",
+      "Sonepur Cattle Fair",
+      "Bodh Gaya Buddha Jayanti",
+      "Rajgir Mahotsav"
+    ],
+    "coordinates": {
+      "lat": 25.0961,
+      "lng": 85.3131
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Worshipper%20at%20Mahabodhi%20Temple%20Bodh%20Gaya%20India.jpg?width=800"
+  },
+  {
+    "id": "jharkhand",
+    "name": "Jharkhand",
+    "code": "JH",
+    "region": "East",
+    "type": "State",
+    "capital": "Ranchi",
+    "description": "Land of Forests & Waterfalls, featuring Hundru & Dassam falls, Betla tiger reserve, sacred Baidyanath Jyotirlinga Deoghar, and Netarhat Queen of Chotanagpur.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20at%20Hurputoli%20in%20afternoon%2C%20in%20Ranchi%2C%20Jharkhand%2C%202022.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20at%20Hurputoli%20in%20afternoon%2C%20in%20Ranchi%2C%20Jharkhand%2C%202022.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 7,
+    "topAttractions": [
+      "Baidyanath Temple Deoghar",
+      "Hundru Waterfalls",
+      "Dassam Falls",
+      "Betla National Park",
+      "Netarhat Sunset Point"
+    ],
+    "foodSpecialties": [
+      "Dhuska with Ghugni",
+      "Chilka Roti",
+      "Bamboo Shoot Curry",
+      "Arsa Roti",
+      "Rugra Mushroom"
+    ],
+    "cultureHighlights": [
+      "Chhau Tribal Dance",
+      "Sohrai & Khovar Murals",
+      "Dhokra Brass Casting",
+      "Santhali Folk Traditions"
+    ],
+    "festivals": [
+      "Sarhul Nature Festival",
+      "Karam Festival",
+      "Deoghar Shravani Mela",
+      "Tusu Parab"
+    ],
+    "coordinates": {
+      "lat": 23.6102,
+      "lng": 85.2799
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake%20at%20Hurputoli%20in%20afternoon%2C%20in%20Ranchi%2C%20Jharkhand%2C%202022.jpg?width=800"
+  },
+  {
+    "id": "madhya-pradesh",
+    "name": "Madhya Pradesh",
+    "code": "MP",
+    "region": "Central",
+    "type": "State",
+    "capital": "Bhopal",
+    "description": "The Heart of Incredible India, famed for UNESCO Khajuraho temples, Sanchi Stupa, Kanha & Bandhavgarh tiger reserves, Gwalior Fort, and Mahakaleshwar Ujjain.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Khajuraho%20Protected%20Temple%20Area%20(52408).jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Khajuraho%20Protected%20Temple%20Area%20(52408).jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 12,
+    "topAttractions": [
+      "Khajuraho Temples",
+      "Mahakaleshwar Temple Ujjain",
+      "Sanchi Stupa",
+      "Gwalior Fort",
+      "Bandhavgarh Tiger Reserve"
+    ],
+    "foodSpecialties": [
+      "Indori Poha Jalebi",
+      "Bhutte Ka Kees",
+      "Dal Bafla",
+      "Seekh Kebab Bhopal",
+      "Mawa Bati"
+    ],
+    "cultureHighlights": [
+      "Gond Tribal Paintings",
+      "Chanderi & Maheshwari Silk Sarees",
+      "Khajuraho Dance Festival",
+      "Classical Dhrupad Music"
+    ],
+    "festivals": [
+      "Khajuraho Dance Festival",
+      "Tansen Music Samaroh Gwalior",
+      "Ujjain Simhastha Kumbh",
+      "Lokrang Bhopal"
+    ],
+    "coordinates": {
+      "lat": 22.9734,
+      "lng": 78.6569
+    },
+    "popularDestinationsCount": 8,
+    "destinationsCount": 8,
+    "totalDestinations": 8,
+    "placesCount": 8,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Khajuraho%20Protected%20Temple%20Area%20(52408).jpg?width=800"
+  },
+  {
+    "id": "chhattisgarh",
+    "name": "Chhattisgarh",
+    "code": "CG",
+    "region": "Central",
+    "type": "State",
+    "capital": "Raipur",
+    "description": "Land of natural wonders and tribal traditions, featuring the Niagara of India Chitrakote Falls, Tirathgarh Falls, Bastar tribal crafts, and Kanger Valley caves.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Chitrakot%20waterfalls.JPG?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Chitrakot%20waterfalls.JPG?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Chitrakote Falls (Niagara of India)",
+      "Tirathgarh Falls",
+      "Bastar Tribal Palace",
+      "Kanger Ghati Caves",
+      "Sirpur Heritage Monuments"
+    ],
+    "foodSpecialties": [
+      "Chila & Fara",
+      "Aamat Tribal Stew",
+      "Muthia",
+      "Bafauri",
+      "Mahua Drink"
+    ],
+    "cultureHighlights": [
+      "Bastar Bell Metal Craft (Dhokra)",
+      "Wrought Iron Craft (Loha Shilp)",
+      "Panthi & Pandwani Folk Songs",
+      "Wood Carvings"
+    ],
+    "festivals": [
+      "Bastar Dussehra (75-Day Celebration)",
+      "Madai Festival",
+      "Rajim Kumbh Mela",
+      "Chakradhar Samaroh"
+    ],
+    "coordinates": {
+      "lat": 21.2787,
+      "lng": 81.8661
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chitrakot%20waterfalls.JPG?width=800"
+  },
+  {
+    "id": "assam",
+    "name": "Assam",
+    "code": "AS",
+    "region": "North East",
+    "type": "State",
+    "capital": "Dispur",
+    "description": "Gateway to the North East, world-famous for Kaziranga one-horned rhinos, Brahmaputra river island Majuli, lush tea gardens, Kamakhya temple, and Bihu dance.",
+    "heroImage": "/assets/images/states/assam.jpg",
+    "bannerImage": "/assets/images/states/assam.jpg",
+    "bestTimeToVisit": [
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April"
+    ],
+    "famousDestinationsCount": 8,
+    "topAttractions": [
+      "Kaziranga National Park",
+      "Kamakhya Devi Temple Guwahati",
+      "Majuli World's Largest River Island",
+      "Manas Tiger Reserve",
+      "Sivasagar Ahom Monuments"
+    ],
+    "foodSpecialties": [
+      "Khar",
+      "Masor Tenga Sour Fish Curry",
+      "Duck Meat Curry with Ash Gourd",
+      "Pitha Sweet",
+      "Assam CTC & Orthodox Tea"
+    ],
+    "cultureHighlights": [
+      "Bihu Folk Dance",
+      "Sattriya Classical Dance",
+      "Assam Golden Muga Silk",
+      "Bamboo & Cane Crafts"
+    ],
+    "festivals": [
+      "Rongali Bihu",
+      "Ambubachi Mela Kamakhya",
+      "Majuli Raas Festival",
+      "Dehing Patkai Festival"
+    ],
+    "coordinates": {
+      "lat": 26.2006,
+      "lng": 92.9376
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "/assets/images/states/assam.jpg",
+    "image": "/assets/images/states/assam.jpg"
+  },
+  {
+    "id": "arunachal-pradesh",
+    "name": "Arunachal Pradesh",
+    "code": "AR",
+    "region": "North East",
+    "type": "State",
+    "capital": "Itanagar",
+    "description": "Land of Dawn-Lit Mountains, featuring India's largest Buddhist monastery in Tawang, Sela Pass snow heights, scenic pine valley Ziro, and pristine tribal villages.",
+    "heroImage": "/assets/images/states/arunachal-pradesh.jpg",
+    "bannerImage": "/assets/images/states/arunachal-pradesh.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April"
+    ],
+    "famousDestinationsCount": 7,
+    "topAttractions": [
+      "Tawang Monastery (Galden Namgyal Lhatse)",
+      "Sela Pass & Sela Lake",
+      "Ziro Valley Pine Groves",
+      "Mechuka Valley",
+      "Namdapha National Park"
+    ],
+    "foodSpecialties": [
+      "Thukpa & Momos",
+      "Pika Pila Pickle",
+      "Bamboo Shoot Pork",
+      "Apong Rice Beer",
+      "Lukter"
+    ],
+    "cultureHighlights": [
+      "Monpa Buddhist Heritage",
+      "Apatani Tribal Traditions",
+      "Thangka Painting",
+      "Handmade Carpets"
+    ],
+    "festivals": [
+      "Losar Festival",
+      "Ziro Music Festival",
+      "Torgya Monastery Festival",
+      "Dree Festival"
+    ],
+    "coordinates": {
+      "lat": 28.218,
+      "lng": 94.7278
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "/assets/images/states/arunachal-pradesh.jpg",
+    "image": "/assets/images/states/arunachal-pradesh.jpg"
+  },
+  {
+    "id": "meghalaya",
+    "name": "Meghalaya",
+    "code": "ML",
+    "region": "North East",
+    "type": "State",
+    "capital": "Shillong",
+    "description": "The Abode of Clouds, featuring Living Root Bridges of Cherrapunji, cleanest village Mawlynnong, crystal-clear Dawki Umngot river, and rock music capital Shillong.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Living%20Root%20Bridges%20Of%20Cherrapunji%20In%20Megahalya%2C%20India.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Living%20Root%20Bridges%20Of%20Cherrapunji%20In%20Megahalya%2C%20India.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Double Decker Living Root Bridge",
+      "Dawki Crystal Clear River",
+      "Nohkalikai Falls Cherrapunji",
+      "Shillong Peak & Ward's Lake",
+      "Mawsmai Limestone Caves"
+    ],
+    "foodSpecialties": [
+      "Jadoh Rice with Pork",
+      "Dohneiiong Black Sesame Curry",
+      "Nakham Bitchi Soup",
+      "Pukhlein Fried Snack",
+      "Tungrymbai"
+    ],
+    "cultureHighlights": [
+      "Khasi, Garo & Jaintia Matrilineal Culture",
+      "Bio-Engineering Living Root Bridges",
+      "Rock Music Culture"
+    ],
+    "festivals": [
+      "Shillong Cherry Blossom Festival",
+      "Nongkrem Dance Festival",
+      "Wangala 100 Drums Festival",
+      "Shad Suk Mynsiem"
+    ],
+    "coordinates": {
+      "lat": 25.467,
+      "lng": 91.3662
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/The%20Living%20Root%20Bridges%20Of%20Cherrapunji%20In%20Megahalya%2C%20India.jpg?width=800"
+  },
+  {
+    "id": "manipur",
+    "name": "Manipur",
+    "code": "MN",
+    "region": "North East",
+    "type": "State",
+    "capital": "Imphal",
+    "description": "Jewel of India, home to the world's only floating national park Keibul Lamjao, circular Phumdis of Loktak Lake, Kangla Fort, and classical Manipuri Raas Leela dance.",
+    "heroImage": "/assets/images/states/manipur.jpg",
+    "bannerImage": "/assets/images/states/manipur.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Loktak Lake & Floating Phumdis",
+      "Keibul Lamjao Sangai Deer Sanctuary",
+      "Kangla Fort Imphal",
+      "Ima Keithel (All-Women Market)",
+      "Shirui Lily Hills Ukhrul"
+    ],
+    "foodSpecialties": [
+      "Kangshoi Vegetable Stew",
+      "Eromba Fermented Fish Mash",
+      "Singju Salad",
+      "Chak-Hao Black Rice Kheer",
+      "Nga Thongba Fish Curry"
+    ],
+    "cultureHighlights": [
+      "Manipuri Classical Raas Dance",
+      "Origins of Modern Polo (Sagol Kangjei)",
+      "Thang-Ta Martial Arts",
+      "Handloom Weaving"
+    ],
+    "festivals": [
+      "Sangai Festival",
+      "Yaoshang (Holi)",
+      "Lai Haraoba",
+      "Ningol Chakouba"
+    ],
+    "coordinates": {
+      "lat": 24.6637,
+      "lng": 93.9063
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "/assets/images/states/manipur.jpg",
+    "image": "/assets/images/states/manipur.jpg"
+  },
+  {
+    "id": "mizoram",
+    "name": "Mizoram",
+    "code": "MZ",
+    "region": "North East",
+    "type": "State",
+    "capital": "Aizawl",
+    "description": "Land of rolling hills and bamboo groves, famous for Cheraw bamboo dance, Reiek cliff viewpoints, Vantawng Falls, blue mountain Phawngpui, and pleasant temperate climate.",
+    "heroImage": "/assets/images/states/mizoram.jpg",
+    "bannerImage": "/assets/images/states/mizoram.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Reiek Heritage Tlang",
+      "Vantawng Waterfalls",
+      "Phawngpui Blue Mountain",
+      "Solomon's Temple Aizawl",
+      "Tamdil Lake"
+    ],
+    "foodSpecialties": [
+      "Bai Vegetable Stew",
+      "Vawksa Rep Smoked Pork",
+      "Sawhchiar Rice Meat Porridge",
+      "Koat Pitha",
+      "Misa Mach Poora"
+    ],
+    "cultureHighlights": [
+      "Cheraw Bamboo Dance",
+      "Puan Traditional Handwoven Shawls",
+      "Khuang Folk Drumming"
+    ],
+    "festivals": [
+      "Chapchar Kut Spring Festival",
+      "Mim Kut",
+      "Pawl Kut",
+      "Thalfavang Kut"
+    ],
+    "coordinates": {
+      "lat": 23.1645,
+      "lng": 92.9376
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "/assets/images/states/mizoram.jpg",
+    "image": "/assets/images/states/mizoram.jpg"
+  },
+  {
+    "id": "nagaland",
+    "name": "Nagaland",
+    "code": "NL",
+    "region": "North East",
+    "type": "State",
+    "capital": "Kohima",
+    "description": "Land of Festivals, famed for the world-renowned Hornbill Festival, green valley treks in Dzukou, Khonoma green village, and 16 colorful warrior tribal traditions.",
+    "heroImage": "/assets/images/states/nagaland.jpg",
+    "bannerImage": "/assets/images/states/nagaland.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Dzukou Valley Trek",
+      "Kisama Naga Heritage Village",
+      "Kohima War Cemetery",
+      "Khonoma Asia's First Green Village",
+      "Mokokchung Ao Tribal Village"
+    ],
+    "foodSpecialties": [
+      "Smoked Pork with Axone (Fermented Soy)",
+      "Boiled Vegetables with Raja Mircha",
+      "Bamboo Shoot Fish",
+      "Galho Porridge",
+      "Zutho Rice Beer"
+    ],
+    "cultureHighlights": [
+      "16 Naga Tribal Clans",
+      "Warrior Folk Songs & Dances",
+      "Naga Shawl Motifs",
+      "Wood Carvings & Spears"
+    ],
+    "festivals": [
+      "Hornbill Festival (Dec 1-10)",
+      "Sekrenyi Angami Festival",
+      "Moatsu Ao Festival",
+      "Aoleang Konyak Festival"
+    ],
+    "coordinates": {
+      "lat": 26.1584,
+      "lng": 94.5624
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "/assets/images/states/nagaland.jpg",
+    "image": "/assets/images/states/nagaland.jpg"
+  },
+  {
+    "id": "sikkim",
+    "name": "Sikkim",
+    "code": "SK",
+    "region": "North East",
+    "type": "State",
+    "capital": "Gangtok",
+    "description": "100% Organic Himalayan state crowned by Mount Kanchenjunga, Rumtek monastery, Tsomgo glacial lake, Gurudongmar Lake, and Yumthang Valley of Flowers.",
+    "heroImage": "/assets/images/states/sikkim.jpg",
+    "bannerImage": "/assets/images/states/sikkim.jpg",
+    "bestTimeToVisit": [
+      "March",
+      "April",
+      "May",
+      "October",
+      "November",
+      "December"
+    ],
+    "famousDestinationsCount": 7,
+    "topAttractions": [
+      "Tsomgo Lake & Baba Mandir",
+      "Rumtek Monastery",
+      "Nathula Pass Indo-China Border",
+      "Yumthang Valley of Flowers",
+      "Gurudongmar Sacred Lake"
+    ],
+    "foodSpecialties": [
+      "Steamed Momos with Chutney",
+      "Thukpa Noodle Soup",
+      "Phagshapa Pork",
+      "Sel Roti Rice Bread",
+      "Chhurpi Cheese Soup"
+    ],
+    "cultureHighlights": [
+      "Bhutia, Lepcha & Nepali Heritage",
+      "Cham Monastic Mask Dance",
+      "Thangka Silk Paintings",
+      "100% Organic Farming"
+    ],
+    "festivals": [
+      "Losoong Tibetan New Year",
+      "Saga Dawa",
+      "Pang Lhabsol Kanchenjunga Tribute",
+      "International Flower Show Gangtok"
+    ],
+    "coordinates": {
+      "lat": 27.533,
+      "lng": 88.5122
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "/assets/images/states/sikkim.jpg",
+    "image": "/assets/images/states/sikkim.jpg"
+  },
+  {
+    "id": "tripura",
+    "name": "Tripura",
+    "code": "TR",
+    "region": "North East",
+    "type": "State",
+    "capital": "Agartala",
+    "description": "Land of royal palaces and cliff rock carvings, featuring the floating lake palace Neermahal, Ujjayanta Palace, 7th-century colossal rock carvings of Unakoti, and Jampui orange hills.",
+    "heroImage": "/assets/images/states/tripura.jpg",
+    "bannerImage": "/assets/images/states/tripura.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Unakoti Rock Carvings",
+      "Neermahal Water Palace",
+      "Ujjayanta Palace Agartala",
+      "Tripura Sundari Temple Udaipur",
+      "Jampui Hills"
+    ],
+    "foodSpecialties": [
+      "Mui Borok",
+      "Berma Fermented Fish",
+      "Chakhwi Bamboo Shoot",
+      "Mosdeng Serma Spicy Chutney",
+      "Bhangui Sticky Rice"
+    ],
+    "cultureHighlights": [
+      "Tripuri Royal Heritage",
+      "Cane & Bamboo Master Craftsmanship",
+      "Hojagiri Folk Dance on Earthen Pitchers"
+    ],
+    "festivals": [
+      "Kharchi Puja (14 Gods Worship)",
+      "Garia Puja",
+      "Neermahal Water Festival",
+      "Orange & Tourism Festival Jampui"
+    ],
+    "coordinates": {
+      "lat": 23.8315,
+      "lng": 91.2868
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "/assets/images/states/tripura.jpg",
+    "image": "/assets/images/states/tripura.jpg"
+  },
+  {
+    "id": "andaman-nicobar",
+    "name": "Andaman and Nicobar Islands",
+    "code": "AN",
+    "region": "South",
+    "type": "Union Territory",
+    "capital": "Sri Vijaya Puram (Port Blair)",
+    "description": "Tropical archipelago in the Bay of Bengal with Asia's finest Radhanagar Beach, scuba diving coral reefs, historic Cellular Jail, and rainforest island adventures.",
+    "heroImage": "/assets/images/states/andaman-nicobar.jpg",
+    "bannerImage": "/assets/images/states/andaman-nicobar.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Radhanagar Beach Havelock (Swaraj Dweep)",
+      "Cellular Jail Port Blair",
+      "Elephant Beach Coral Reef",
+      "Baratang Limestone Caves",
+      "Ross Island British Ruins"
+    ],
+    "foodSpecialties": [
+      "Fresh Grilled Lobster",
+      "Coconut Prawn Curry",
+      "Seafood Barbecue Platter",
+      "Tropical Fruit Smoothies"
+    ],
+    "cultureHighlights": [
+      "Freedom Struggle Heritage",
+      "Indigenous Island Traditions",
+      "Marine Conservation Living"
+    ],
+    "festivals": [
+      "Island Tourism Festival",
+      "Beach Festival Havelock",
+      "Monsoon Music Festival"
+    ],
+    "coordinates": {
+      "lat": 11.7401,
+      "lng": 92.6586
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "/assets/images/states/andaman-nicobar.jpg",
+    "image": "/assets/images/states/andaman-nicobar.jpg"
+  },
+  {
+    "id": "chandigarh",
+    "name": "Chandigarh",
+    "code": "CH",
+    "region": "North",
+    "type": "Union Territory",
+    "capital": "Chandigarh",
+    "description": "The City Beautiful designed by master architect Le Corbusier, featuring the world-famous Rock Garden made of recycled scrap, tranquil Sukhna Lake, and Zakir Hussain Rose Garden.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20Garden%20Memory%20Stone%2C%20Chandigarh%2C%20India.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20Garden%20Memory%20Stone%2C%20Chandigarh%2C%20India.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 4,
+    "topAttractions": [
+      "Nek Chand Rock Garden",
+      "Sukhna Lake Boating",
+      "Zakir Hussain Rose Garden",
+      "Capitol Complex (UNESCO)",
+      "Open Hand Monument"
+    ],
+    "foodSpecialties": [
+      "Chole Bhature",
+      "Amritsari Stuffed Kulcha",
+      "Paneer Tikka",
+      "Giani Ice Cream & Falooda",
+      "Tandoori Chicken"
+    ],
+    "cultureHighlights": [
+      "Modernist Urban Architecture",
+      "Sculptural Scrap Art",
+      "Open-Air Garden Culture"
+    ],
+    "festivals": [
+      "Rose Festival Chandigarh",
+      "Mango Festival Pinjore",
+      "Plaza Carnival",
+      "Chandigarh Carnival"
+    ],
+    "coordinates": {
+      "lat": 30.7333,
+      "lng": 76.7794
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20Garden%20Memory%20Stone%2C%20Chandigarh%2C%20India.jpg?width=800"
+  },
+  {
+    "id": "daman-diu",
+    "name": "Dadra & Nagar Haveli and Daman & Diu",
+    "code": "DD",
+    "region": "West",
+    "type": "Union Territory",
+    "capital": "Daman",
+    "description": "Coastal Union Territory with Portuguese fortresses, serene palm-fringed Arabian Sea beaches in Diu & Daman, Naida Caves, and lush tribal forests of Silvassa.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Major%20Churches%20of%20Diu%20Island.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Major%20Churches%20of%20Diu%20Island.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Diu Fort & Lighthouse",
+      "Naida Caves Diu",
+      "Nagoa Beach",
+      "St. Paul's Church Diu",
+      "Devka Beach Daman"
+    ],
+    "foodSpecialties": [
+      "Cozi de Peixe (Goan-Portuguese Fish Stew)",
+      "Lobster Thermidor",
+      "Crab Masala",
+      "Dhokla & Gujarati Snacks"
+    ],
+    "cultureHighlights": [
+      "Portuguese Colonial Heritage",
+      "Tribal Warli Art of Silvassa",
+      "Coastal Maritime Traditions"
+    ],
+    "festivals": [
+      "Festa De Diu Beach Festival",
+      "Garba Celebrations",
+      "Nariyal Poornima",
+      "Christmas Carnival"
+    ],
+    "coordinates": {
+      "lat": 20.4283,
+      "lng": 72.8397
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Major%20Churches%20of%20Diu%20Island.jpg?width=800"
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "code": "DL",
+    "region": "North",
+    "type": "Union Territory",
+    "capital": "New Delhi",
+    "description": "India's historic national capital bridging ancient Mughal empires and modern metropolis, featuring Qutub Minar, Red Fort, Humayun Tomb, India Gate, and Chandni Chowk street food.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Jama%20Masjid%2C%20Delhi.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Jama%20Masjid%2C%20Delhi.jpg?width=1200",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Red Fort (Lal Qila)",
+      "Qutub Minar (UNESCO)",
+      "Humayun's Tomb",
+      "Lotus Temple",
+      "India Gate & Kartavya Path"
+    ],
+    "foodSpecialties": [
+      "Butter Chicken",
+      "Chole Bhature",
+      "Paranthas of Chandni Chowk",
+      "Dahi Bhalla",
+      "Kulfi Falooda"
+    ],
+    "cultureHighlights": [
+      "Mughal & Lutyens Architecture",
+      "Classical Sufi Qawwali at Nizamuddin",
+      "Bazaar Shopping Traditions"
+    ],
+    "festivals": [
+      "Qutub Festival",
+      "Phool Walon Ki Sair",
+      "International Trade Fair",
+      "Delhi Literature Festival"
+    ],
+    "coordinates": {
+      "lat": 28.6139,
+      "lng": 77.209
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jama%20Masjid%2C%20Delhi.jpg?width=800"
+  },
+  {
+    "id": "jammu-kashmir",
+    "name": "Jammu and Kashmir",
+    "code": "JK",
+    "region": "North",
+    "type": "Union Territory",
+    "capital": "Srinagar (Summer) / Jammu (Winter)",
+    "description": "Paradise on Earth, featuring Dal Lake Shikaras, Gulmarg world-class ski slopes and gondola, Pahalgam Betaab Valley, Sonamarg glaciers, and Mata Vaishno Devi shrine.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Srinagar%20pano.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Srinagar%20pano.jpg?width=1200",
+    "bestTimeToVisit": [
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "December",
+      "January"
+    ],
+    "famousDestinationsCount": 8,
+    "topAttractions": [
+      "Dal Lake Shikara Houseboats",
+      "Gulmarg Gondola & Skiing",
+      "Pahalgam Betaab Valley",
+      "Sonamarg Thajiwas Glacier",
+      "Vaishno Devi Shrine Katra"
+    ],
+    "foodSpecialties": [
+      "Kashmiri Wazwan (Rista, Gushtaba)",
+      "Kahwa Saffron Green Tea",
+      "Modur Pulao",
+      "Dum Aloo Kashmiri",
+      "Tabakh Maaz"
+    ],
+    "cultureHighlights": [
+      "Pashmina & Shahtoosh Shawl Weaving",
+      "Walnut Wood Carvings",
+      "Paper Mache Crafts",
+      "Sufiyana Kalam Music"
+    ],
+    "festivals": [
+      "Tulip Festival Srinagar (April)",
+      "Shikara Festival",
+      "Saffron Harvest Festival Pampore",
+      "Baisakhi"
+    ],
+    "coordinates": {
+      "lat": 34.0837,
+      "lng": 74.7973
+    },
+    "popularDestinationsCount": 6,
+    "destinationsCount": 6,
+    "totalDestinations": 6,
+    "placesCount": 6,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Srinagar%20pano.jpg?width=800"
+  },
+  {
+    "id": "ladakh",
+    "name": "Ladakh",
+    "code": "LA",
+    "region": "North",
+    "type": "Union Territory",
+    "capital": "Leh",
+    "description": "The Land of High Passes, featuring turquoise Pangong Lake, Khardung La Pass, Nubra Valley sand dunes with double-humped camels, and ancient cliff monasteries.",
+    "heroImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Indus%20Valley%20near%20Leh.jpg?width=1200",
+    "bannerImage": "https://commons.wikimedia.org/wiki/Special:FilePath/Indus%20Valley%20near%20Leh.jpg?width=1200",
+    "bestTimeToVisit": [
+      "May",
+      "June",
+      "July",
+      "August",
+      "September"
+    ],
+    "famousDestinationsCount": 6,
+    "topAttractions": [
+      "Pangong Tso Lake",
+      "Nubra Valley & Hunder Dunes",
+      "Khardung La Pass",
+      "Thiksey Monastery",
+      "Magnetic Hill"
+    ],
+    "foodSpecialties": [
+      "Ladakhi Skyu Stew",
+      "Chhutagi Pasta Soup",
+      "Butter Tea (Gur Gur Chai)",
+      "Mutton Thukpa",
+      "Tigmo Steamed Bread"
+    ],
+    "cultureHighlights": [
+      "Ladakhi Monastic Cham Mask Dance",
+      "Buddhist Astronomy",
+      "High Altitude Living",
+      "Pashmina Weaving"
+    ],
+    "festivals": [
+      "Hemis Festival (Guru Padmasambhava)",
+      "Ladakh Festival Leh",
+      "Dosmoche",
+      "Spituk Gustor"
+    ],
+    "coordinates": {
+      "lat": 34.1526,
+      "lng": 77.5771
+    },
+    "popularDestinationsCount": 7,
+    "destinationsCount": 7,
+    "totalDestinations": 7,
+    "placesCount": 7,
+    "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Indus%20Valley%20near%20Leh.jpg?width=800"
+  },
+  {
+    "id": "lakshadweep",
+    "name": "Lakshadweep",
+    "code": "LD",
+    "region": "South",
+    "type": "Union Territory",
+    "capital": "Kavaratti",
+    "description": "A secluded tropical archipelago of 36 coral atolls in the Arabian Sea, renowned for crystal turquoise lagoons, untouched coral reefs, scuba diving, and pristine sandy shores.",
+    "heroImage": "/assets/images/states/lakshadweep.jpg",
+    "bannerImage": "/assets/images/states/lakshadweep.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Agatti Island Lagoon",
+      "Bangaram Island Beach Resort",
+      "Kavaratti Marine Aquarium",
+      "Kadmat Water Sports Sanctuary",
+      "Minicoy Lighthouse"
+    ],
+    "foodSpecialties": [
+      "Tuna Fish Curry (Mas Podichathu)",
+      "Coconut Rice (Thenga Choru)",
+      "Octopus Fry",
+      "Rayereha Red Tuna Curry",
+      "Kadlakka Sweet"
+    ],
+    "cultureHighlights": [
+      "Lava Dance of Minicoy",
+      "Kolkali Folk Dance",
+      "Coir & Coconut Shell Crafts",
+      "Atoll Marine Living"
+    ],
+    "festivals": [
+      "Eid-ul-Fitr Celebrations",
+      "Muharram",
+      "Milad-un-Nabi",
+      "National Island Festival"
+    ],
+    "coordinates": {
+      "lat": 10.5667,
+      "lng": 72.6417
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "/assets/images/states/lakshadweep.jpg",
+    "image": "/assets/images/states/lakshadweep.jpg"
+  },
+  {
+    "id": "puducherry",
+    "name": "Puducherry",
+    "code": "PY",
+    "region": "South",
+    "type": "Union Territory",
+    "capital": "Puducherry",
+    "description": "The French Riviera of the East, boasting pastel-hued colonial French Quarter villas, Sri Aurobindo Ashram, universal township of Auroville, and tranquil Promenade Beach.",
+    "heroImage": "/assets/images/states/puducherry.jpg",
+    "bannerImage": "/assets/images/states/puducherry.jpg",
+    "bestTimeToVisit": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "famousDestinationsCount": 5,
+    "topAttractions": [
+      "Auroville Matrimandir",
+      "French Quarter (White Town)",
+      "Promenade Beach Rock Walk",
+      "Sri Aurobindo Ashram",
+      "Paradise Beach Boat Cruise"
+    ],
+    "foodSpecialties": [
+      "French Croissants & Crepes",
+      "Pondicherry Fish Assiet",
+      "Creole Curry",
+      "Artisanal Woodfired Pizza",
+      "Filter Coffee"
+    ],
+    "cultureHighlights": [
+      "Franco-Tamil Architecture",
+      "Spiritual Community Living in Auroville",
+      "Pottery & Handmade Paper Crafts"
+    ],
+    "festivals": [
+      "Bastille Day (July 14)",
+      "International Yoga Festival",
+      "Auroville Marathon",
+      "Pondicherry Heritage Festival"
+    ],
+    "coordinates": {
+      "lat": 11.9416,
+      "lng": 79.8083
+    },
+    "popularDestinationsCount": 5,
+    "destinationsCount": 5,
+    "totalDestinations": 5,
+    "placesCount": 5,
+    "thumbnailUrl": "/assets/images/states/puducherry.jpg",
+    "image": "/assets/images/states/puducherry.jpg"
+  }
+]

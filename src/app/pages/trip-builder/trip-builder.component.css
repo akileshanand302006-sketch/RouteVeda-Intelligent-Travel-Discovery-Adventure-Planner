@@ -1,0 +1,145 @@
+.selectable-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  background: var(--tf-surface);
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius);
+  cursor: pointer;
+  transition: var(--tf-transition);
+}
+
+.selectable-card:hover {
+  border-color: var(--tf-primary);
+  transform: translateY(-2px);
+}
+
+.selectable-card.selected {
+  border-color: var(--tf-primary);
+  background: rgba(var(--tf-primary-rgb), 0.1);
+}
+
+.card-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--tf-radius-sm);
+  object-fit: cover;
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-info h6 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.select-check {
+  font-size: 1.3rem;
+}
+
+.style-card {
+  padding: 1.5rem 1rem;
+  background: var(--tf-surface);
+  border: 1px solid var(--tf-border);
+  border-radius: var(--tf-radius);
+  cursor: pointer;
+  transition: var(--tf-transition);
+}
+
+.style-card:hover,
+.style-card.active {
+  border-color: var(--tf-primary);
+  background: rgba(var(--tf-primary-rgb), 0.1);
+  transform: translateY(-4px);
+}
+
+.b-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px dashed var(--tf-border-light);
+}
+
+.insight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(var(--tf-accent-rgb), 0.08);
+  border: 1px solid rgba(var(--tf-accent-rgb), 0.2);
+  border-radius: var(--tf-radius-sm);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.dest-picker-grid,
+.activity-picker-grid {
+  max-height: 420px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--tf-text-muted);
+  pointer-events: none;
+  font-size: 0.95rem;
+  z-index: 2;
+}
+
+.input-wrapper .form-control-tf {
+  padding-left: 40px !important;
+  height: 44px !important;
+  line-height: 44px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.form-select-tf {
+  height: 44px !important;
+  line-height: 1.5;
+  box-sizing: border-box;
+  border-radius: var(--tf-radius-sm);
+  background-color: var(--tf-surface);
+  border: 1px solid var(--tf-border);
+  color: var(--tf-text);
+  padding: 0 12px;
+  margin: 0;
+  width: 100%;
+}
+
+.state-category-section {
+  scroll-margin-top: 8px;
+}
+
+.state-header {
+  position: sticky;
+  top: 0;
+  background: var(--tf-bg-card, rgba(255, 255, 255, 0.95));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 4;
+  padding: 6px 0;
+}
+
+:host-context([data-theme="dark"]) .state-header,
+:host-context(.theme-dark) .state-header {
+  background: rgba(15, 23, 42, 0.95) !important;
+}
+

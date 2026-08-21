@@ -1,0 +1,145 @@
+<div class="page-container state-details-page">
+  @if (state()) {
+    <!-- Hero Banner -->
+    <div class="state-hero hero-overlay" [style.background-image]="'url(' + state()?.bannerImage + ')'">
+      <div class="container py-5 hero-content">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <a routerLink="/india" class="btn btn-sm btn-tf-glass">
+            <i class="bi bi-arrow-left"></i> Back to All States
+          </a>
+          <span class="badge-tf badge-tf-primary">{{ state()?.region }} India</span>
+          <span class="badge-tf badge-tf-info">{{ state()?.type }}</span>
+        </div>
+
+        <h1 class="state-title gradient-text">{{ state()?.name }}</h1>
+        <p class="state-subtitle">
+          <i class="bi bi-building text-tf-primary me-1"></i> Capital: <strong>{{ state()?.capital }}</strong>
+        </p>
+
+        <p class="state-desc lead-text max-w-800">{{ state()?.description }}</p>
+
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a routerLink="/trip-builder" class="btn-tf-primary">
+            <i class="bi bi-tools"></i> Build Trip in {{ state()?.name }}
+          </a>
+          <a routerLink="/explore" [queryParams]="{ state: state()?.name }" class="btn-tf-glass">
+            <i class="bi bi-binoculars"></i> View All Destinations
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <!-- Info Bar -->
+      <div class="row g-3 mb-5">
+        <div class="col-md-3 col-6">
+          <div class="glass-card p-3 text-center">
+            <i class="bi bi-calendar-event text-tf-primary fs-3 mb-1"></i>
+            <strong class="d-block small">Best Time to Visit</strong>
+            <small class="text-tf-muted">{{ state()?.bestTimeToVisit?.join(', ') }}</small>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="glass-card p-3 text-center">
+            <i class="bi bi-geo-alt text-tf-accent fs-3 mb-1"></i>
+            <strong class="d-block small">Top Destinations</strong>
+            <small class="text-tf-muted">{{ destinations().length }} Featured Places</small>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="glass-card p-3 text-center">
+            <i class="bi bi-bank text-tf-warning fs-3 mb-1"></i>
+            <strong class="d-block small">Famous Attractions</strong>
+            <small class="text-tf-muted">{{ attractions().length }} Listed Sites</small>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="glass-card p-3 text-center">
+            <i class="bi bi-cup-hot text-tf-success fs-3 mb-1"></i>
+            <strong class="d-block small">Food Specialties</strong>
+            <small class="text-tf-muted">{{ state()?.foodSpecialties?.length }} Delicacies</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Destinations Grid -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h3 class="mb-1"><i class="bi bi-compass text-tf-primary me-2"></i> Destinations in {{ state()?.name }}</h3>
+            <p class="text-tf-secondary mb-0">Explore key cities, hill stations, beaches, and heritage sites.</p>
+          </div>
+        </div>
+
+        @if (destinations().length > 0) {
+          <div class="row g-4">
+            @for (dest of destinations(); track dest.id) {
+              <div class="col-lg-4 col-md-6">
+                <app-destination-card [destination]="dest" (addToTrip)="onAddToTrip($event)" />
+              </div>
+            }
+          </div>
+        } @else {
+          <div class="glass-card p-4 text-center">
+            <p class="text-tf-muted mb-0">Destinations for {{ state()?.name }} are available across our nationwide directory.</p>
+          </div>
+        }
+      </section>
+
+      <!-- Attractions Grid -->
+      @if (attractions().length > 0) {
+        <section class="mb-5">
+          <h3 class="mb-4"><i class="bi bi-bank text-tf-warning me-2"></i> Famous Attractions & Monuments</h3>
+          <div class="row g-4">
+            @for (att of attractions(); track att.id) {
+              <div class="col-lg-4 col-md-6">
+                <div class="glass-card h-100 p-3">
+                  <img [src]="att.image" [alt]="att.name" class="img-fluid rounded mb-3 attraction-thumb">
+                  <span class="badge-tf badge-tf-primary mb-2">{{ att.category }}</span>
+                  <h5 class="mb-1">{{ att.name }}</h5>
+                  <small class="text-tf-muted d-block mb-2"><i class="bi bi-geo-alt"></i> {{ att.destinationName }}</small>
+                  <p class="small text-tf-secondary mb-3">{{ att.description }}</p>
+                  <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25 extra-small">
+                    <span><i class="bi bi-clock"></i> {{ att.visitDuration }}</span>
+                    <span><i class="bi bi-info-circle"></i> {{ att.entryInfo }}</span>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+        </section>
+      }
+
+      <!-- Food & Culture Section -->
+      <section class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="glass-card p-4 h-100">
+            <h4 class="mb-3 text-tf-primary"><i class="bi bi-cup-hot me-2"></i> Regional Food Specialties</h4>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              @for (food of state()?.foodSpecialties; track food) {
+                <span class="badge-tf badge-tf-glass">🍲 {{ food }}</span>
+              }
+            </div>
+            <p class="small text-tf-secondary mb-0">Discover authentic regional flavors and traditional recipes passed down through generations.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="glass-card p-4 h-100">
+            <h4 class="mb-3 text-tf-accent"><i class="bi bi-stars me-2"></i> Culture & Traditions</h4>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              @for (cult of state()?.cultureHighlights; track cult) {
+                <span class="badge-tf badge-tf-info">✨ {{ cult }}</span>
+              }
+            </div>
+            <p class="small text-tf-secondary mb-0">Experience colorful folk dances, classical art forms, and rich craftsmanship.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  } @else {
+    <div class="container py-5">
+      <app-loading-spinner message="Loading State tourism details..." />
+    </div>
+  }
+</div>

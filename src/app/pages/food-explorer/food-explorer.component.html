@@ -1,0 +1,113 @@
+<div class="page-container food-explorer-page">
+  <div class="food-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <h1 class="animate-fade-in-up">Flavors of India: <span class="gradient-text">Regional Food Explorer</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Discover authentic regional dishes from Chettinad spicy curries and Kerala Appam stew to Rajasthani Dal Baati and Kashmiri Wazwan.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Region Selector Chips -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+      <button class="category-chip" [class.active]="selectedRegion === 'All'" (click)="onRegionChange('All')">
+        All Regions
+      </button>
+      <button class="category-chip" [class.active]="selectedRegion === 'South'" (click)="onRegionChange('South')">
+        South India
+      </button>
+      <button class="category-chip" [class.active]="selectedRegion === 'North'" (click)="onRegionChange('North')">
+        North India
+      </button>
+      <button class="category-chip" [class.active]="selectedRegion === 'West'" (click)="onRegionChange('West')">
+        West India
+      </button>
+      <button class="category-chip" [class.active]="selectedRegion === 'East'" (click)="onRegionChange('East')">
+        East India
+      </button>
+    </div>
+
+    <!-- Filter Control Bar -->
+    <div class="glass-card p-3 mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <div class="input-wrapper">
+            <i class="bi bi-search input-icon"></i>
+            <input
+              type="text"
+              class="form-control-tf"
+              placeholder="Search dish name, state, ingredients..."
+              [(ngModel)]="searchQuery"
+              (input)="onSearchChange()"
+            >
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <select class="form-select-tf" [(ngModel)]="selectedType" (change)="onTypeChange(selectedType)">
+            <option value="All">All Food Types</option>
+            <option value="Veg">Vegetarian</option>
+            <option value="Non-Veg">Non-Vegetarian</option>
+            <option value="Sweet">Sweets & Desserts</option>
+            <option value="Beverage">Traditional Beverages</option>
+          </select>
+        </div>
+
+        <div class="col-md-2 text-md-end">
+          <button class="btn btn-sm btn-tf-glass w-100" (click)="resetFilters()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food Cards Grid -->
+    @if (foodService.isLoading()) {
+      <app-loading-spinner message="Loading regional cuisine database..." />
+    } @else if (foodService.filteredFood().length === 0) {
+      <app-empty-state
+        icon="bi-cup-hot"
+        title="No regional food items found"
+        message="No delicacies match your current search or diet filter."
+        actionLabel="Reset Food Explorer"
+        (action)="resetFilters()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (item of foodService.filteredFood(); track item.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.05) + 's'">
+            <div class="glass-card h-100 d-flex flex-column p-3">
+              <div class="food-img-wrapper rounded overflow-hidden mb-3">
+                <img [src]="item.image" [alt]="item.name" class="food-img">
+                <span class="type-badge badge-tf" [class.badge-tf-success]="item.type === 'Veg'" [class.badge-tf-danger]="item.type === 'Non-Veg'" [class.badge-tf-warning]="item.type === 'Sweet'">
+                  {{ item.type }}
+                </span>
+                <span class="region-badge badge-tf badge-tf-primary">{{ item.region }} India</span>
+              </div>
+
+              <div class="d-flex flex-column flex-grow-1">
+                <h5 class="fw-bold mb-1">{{ item.name }}</h5>
+                <small class="text-tf-primary fw-semibold mb-2"><i class="bi bi-geo-alt"></i> {{ item.state }}</small>
+                <p class="small text-tf-secondary line-clamp-3 mb-3">{{ item.description }}</p>
+
+                <div class="mb-3">
+                  <small class="text-tf-muted extra-small d-block mb-1">Famous Places to Try:</small>
+                  <ul class="list-unstyled extra-small text-tf-secondary mb-0">
+                    @for (place of item.popularPlacesToTry; track place) {
+                      <li><i class="bi bi-check2 text-tf-success me-1"></i> {{ place }}</li>
+                    }
+                  </ul>
+                </div>
+
+                <div class="mt-auto pt-2 border-top border-secondary border-opacity-25 d-flex flex-wrap gap-1">
+                  @for (tag of item.tags; track tag) {
+                    <span class="badge-tf badge-tf-glass extra-small"># {{ tag }}</span>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

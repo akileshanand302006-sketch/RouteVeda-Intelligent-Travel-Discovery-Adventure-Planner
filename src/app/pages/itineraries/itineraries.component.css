@@ -1,0 +1,27 @@
+.itin-hero {
+  padding: 70px 0 40px;
+  margin-bottom: 2rem;
+}
+
+.itin-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+.itin-cover {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.day-plan-box {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.last-no-border:last-child {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}

@@ -1,0 +1,70 @@
+<div class="page-container about-page">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="gradient-text display-4 font-weight-bold"><i class="bi bi-compass"></i> About TripForge</h1>
+      <p class="lead text-tf-secondary max-w-700 mx-auto">
+        A futuristic travel planning platform built as an advanced Angular mini project.
+      </p>
+    </div>
+
+    <!-- Core Vision Card -->
+    <div class="glass-card p-5 mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="mb-3">Forge Your Journey with Precision</h2>
+          <p class="text-tf-secondary">
+            TripForge is designed to solve the complexity of adventure travel planning. By combining destination discovery, real-time activity selection, dynamic budget calculations, and automated day-by-day itinerary generation into one seamless interface, TripForge provides travelers with complete control over their journeys.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a routerLink="/trip-builder" class="btn-tf-primary">
+              <i class="bi bi-tools"></i> Launch Trip Builder
+            </a>
+            <a routerLink="/explore" class="btn-tf-outline">
+              <i class="bi bi-binoculars"></i> Explore Destinations
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="arch-box p-4 glass-strong rounded-3">
+            <h5 class="mb-3 text-tf-primary"><i class="bi bi-diagram-3"></i> Architecture Flow</h5>
+            <div class="arch-step">
+              <span class="step-num">1</span>
+              <span>JSON Datasets (destinations, activities, users)</span>
+            </div>
+            <div class="arch-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="arch-step">
+              <span class="step-num">2</span>
+              <span>Angular HttpClient & Core Services</span>
+            </div>
+            <div class="arch-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="arch-step">
+              <span class="step-num">3</span>
+              <span>Angular Signals & Computed Reactive State</span>
+            </div>
+            <div class="arch-arrow"><i class="bi bi-arrow-down"></i></div>
+            <div class="arch-step">
+              <span class="step-num">4</span>
+              <span>Standalone Components & Custom Directives</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Stack Grid -->
+    <div class="mb-5">
+      <h3 class="text-center mb-4">Technology Stack</h3>
+      <div class="row g-3">
+        @for (item of techStack; track item.name) {
+          <div class="col-md-4 col-6">
+            <div class="glass-card p-3 text-center h-100">
+              <h5 class="text-tf-primary mb-1">{{ item.name }}</h5>
+              <small class="text-tf-muted">{{ item.role }}</small>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

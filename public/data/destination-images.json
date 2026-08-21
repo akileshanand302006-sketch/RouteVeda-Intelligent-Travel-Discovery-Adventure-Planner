@@ -1,0 +1,1978 @@
+{
+  "tn-ooty": {
+    "name": "Ooty (Udhagamandalam)",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Nilgiri_Mountain_Railway_steam_locomotive.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nilgiri_Mountain_Railway_steam_locomotive.jpg",
+    "verified": true
+  },
+  "tn-kodaikanal": {
+    "name": "Kodaikanal",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Kodaikanal_Lake_Panorama.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kodaikanal_Lake_Panorama.jpg",
+    "verified": true
+  },
+  "tn-madurai": {
+    "name": "Madurai",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Madurai_Meenakshi_Amman_Temple_West_Tower.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madurai_Meenakshi_Amman_Temple_West_Tower.jpg",
+    "verified": true
+  },
+  "tn-rameshwaram": {
+    "name": "Rameshwaram",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Pamban_Bridge_Rameswaram_Tamil_Nadu.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pamban_Bridge_Rameswaram_Tamil_Nadu.jpg",
+    "verified": true
+  },
+  "tn-mahabalipuram": {
+    "name": "Mahabalipuram (Mamallapuram)",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Shore_Temple_at_Mamallapuram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shore_Temple_at_Mamallapuram.jpg",
+    "verified": true
+  },
+  "tn-kanyakumari": {
+    "name": "Kanyakumari",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Vivekananda_Rock_Memorial_and_Thiruvalluvar_Statue_at_Kanyakumari.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vivekananda_Rock_Memorial_and_Thiruvalluvar_Statue_at_Kanyakumari.jpg",
+    "verified": true
+  },
+  "tn-thanjavur": {
+    "name": "Thanjavur (Tanjore)",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Brihadeeswarar_Temple_Thanjavur_Front_View.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brihadeeswarar_Temple_Thanjavur_Front_View.jpg",
+    "verified": true
+  },
+  "tn-coonoor": {
+    "name": "Coonoor",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Sims_Park_Coonoor_Nilgiris.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sims_Park_Coonoor_Nilgiris.jpg",
+    "verified": true
+  },
+  "tn-yercaud": {
+    "name": "Yercaud",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Yercaud_Emerald_Lake_Shevaroy_Hills.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yercaud_Emerald_Lake_Shevaroy_Hills.jpg",
+    "verified": true
+  },
+  "tn-chennai": {
+    "name": "Chennai",
+    "stateId": "tamil-nadu",
+    "stateName": "Tamil Nadu",
+    "fileName": "File:Marina_Beach_Chennai_Sunrise.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marina_Beach_Chennai_Sunrise.jpg",
+    "verified": true
+  },
+  "kl-munnar": {
+    "name": "Munnar",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Tea_Plantations_in_Munnar_Kerala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tea_Plantations_in_Munnar_Kerala.jpg",
+    "verified": true
+  },
+  "kl-alleppey": {
+    "name": "Alleppey (Alappuzha)",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Houseboats_in_Kerala_Backwaters_Alappuzha.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Houseboats_in_Kerala_Backwaters_Alappuzha.jpg",
+    "verified": true
+  },
+  "kl-wayanad": {
+    "name": "Wayanad",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Chembra_Peak_Heart_Lake_Wayanad.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chembra_Peak_Heart_Lake_Wayanad.jpg",
+    "verified": true
+  },
+  "kl-varkala": {
+    "name": "Varkala",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Varkala_Cliff_and_Papanasam_Beach_Kerala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Varkala_Cliff_and_Papanasam_Beach_Kerala.jpg",
+    "verified": true
+  },
+  "kl-kochi": {
+    "name": "Kochi (Cochin)",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Chinese_Fishing_Nets_Fort_Kochi_Sunset.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chinese_Fishing_Nets_Fort_Kochi_Sunset.jpg",
+    "verified": true
+  },
+  "kl-thekkady": {
+    "name": "Thekkady (Periyar)",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Periyar_National_Park_Lake_Boating.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Periyar_National_Park_Lake_Boating.jpg",
+    "verified": true
+  },
+  "kl-athirappilly": {
+    "name": "Athirappilly Waterfalls",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Athirappilly_Waterfalls_Chalakudy_River.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Athirappilly_Waterfalls_Chalakudy_River.jpg",
+    "verified": true
+  },
+  "kl-kovalam": {
+    "name": "Kovalam",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Vizhinjam_Lighthouse_Kovalam_Beach.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vizhinjam_Lighthouse_Kovalam_Beach.jpg",
+    "verified": true
+  },
+  "kl-vagamon": {
+    "name": "Vagamon",
+    "stateId": "kerala",
+    "stateName": "Kerala",
+    "fileName": "File:Vagamon_Pine_Forest_Kerala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vagamon_Pine_Forest_Kerala.jpg",
+    "verified": true
+  },
+  "ka-hampi": {
+    "name": "Hampi",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Vittala_Temple_Stone_Chariot_Hampi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vittala_Temple_Stone_Chariot_Hampi.jpg",
+    "verified": true
+  },
+  "ka-coorg": {
+    "name": "Coorg (Kodagu)",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Abbey_Falls_Madikeri_Coorg.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abbey_Falls_Madikeri_Coorg.jpg",
+    "verified": true
+  },
+  "ka-mysore": {
+    "name": "Mysore (Mysuru)",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Mysore_Palace_Illuminated_at_Night.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mysore_Palace_Illuminated_at_Night.jpg",
+    "verified": true
+  },
+  "ka-gokarna": {
+    "name": "Gokarna",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Om_Beach_Aerial_View_Gokarna.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Om_Beach_Aerial_View_Gokarna.jpg",
+    "verified": true
+  },
+  "ka-chikmagalur": {
+    "name": "Chikmagalur",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Mullayanagiri_Peak_Chikmagalur_Western_Ghats.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mullayanagiri_Peak_Chikmagalur_Western_Ghats.jpg",
+    "verified": true
+  },
+  "ka-bengaluru": {
+    "name": "Bengaluru (Bangalore)",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Lalbagh_Glass_House_Flower_Show.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lalbagh_Glass_House_Flower_Show.jpg",
+    "verified": true
+  },
+  "ka-badami": {
+    "name": "Badami, Aihole & Pattadakal",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Badami_Cave_Temples_and_Agastya_Lake.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Badami_Cave_Temples_and_Agastya_Lake.jpg",
+    "verified": true
+  },
+  "ka-dandeli": {
+    "name": "Dandeli",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Kali_River_White_Water_Rafting_Dandeli.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kali_River_White_Water_Rafting_Dandeli.jpg",
+    "verified": true
+  },
+  "ka-kabini": {
+    "name": "Kabini & Bandipur",
+    "stateId": "karnataka",
+    "stateName": "Karnataka",
+    "fileName": "File:Kabini_River_Coracle_Safari_Nagarhole.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kabini_River_Coracle_Safari_Nagarhole.jpg",
+    "verified": true
+  },
+  "ap-visakhapatnam": {
+    "name": "Visakhapatnam (Vizag)",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:INS_Kursura_Submarine_Museum_RK_Beach.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:INS_Kursura_Submarine_Museum_RK_Beach.jpg",
+    "verified": true
+  },
+  "ap-araku": {
+    "name": "Araku Valley",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Borra_Caves_Gorge_and_Rail_Bridge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Borra_Caves_Gorge_and_Rail_Bridge.jpg",
+    "verified": true
+  },
+  "ap-gandikota": {
+    "name": "Gandikota",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Grand_Canyon_of_India_Gandikota_Pennar_River.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_of_India_Gandikota_Pennar_River.jpg",
+    "verified": true
+  },
+  "ap-tirupati": {
+    "name": "Tirupati",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Tirumala_Venkateswara_Temple_Ananda_Nilayam.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tirumala_Venkateswara_Temple_Ananda_Nilayam.jpg",
+    "verified": true
+  },
+  "ap-lepakshi": {
+    "name": "Lepakshi",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Veerabhadra_Temple_Lepakshi_Hanging_Pillar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Veerabhadra_Temple_Lepakshi_Hanging_Pillar.jpg",
+    "verified": true
+  },
+  "ap-srisailam": {
+    "name": "Srisailam",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Mallikarjuna_Swamy_Temple_Srisailam_Gopuram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mallikarjuna_Swamy_Temple_Srisailam_Gopuram.jpg",
+    "verified": true
+  },
+  "ap-vijayawada": {
+    "name": "Vijayawada",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Kanaka_Durga_Temple_Indrakeeladri_Hill.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kanaka_Durga_Temple_Indrakeeladri_Hill.jpg",
+    "verified": true
+  },
+  "ap-lambasingi": {
+    "name": "Lambasingi",
+    "stateId": "andhra-pradesh",
+    "stateName": "Andhra Pradesh",
+    "fileName": "File:Lambasingi_Sunrise_Misty_Eastern_Ghats.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lambasingi_Sunrise_Misty_Eastern_Ghats.jpg",
+    "verified": true
+  },
+  "tg-hyderabad": {
+    "name": "Hyderabad",
+    "stateId": "telangana",
+    "stateName": "Telangana",
+    "fileName": "File:Charminar_Hyderabad_Illuminated_Evening.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charminar_Hyderabad_Illuminated_Evening.jpg",
+    "verified": true
+  },
+  "tg-warangal": {
+    "name": "Warangal & Ramappa",
+    "stateId": "telangana",
+    "stateName": "Telangana",
+    "fileName": "File:Ramappa_Temple_UNESCO_Kakatiya_Sculpture.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ramappa_Temple_UNESCO_Kakatiya_Sculpture.jpg",
+    "verified": true
+  },
+  "tg-laknavaram": {
+    "name": "Laknavaram Lake",
+    "stateId": "telangana",
+    "stateName": "Telangana",
+    "fileName": "File:Laknavaram_Lake_Suspension_Hanging_Bridge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laknavaram_Lake_Suspension_Hanging_Bridge.jpg",
+    "verified": true
+  },
+  "tg-nagarjunasagar": {
+    "name": "Nagarjuna Sagar",
+    "stateId": "telangana",
+    "stateName": "Telangana",
+    "fileName": "File:Nagarjuna_Sagar_Dam_Crest_Gates_Opened.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagarjuna_Sagar_Dam_Crest_Gates_Opened.jpg",
+    "verified": true
+  },
+  "tg-bhadrachalam": {
+    "name": "Bhadrachalam",
+    "stateId": "telangana",
+    "stateName": "Telangana",
+    "fileName": "File:Sita_Ramachandra_Swamy_Temple_Bhadrachalam.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sita_Ramachandra_Swamy_Temple_Bhadrachalam.jpg",
+    "verified": true
+  },
+  "tg-ananthagiri": {
+    "name": "Ananthagiri Hills",
+    "stateId": "telangana",
+    "stateName": "Telangana",
+    "fileName": "File:Ananthagiri_Hills_Dense_Forest_Vikarabad.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ananthagiri_Hills_Dense_Forest_Vikarabad.jpg",
+    "verified": true
+  },
+  "od-konark": {
+    "name": "Konark (UNESCO Sun Temple - Black Pagoda)",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Sun_Temple_Konarak.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sun_Temple_Konarak.jpg",
+    "verified": true
+  },
+  "od-puri": {
+    "name": "Puri (Shri Jagannath Temple & Golden Beach)",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Jagannath_Temple_Puri_Meghnad_Pacheri.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jagannath_Temple_Puri_Meghnad_Pacheri.jpg",
+    "verified": true
+  },
+  "od-bhubaneswar": {
+    "name": "Bhubaneswar (Temple City of India)",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Lingaraj_Temple_Bhubaneswar_Kalinga_Architecture.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lingaraj_Temple_Bhubaneswar_Kalinga_Architecture.jpg",
+    "verified": true
+  },
+  "od-chilika": {
+    "name": "Chilika Lake & Satapada (Irrawaddy Dolphins)",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Chilika_Lake_Irrawaddy_Dolphins_Satapada.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chilika_Lake_Irrawaddy_Dolphins_Satapada.jpg",
+    "verified": true
+  },
+  "od-similipal": {
+    "name": "Similipal National Park & Waterfalls",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Barehipani_Falls_Two_Tiered_Similipal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Barehipani_Falls_Two_Tiered_Similipal.jpg",
+    "verified": true
+  },
+  "od-gopalpur": {
+    "name": "Gopalpur-on-Sea & Tampara Lake",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Gopalpur_Sea_Beach_Old_Lighthouse_Odisha.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gopalpur_Sea_Beach_Old_Lighthouse_Odisha.jpg",
+    "verified": true
+  },
+  "od-daringbadi": {
+    "name": "Daringbadi (Kashmir of Odisha)",
+    "stateId": "odisha",
+    "stateName": "Odisha",
+    "fileName": "File:Daringbadi_Coffee_Gardens_Pine_Forests_Kashmir_of_Odisha.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Daringbadi_Coffee_Gardens_Pine_Forests_Kashmir_of_Odisha.jpg",
+    "verified": true
+  },
+  "br-bodhgaya": {
+    "name": "Bodh Gaya (Mahabodhi Temple & Enlightenment Tree)",
+    "stateId": "bihar",
+    "stateName": "Bihar",
+    "fileName": "File:Mahabodhi_Temple_at_Bodh_Gaya.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahabodhi_Temple_at_Bodh_Gaya.jpg",
+    "verified": true
+  },
+  "br-nalanda": {
+    "name": "Nalanda (Ancient World University Ruins)",
+    "stateId": "bihar",
+    "stateName": "Bihar",
+    "fileName": "File:Nalanda_University_Ruins_Sariputta_Stupa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nalanda_University_Ruins_Sariputta_Stupa.jpg",
+    "verified": true
+  },
+  "br-rajgir": {
+    "name": "Rajgir (Vishwa Shanti Stupa & Glass Bridge)",
+    "stateId": "bihar",
+    "stateName": "Bihar",
+    "fileName": "File:Vishwa_Shanti_Stupa_Ratnagiri_Hill_Rajgir.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vishwa_Shanti_Stupa_Ratnagiri_Hill_Rajgir.jpg",
+    "verified": true
+  },
+  "br-patna": {
+    "name": "Patna (Ancient Pataliputra & Takht Sri Patna Sahib)",
+    "stateId": "bihar",
+    "stateName": "Bihar",
+    "fileName": "File:Takht_Sri_Patna_Sahib_Gurudwara.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takht_Sri_Patna_Sahib_Gurudwara.jpg",
+    "verified": true
+  },
+  "br-vaishali": {
+    "name": "Vaishali (World's First Republic)",
+    "stateId": "bihar",
+    "stateName": "Bihar",
+    "fileName": "File:Ashoka_Pillar_and_Lion_Capital_Kolhua_Vaishali.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ashoka_Pillar_and_Lion_Capital_Kolhua_Vaishali.jpg",
+    "verified": true
+  },
+  "br-valmiki": {
+    "name": "Valmiki National Park & Tiger Reserve",
+    "stateId": "bihar",
+    "stateName": "Bihar",
+    "fileName": "File:Valmiki_Tiger_Reserve_Gandak_River_Bihar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valmiki_Tiger_Reserve_Gandak_River_Bihar.jpg",
+    "verified": true
+  },
+  "mp-khajuraho": {
+    "name": "Khajuraho (UNESCO Temples of Love & Art)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Western_Group_of_Temples,_Khajuraho.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Western_Group_of_Temples%2C_Khajuraho.jpg",
+    "verified": true
+  },
+  "mp-bandhavgarh": {
+    "name": "Bandhavgarh National Park (Highest Tiger Density)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Royal_Bengal_Tiger_in_Bandhavgarh_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Bengal_Tiger_in_Bandhavgarh_National_Park.jpg",
+    "verified": true
+  },
+  "mp-jabalpur": {
+    "name": "Jabalpur & Bhedaghat (Marble Rocks & Dhuandhar Falls)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Marble_Rocks_Gorge_Narmada_River_Bhedaghat.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Marble_Rocks_Gorge_Narmada_River_Bhedaghat.jpg",
+    "verified": true
+  },
+  "mp-gwalior": {
+    "name": "Gwalior (The Pearl of Indian Fortresses)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Gwalior_Fort_Man_Singh_Palace_Blue_Tiles.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gwalior_Fort_Man_Singh_Palace_Blue_Tiles.jpg",
+    "verified": true
+  },
+  "mp-orchha": {
+    "name": "Orchha (The Hidden Gem of the Betwa River)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Orchha_Fort_Complex_Jahangir_Mahal_Betwa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Orchha_Fort_Complex_Jahangir_Mahal_Betwa.jpg",
+    "verified": true
+  },
+  "mp-sanchi": {
+    "name": "Sanchi (UNESCO Great Stupa of Emperor Ashoka)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Great_Stupa_at_Sanchi_Torana_Gate_UNESCO.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Stupa_at_Sanchi_Torana_Gate_UNESCO.jpg",
+    "verified": true
+  },
+  "mp-ujjain": {
+    "name": "Ujjain (Mahakaleshwar Jyotirlinga & Mahakal Lok)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Mahakaleshwar_Jyotirlinga_Temple_Ujjain.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mahakaleshwar_Jyotirlinga_Temple_Ujjain.jpg",
+    "verified": true
+  },
+  "mp-pachmarhi": {
+    "name": "Pachmarhi (Queen of the Satpuras)",
+    "stateId": "madhya-pradesh",
+    "stateName": "Madhya Pradesh",
+    "fileName": "File:Bee_Falls_Pachmarhi_Satpura_Hills.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bee_Falls_Pachmarhi_Satpura_Hills.jpg",
+    "verified": true
+  },
+  "up-agra": {
+    "name": "Agra (City of the Taj Mahal)",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Taj_Mahal_Agra_Front_Reflecting_Pool.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Agra_Front_Reflecting_Pool.jpg",
+    "verified": true
+  },
+  "up-varanasi": {
+    "name": "Varanasi (Kashi & Banaras)",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Varanasi_Ghats_Evening_Ganga_Aarti_Dashashwamedh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Varanasi_Ghats_Evening_Ganga_Aarti_Dashashwamedh.jpg",
+    "verified": true
+  },
+  "up-lucknow": {
+    "name": "Lucknow (The City of Nawabs)",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Bara_Imambara_and_Rumi_Darwaza_Lucknow.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bara_Imambara_and_Rumi_Darwaza_Lucknow.jpg",
+    "verified": true
+  },
+  "up-ayodhya": {
+    "name": "Ayodhya (Ram Janmabhoomi)",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Shri_Ram_Janmabhoomi_Mandir_Ayodhya.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Ram_Janmabhoomi_Mandir_Ayodhya.jpg",
+    "verified": true
+  },
+  "up-mathura": {
+    "name": "Mathura & Vrindavan (Braj Bhoomi)",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Prem_Mandir_Vrindavan_Illuminated.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Prem_Mandir_Vrindavan_Illuminated.jpg",
+    "verified": true
+  },
+  "up-prayagraj": {
+    "name": "Prayagraj (Allahabad & Triveni Sangam)",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Triveni_Sangam_Prayagraj_Kumbh_Mela.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Triveni_Sangam_Prayagraj_Kumbh_Mela.jpg",
+    "verified": true
+  },
+  "up-jhansi": {
+    "name": "Jhansi & Bundelkhand Fort",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Jhansi_Fort_Rani_Lakshmibai_Ramparts.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jhansi_Fort_Rani_Lakshmibai_Ramparts.jpg",
+    "verified": true
+  },
+  "up-dudhwa": {
+    "name": "Dudhwa National Park",
+    "stateId": "uttar-pradesh",
+    "stateName": "Uttar Pradesh",
+    "fileName": "File:Swamp_Deer_Barasingha_in_Dudhwa_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Swamp_Deer_Barasingha_in_Dudhwa_National_Park.jpg",
+    "verified": true
+  },
+  "rj-jaipur": {
+    "name": "Jaipur (The Pink City)",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Hawa_Mahal_Jaipur_Palace_of_Winds.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hawa_Mahal_Jaipur_Palace_of_Winds.jpg",
+    "verified": true
+  },
+  "rj-udaipur": {
+    "name": "Udaipur (City of Lakes & Venice of the East)",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:City_Palace_Udaipur_Lake_Pichola.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:City_Palace_Udaipur_Lake_Pichola.jpg",
+    "verified": true
+  },
+  "rj-jodhpur": {
+    "name": "Jodhpur (The Blue City)",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Mehrangarh_Fort_and_Blue_City_Jodhpur.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mehrangarh_Fort_and_Blue_City_Jodhpur.jpg",
+    "verified": true
+  },
+  "rj-jaisalmer": {
+    "name": "Jaisalmer (The Golden City)",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Jaisalmer_Fort_Sonar_Qila_Golden_Fort.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaisalmer_Fort_Sonar_Qila_Golden_Fort.jpg",
+    "verified": true
+  },
+  "rj-pushkar": {
+    "name": "Pushkar & Ajmer",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Pushkar_Brahma_Temple_and_Holy_Lake_Ghats.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pushkar_Brahma_Temple_and_Holy_Lake_Ghats.jpg",
+    "verified": true
+  },
+  "rj-ranthambore": {
+    "name": "Ranthambore National Park",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Bengal_Tiger_in_Ranthambore_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bengal_Tiger_in_Ranthambore_National_Park.jpg",
+    "verified": true
+  },
+  "rj-mountabu": {
+    "name": "Mount Abu (Only Hill Station in Rajasthan)",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Dilwara_Jain_Temples_Marble_Ceiling_Mount_Abu.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dilwara_Jain_Temples_Marble_Ceiling_Mount_Abu.jpg",
+    "verified": true
+  },
+  "rj-kumbhalgarh": {
+    "name": "Kumbhalgarh & Ranakpur",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Kumbhalgarh_Fort_Great_Wall_of_India.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kumbhalgarh_Fort_Great_Wall_of_India.jpg",
+    "verified": true
+  },
+  "rj-bikaner": {
+    "name": "Bikaner",
+    "stateId": "rajasthan",
+    "stateName": "Rajasthan",
+    "fileName": "File:Junagarh_Fort_Bikaner_Courtyard.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Junagarh_Fort_Bikaner_Courtyard.jpg",
+    "verified": true
+  },
+  "wb-darjeeling": {
+    "name": "Darjeeling (Queen of the Himalayas)",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Darjeeling_Himalayan_Railway_Toy_Train_Batasia_Loop.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Darjeeling_Himalayan_Railway_Toy_Train_Batasia_Loop.jpg",
+    "verified": true
+  },
+  "wb-kolkata": {
+    "name": "Kolkata (The City of Joy)",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Victoria_Memorial_Kolkata_Marble_Palace.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Victoria_Memorial_Kolkata_Marble_Palace.jpg",
+    "verified": true
+  },
+  "wb-sundarbans": {
+    "name": "Sundarbans National Park (World's Largest Mangrove Delta)",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Sundarbans_Mangrove_Forest_Delta_Royal_Bengal_Tiger.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sundarbans_Mangrove_Forest_Delta_Royal_Bengal_Tiger.jpg",
+    "verified": true
+  },
+  "wb-shantiniketan": {
+    "name": "Shantiniketan (UNESCO Heritage of Rabindranath Tagore)",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Visva_Bharati_University_Shantiniketan_Rabindranath_Tagore.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Visva_Bharati_University_Shantiniketan_Rabindranath_Tagore.jpg",
+    "verified": true
+  },
+  "wb-digha": {
+    "name": "Digha & Mandarmani",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Digha_Sea_Beach_Promenade_Bay_of_Bengal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Digha_Sea_Beach_Promenade_Bay_of_Bengal.jpg",
+    "verified": true
+  },
+  "wb-bishnupur": {
+    "name": "Bishnupur (Terracotta Temple Capital)",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Rasmancha_Terracotta_Temple_Bishnupur.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rasmancha_Terracotta_Temple_Bishnupur.jpg",
+    "verified": true
+  },
+  "wb-kalimpong": {
+    "name": "Kalimpong & Lava-Rishyap",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Deolo_Hill_Kalimpong_Viewpoint_Kanchenjunga.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deolo_Hill_Kalimpong_Viewpoint_Kanchenjunga.jpg",
+    "verified": true
+  },
+  "wb-dooars": {
+    "name": "Dooars (Gorumara & Jaldapara)",
+    "stateId": "west-bengal",
+    "stateName": "West Bengal",
+    "fileName": "File:Gorumara_National_Park_Rhino_Tower_Dooars.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gorumara_National_Park_Rhino_Tower_Dooars.jpg",
+    "verified": true
+  },
+  "goa-north-goa--calangute--baga---anjuna-": {
+    "name": "North Goa (Calangute, Baga & Anjuna)",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Calangute_Beach_Goa_Coastline.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Calangute_Beach_Goa_Coastline.jpg",
+    "verified": true
+  },
+  "goa-south-goa--palolem---agonda-": {
+    "name": "South Goa (Palolem & Agonda)",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Palolem_Beach_Crescent_Bay_South_Goa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palolem_Beach_Crescent_Bay_South_Goa.jpg",
+    "verified": true
+  },
+  "goa-dudhsagar-waterfalls": {
+    "name": "Dudhsagar Waterfalls",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Dudhsagar_Falls_Train_Crossing_Bridge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dudhsagar_Falls_Train_Crossing_Bridge.jpg",
+    "verified": true
+  },
+  "goa-old-goa--velha-goa-": {
+    "name": "Old Goa (Velha Goa)",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Basilica_of_Bom_Jesus_Old_Goa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Basilica_of_Bom_Jesus_Old_Goa.jpg",
+    "verified": true
+  },
+  "goa-panaji---fontainhas": {
+    "name": "Panaji & Fontainhas",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Fontainhas_Latin_Quarter_Colonial_Houses_Panaji.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fontainhas_Latin_Quarter_Colonial_Houses_Panaji.jpg",
+    "verified": true
+  },
+  "goa-divar---chor-o-islands": {
+    "name": "Divar & Chorão Islands",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Divar_Island_Goan_Village_Church.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Divar_Island_Goan_Village_Church.jpg",
+    "verified": true
+  },
+  "goa-morjim---ashwem": {
+    "name": "Morjim & Ashwem",
+    "stateId": "goa",
+    "stateName": "Goa",
+    "fileName": "File:Morjim_Beach_Olive_Ridley_Turtle_Nesting.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Morjim_Beach_Olive_Ridley_Turtle_Nesting.jpg",
+    "verified": true
+  },
+  "maharashtra-mumbai": {
+    "name": "Mumbai",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Gateway_of_India_and_Taj_Mahal_Palace_Hotel_Mumbai.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gateway_of_India_and_Taj_Mahal_Palace_Hotel_Mumbai.jpg",
+    "verified": true
+  },
+  "maharashtra-ajanta---ellora-caves": {
+    "name": "Ajanta & Ellora Caves",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Kailasa_Temple_Cave_16_Ellora_Monolith.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kailasa_Temple_Cave_16_Ellora_Monolith.jpg",
+    "verified": true
+  },
+  "maharashtra-mahabaleshwar---panchgani": {
+    "name": "Mahabaleshwar & Panchgani",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Arthur_Seat_Point_Mahabaleshwar_Gorge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arthur_Seat_Point_Mahabaleshwar_Gorge.jpg",
+    "verified": true
+  },
+  "maharashtra-lonavala---khandala": {
+    "name": "Lonavala & Khandala",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Tiger_Leap_Viewpoint_Lonavala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tiger_Leap_Viewpoint_Lonavala.jpg",
+    "verified": true
+  },
+  "maharashtra-alibaug": {
+    "name": "Alibaug",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Kolaba_Fort_in_Arabian_Sea_Alibaug.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kolaba_Fort_in_Arabian_Sea_Alibaug.jpg",
+    "verified": true
+  },
+  "maharashtra-tadoba-andhari-tiger-reserve": {
+    "name": "Tadoba-Andhari Tiger Reserve",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Royal_Bengal_Tiger_in_Tadoba_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Bengal_Tiger_in_Tadoba_National_Park.jpg",
+    "verified": true
+  },
+  "maharashtra-matheran": {
+    "name": "Matheran",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Matheran_Toy_Train_Neral_Aman_Lodge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matheran_Toy_Train_Neral_Aman_Lodge.jpg",
+    "verified": true
+  },
+  "maharashtra-nashik--wine-capital-": {
+    "name": "Nashik (Wine Capital)",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Trimbakeshwar_Shiva_Temple_Nashik.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Trimbakeshwar_Shiva_Temple_Nashik.jpg",
+    "verified": true
+  },
+  "maharashtra-shirdi": {
+    "name": "Shirdi",
+    "stateId": "maharashtra",
+    "stateName": "Maharashtra",
+    "fileName": "File:Sai_Baba_Samadhi_Mandir_Shirdi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sai_Baba_Samadhi_Mandir_Shirdi.jpg",
+    "verified": true
+  },
+  "gujarat-rann-of-kutch--white-desert---rann-utsav-": {
+    "name": "Rann of Kutch (White Desert & Rann Utsav)",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:White_Rann_of_Kutch_Salt_Desert_Sunset.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:White_Rann_of_Kutch_Salt_Desert_Sunset.jpg",
+    "verified": true
+  },
+  "gujarat-gir-national-park--home-of-asiatic-lions-": {
+    "name": "Gir National Park (Home of Asiatic Lions)",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Asiatic_Lion_in_Gir_National_Park_Gujarat.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asiatic_Lion_in_Gir_National_Park_Gujarat.jpg",
+    "verified": true
+  },
+  "gujarat-statue-of-unity---kevadia": {
+    "name": "Statue of Unity & Kevadia",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Statue_of_Unity_Sardar_Vallabhbhai_Patel_Narmada.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Statue_of_Unity_Sardar_Vallabhbhai_Patel_Narmada.jpg",
+    "verified": true
+  },
+  "gujarat-somnath-temple": {
+    "name": "Somnath Temple",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Somnath_Temple_Gujarat_Ocean_Front.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Somnath_Temple_Gujarat_Ocean_Front.jpg",
+    "verified": true
+  },
+  "gujarat-dwarka---bet-dwarka": {
+    "name": "Dwarka & Bet Dwarka",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Dwarkadhish_Temple_Jagat_Mandir_Dwarka.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dwarkadhish_Temple_Jagat_Mandir_Dwarka.jpg",
+    "verified": true
+  },
+  "gujarat-ahmedabad--india-s-first-unesco-heritage-city-": {
+    "name": "Ahmedabad (India's First UNESCO Heritage City)",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Sabarmati_Ashram_Hriday_Kunj_Ahmedabad.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sabarmati_Ashram_Hriday_Kunj_Ahmedabad.jpg",
+    "verified": true
+  },
+  "gujarat-rani-ki-vav---modhera-sun-temple": {
+    "name": "Rani Ki Vav & Modhera Sun Temple",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Rani_ki_vav_Patan_UNESCO_Stepwell.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rani_ki_vav_Patan_UNESCO_Stepwell.jpg",
+    "verified": true
+  },
+  "gujarat-saputara--only-hill-station-in-gujarat-": {
+    "name": "Saputara (Only Hill Station in Gujarat)",
+    "stateId": "gujarat",
+    "stateName": "Gujarat",
+    "fileName": "File:Saputara_Lake_Boating_Dang_Hills.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saputara_Lake_Boating_Dang_Hills.jpg",
+    "verified": true
+  },
+  "daman-diu-diu-island": {
+    "name": "Diu Island",
+    "stateId": "daman-diu",
+    "stateName": "Dadra and Nagar Haveli and Daman and Diu",
+    "fileName": "File:Naida_Caves_Diu_Natural_Rock_Formations.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naida_Caves_Diu_Natural_Rock_Formations.jpg",
+    "verified": true
+  },
+  "daman-diu-daman--moti-daman---nani-daman-": {
+    "name": "Daman (Moti Daman & Nani Daman)",
+    "stateId": "daman-diu",
+    "stateName": "Dadra and Nagar Haveli and Daman and Diu",
+    "fileName": "File:Moti_Daman_Fort_Gateway_and_Ramparts.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moti_Daman_Fort_Gateway_and_Ramparts.jpg",
+    "verified": true
+  },
+  "daman-diu-silvassa---dudhni-lake": {
+    "name": "Silvassa & Dudhni Lake",
+    "stateId": "daman-diu",
+    "stateName": "Dadra and Nagar Haveli and Daman and Diu",
+    "fileName": "File:Dudhni_Lake_Water_Sports_Silvassa.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dudhni_Lake_Water_Sports_Silvassa.jpg",
+    "verified": true
+  },
+  "daman-diu-ghoghla-beach": {
+    "name": "Ghoghla Beach",
+    "stateId": "daman-diu",
+    "stateName": "Dadra and Nagar Haveli and Daman and Diu",
+    "fileName": "File:Ghoghla_Beach_Diu_Golden_Sands.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ghoghla_Beach_Diu_Golden_Sands.jpg",
+    "verified": true
+  },
+  "daman-diu-khanvel---bindrabin": {
+    "name": "Khanvel & Bindrabin",
+    "stateId": "daman-diu",
+    "stateName": "Dadra and Nagar Haveli and Daman and Diu",
+    "fileName": "File:Khanvel_Resort_River_and_Forests_DNH.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Khanvel_Resort_River_and_Forests_DNH.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-manali---solang-valley": {
+    "name": "Manali & Solang Valley",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Solang_Valley_Manali_Snow_Peaks.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Solang_Valley_Manali_Snow_Peaks.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-shimla--queen-of-hills-": {
+    "name": "Shimla (Queen of Hills)",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:The_Ridge_Shimla_Christ_Church.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Ridge_Shimla_Christ_Church.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-spiti-valley--the-middle-land-": {
+    "name": "Spiti Valley (The Middle Land)",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Key_Monastery_Spiti_Valley_Himachal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Key_Monastery_Spiti_Valley_Himachal.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-dharamshala---mcleodganj--little-lhasa-": {
+    "name": "Dharamshala & McLeodganj (Little Lhasa)",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Tsuglagkhang_Complex_Dalai_Lama_Temple_McLeodganj.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsuglagkhang_Complex_Dalai_Lama_Temple_McLeodganj.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-bir-billing--world-s-paragliding-capital-": {
+    "name": "Bir Billing (World's Paragliding Capital)",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Paragliding_Takeoff_Site_Billing_Himachal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paragliding_Takeoff_Site_Billing_Himachal.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-kasol---parvati-valley": {
+    "name": "Kasol & Parvati Valley",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Parvati_River_Valley_Kasol_Pine_Forests.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Parvati_River_Valley_Kasol_Pine_Forests.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-dalhousie---khajjiar--mini-switzerland-of-india-": {
+    "name": "Dalhousie & Khajjiar (Mini Switzerland of India)",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Khajjiar_Lake_Mini_Switzerland_of_India.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Khajjiar_Lake_Mini_Switzerland_of_India.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-jibhi---tirthan-valley--great-himalayan-national-park-": {
+    "name": "Jibhi & Tirthan Valley (Great Himalayan National Park)",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Jibhi_Waterfall_Wooden_Bridge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jibhi_Waterfall_Wooden_Bridge.jpg",
+    "verified": true
+  },
+  "himachal-pradesh-kinnaur---kalpa": {
+    "name": "Kinnaur & Kalpa",
+    "stateId": "himachal-pradesh",
+    "stateName": "Himachal Pradesh",
+    "fileName": "File:Kalpa_Apple_Orchards_and_Kinner_Kailash_Peak.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kalpa_Apple_Orchards_and_Kinner_Kailash_Peak.jpg",
+    "verified": true
+  },
+  "uttarakhand-rishikesh--yoga-capital-of-the-world-": {
+    "name": "Rishikesh (Yoga Capital of the World)",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Laxman_Jhula_Suspension_Bridge_Rishikesh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laxman_Jhula_Suspension_Bridge_Rishikesh.jpg",
+    "verified": true
+  },
+  "uttarakhand-nainital--city-of-lakes-": {
+    "name": "Nainital (City of Lakes)",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Naini_Lake_Yachting_and_Nainital_Town.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Naini_Lake_Yachting_and_Nainital_Town.jpg",
+    "verified": true
+  },
+  "uttarakhand-mussoorie--queen-of-the-hills-": {
+    "name": "Mussoorie (Queen of the Hills)",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Kempty_Falls_Mussoorie_Cascades.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kempty_Falls_Mussoorie_Cascades.jpg",
+    "verified": true
+  },
+  "uttarakhand-valley-of-flowers---hemkund-sahib": {
+    "name": "Valley of Flowers & Hemkund Sahib",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Valley_of_Flowers_National_Park_Uttarakhand.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Flowers_National_Park_Uttarakhand.jpg",
+    "verified": true
+  },
+  "uttarakhand-auli--skiing-capital-of-india-": {
+    "name": "Auli (Skiing Capital of India)",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Auli_Ski_Resort_Slopes_and_Nanda_Devi_Peak.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Auli_Ski_Resort_Slopes_and_Nanda_Devi_Peak.jpg",
+    "verified": true
+  },
+  "uttarakhand-jim-corbett-national-park": {
+    "name": "Jim Corbett National Park",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Royal_Bengal_Tiger_in_Jim_Corbett_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Royal_Bengal_Tiger_in_Jim_Corbett_National_Park.jpg",
+    "verified": true
+  },
+  "uttarakhand-kedarnath---badrinath--chardham-": {
+    "name": "Kedarnath & Badrinath (Chardham)",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Kedarnath_Temple_Garhwal_Himalayas_Snow_Peaks.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kedarnath_Temple_Garhwal_Himalayas_Snow_Peaks.jpg",
+    "verified": true
+  },
+  "uttarakhand-haridwar--gateway-to-gods-": {
+    "name": "Haridwar (Gateway to Gods)",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Har_Ki_Pauri_Ganga_Aarti_Haridwar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Har_Ki_Pauri_Ganga_Aarti_Haridwar.jpg",
+    "verified": true
+  },
+  "uttarakhand-chopta--tungnath---chandrashila": {
+    "name": "Chopta, Tungnath & Chandrashila",
+    "stateId": "uttarakhand",
+    "stateName": "Uttarakhand",
+    "fileName": "File:Tungnath_Temple_Highest_Shiva_Temple_World.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tungnath_Temple_Highest_Shiva_Temple_World.jpg",
+    "verified": true
+  },
+  "punjab-amritsar--the-golden-temple---wagah-border-": {
+    "name": "Amritsar (The Golden Temple & Wagah Border)",
+    "stateId": "punjab",
+    "stateName": "Punjab",
+    "fileName": "File:Golden_Temple_Harmandir_Sahib_Amritsar_Illuminated.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Golden_Temple_Harmandir_Sahib_Amritsar_Illuminated.jpg",
+    "verified": true
+  },
+  "punjab-patiala--royal-heritage---qila-mubarak-": {
+    "name": "Patiala (Royal Heritage & Qila Mubarak)",
+    "stateId": "punjab",
+    "stateName": "Punjab",
+    "fileName": "File:Qila_Mubarak_Patiala_Sheesh_Mahal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qila_Mubarak_Patiala_Sheesh_Mahal.jpg",
+    "verified": true
+  },
+  "punjab-anandpur-sahib---virasat-e-khalsa": {
+    "name": "Anandpur Sahib & Virasat-e-Khalsa",
+    "stateId": "punjab",
+    "stateName": "Punjab",
+    "fileName": "File:Takht_Sri_Kesgarh_Sahib_Anandpur_Sahib.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takht_Sri_Kesgarh_Sahib_Anandpur_Sahib.jpg",
+    "verified": true
+  },
+  "punjab-kapurthala--paris-of-punjab-": {
+    "name": "Kapurthala (Paris of Punjab)",
+    "stateId": "punjab",
+    "stateName": "Punjab",
+    "fileName": "File:Jagatjit_Palace_Sainik_School_Kapurthala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jagatjit_Palace_Sainik_School_Kapurthala.jpg",
+    "verified": true
+  },
+  "punjab-bathinda---qila-mubarak": {
+    "name": "Bathinda & Qila Mubarak",
+    "stateId": "punjab",
+    "stateName": "Punjab",
+    "fileName": "File:Qila_Mubarak_Razia_Sultan_Fort_Bathinda.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qila_Mubarak_Razia_Sultan_Fort_Bathinda.jpg",
+    "verified": true
+  },
+  "punjab-harike-wetland---bird-sanctuary": {
+    "name": "Harike Wetland & Bird Sanctuary",
+    "stateId": "punjab",
+    "stateName": "Punjab",
+    "fileName": "File:Harike_Wetland_and_Bird_Sanctuary_Migratory_Birds.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Harike_Wetland_and_Bird_Sanctuary_Migratory_Birds.jpg",
+    "verified": true
+  },
+  "haryana-kurukshetra--land-of-the-bhagavad-gita-": {
+    "name": "Kurukshetra (Land of the Bhagavad Gita)",
+    "stateId": "haryana",
+    "stateName": "Haryana",
+    "fileName": "File:Brahma_Sarovar_Kurukshetra_Holy_Tank.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Brahma_Sarovar_Kurukshetra_Holy_Tank.jpg",
+    "verified": true
+  },
+  "haryana-sultanpur-national-park": {
+    "name": "Sultanpur National Park",
+    "stateId": "haryana",
+    "stateName": "Haryana",
+    "fileName": "File:Sultanpur_National_Park_Bird_Sanctuary_Lake.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sultanpur_National_Park_Bird_Sanctuary_Lake.jpg",
+    "verified": true
+  },
+  "haryana-morni-hills---tikkar-taal--only-hill-station-in-haryana-": {
+    "name": "Morni Hills & Tikkar Taal (Only Hill Station in Haryana)",
+    "stateId": "haryana",
+    "stateName": "Haryana",
+    "fileName": "File:Tikkar_Taal_Lake_Morni_Hills_Haryana.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tikkar_Taal_Lake_Morni_Hills_Haryana.jpg",
+    "verified": true
+  },
+  "haryana-pinjore-gardens--yadavindra-gardens-": {
+    "name": "Pinjore Gardens (Yadavindra Gardens)",
+    "stateId": "haryana",
+    "stateName": "Haryana",
+    "fileName": "File:Yadavindra_Gardens_Pinjore_Mughal_Terraces.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yadavindra_Gardens_Pinjore_Mughal_Terraces.jpg",
+    "verified": true
+  },
+  "haryana-damdama-lake---sohna-hills": {
+    "name": "Damdama Lake & Sohna Hills",
+    "stateId": "haryana",
+    "stateName": "Haryana",
+    "fileName": "File:Damdama_Lake_Aravalli_Hills_Gurugram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Damdama_Lake_Aravalli_Hills_Gurugram.jpg",
+    "verified": true
+  },
+  "delhi-red-fort--lal-qila----old-delhi": {
+    "name": "Red Fort (Lal Qila) & Old Delhi",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:Red_Fort_Lal_Qila_Delhi_Lahori_Gate.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red_Fort_Lal_Qila_Delhi_Lahori_Gate.jpg",
+    "verified": true
+  },
+  "delhi-qutub-minar---mehrauli-archaeological-park": {
+    "name": "Qutub Minar & Mehrauli Archaeological Park",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:Qutub_Minar_Complex_Mehrauli_Delhi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Qutub_Minar_Complex_Mehrauli_Delhi.jpg",
+    "verified": true
+  },
+  "delhi-humayun-s-tomb---sunder-nursery": {
+    "name": "Humayun's Tomb & Sunder Nursery",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:Humayuns_Tomb_Delhi_UNESCO_Mughal_Garden.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Humayuns_Tomb_Delhi_UNESCO_Mughal_Garden.jpg",
+    "verified": true
+  },
+  "delhi-india-gate---kartavya-path": {
+    "name": "India Gate & Kartavya Path",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:India_Gate_in_New_Delhi_03-2016.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:India_Gate_in_New_Delhi_03-2016.jpg",
+    "verified": true
+  },
+  "delhi-lotus-temple---akshardham": {
+    "name": "Lotus Temple & Akshardham",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:Lotus_Temple_Bahai_House_of_Worship_Delhi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lotus_Temple_Bahai_House_of_Worship_Delhi.jpg",
+    "verified": true
+  },
+  "delhi-lodhi-garden---lodhi-art-district": {
+    "name": "Lodhi Garden & Lodhi Art District",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:Shisha_Gumbad_and_Bara_Gumbad_Lodhi_Garden_Delhi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shisha_Gumbad_and_Bara_Gumbad_Lodhi_Garden_Delhi.jpg",
+    "verified": true
+  },
+  "delhi-hauz-khas-village---deer-park": {
+    "name": "Hauz Khas Village & Deer Park",
+    "stateId": "delhi",
+    "stateName": "Delhi",
+    "fileName": "File:Hauz_Khas_Complex_Madrasa_and_Lake_Delhi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hauz_Khas_Complex_Madrasa_and_Lake_Delhi.jpg",
+    "verified": true
+  },
+  "jammu-kashmir-srinagar--paradise-on-earth---dal-lake-": {
+    "name": "Srinagar (Paradise on Earth & Dal Lake)",
+    "stateId": "jammu-kashmir",
+    "stateName": "Jammu and Kashmir",
+    "fileName": "File:Dal_Lake_Shikara_Boats_Srinagar_Kashmir.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dal_Lake_Shikara_Boats_Srinagar_Kashmir.jpg",
+    "verified": true
+  },
+  "jammu-kashmir-gulmarg--meadow-of-flowers---skiing-capital-": {
+    "name": "Gulmarg (Meadow of Flowers & Skiing Capital)",
+    "stateId": "jammu-kashmir",
+    "stateName": "Jammu and Kashmir",
+    "fileName": "File:Gulmarg_Gondola_Apharwat_Peak_Snow.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gulmarg_Gondola_Apharwat_Peak_Snow.jpg",
+    "verified": true
+  },
+  "jammu-kashmir-pahalgam--valley-of-shepherds---betaab-valley-": {
+    "name": "Pahalgam (Valley of Shepherds & Betaab Valley)",
+    "stateId": "jammu-kashmir",
+    "stateName": "Jammu and Kashmir",
+    "fileName": "File:Betaab_Valley_Pahalgam_Lidder_River.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Betaab_Valley_Pahalgam_Lidder_River.jpg",
+    "verified": true
+  },
+  "jammu-kashmir-sonamarg--meadow-of-gold---thajiwas-glacier-": {
+    "name": "Sonamarg (Meadow of Gold & Thajiwas Glacier)",
+    "stateId": "jammu-kashmir",
+    "stateName": "Jammu and Kashmir",
+    "fileName": "File:Thajiwas_Glacier_Sonamarg_Meadow_of_Gold.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thajiwas_Glacier_Sonamarg_Meadow_of_Gold.jpg",
+    "verified": true
+  },
+  "jammu-kashmir-katra---shri-mata-vaishno-devi-shrine": {
+    "name": "Katra & Shri Mata Vaishno Devi Shrine",
+    "stateId": "jammu-kashmir",
+    "stateName": "Jammu and Kashmir",
+    "fileName": "File:Shri_Mata_Vaishno_Devi_Bhawan_Trikuta_Hills.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shri_Mata_Vaishno_Devi_Bhawan_Trikuta_Hills.jpg",
+    "verified": true
+  },
+  "jammu-kashmir-patnitop---sanasar": {
+    "name": "Patnitop & Sanasar",
+    "stateId": "jammu-kashmir",
+    "stateName": "Jammu and Kashmir",
+    "fileName": "File:Patnitop_Meadows_and_Pine_Forests_Jammu.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Patnitop_Meadows_and_Pine_Forests_Jammu.jpg",
+    "verified": true
+  },
+  "ladakh-leh--capital-of-ladakh---leh-palace-": {
+    "name": "Leh (Capital of Ladakh & Leh Palace)",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Leh_Palace_and_Tsemo_Fort_Namgyal_Hill.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leh_Palace_and_Tsemo_Fort_Namgyal_Hill.jpg",
+    "verified": true
+  },
+  "ladakh-pangong-tso--the-color-changing-lake-": {
+    "name": "Pangong Tso (The Color-Changing Lake)",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Pangong_Tso_Lake_Blue_Waters_Ladakh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pangong_Tso_Lake_Blue_Waters_Ladakh.jpg",
+    "verified": true
+  },
+  "ladakh-nubra-valley---hunder-sand-dunes": {
+    "name": "Nubra Valley & Hunder Sand Dunes",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Hunder_Sand_Dunes_Bactrian_Double_Humped_Camels.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hunder_Sand_Dunes_Bactrian_Double_Humped_Camels.jpg",
+    "verified": true
+  },
+  "ladakh-thiksey---hemis-monasteries": {
+    "name": "Thiksey & Hemis Monasteries",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Thiksey_Monastery_Gompa_Indus_Valley.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Thiksey_Monastery_Gompa_Indus_Valley.jpg",
+    "verified": true
+  },
+  "ladakh-tso-moriri---hanle--dark-sky-reserve-": {
+    "name": "Tso Moriri & Hanle (Dark Sky Reserve)",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Tso_Moriri_High_Altitude_Glacial_Lake_Ladakh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tso_Moriri_High_Altitude_Glacial_Lake_Ladakh.jpg",
+    "verified": true
+  },
+  "ladakh-zanskar-valley---padum": {
+    "name": "Zanskar Valley & Padum",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Phuktal_Monastery_Cliff_Cave_Zanskar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phuktal_Monastery_Cliff_Cave_Zanskar.jpg",
+    "verified": true
+  },
+  "ladakh-magnetic-hill--sangam---pathar-sahib": {
+    "name": "Magnetic Hill, Sangam & Pathar Sahib",
+    "stateId": "ladakh",
+    "stateName": "Ladakh",
+    "fileName": "File:Confluence_of_Indus_and_Zanskar_Rivers_Nimmu.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Confluence_of_Indus_and_Zanskar_Rivers_Nimmu.jpg",
+    "verified": true
+  },
+  "chandigarh-rock-garden--nek-chand-s-fantasy-world-": {
+    "name": "Rock Garden (Nek Chand's Fantasy World)",
+    "stateId": "chandigarh",
+    "stateName": "Chandigarh",
+    "fileName": "File:Rock_Garden_Chandigarh_Nek_Chand_Sculptures.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rock_Garden_Chandigarh_Nek_Chand_Sculptures.jpg",
+    "verified": true
+  },
+  "chandigarh-sukhna-lake---promenade": {
+    "name": "Sukhna Lake & Promenade",
+    "stateId": "chandigarh",
+    "stateName": "Chandigarh",
+    "fileName": "File:Sukhna_Lake_Promenade_Chandigarh_Boating.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sukhna_Lake_Promenade_Chandigarh_Boating.jpg",
+    "verified": true
+  },
+  "chandigarh-zakir-hussain-rose-garden": {
+    "name": "Zakir Hussain Rose Garden",
+    "stateId": "chandigarh",
+    "stateName": "Chandigarh",
+    "fileName": "File:Zakir_Hussain_Rose_Garden_Chandigarh_Roses.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zakir_Hussain_Rose_Garden_Chandigarh_Roses.jpg",
+    "verified": true
+  },
+  "chandigarh-capitol-complex--unesco-heritage-by-le-corbusier-": {
+    "name": "Capitol Complex (UNESCO Heritage by Le Corbusier)",
+    "stateId": "chandigarh",
+    "stateName": "Chandigarh",
+    "fileName": "File:Open_Hand_Monument_Le_Corbusier_Chandigarh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Open_Hand_Monument_Le_Corbusier_Chandigarh.jpg",
+    "verified": true
+  },
+  "chandigarh-sector-17-plaza---city-centre": {
+    "name": "Sector 17 Plaza & City Centre",
+    "stateId": "chandigarh",
+    "stateName": "Chandigarh",
+    "fileName": "File:Sector_17_Plaza_Fountains_Chandigarh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sector_17_Plaza_Fountains_Chandigarh.jpg",
+    "verified": true
+  },
+  "jharkhand-ranchi--city-of-waterfalls-": {
+    "name": "Ranchi (City of Waterfalls)",
+    "stateId": "jharkhand",
+    "stateName": "Jharkhand",
+    "fileName": "File:Hundru_Falls_Subarnarekha_River_Ranchi.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hundru_Falls_Subarnarekha_River_Ranchi.jpg",
+    "verified": true
+  },
+  "jharkhand-netarhat--queen-of-chhota-nagpur-": {
+    "name": "Netarhat (Queen of Chhota Nagpur)",
+    "stateId": "jharkhand",
+    "stateName": "Jharkhand",
+    "fileName": "File:Netarhat_Sunrise_Point_Chhota_Nagpur_Hills.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Netarhat_Sunrise_Point_Chhota_Nagpur_Hills.jpg",
+    "verified": true
+  },
+  "jharkhand-betla-national-park---palamu-forts": {
+    "name": "Betla National Park & Palamu Forts",
+    "stateId": "jharkhand",
+    "stateName": "Jharkhand",
+    "fileName": "File:Palamu_Forts_Old_and_New_Fort_Auranga_River.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Palamu_Forts_Old_and_New_Fort_Auranga_River.jpg",
+    "verified": true
+  },
+  "jharkhand-deoghar--baidyanath-dham-jyotirlinga-": {
+    "name": "Deoghar (Baidyanath Dham Jyotirlinga)",
+    "stateId": "jharkhand",
+    "stateName": "Jharkhand",
+    "fileName": "File:Baidyanath_Jyotirlinga_Temple_Deoghar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baidyanath_Jyotirlinga_Temple_Deoghar.jpg",
+    "verified": true
+  },
+  "jharkhand-jamshedpur--the-steel-city---jubilee-park-": {
+    "name": "Jamshedpur (The Steel City & Jubilee Park)",
+    "stateId": "jharkhand",
+    "stateName": "Jharkhand",
+    "fileName": "File:Jubilee_Park_and_Musical_Fountains_Jamshedpur.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jubilee_Park_and_Musical_Fountains_Jamshedpur.jpg",
+    "verified": true
+  },
+  "jharkhand-parasnath-hill--shikharji---holiest-jain-tirth-": {
+    "name": "Parasnath Hill (Shikharji - Holiest Jain Tirth)",
+    "stateId": "jharkhand",
+    "stateName": "Jharkhand",
+    "fileName": "File:Shikharji_Parasnath_Hill_Jain_Tirth_Jharkhand.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shikharji_Parasnath_Hill_Jain_Tirth_Jharkhand.jpg",
+    "verified": true
+  },
+  "chhattisgarh-chitrakote-waterfalls--niagara-of-india-": {
+    "name": "Chitrakote Waterfalls (Niagara of India)",
+    "stateId": "chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "fileName": "File:Chitrakote_Waterfalls_Niagara_of_India_Indravati.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chitrakote_Waterfalls_Niagara_of_India_Indravati.jpg",
+    "verified": true
+  },
+  "chhattisgarh-kanger-valley-national-park---kotumsar-caves": {
+    "name": "Kanger Valley National Park & Kotumsar Caves",
+    "stateId": "chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "fileName": "File:Kotumsar_Caves_Stalactites_and_Stalagmites_Kanger.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kotumsar_Caves_Stalactites_and_Stalagmites_Kanger.jpg",
+    "verified": true
+  },
+  "chhattisgarh-sirpur--ancient-buddhist---lakshmana-brick-temple-": {
+    "name": "Sirpur (Ancient Buddhist & Lakshmana Brick Temple)",
+    "stateId": "chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "fileName": "File:Lakshmana_Brick_Temple_Sirpur_7th_Century.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lakshmana_Brick_Temple_Sirpur_7th_Century.jpg",
+    "verified": true
+  },
+  "chhattisgarh-mainpat--tibetan-settlement---shimla-of-chhattisgarh-": {
+    "name": "Mainpat (Tibetan Settlement & Shimla of Chhattisgarh)",
+    "stateId": "chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "fileName": "File:Mainpat_Tibetan_Camp_Monastery_Dhakpo.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mainpat_Tibetan_Camp_Monastery_Dhakpo.jpg",
+    "verified": true
+  },
+  "chhattisgarh-barnawapara-wildlife-sanctuary": {
+    "name": "Barnawapara Wildlife Sanctuary",
+    "stateId": "chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "fileName": "File:Leopard_in_Barnawapara_Wildlife_Sanctuary.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leopard_in_Barnawapara_Wildlife_Sanctuary.jpg",
+    "verified": true
+  },
+  "chhattisgarh-bhoramdeo-temple--khajuraho-of-chhattisgarh-": {
+    "name": "Bhoramdeo Temple (Khajuraho of Chhattisgarh)",
+    "stateId": "chhattisgarh",
+    "stateName": "Chhattisgarh",
+    "fileName": "File:Bhoramdeo_Temple_Maikal_Hills_Khajuraho_of_Chhattisgarh.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bhoramdeo_Temple_Maikal_Hills_Khajuraho_of_Chhattisgarh.jpg",
+    "verified": true
+  },
+  "assam-kaziranga-national-park--home-of-the-one-horned-rhino-": {
+    "name": "Kaziranga National Park (Home of the One-Horned Rhino)",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Indian_Rhinoceros_in_Kaziranga_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indian_Rhinoceros_in_Kaziranga_National_Park.jpg",
+    "verified": true
+  },
+  "assam-majuli--world-s-largest-inhabited-river-island-": {
+    "name": "Majuli (World's Largest Inhabited River Island)",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Majuli_River_Island_Brahmaputra_Sunset.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Majuli_River_Island_Brahmaputra_Sunset.jpg",
+    "verified": true
+  },
+  "assam-guwahati---kamakhya-temple": {
+    "name": "Guwahati & Kamakhya Temple",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Kamakhya_Temple_Nilachal_Hill_Guwahati.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamakhya_Temple_Nilachal_Hill_Guwahati.jpg",
+    "verified": true
+  },
+  "assam-sivasagar--imperial-capital-of-the-ahom-kingdom-": {
+    "name": "Sivasagar (Imperial Capital of the Ahom Kingdom)",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Rang_Ghar_Ahom_Royal_Amphitheatre_Sivasagar.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rang_Ghar_Ahom_Royal_Amphitheatre_Sivasagar.jpg",
+    "verified": true
+  },
+  "assam-haflong---jatinga--only-hill-station-of-assam-": {
+    "name": "Haflong & Jatinga (Only Hill Station of Assam)",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Haflong_Lake_and_Hanging_Bridge_Dima_Hasao.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haflong_Lake_and_Hanging_Bridge_Dima_Hasao.jpg",
+    "verified": true
+  },
+  "assam-manas-national-park--unesco-wild-biosphere-reserve-": {
+    "name": "Manas National Park (UNESCO Wild Biosphere Reserve)",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Manas_National_Park_Royal_Bengal_Tiger_Grasslands.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manas_National_Park_Royal_Bengal_Tiger_Grasslands.jpg",
+    "verified": true
+  },
+  "assam-dibrugarh--the-tea-city-of-india-": {
+    "name": "Dibrugarh (The Tea City of India)",
+    "stateId": "assam",
+    "stateName": "Assam",
+    "fileName": "File:Tea_Gardens_of_Dibrugarh_Upper_Assam.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tea_Gardens_of_Dibrugarh_Upper_Assam.jpg",
+    "verified": true
+  },
+  "meghalaya-cherrapunji--sohra---double-decker-living-root-bridge-": {
+    "name": "Cherrapunji (Sohra & Double Decker Living Root Bridge)",
+    "stateId": "meghalaya",
+    "stateName": "Meghalaya",
+    "fileName": "File:Double_Decker_Living_Root_Bridge_Nongriat_Cherrapunji.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Double_Decker_Living_Root_Bridge_Nongriat_Cherrapunji.jpg",
+    "verified": true
+  },
+  "meghalaya-dawki---umngot-river--crystal-clear-floating-boats-": {
+    "name": "Dawki & Umngot River (Crystal Clear Floating Boats)",
+    "stateId": "meghalaya",
+    "stateName": "Meghalaya",
+    "fileName": "File:Dawki_Umngot_River_Transparent_Crystal_Water_Boat.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dawki_Umngot_River_Transparent_Crystal_Water_Boat.jpg",
+    "verified": true
+  },
+  "meghalaya-shillong--scotland-of-the-east---music-capital-": {
+    "name": "Shillong (Scotland of the East & Music Capital)",
+    "stateId": "meghalaya",
+    "stateName": "Meghalaya",
+    "fileName": "File:Umiam_Lake_Barapani_Shillong_Meghalaya.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Umiam_Lake_Barapani_Shillong_Meghalaya.jpg",
+    "verified": true
+  },
+  "meghalaya-mawlynnong--asia-s-cleanest-village-": {
+    "name": "Mawlynnong (Asia's Cleanest Village)",
+    "stateId": "meghalaya",
+    "stateName": "Meghalaya",
+    "fileName": "File:Mawlynnong_Asias_Cleanest_Village_Flower_Gardens.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mawlynnong_Asias_Cleanest_Village_Flower_Gardens.jpg",
+    "verified": true
+  },
+  "meghalaya-laitlum-canyons--the-end-of-the-world-": {
+    "name": "Laitlum Canyons (The End of the World)",
+    "stateId": "meghalaya",
+    "stateName": "Meghalaya",
+    "fileName": "File:Laitlum_Canyons_East_Khasi_Hills_Gorge.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Laitlum_Canyons_East_Khasi_Hills_Gorge.jpg",
+    "verified": true
+  },
+  "meghalaya-mawsynram---mawlyngbna": {
+    "name": "Mawsynram & Mawlyngbna",
+    "stateId": "meghalaya",
+    "stateName": "Meghalaya",
+    "fileName": "File:Mawjymbuin_Cave_Natural_Shivalinga_Mawsynram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mawjymbuin_Cave_Natural_Shivalinga_Mawsynram.jpg",
+    "verified": true
+  },
+  "sikkim-gangtok--capital-of-sikkim---mg-marg-": {
+    "name": "Gangtok (Capital of Sikkim & MG Marg)",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:MG_Marg_Gangtok_Promenade_Boulevard.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MG_Marg_Gangtok_Promenade_Boulevard.jpg",
+    "verified": true
+  },
+  "sikkim-tsomgo-lake--baba-mandir---nathu-la-pass": {
+    "name": "Tsomgo Lake, Baba Mandir & Nathu La Pass",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:Tsomgo_Changu_Lake_Glacial_Lake_Sikkim.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tsomgo_Changu_Lake_Glacial_Lake_Sikkim.jpg",
+    "verified": true
+  },
+  "sikkim-yumthang-valley---zero-point--valley-of-flowers-of-sikkim-": {
+    "name": "Yumthang Valley & Zero Point (Valley of Flowers of Sikkim)",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:Yumthang_Valley_of_Flowers_Rhododendrons_Sikkim.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yumthang_Valley_of_Flowers_Rhododendrons_Sikkim.jpg",
+    "verified": true
+  },
+  "sikkim-gurudongmar-lake--one-of-world-s-highest-lakes-": {
+    "name": "Gurudongmar Lake (One of World's Highest Lakes)",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:Gurudongmar_Lake_Highest_Lakes_in_the_World_Sikkim.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gurudongmar_Lake_Highest_Lakes_in_the_World_Sikkim.jpg",
+    "verified": true
+  },
+  "sikkim-pelling---skywalk--kanchenjunga-panorama-": {
+    "name": "Pelling & Skywalk (Kanchenjunga Panorama)",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:Pelling_Skywalk_Chenrezig_Statue_Kanchenjunga.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pelling_Skywalk_Chenrezig_Statue_Kanchenjunga.jpg",
+    "verified": true
+  },
+  "sikkim-ravangla--buddha-park---tathagata-tsal-": {
+    "name": "Ravangla (Buddha Park / Tathagata Tsal)",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:Buddha_Park_Tathagata_Tsal_Ravangla_Statue.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buddha_Park_Tathagata_Tsal_Ravangla_Statue.jpg",
+    "verified": true
+  },
+  "sikkim-yuksom---dzongri-trek--first-capital-of-sikkim-": {
+    "name": "Yuksom & Dzongri Trek (First Capital of Sikkim)",
+    "stateId": "sikkim",
+    "stateName": "Sikkim",
+    "fileName": "File:Yuksom_Norbugang_Coronation_Throne_First_Chogyal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yuksom_Norbugang_Coronation_Throne_First_Chogyal.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-tawang---tawang-monastery--india-s-largest-monastery-": {
+    "name": "Tawang & Tawang Monastery (India's Largest Monastery)",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Tawang_Monastery_Galden_Namgyal_Lhatse.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tawang_Monastery_Galden_Namgyal_Lhatse.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-ziro-valley--unesco-apatani-cultural-landscape-": {
+    "name": "Ziro Valley (UNESCO Apatani Cultural Landscape)",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Ziro_Valley_Apatani_Paddy_Cum_Fish_Culture.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ziro_Valley_Apatani_Paddy_Cum_Fish_Culture.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-mechuka--menchukha---forbidden-valley-of-arunachal-": {
+    "name": "Mechuka (Menchukha - Forbidden Valley of Arunachal)",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Mechuka_Valley_Yargyapchu_River_Snow_Peaks.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mechuka_Valley_Yargyapchu_River_Snow_Peaks.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-dirang---sangti-valley": {
+    "name": "Dirang & Sangti Valley",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Dirang_Dzong_Fort_and_Monpa_Village.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dirang_Dzong_Fort_and_Monpa_Village.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-namdapha-national-park---tiger-reserve": {
+    "name": "Namdapha National Park & Tiger Reserve",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Namdapha_National_Park_Rainforest_Noa_Dihing.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Namdapha_National_Park_Rainforest_Noa_Dihing.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-pasighat---siang-river--where-brahmaputra-enters-india-": {
+    "name": "Pasighat & Siang River (Where Brahmaputra Enters India)",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Siang_River_Valley_Pasighat_Arunachal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siang_River_Valley_Pasighat_Arunachal.jpg",
+    "verified": true
+  },
+  "arunachal-pradesh-anini---dibang-valley": {
+    "name": "Anini & Dibang Valley",
+    "stateId": "arunachal-pradesh",
+    "stateName": "Arunachal Pradesh",
+    "fileName": "File:Anini_Dibang_Valley_Misty_Himalayas.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anini_Dibang_Valley_Misty_Himalayas.jpg",
+    "verified": true
+  },
+  "nagaland-kohima---hornbill-festival--kisama-": {
+    "name": "Kohima & Hornbill Festival (Kisama)",
+    "stateId": "nagaland",
+    "stateName": "Nagaland",
+    "fileName": "File:Kisama_Heritage_Village_Hornbill_Festival_Nagaland.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kisama_Heritage_Village_Hornbill_Festival_Nagaland.jpg",
+    "verified": true
+  },
+  "nagaland-dzukou-valley--valley-of-flowers-of-the-east-": {
+    "name": "Dzukou Valley (Valley of Flowers of the East)",
+    "stateId": "nagaland",
+    "stateName": "Nagaland",
+    "fileName": "File:Dzukou_Valley_Rolling_Green_Hills_Nagaland.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dzukou_Valley_Rolling_Green_Hills_Nagaland.jpg",
+    "verified": true
+  },
+  "nagaland-khonoma--india-s-first-green-village-": {
+    "name": "Khonoma (India's First Green Village)",
+    "stateId": "nagaland",
+    "stateName": "Nagaland",
+    "fileName": "File:Khonoma_Green_Village_Terraced_Paddy_Fields.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Khonoma_Green_Village_Terraced_Paddy_Fields.jpg",
+    "verified": true
+  },
+  "nagaland-mokokchung--cultural-heartland-of-the-ao-tribe-": {
+    "name": "Mokokchung (Cultural Heartland of the Ao Tribe)",
+    "stateId": "nagaland",
+    "stateName": "Nagaland",
+    "fileName": "File:Ungma_Oldest_and_Largest_Ao_Naga_Village.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ungma_Oldest_and_Largest_Ao_Naga_Village.jpg",
+    "verified": true
+  },
+  "nagaland-mon---longwa--headhunters---indo-myanmar-border-": {
+    "name": "Mon & Longwa (Headhunters & Indo-Myanmar Border)",
+    "stateId": "nagaland",
+    "stateName": "Nagaland",
+    "fileName": "File:Longwa_Village_Angh_House_Indo_Myanmar_Border.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Longwa_Village_Angh_House_Indo_Myanmar_Border.jpg",
+    "verified": true
+  },
+  "nagaland-wokha---doyang-river--amur-falcon-capital-": {
+    "name": "Wokha & Doyang River (Amur Falcon Capital)",
+    "stateId": "nagaland",
+    "stateName": "Nagaland",
+    "fileName": "File:Doyang_River_Amur_Falcon_Roosting_Wokha.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Doyang_River_Amur_Falcon_Roosting_Wokha.jpg",
+    "verified": true
+  },
+  "manipur-loktak-lake---keibul-lamjao--world-s-only-floating-national-park-": {
+    "name": "Loktak Lake & Keibul Lamjao (World's Only Floating National Park)",
+    "stateId": "manipur",
+    "stateName": "Manipur",
+    "fileName": "File:Loktak_Lake_Phumdis_Floating_Islands_Manipur.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Loktak_Lake_Phumdis_Floating_Islands_Manipur.jpg",
+    "verified": true
+  },
+  "manipur-imphal---kangla-fort": {
+    "name": "Imphal & Kangla Fort",
+    "stateId": "manipur",
+    "stateName": "Manipur",
+    "fileName": "File:Kangla_Fort_Western_Gate_and_Kangla_Sha_Imphal.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kangla_Fort_Western_Gate_and_Kangla_Sha_Imphal.jpg",
+    "verified": true
+  },
+  "manipur-ukhrul---shirui-peak--home-of-shirui-lily-": {
+    "name": "Ukhrul & Shirui Peak (Home of Shirui Lily)",
+    "stateId": "manipur",
+    "stateName": "Manipur",
+    "fileName": "File:Shirui_Kashong_Peak_Shirui_Lily_Ukhrul.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shirui_Kashong_Peak_Shirui_Lily_Ukhrul.jpg",
+    "verified": true
+  },
+  "manipur-andro-heritage-village": {
+    "name": "Andro Heritage Village",
+    "stateId": "manipur",
+    "stateName": "Manipur",
+    "fileName": "File:Andro_Cultural_Heritage_Complex_Mutua_Museum.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andro_Cultural_Heritage_Complex_Mutua_Museum.jpg",
+    "verified": true
+  },
+  "manipur-moreh---tamu--indo-myanmar-border-gateway-": {
+    "name": "Moreh & Tamu (Indo-Myanmar Border Gateway)",
+    "stateId": "manipur",
+    "stateName": "Manipur",
+    "fileName": "File:Moreh_Border_Town_Indo_Myanmar_Friendship_Gate.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Moreh_Border_Town_Indo_Myanmar_Friendship_Gate.jpg",
+    "verified": true
+  },
+  "mizoram-aizawl---reiek-heritage-peak": {
+    "name": "Aizawl & Reiek Heritage Peak",
+    "stateId": "mizoram",
+    "stateName": "Mizoram",
+    "fileName": "File:Reiek_Heritage_Village_and_Peak_Mizoram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Reiek_Heritage_Village_and_Peak_Mizoram.jpg",
+    "verified": true
+  },
+  "mizoram-vantawng-falls---thenzawl": {
+    "name": "Vantawng Falls & Thenzawl",
+    "stateId": "mizoram",
+    "stateName": "Mizoram",
+    "fileName": "File:Vantawng_Falls_Highest_Waterfall_in_Mizoram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vantawng_Falls_Highest_Waterfall_in_Mizoram.jpg",
+    "verified": true
+  },
+  "mizoram-phawngpui--blue-mountain---highest-peak-of-mizoram-": {
+    "name": "Phawngpui (Blue Mountain - Highest Peak of Mizoram)",
+    "stateId": "mizoram",
+    "stateName": "Mizoram",
+    "fileName": "File:Phawngpui_Blue_Mountain_Peak_Mizoram.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Phawngpui_Blue_Mountain_Peak_Mizoram.jpg",
+    "verified": true
+  },
+  "mizoram-champhai---rih-dil--indo-myanmar-border-": {
+    "name": "Champhai & Rih Dil (Indo-Myanmar Border)",
+    "stateId": "mizoram",
+    "stateName": "Mizoram",
+    "fileName": "File:Rih_Dil_Heart_Shaped_Lake_Mizo_Ancestral_Spirits.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rih_Dil_Heart_Shaped_Lake_Mizo_Ancestral_Spirits.jpg",
+    "verified": true
+  },
+  "mizoram-hmuifang---sialsuk-hills": {
+    "name": "Hmuifang & Sialsuk Hills",
+    "stateId": "mizoram",
+    "stateName": "Mizoram",
+    "fileName": "File:Hmuifang_Tourist_Resort_Rolling_Grasslands.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hmuifang_Tourist_Resort_Rolling_Grasslands.jpg",
+    "verified": true
+  },
+  "tripura-neermahal---rudrasagar-lake": {
+    "name": "Neermahal & Rudrasagar Lake",
+    "stateId": "tripura",
+    "stateName": "Tripura",
+    "fileName": "File:Neermahal_Water_Palace_Rudrasagar_Lake_Tripura.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Neermahal_Water_Palace_Rudrasagar_Lake_Tripura.jpg",
+    "verified": true
+  },
+  "tripura-unakoti--lost-hill-of-subterranean-rock-carvings-": {
+    "name": "Unakoti (Lost Hill of Subterranean Rock Carvings)",
+    "stateId": "tripura",
+    "stateName": "Tripura",
+    "fileName": "File:Unakoti_Rock_Cut_Carvings_Lord_Shiva_Unakotiswara_Kal_Bhairava.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Unakoti_Rock_Cut_Carvings_Lord_Shiva_Unakotiswara_Kal_Bhairava.jpg",
+    "verified": true
+  },
+  "tripura-agartala---ujjayanta-palace": {
+    "name": "Agartala & Ujjayanta Palace",
+    "stateId": "tripura",
+    "stateName": "Tripura",
+    "fileName": "File:Ujjayanta_Palace_Tripura_State_Museum_Agartala.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ujjayanta_Palace_Tripura_State_Museum_Agartala.jpg",
+    "verified": true
+  },
+  "tripura-jampui-hills--land-of-eternal-spring-": {
+    "name": "Jampui Hills (Land of Eternal Spring)",
+    "stateId": "tripura",
+    "stateName": "Tripura",
+    "fileName": "File:Jampui_Hills_Orange_Orchards_Betlingchhip_Peak.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jampui_Hills_Orange_Orchards_Betlingchhip_Peak.jpg",
+    "verified": true
+  },
+  "tripura-udaipur---tripura-sundari-temple--matabari-": {
+    "name": "Udaipur & Tripura Sundari Temple (Matabari)",
+    "stateId": "tripura",
+    "stateName": "Tripura",
+    "fileName": "File:Tripura_Sundari_Temple_Matabari_Udaipur_Tripura.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tripura_Sundari_Temple_Matabari_Udaipur_Tripura.jpg",
+    "verified": true
+  },
+  "andaman-nicobar-havelock-island--swaraj-dweep---radhanagar-beach-": {
+    "name": "Havelock Island (Swaraj Dweep & Radhanagar Beach)",
+    "stateId": "andaman-nicobar",
+    "stateName": "Andaman and Nicobar Islands",
+    "fileName": "File:Radhanagar_Beach_Beach_No_7_Havelock_Sunset.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Radhanagar_Beach_Beach_No_7_Havelock_Sunset.jpg",
+    "verified": true
+  },
+  "andaman-nicobar-port-blair---cellular-jail--national-memorial-": {
+    "name": "Port Blair & Cellular Jail (National Memorial)",
+    "stateId": "andaman-nicobar",
+    "stateName": "Andaman and Nicobar Islands",
+    "fileName": "File:Cellular_Jail_National_Memorial_Port_Blair.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cellular_Jail_National_Memorial_Port_Blair.jpg",
+    "verified": true
+  },
+  "andaman-nicobar-neil-island--shaheed-dweep---natural-bridge-": {
+    "name": "Neil Island (Shaheed Dweep & Natural Bridge)",
+    "stateId": "andaman-nicobar",
+    "stateName": "Andaman and Nicobar Islands",
+    "fileName": "File:Natural_Rock_Formation_Howrah_Bridge_Neil_Island.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Natural_Rock_Formation_Howrah_Bridge_Neil_Island.jpg",
+    "verified": true
+  },
+  "andaman-nicobar-baratang-island--mud-volcano---limestone-caves-": {
+    "name": "Baratang Island (Mud Volcano & Limestone Caves)",
+    "stateId": "andaman-nicobar",
+    "stateName": "Andaman and Nicobar Islands",
+    "fileName": "File:Baratang_Island_Limestone_Caves_Mangrove_Safari.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Baratang_Island_Limestone_Caves_Mangrove_Safari.jpg",
+    "verified": true
+  },
+  "andaman-nicobar-diglipur---ross-and-smith-islands": {
+    "name": "Diglipur & Ross and Smith Islands",
+    "stateId": "andaman-nicobar",
+    "stateName": "Andaman and Nicobar Islands",
+    "fileName": "File:Ross_and_Smith_Twin_Islands_Sandbar_Diglipur.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ross_and_Smith_Twin_Islands_Sandbar_Diglipur.jpg",
+    "verified": true
+  },
+  "andaman-nicobar-jolly-buoy---red-skin-islands--mahatma-gandhi-marine-park-": {
+    "name": "Jolly Buoy & Red Skin Islands (Mahatma Gandhi Marine Park)",
+    "stateId": "andaman-nicobar",
+    "stateName": "Andaman and Nicobar Islands",
+    "fileName": "File:Jolly_Buoy_Island_Mahatma_Gandhi_Marine_National_Park.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jolly_Buoy_Island_Mahatma_Gandhi_Marine_National_Park.jpg",
+    "verified": true
+  },
+  "lakshadweep-agatti-island---lagoon": {
+    "name": "Agatti Island & Lagoon",
+    "stateId": "lakshadweep",
+    "stateName": "Lakshadweep",
+    "fileName": "File:Agatti_Island_Airport_Strip_and_Lagoon_Lakshadweep.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agatti_Island_Airport_Strip_and_Lagoon_Lakshadweep.jpg",
+    "verified": true
+  },
+  "lakshadweep-bangaram---thinnakara-atolls": {
+    "name": "Bangaram & Thinnakara Atolls",
+    "stateId": "lakshadweep",
+    "stateName": "Lakshadweep",
+    "fileName": "File:Bangaram_Island_Teardrop_Shaped_Lagoon_Resort.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bangaram_Island_Teardrop_Shaped_Lagoon_Resort.jpg",
+    "verified": true
+  },
+  "lakshadweep-kavaratti--capital-island-": {
+    "name": "Kavaratti (Capital Island)",
+    "stateId": "lakshadweep",
+    "stateName": "Lakshadweep",
+    "fileName": "File:Kavaratti_Island_Lagoon_and_Light_House.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kavaratti_Island_Lagoon_and_Light_House.jpg",
+    "verified": true
+  },
+  "lakshadweep-kadmat-island--cardamom-island-": {
+    "name": "Kadmat Island (Cardamom Island)",
+    "stateId": "lakshadweep",
+    "stateName": "Lakshadweep",
+    "fileName": "File:Kadmat_Island_Longest_Sandy_Beach_Lagoon.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kadmat_Island_Longest_Sandy_Beach_Lagoon.jpg",
+    "verified": true
+  },
+  "lakshadweep-minicoy-island--maliku-atoll-": {
+    "name": "Minicoy Island (Maliku Atoll)",
+    "stateId": "lakshadweep",
+    "stateName": "Lakshadweep",
+    "fileName": "File:Minicoy_Island_Lighthouse_British_Heritage_1885.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minicoy_Island_Lighthouse_British_Heritage_1885.jpg",
+    "verified": true
+  },
+  "puducherry-white-town--french-quarter----promenade": {
+    "name": "White Town (French Quarter) & Promenade",
+    "stateId": "puducherry",
+    "stateName": "Puducherry",
+    "fileName": "File:White_Town_French_Quarter_Yellow_Colonial_Villas_Puducherry.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:White_Town_French_Quarter_Yellow_Colonial_Villas_Puducherry.jpg",
+    "verified": true
+  },
+  "puducherry-auroville---matrimandir": {
+    "name": "Auroville & Matrimandir",
+    "stateId": "puducherry",
+    "stateName": "Puducherry",
+    "fileName": "File:Matrimandir_Golden_Globe_Auroville_Pondicherry.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matrimandir_Golden_Globe_Auroville_Pondicherry.jpg",
+    "verified": true
+  },
+  "puducherry-paradise-beach--chunnambar-boat-house-": {
+    "name": "Paradise Beach (Chunnambar Boat House)",
+    "stateId": "puducherry",
+    "stateName": "Puducherry",
+    "fileName": "File:Paradise_Beach_Chunnambar_Boat_House_Pondicherry.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paradise_Beach_Chunnambar_Boat_House_Pondicherry.jpg",
+    "verified": true
+  },
+  "puducherry-serenity-beach---surfing": {
+    "name": "Serenity Beach & Surfing",
+    "stateId": "puducherry",
+    "stateName": "Puducherry",
+    "fileName": "File:Serenity_Beach_Surf_Waves_Pondicherry.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Serenity_Beach_Surf_Waves_Pondicherry.jpg",
+    "verified": true
+  },
+  "puducherry-arikamedu--ancient-roman-port-ruins-": {
+    "name": "Arikamedu (Ancient Roman Port Ruins)",
+    "stateId": "puducherry",
+    "stateName": "Puducherry",
+    "fileName": "File:Arikamedu_Ancient_Roman_Trade_Port_Ruins_Ariyankuppam.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Arikamedu_Ancient_Roman_Trade_Port_Ruins_Ariyankuppam.jpg",
+    "verified": true
+  }
+}

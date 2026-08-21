@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "name": "Akilesh Sharma",
+    "email": "demo1@tripforge.com",
+    "password": "password123",
+    "role": "user",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&q=80",
+    "bio": "Solo adventure traveler and Himalayan trekker. Always chasing sunsets and misty mountain peaks across India.",
+    "phone": "+91 98765 43210",
+    "location": "Bengaluru, Karnataka",
+    "joinedDate": "2025-01-15",
+    "tripsCreated": 6,
+    "destinationsVisited": 14,
+    "favoriteCategory": "Adventure",
+    "preferences": {
+      "travelStyle": "Adventure",
+      "preferredDestinationType": "Hill Station",
+      "currency": "INR",
+      "notifications": {
+        "tripReminders": true,
+        "budgetAlerts": true,
+        "recommendations": true
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "Priya Patel",
+    "email": "demo2@tripforge.com",
+    "password": "password123",
+    "role": "user",
+    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&q=80",
+    "bio": "Travel photographer, heritage admirer, and culinary explorer. Documenting Indian monuments and traditional arts.",
+    "phone": "+91 98111 22334",
+    "location": "Ahmedabad, Gujarat",
+    "joinedDate": "2024-08-10",
+    "tripsCreated": 4,
+    "destinationsVisited": 9,
+    "favoriteCategory": "Heritage",
+    "preferences": {
+      "travelStyle": "Photography",
+      "preferredDestinationType": "Heritage",
+      "currency": "INR",
+      "notifications": {
+        "tripReminders": true,
+        "budgetAlerts": false,
+        "recommendations": true
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Rahul Verma",
+    "email": "demo3@tripforge.com",
+    "password": "password123",
+    "role": "user",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    "bio": "Road tripper, coastal wanderer, and scuba diving enthusiast. Exploring offbeat trails and scenic highways.",
+    "phone": "+91 97234 56789",
+    "location": "Mumbai, Maharashtra",
+    "joinedDate": "2024-11-05",
+    "tripsCreated": 8,
+    "destinationsVisited": 18,
+    "favoriteCategory": "Beach",
+    "preferences": {
+      "travelStyle": "Road Trip",
+      "preferredDestinationType": "Beach",
+      "currency": "INR",
+      "notifications": {
+        "tripReminders": true,
+        "budgetAlerts": true,
+        "recommendations": true
+      }
+    }
+  }
+]

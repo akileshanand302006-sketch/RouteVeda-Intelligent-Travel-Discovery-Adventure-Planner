@@ -1,0 +1,95 @@
+<div class="page-container attractions-page">
+  <!-- Hero Banner -->
+  <div class="attractions-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1599661046289-e31897846e41?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <h1 class="animate-fade-in-up">India's Iconic <span class="gradient-text">Tourist Attractions</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Explore UNESCO World Heritage forts, palaces, ancient temples, waterfalls, lakes, and scenic viewpoints across India.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Category Chips -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+      <button class="category-chip" [class.active]="selectedCategory === 'All'" (click)="onCategoryChange('All')">
+        All Categories
+      </button>
+      @for (cat of attractionService.categories; track cat) {
+        <button class="category-chip" [class.active]="selectedCategory === cat" (click)="onCategoryChange(cat)">
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="glass-card p-3 mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <div class="input-wrapper">
+            <i class="bi bi-search input-icon"></i>
+            <input
+              type="text"
+              class="form-control-tf"
+              placeholder="Search attraction name, city, state..."
+              [(ngModel)]="searchQuery"
+              (input)="onSearchChange()"
+            >
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <select class="form-select-tf" [(ngModel)]="selectedState" (change)="onStateChange()">
+            <option value="All">All States</option>
+            @for (st of stateService.states(); track st.id) {
+              <option [value]="st.name">{{ st.name }}</option>
+            }
+          </select>
+        </div>
+
+        <div class="col-md-2 text-md-end">
+          <button class="btn btn-sm btn-tf-glass w-100" (click)="resetFilters()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attractions Grid -->
+    @if (attractionService.isLoading()) {
+      <app-loading-spinner message="Finding tourist attractions..." />
+    } @else if (attractionService.filteredAttractions().length === 0) {
+      <app-empty-state
+        icon="bi-bank"
+        title="No attractions found"
+        message="No attractions match your search or category filter."
+        actionLabel="Reset Filters"
+        (action)="resetFilters()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (att of attractionService.filteredAttractions(); track att.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.04) + 's'">
+            <div class="glass-card h-100 d-flex flex-column p-3">
+              <div class="attraction-img-wrapper mb-3 rounded overflow-hidden">
+                <img [src]="att.image" [alt]="att.name" class="attraction-img">
+                <span class="category-badge badge-tf badge-tf-primary">{{ att.category }}</span>
+              </div>
+
+              <div class="d-flex flex-column flex-grow-1">
+                <h5 class="mb-1 fw-bold">{{ att.name }}</h5>
+                <small class="text-tf-muted mb-2"><i class="bi bi-geo-alt-fill text-tf-primary"></i> {{ att.destinationName }}, {{ att.state }}</small>
+                <p class="small text-tf-secondary line-clamp-3 mb-3">{{ att.description }}</p>
+
+                <div class="mt-auto pt-2 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                  <small class="text-tf-muted"><i class="bi bi-clock"></i> {{ att.visitDuration }}</small>
+                  <a [routerLink]="['/attraction', att.id]" class="btn btn-sm btn-tf-outline">
+                    View Details <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

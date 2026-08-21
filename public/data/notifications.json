@@ -1,0 +1,10 @@
+[
+  { "id": 1, "type": "trip", "title": "Trip Confirmed!", "message": "Your Himalayan Adventure Escape has been confirmed. Get ready for an amazing journey!", "icon": "bi-check-circle-fill", "timestamp": "2026-08-05T14:20:00", "read": false, "actionUrl": "/my-trips" },
+  { "id": 2, "type": "recommendation", "title": "New Destination Added", "message": "Spiti Valley is now available! Explore the cold desert wonderland of the Trans-Himalayas.", "icon": "bi-geo-alt-fill", "timestamp": "2026-08-04T10:00:00", "read": false, "actionUrl": "/destination/10" },
+  { "id": 3, "type": "budget", "title": "Budget Alert", "message": "Your Kerala Nature Retreat is currently 16% under budget. Great planning!", "icon": "bi-cash-stack", "timestamp": "2026-08-03T09:30:00", "read": false, "actionUrl": "/my-trips" },
+  { "id": 4, "type": "wishlist", "title": "Wishlist Update", "message": "Ladakh is trending this season! It's on your wishlist — plan your trip now.", "icon": "bi-heart-fill", "timestamp": "2026-08-02T16:45:00", "read": true, "actionUrl": "/destination/14" },
+  { "id": 5, "type": "achievement", "title": "Explorer Badge Earned!", "message": "You've explored 8 destinations! Keep going to earn the Wanderlust badge.", "icon": "bi-trophy-fill", "timestamp": "2026-08-01T11:00:00", "read": true, "actionUrl": "/profile" },
+  { "id": 6, "type": "system", "title": "Welcome to TripForge", "message": "Start your journey by exploring destinations or building your first trip!", "icon": "bi-rocket-takeoff-fill", "timestamp": "2026-07-30T08:00:00", "read": true, "actionUrl": "/explore" },
+  { "id": 7, "type": "trip", "title": "Trip Reminder", "message": "Your Rajasthan Heritage Tour starts in 4 months. Time to finalize your packing list!", "icon": "bi-calendar-event-fill", "timestamp": "2026-08-10T07:00:00", "read": false, "actionUrl": "/my-trips" },
+  { "id": 8, "type": "recommendation", "title": "Monsoon Special", "message": "Wayanad is at its greenest! Perfect time for waterfall treks and nature photography.", "icon": "bi-cloud-rain-fill", "timestamp": "2026-08-09T12:30:00", "read": false, "actionUrl": "/destination/7" }
+]

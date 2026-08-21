@@ -1,0 +1,170 @@
+[
+  {
+    "id": "itin-ooty-3d",
+    "title": "3-Day Nilgiri Queen Ooty Escape",
+    "subtitle": "Toy train ride, tea estates, botanical gardens & serene lake boating.",
+    "region": "South",
+    "states": ["Tamil Nadu"],
+    "durationDays": 3,
+    "travelStyle": "Relaxation",
+    "estimatedBudgetPerPerson": 6500,
+    "coverImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=800&q=80",
+    "destinationIds": [5],
+    "destinationNames": ["Ooty"],
+    "highlights": ["UNESCO Toy Train Ride", "Government Botanical Gardens", "Ooty Lake Paddle Boating", "Doddabetta Peak Views"],
+    "dayByDayPlan": [
+      {
+        "day": 1,
+        "title": "Arrival in Ooty & Botanical Gardens",
+        "description": "Check into Nilgiri mountain resort. Afternoon stroll through 22-hectare Government Botanical Gardens and evening hot filter coffee.",
+        "activities": ["Botanical Garden Stroll", "Welcome Nilgiri Tea Tasting"],
+        "meals": ["Lunch", "Dinner"],
+        "accommodation": "Sterling Ooty Fern Hill"
+      },
+      {
+        "day": 2,
+        "title": "UNESCO Toy Train & Ooty Lake",
+        "description": "Morning ride on Nilgiri Mountain Railway from Ooty to Coonoor through tunnels and pine forests. Afternoon lake boating.",
+        "activities": ["Toy Train Experience", "Ooty Lake Boating", "Doddabetta Sunset"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Sterling Ooty Fern Hill"
+      },
+      {
+        "day": 3,
+        "title": "Tea Factory Tour & Departure",
+        "description": "Visit Tea Museum and factory to sample fresh orthodox teas before departure.",
+        "activities": ["Tea Factory Tour", "Souvenir Shopping"],
+        "meals": ["Breakfast"],
+        "accommodation": "N/A"
+      }
+    ]
+  },
+  {
+    "id": "itin-kerala-5d",
+    "title": "5-Day Enchanting Kerala Backwaters & Hills",
+    "subtitle": "Munnar tea plantations, Eravikulam safari & Alleppey luxury houseboat.",
+    "region": "South",
+    "states": ["Kerala"],
+    "durationDays": 5,
+    "travelStyle": "Nature",
+    "estimatedBudgetPerPerson": 14500,
+    "coverImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80",
+    "destinationIds": [3],
+    "destinationNames": ["Munnar", "Alleppey", "Varkala"],
+    "highlights": ["Munnar Tea Plantation Stroll", "Eravikulam Tahr Safari", "Alleppey Houseboat Overnight", "Varkala Cliff Sunset"],
+    "dayByDayPlan": [
+      {
+        "day": 1,
+        "title": "Kochi Arrival & Scenic Drive to Munnar",
+        "description": "Arrive at Kochi airport and drive up through Cheeyappara Waterfalls to misty Munnar.",
+        "activities": ["Cheeyappara Falls Photo Stop", "Munnar Town Stroll"],
+        "meals": ["Lunch", "Dinner"],
+        "accommodation": "Tea County Resort Munnar"
+      },
+      {
+        "day": 2,
+        "title": "Munnar Tea Estates & National Park",
+        "description": "Visit Eravikulam National Park to spot Nilgiri Tahr. Afternoon walk through Kolukkumalai tea estate.",
+        "activities": ["Eravikulam Safari", "Tea Tasting Session"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Tea County Resort Munnar"
+      },
+      {
+        "day": 3,
+        "title": "Munnar to Alleppey Houseboat Check-in",
+        "description": "Drive down to Alleppey jetty and board private luxury Kettuvallam houseboat for backwater cruise.",
+        "activities": ["Backwater Lagoon Cruise", "Kerala Sadya Lunch on Board"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Deluxe Houseboat Alleppey"
+      },
+      {
+        "day": 4,
+        "title": "Alleppey to Varkala Cliff Beach",
+        "description": "Disembark houseboat and drive south to Varkala. Evening sunset walk along Varkala Cliff.",
+        "activities": ["Varkala Cliff Sunset Walk", "Seafood Shack Dinner"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Clafouti Beach Resort Varkala"
+      },
+      {
+        "day": 5,
+        "title": "Ayurvedic Massage & Departure",
+        "description": "Morning Ayurvedic rejuvenation massage followed by departure transfer to Trivandrum airport.",
+        "activities": ["Ayurvedic Massage", "Souvenir Shopping"],
+        "meals": ["Breakfast"],
+        "accommodation": "N/A"
+      }
+    ]
+  },
+  {
+    "id": "itin-rajasthan-7d",
+    "title": "7-Day Golden Triangle & Desert Forts of Rajasthan",
+    "subtitle": "Jaipur palaces, Jodhpur blue city & Jaisalmer sand dune camping.",
+    "region": "North",
+    "states": ["Rajasthan"],
+    "durationDays": 7,
+    "travelStyle": "Heritage",
+    "estimatedBudgetPerPerson": 22000,
+    "coverImage": "https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80",
+    "destinationIds": [11, 15],
+    "destinationNames": ["Jaipur", "Jaisalmer"],
+    "highlights": ["Amber Fort Elephant Ride", "Jaipur Pink City Bazaar", "Jaisalmer Golden Fort", "Sam Sand Dunes Camel Safari"],
+    "dayByDayPlan": [
+      {
+        "day": 1,
+        "title": "Arrival in Pink City Jaipur",
+        "description": "Check into heritage hotel. Evening visit to Albert Hall Museum illuminated at night.",
+        "activities": ["Albert Hall Photo Stop", "Rajasthani Thali Dinner"],
+        "meals": ["Lunch", "Dinner"],
+        "accommodation": "Shahpura House Jaipur"
+      },
+      {
+        "day": 2,
+        "title": "Jaipur Forts & Palaces",
+        "description": "Explore hilltop Amber Fort, Hawa Mahal (Palace of Winds), and Jantar Mantar observatory.",
+        "activities": ["Amber Fort Tour", "Hawa Mahal Photography", "City Palace"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Shahpura House Jaipur"
+      },
+      {
+        "day": 3,
+        "title": "Jaipur to Jodhpur Blue City Drive",
+        "description": "Drive west to Jodhpur. Visit towering Mehrangarh Fort overlooking blue houses.",
+        "activities": ["Mehrangarh Fort Tour", "Jaswant Thada Marble Cenotaph"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Ajit Bhawan Jodhpur"
+      },
+      {
+        "day": 4,
+        "title": "Jodhpur to Golden City Jaisalmer",
+        "description": "Drive across Thar Desert to Jaisalmer. Evening walk around Gadisar Lake.",
+        "activities": ["Thar Desert Drive", "Gadisar Lake Sunset"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Fort Rajwada Jaisalmer"
+      },
+      {
+        "day": 5,
+        "title": "Living Fort & Sam Sand Dunes Camp",
+        "description": "Tour living Jaisalmer Fort & Patwon Ki Haveli. Drive to Sam dunes for camel safari & desert camping.",
+        "activities": ["Jaisalmer Fort Walk", "Sam Dunes Camel Safari", "Desert Folk Dance"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Luxury Desert Camp Sam"
+      },
+      {
+        "day": 6,
+        "title": "Kuldhara Ghost Village & Shopping",
+        "description": "Visit mysterious abandoned Kuldhara village and shop for leather crafts & silver jewelry.",
+        "activities": ["Kuldhara Ghost Village", "Jaisalmer Bazaar Walk"],
+        "meals": ["Breakfast", "Lunch", "Dinner"],
+        "accommodation": "Fort Rajwada Jaisalmer"
+      },
+      {
+        "day": 7,
+        "title": "Departure from Jaisalmer",
+        "description": "Breakfast at hotel and departure transfer to Jaisalmer airport/railway station.",
+        "activities": ["Pack & Depart"],
+        "meals": ["Breakfast"],
+        "accommodation": "N/A"
+      }
+    ]
+  }
+]

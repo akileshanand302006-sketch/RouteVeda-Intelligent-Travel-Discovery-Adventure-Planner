@@ -1,0 +1,48 @@
+.activities-hero {
+  padding: 60px 0 40px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.activities-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.category-chip {
+  padding: 8px 18px;
+  border-radius: var(--tf-radius-full);
+  border: 1px solid var(--tf-border);
+  background: var(--tf-surface);
+  color: var(--tf-text-secondary);
+  font-weight: 500;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--tf-transition);
+}
+
+.category-chip:hover,
+.category-chip.active {
+  background: var(--tf-gradient-primary);
+  color: white;
+  border-color: var(--tf-primary);
+  box-shadow: var(--tf-shadow-glow);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--tf-text-muted);
+}
+
+.input-wrapper .form-control-tf {
+  padding-left: 38px;
+}

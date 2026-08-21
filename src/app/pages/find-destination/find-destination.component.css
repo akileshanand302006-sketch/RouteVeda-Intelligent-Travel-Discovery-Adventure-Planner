@@ -1,0 +1,39 @@
+.quiz-hero {
+  padding: 70px 0 40px;
+  margin-bottom: 2rem;
+}
+
+.quiz-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+.quiz-option-btn {
+  padding: 16px 14px;
+  border-radius: var(--tf-radius-md);
+  border: 1px solid var(--tf-border);
+  background: var(--tf-surface);
+  color: var(--tf-text-secondary);
+  cursor: pointer;
+  transition: var(--tf-transition);
+  text-align: center;
+}
+
+.quiz-option-btn:hover,
+.quiz-option-btn.selected {
+  background: rgba(var(--tf-primary-rgb), 0.15);
+  border-color: var(--tf-primary);
+  color: var(--tf-primary);
+  box-shadow: var(--tf-shadow-glow);
+}
+
+.max-w-700 {
+  max-width: 700px;
+}
+
+.match-score-badge {
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 14px;
+}

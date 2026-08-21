@@ -1,0 +1,90 @@
+<div class="page-container festivals-page">
+  <div class="festivals-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1558431382-27e303142255?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <h1 class="animate-fade-in-up">Indian <span class="gradient-text">Festival & Fairs Calendar</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary max-w-700 mx-auto">
+        Experience grand cultural celebrations: From Kolkata's Durga Puja and Pushkar Camel Fair to Nagaland's Hornbill Festival and Kerala's Onam.
+      </p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Month Chips Bar -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+      <button class="category-chip" [class.active]="selectedMonth === 'All'" (click)="onMonthChange('All')">
+        All Months
+      </button>
+      @for (m of festivalService.months; track m) {
+        <button class="category-chip" [class.active]="selectedMonth === m" (click)="onMonthChange(m)">
+          {{ m }}
+        </button>
+      }
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="glass-card p-3 mb-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-8">
+          <select class="form-select-tf" [(ngModel)]="selectedState" (change)="onStateChange()">
+            <option value="All">All States & UTs</option>
+            @for (st of stateService.states(); track st.id) {
+              <option [value]="st.name">{{ st.name }}</option>
+            }
+          </select>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <button class="btn btn-sm btn-tf-glass w-100" (click)="resetFilters()">Reset Calendar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Festival Cards Grid -->
+    @if (festivalService.isLoading()) {
+      <app-loading-spinner message="Loading festival calendar..." />
+    } @else if (festivalService.filteredFestivals().length === 0) {
+      <app-empty-state
+        icon="bi-calendar-event"
+        title="No festivals found"
+        message="No festivals match your selected month or state filter."
+        actionLabel="Reset Calendar"
+        (action)="resetFilters()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (fest of festivalService.filteredFestivals(); track fest.id; let i = $index) {
+          <div class="col-lg-4 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.05) + 's'">
+            <div class="glass-card h-100 d-flex flex-column p-3">
+              <div class="fest-img-wrapper rounded overflow-hidden mb-3">
+                <img [src]="fest.image" [alt]="fest.name" class="fest-img">
+                <span class="month-badge badge-tf badge-tf-warning"><i class="bi bi-calendar"></i> {{ fest.month }}</span>
+                <span class="category-badge badge-tf badge-tf-primary">{{ fest.category }}</span>
+              </div>
+
+              <div class="d-flex flex-column flex-grow-1">
+                <h4 class="fw-bold mb-1">{{ fest.name }}</h4>
+                <small class="text-tf-primary fw-semibold mb-2"><i class="bi bi-geo-alt"></i> {{ fest.location }}, {{ fest.state }}</small>
+                <p class="small text-tf-secondary line-clamp-3 mb-3">{{ fest.description }}</p>
+
+                <div class="mb-3">
+                  <small class="text-tf-muted extra-small d-block mb-1">Key Attractions:</small>
+                  <div class="d-flex flex-wrap gap-1">
+                    @for (att of fest.keyAttractions; track att) {
+                      <span class="badge-tf badge-tf-glass extra-small">✦ {{ att }}</span>
+                    }
+                  </div>
+                </div>
+
+                <div class="mt-auto pt-2 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+                  <small class="text-tf-muted"><i class="bi bi-clock"></i> Duration: {{ fest.duration }}</small>
+                  <a [routerLink]="['/state', fest.state.toLowerCase().replace(' ', '-')]" class="btn btn-sm btn-tf-outline">
+                    Explore State <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="60%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#4338ca" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" />
+
+  <!-- Natural Scenery Illustration Layer -->
+  
+      <!-- Mountain Sun / Moon Glow -->
+      <circle cx="600" cy="220" r="140" fill="#fbbf24" opacity="0.4" filter="blur(30px)" />
+      <circle cx="600" cy="220" r="70" fill="#ffffff" opacity="0.85" />
+      
+      <!-- Distant Mountain Range -->
+      <path d="M 0,550 L 220,320 L 450,480 L 680,260 L 920,440 L 1200,300 L 1200,800 L 0,800 Z" fill="#1e1b4b" opacity="0.7" />
+      <!-- Mid Mountain Range -->
+      <path d="M 0,620 L 300,380 L 520,520 L 800,340 L 1050,490 L 1200,420 L 1200,800 L 0,800 Z" fill="#312e81" opacity="0.85" />
+      <!-- Fore Mountain Ridge with Pines -->
+      <path d="M 0,680 L 180,540 L 420,640 L 700,480 L 980,600 L 1200,520 L 1200,800 L 0,800 Z" fill="#1e1b4b" />
+      
+      <!-- Silhouetted Pine Trees -->
+      <g fill="#0f172a" opacity="0.6">
+        <polygon points="120,680 140,610 160,680" />
+        <polygon points="140,680 155,620 170,680" />
+        <polygon points="380,670 400,590 420,670" />
+        <polygon points="850,650 870,580 890,650" />
+        <polygon points="1020,660 1040,595 1060,660" />
+      </g>
+    
+
+  <!-- Lower Ambient Vignette Overlay -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" opacity="0.2" />
+
+  <!-- Glass Card Detail Overlay -->
+  <rect x="120" y="160" width="960" height="480" rx="32" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(255, 255, 255, 0.22)" stroke-width="2" filter="url(#cardShadow)" />
+
+  <!-- Category & Region Badge -->
+  <rect x="170" y="210" width="240" height="38" rx="19" fill="#6366f1" opacity="0.95" />
+  <text x="290" y="235" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">
+    TRIBAL • NORTH EAST
+  </text>
+
+  <!-- Title -->
+  <text x="170" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" fill="#ffffff">
+    Mokokchung (Cultural Heartla...
+  </text>
+
+  <!-- Location -->
+  <text x="170" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="500" fill="rgba(255, 255, 255, 0.88)">
+    📍 Mokokchung (Cultural Heartland of the Ao Tribe), Nagaland
+  </text>
+
+  <!-- Divider -->
+  <line x1="170" y1="420" x2="1030" y2="420" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+
+  <!-- Highlights & Key Info -->
+  <text x="170" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="rgba(255, 255, 255, 0.78)">
+    ✨ Ungma (Oldest &amp; Largest Living Ao Naga Village with Ancient Log Drums) • Longkhum Clifftop Village &amp; Footprints of Rhododendron Eagles • Moatsu Festival of the Ao Tribe (Spring Sowing Celebration in May)
+  </text>
+
+  <text x="170" y="525" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400" fill="rgba(255, 255, 255, 0.65)">
+    🗓️ Best Season: October to May (Moatsu Festival in May) • ⏱️ Ideal Duration: 2 days
+  </text>
+
+  <!-- Bottom Brand Footer -->
+  <text x="170" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#818cf8" letter-spacing="1">
+    ✦ TRIPFORGE VERIFIED SCENERY &amp; GUIDE
+  </text>
+  <text x="1030" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="rgba(255, 255, 255, 0.5)" text-anchor="end">
+    Starting from ₹4,800/person
+  </text>
+</svg>

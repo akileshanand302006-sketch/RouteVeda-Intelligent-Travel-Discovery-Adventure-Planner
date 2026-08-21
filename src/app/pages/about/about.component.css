@@ -1,0 +1,34 @@
+.arch-box {
+  border: 1px solid var(--tf-border);
+}
+
+.arch-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--tf-surface);
+  border-radius: var(--tf-radius-sm);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.step-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--tf-gradient-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.arch-arrow {
+  text-align: center;
+  color: var(--tf-primary);
+  font-size: 1.1rem;
+  margin: 4px 0;
+}

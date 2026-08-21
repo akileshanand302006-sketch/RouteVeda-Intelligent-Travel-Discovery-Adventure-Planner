@@ -1,0 +1,170 @@
+<div class="page-container profile-page">
+  <div class="container py-4">
+    <div class="row g-4">
+      <!-- Left Column: User Card & Stats -->
+      <div class="col-lg-4">
+        <div class="glass-card p-4 text-center">
+          <img [src]="authService.avatarUrl()" [alt]="name" class="profile-avatar mb-3 shadow border-primary">
+          <h4 class="text-tf fw-bold">{{ authService.currentUser()?.name }}</h4>
+          <p class="text-tf-muted small mb-2">{{ authService.currentUser()?.email }}</p>
+          <span class="badge-tf badge-tf-primary mb-3">
+            <i class="bi bi-shield-check"></i> {{ authService.currentUser()?.role | uppercase }}
+          </span>
+
+          <p class="bio-text mt-2 mb-4 text-tf-secondary small">{{ authService.currentUser()?.bio || 'No bio provided yet.' }}</p>
+
+          <!-- Stats Grid -->
+          <div class="row g-2 text-center pt-3 border-top border-secondary border-opacity-25">
+            <div class="col-3">
+              <strong class="d-block fs-5 text-tf-primary">{{ tripService.trips().length }}</strong>
+              <small class="extra-small text-tf-muted">Trips</small>
+            </div>
+            <div class="col-3">
+              <strong class="d-block fs-5 text-tf-danger">{{ wishlistService.count() }}</strong>
+              <small class="extra-small text-tf-muted">Wishlist</small>
+            </div>
+            <div class="col-3">
+              <strong class="d-block fs-5 text-tf-success">{{ achievementService.totalVisitedStates() }}</strong>
+              <small class="extra-small text-tf-muted">States</small>
+            </div>
+            <div class="col-3">
+              <strong class="d-block fs-5 text-tf-accent">{{ achievementService.indiaExplorationPercent() }}%</strong>
+              <small class="extra-small text-tf-muted">India %</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Profile Edit Form -->
+      <div class="col-lg-8">
+        <div class="glass-card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0 text-tf fw-bold"><i class="bi bi-person-gear text-tf-primary me-2"></i> Account Profile</h4>
+            <button class="btn-tf-glass btn-sm" (click)="toggleEdit()">
+              <i [class]="isEditing ? 'bi bi-x-lg' : 'bi bi-pencil'"></i>
+              {{ isEditing ? 'Cancel Edit' : 'Edit Profile' }}
+            </button>
+          </div>
+
+          @if (isEditing) {
+            <form #profileForm="ngForm" (ngSubmit)="saveProfile(profileForm)">
+              <div class="row g-3">
+                <div class="col-12 mb-2">
+                  <label class="form-label-tf d-block">Choose Profile Avatar</label>
+                  <div class="d-flex gap-3 flex-wrap">
+                    @for (av of avatarOptions; track av) {
+                      <img
+                        [src]="av"
+                        alt="Avatar Option"
+                        class="avatar-option rounded-circle cursor-pointer"
+                        [class.selected]="avatar === av"
+                        (click)="selectAvatar(av)"
+                      >
+                    }
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="name" class="form-label-tf">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control-tf"
+                    [(ngModel)]="name"
+                    required
+                    minlength="3"
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label for="phone" class="form-label-tf">Phone Number</label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    class="form-control-tf"
+                    [(ngModel)]="phone"
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label for="location" class="form-label-tf">Location</label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    class="form-control-tf"
+                    [(ngModel)]="location"
+                  >
+                </div>
+
+                <div class="col-md-6">
+                  <label for="travelStyle" class="form-label-tf">Travel Style Preference</label>
+                  <select id="travelStyle" name="travelStyle" class="form-select-tf" [(ngModel)]="travelStyle">
+                    <option value="Adventure">Adventure</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Road Trip">Road Trip</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Heritage">Heritage</option>
+                    <option value="Relaxation">Relaxation</option>
+                    <option value="Luxury">Luxury</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="bio" class="form-label-tf">Bio & Travel Moto</label>
+                  <textarea
+                    id="bio"
+                    name="bio"
+                    rows="3"
+                    class="form-control-tf"
+                    [(ngModel)]="bio"
+                  ></textarea>
+                </div>
+
+                <div class="col-12 text-end mt-4">
+                  <button type="submit" class="btn-tf-primary" [disabled]="profileForm.invalid">
+                    <i class="bi bi-check-lg"></i> Save Changes
+                  </button>
+                </div>
+              </div>
+            </form>
+          } @else {
+            <div class="profile-details-view">
+              <div class="p-row">
+                <span class="p-label"><i class="bi bi-person text-tf-primary"></i> Full Name</span>
+                <span class="p-value text-tf fw-bold">{{ authService.currentUser()?.name }}</span>
+              </div>
+
+              <div class="p-row">
+                <span class="p-label"><i class="bi bi-envelope text-tf-primary"></i> Email Address</span>
+                <span class="p-value text-tf">{{ authService.currentUser()?.email }}</span>
+              </div>
+
+              <div class="p-row">
+                <span class="p-label"><i class="bi bi-telephone text-tf-primary"></i> Phone</span>
+                <span class="p-value text-tf">{{ authService.currentUser()?.phone || 'Not provided' }}</span>
+              </div>
+
+              <div class="p-row">
+                <span class="p-label"><i class="bi bi-geo-alt text-tf-primary"></i> Location</span>
+                <span class="p-value text-tf">{{ authService.currentUser()?.location || 'Not provided' }}</span>
+              </div>
+
+              <div class="p-row">
+                <span class="p-label"><i class="bi bi-compass text-tf-accent"></i> Travel Style</span>
+                <span class="p-value badge-tf badge-tf-primary">{{ authService.currentUser()?.preferences?.travelStyle || 'Adventure' }}</span>
+              </div>
+
+              <div class="p-row">
+                <span class="p-label"><i class="bi bi-calendar text-tf-primary"></i> Member Since</span>
+                <span class="p-value text-tf">{{ authService.currentUser()?.joinedDate }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#042f2e" />
+      <stop offset="60%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#2dd4bf" />
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Sky Canvas -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" />
+
+  <!-- Natural Scenery Illustration Layer -->
+  
+      <!-- Mist & Glow -->
+      <circle cx="600" cy="240" r="180" fill="#5eead4" opacity="0.35" filter="blur(45px)" />
+      
+      <!-- Valley Cliffs -->
+      <path d="M 0,200 L 280,450 L 340,800 L 0,800 Z" fill="#042f2e" opacity="0.9" />
+      <path d="M 1200,220 L 920,460 L 860,800 L 1200,800 Z" fill="#042f2e" opacity="0.9" />
+      
+      <!-- Central Waterfall & River Flow -->
+      <path d="M 540,280 L 660,280 L 700,800 L 500,800 Z" fill="url(#waterGrad)" opacity="0.8" />
+      <ellipse cx="600" cy="620" rx="300" ry="80" fill="#2dd4bf" opacity="0.4" filter="blur(16px)" />
+      
+      <!-- Crystal Boats & Reflections -->
+      <g fill="#115e59" opacity="0.7">
+        <ellipse cx="600" cy="660" rx="60" ry="12" />
+        <ellipse cx="440" cy="710" rx="50" ry="10" />
+        <ellipse cx="760" cy="700" rx="55" ry="11" />
+      </g>
+    
+
+  <!-- Lower Ambient Vignette Overlay -->
+  <rect width="1200" height="800" fill="url(#skyGrad)" opacity="0.2" />
+
+  <!-- Glass Card Detail Overlay -->
+  <rect x="120" y="160" width="960" height="480" rx="32" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(255, 255, 255, 0.22)" stroke-width="2" filter="url(#cardShadow)" />
+
+  <!-- Category & Region Badge -->
+  <rect x="170" y="210" width="240" height="38" rx="19" fill="#14b8a6" opacity="0.95" />
+  <text x="290" y="235" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">
+    HERITAGE • SOUTH
+  </text>
+
+  <!-- Title -->
+  <text x="170" y="320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="42" font-weight="800" fill="#ffffff">
+    Badami, Aihole &amp; Pattada...
+  </text>
+
+  <!-- Location -->
+  <text x="170" y="375" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="500" fill="rgba(255, 255, 255, 0.88)">
+    📍 Badami, Aihole &amp; Pattadakal, Karnataka
+  </text>
+
+  <!-- Divider -->
+  <line x1="170" y1="420" x2="1030" y2="420" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+
+  <!-- Highlights & Key Info -->
+  <text x="170" y="470" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" fill="rgba(255, 255, 255, 0.78)">
+    ✨ Badami Four Rock-Cut Sandstone Caves • Agastya Lake &amp; Bhutanatha Temples • UNESCO Pattadakal Monument Complex
+  </text>
+
+  <text x="170" y="525" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400" fill="rgba(255, 255, 255, 0.65)">
+    🗓️ Best Season: October to March • ⏱️ Ideal Duration: 2 days
+  </text>
+
+  <!-- Bottom Brand Footer -->
+  <text x="170" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#2dd4bf" letter-spacing="1">
+    ✦ TRIPFORGE VERIFIED SCENERY &amp; GUIDE
+  </text>
+  <text x="1030" y="590" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="600" fill="rgba(255, 255, 255, 0.5)" text-anchor="end">
+    Starting from ₹4,400/person
+  </text>
+</svg>

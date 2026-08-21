@@ -1,0 +1,97 @@
+<div class="page-container activities-page">
+  <!-- Hero Banner -->
+  <div class="activities-hero hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=1920&q=80')">
+    <div class="container text-center py-5">
+      <h1 class="animate-fade-in-up">Explore <span class="gradient-text">Adventure Activities</span></h1>
+      <p class="animate-fade-in-up delay-1 text-tf-secondary">From paragliding in Solang to serene tea plantation walks in Munnar.</p>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <!-- Category Filter Chips -->
+    <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+      <button
+        class="category-chip"
+        [class.active]="selectedCategory === ''"
+        (click)="onCategorySelect('')"
+      >
+        All Activities
+      </button>
+      @for (cat of activityService.categories(); track cat) {
+        <button
+          class="category-chip"
+          [class.active]="selectedCategory === cat"
+          (click)="onCategorySelect(cat)"
+        >
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <!-- Filter Control Bar -->
+    <div class="glass-card p-3 mb-4">
+      <div class="row g-3 align-items-center">
+        <!-- Real-time search -->
+        <div class="col-md-5">
+          <div class="input-wrapper">
+            <i class="bi bi-search input-icon"></i>
+            <input
+              type="text"
+              class="form-control-tf"
+              placeholder="Search activities by name or description..."
+              [(ngModel)]="searchQuery"
+              (input)="onSearchChange()"
+            >
+          </div>
+        </div>
+
+        <!-- Difficulty -->
+        <div class="col-md-3">
+          <select class="form-select-tf" [(ngModel)]="selectedDifficulty" (change)="onFilterChange()">
+            <option value="">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Challenging">Challenging</option>
+            <option value="Extreme">Extreme</option>
+          </select>
+        </div>
+
+        <!-- Max Price Slider -->
+        <div class="col-md-4 d-flex align-items-center gap-2">
+          <span class="form-label-tf mb-0 text-nowrap">Max: ₹{{ maxPrice.toLocaleString() }}</span>
+          <input
+            type="range"
+            class="form-range"
+            min="200"
+            max="15000"
+            step="500"
+            [(ngModel)]="maxPrice"
+            (change)="onFilterChange()"
+          >
+          <button class="btn btn-sm btn-tf-glass ms-auto" (click)="resetFilters()">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activities Grid -->
+    @if (activityService.isLoading()) {
+      <app-loading-spinner message="Loading adventure activities..." />
+    } @else if (activityService.filteredActivities().length === 0) {
+      <app-empty-state
+        icon="bi-lightning"
+        title="No activities found"
+        message="No activities match your current search or filter criteria."
+        actionLabel="Reset Filters"
+        (action)="resetFilters()"
+      />
+    } @else {
+      <div class="row g-4">
+        @for (act of activityService.filteredActivities(); track act.id; let i = $index) {
+          <div class="col-lg-3 col-md-6 animate-fade-in-up" [style.animation-delay]="(i * 0.04) + 's'">
+            <app-activity-card [activity]="act" (addActivity)="onAddActivityToTrip($event)" />
+          </div>
+        }
+      </div>
+    }
+  </div>
+</div>

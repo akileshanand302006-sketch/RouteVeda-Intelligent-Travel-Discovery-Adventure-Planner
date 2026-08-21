@@ -1,0 +1,80 @@
+<div class="page-container attraction-details-page">
+  @if (attraction()) {
+    <div class="attraction-hero hero-overlay" [style.background-image]="'url(' + attraction()?.image + ')'">
+      <div class="container py-5 hero-content">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <a routerLink="/attractions" class="btn btn-sm btn-tf-glass">
+            <i class="bi bi-arrow-left"></i> All Attractions
+          </a>
+          <span class="badge-tf badge-tf-primary">{{ attraction()?.category }}</span>
+          <span class="badge-tf badge-tf-info">{{ attraction()?.state }}</span>
+        </div>
+
+        <h1 class="gradient-text display-4 fw-bold mb-2">{{ attraction()?.name }}</h1>
+        <p class="fs-5 text-white-50">
+          <i class="bi bi-geo-alt-fill text-tf-primary"></i> {{ attraction()?.destinationName }}, {{ attraction()?.state }}
+        </p>
+
+        <div class="mt-4">
+          @if (parentDestination()) {
+            <a [routerLink]="['/destination', parentDestination()?.id]" class="btn-tf-primary me-2">
+              <i class="bi bi-compass"></i> View {{ parentDestination()?.name }} Destination
+            </a>
+          }
+          <button class="btn-tf-accent" (click)="addToTrip()">
+            <i class="bi bi-plus-circle"></i> Add Destination to Trip
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="glass-card p-4 mb-4">
+            <h4 class="mb-3">About {{ attraction()?.name }}</h4>
+            <p class="lead-text">{{ attraction()?.description }}</p>
+
+            <h5 class="mt-4 mb-2 text-tf-primary"><i class="bi bi-award me-2"></i> Cultural & Historical Significance</h5>
+            <p class="text-tf-secondary">{{ attraction()?.significance }}</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="glass-card p-4 sticky-top" style="top: 90px;">
+            <h5 class="mb-3 border-bottom border-secondary border-opacity-25 pb-2">Visitor Guide</h5>
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-clock"></i> Visit Duration</span>
+              <span class="info-value">{{ attraction()?.visitDuration }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-sun"></i> Best Time of Day</span>
+              <span class="info-value">{{ attraction()?.bestTime }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-ticket-perforated"></i> Entry Information</span>
+              <span class="info-value text-tf-primary fw-bold">{{ attraction()?.entryInfo }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-geo"></i> Coordinates</span>
+              <span class="info-value font-monospace small">{{ attraction()?.coordinates?.lat }}° N, {{ attraction()?.coordinates?.lng }}° E</span>
+            </div>
+
+            <div class="p-3 glass-card rounded-3 mt-4 text-center">
+              <i class="bi bi-shield-check text-tf-success fs-3 d-block mb-1"></i>
+              <small class="text-tf-muted extra-small">Check official local guidelines or ticket counter before entry.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="container py-5">
+      <app-loading-spinner message="Loading attraction details..." />
+    </div>
+  }
+</div>

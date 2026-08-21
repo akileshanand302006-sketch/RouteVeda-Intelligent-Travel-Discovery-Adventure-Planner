@@ -1,0 +1,344 @@
+<div class="page-container details-page">
+  @if (destination()) {
+    <!-- Hero Banner -->
+    <div class="dest-hero hero-overlay" [style.background-image]="'url(' + activeImage() + ')'">
+      <div class="container py-5 hero-content">
+        <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+          <a routerLink="/explore" class="btn btn-sm btn-tf-glass">
+            <i class="bi bi-arrow-left"></i> Back to Explore
+          </a>
+          <span class="badge-tf badge-tf-primary">{{ destination()?.category }}</span>
+          @if (destination()?.region) {
+            <span class="badge-tf badge-tf-info">{{ destination()?.region }} India</span>
+          }
+          @if (destination()?.googleRating) {
+            <span class="badge-tf badge-tf-glass" title="Google Places API (New) Verified Rating">
+              <i class="bi bi-google text-tf-primary me-1"></i> {{ destination()?.googleRating }} ★ ({{ (destination()?.googleUserRatingCount || 0).toLocaleString() }})
+            </span>
+          }
+          <span class="badge-tf"
+            [class.badge-tf-success]="destination()?.difficulty === 'Easy'"
+            [class.badge-tf-warning]="destination()?.difficulty === 'Moderate'"
+            [class.badge-tf-danger]="destination()?.difficulty === 'Challenging' || destination()?.difficulty === 'Extreme'"
+          >{{ destination()?.difficulty }}</span>
+        </div>
+
+        <h1 class="dest-title gradient-text">{{ destination()?.name }}</h1>
+        <p class="dest-location fs-5 text-white-50">
+          <i class="bi bi-geo-alt-fill text-tf-primary me-1"></i>
+          {{ destination()?.formattedAddress || (destination()?.location + ', ' + destination()?.state + ', ' + destination()?.country) }}
+        </p>
+
+        <div class="hero-actions-bar mt-4 d-flex flex-wrap gap-2">
+          <button class="btn-tf-primary" (click)="addToTrip()" title="Add to Trip Builder queue">
+            <i class="bi bi-plus-circle"></i> Add to Trip
+          </button>
+          <button class="btn-tf-accent" (click)="createInstantTrip()" title="Save directly as a new trip in My Trips">
+            <i class="bi bi-bookmark-check-fill"></i> Save as Trip
+          </button>
+          <button class="btn-tf-glass" (click)="openCalculator()" title="Calculate travel budget and expenses">
+            <i class="bi bi-calculator-fill text-tf-warning me-1"></i> Calculate Expenses
+          </button>
+          <button class="btn-tf-glass" (click)="buildTripNow()" title="Open Trip Builder with this destination">
+            <i class="bi bi-tools"></i> Build Trip Now
+          </button>
+          <button class="btn-tf-glass" (click)="toggleWishlist()">
+            <i [class]="wishlistService.isWishlisted(destination()!.id) ? 'bi bi-heart-fill text-danger' : 'bi bi-heart'"></i>
+            {{ wishlistService.isWishlisted(destination()!.id) ? 'Wishlisted' : 'Save to Wishlist' }}
+          </button>
+          @if (destination()?.googleMapsUri) {
+            <a [href]="destination()?.googleMapsUri" target="_blank" rel="noopener noreferrer" class="btn btn-tf-glass" title="Open destination in Google Maps">
+              <i class="bi bi-map-fill text-tf-primary me-1"></i> Google Maps
+            </a>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs Bar -->
+    <div class="glass-navbar border-top border-bottom border-secondary border-opacity-25 sticky-top z-3">
+      <div class="container">
+        <ul class="nav nav-pills gap-2 py-2">
+          <li class="nav-item">
+            <button class="nav-link btn-sm" [class.active]="activeTab() === 'overview'" (click)="setActiveTab('overview')">
+              <i class="bi bi-info-circle me-1"></i> Overview
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" [class.active]="activeTab() === 'attractions'" (click)="setActiveTab('attractions')">
+              <i class="bi bi-bank me-1"></i> Attractions ({{ attractions().length }})
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" [class.active]="activeTab() === 'activities'" (click)="setActiveTab('activities')">
+              <i class="bi bi-lightning me-1"></i> Activities ({{ destinationActivities().length }})
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" [class.active]="activeTab() === 'food'" (click)="setActiveTab('food')">
+              <i class="bi bi-cup-hot me-1"></i> Food & Culture
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn-sm" [class.active]="activeTab() === 'transport'" (click)="setActiveTab('transport')">
+              <i class="bi bi-signpost-split me-1"></i> Transport & Travel Tips
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Main Details Content -->
+        <div class="col-lg-8">
+          <!-- Photo Gallery with Fullscreen Lightbox -->
+          @if (destination()?.gallery && destination()!.gallery.length > 0) {
+            <div class="glass-card p-3 mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="mb-0"><i class="bi bi-images text-tf-primary me-2"></i> Photo Gallery</h5>
+                <button class="btn btn-sm btn-tf-glass" (click)="openGalleryLightbox(0)">
+                  <i class="bi bi-arrows-fullscreen me-1"></i> View Fullscreen
+                </button>
+              </div>
+              <div class="gallery-grid">
+                @for (img of destination()?.gallery; track img; let i = $index) {
+                  <div
+                    class="gallery-thumb cursor-pointer"
+                    [class.active]="activeImage() === img"
+                    (click)="openGalleryLightbox(i + 1)"
+                    title="Click to view full image in lightbox"
+                  >
+                    <app-image-loader [src]="img" [alt]="destination()?.name || 'Destination image'" [category]="destination()?.category" />
+                  </div>
+                }
+              </div>
+
+              @if (destination()?.imageAuthor || destination()?.imageMetadata || destination()?.imageAttribution) {
+                <div class="mt-3 pt-2 border-top border-secondary border-opacity-25 d-flex flex-wrap justify-content-between align-items-center extra-small text-tf-muted">
+                  <span>
+                    <i class="bi bi-camera me-1 text-tf-primary"></i>
+                    <strong>Photography via Google Places API & Verified Contributor:</strong>
+                    @if (destination()?.sourceUrl || destination()?.imageMetadata?.sourceUrl) {
+                      <a [href]="destination()?.sourceUrl || destination()?.imageMetadata?.sourceUrl" target="_blank" rel="noopener noreferrer" class="text-tf-accent ms-1 text-decoration-none hover-underline">
+                        {{ destination()?.imageAuthor ? 'Photo by ' + destination()?.imageAuthor : (destination()?.imageAttribution || destination()?.name) }}
+                        <i class="bi bi-box-arrow-up-right ms-1 extra-small"></i>
+                      </a>
+                    } @else {
+                      <span class="ms-1">{{ destination()?.imageAuthor ? 'Photo by ' + destination()?.imageAuthor : (destination()?.imageAttribution || destination()?.name) }}</span>
+                    }
+                  </span>
+                  <span class="badge-tf badge-tf-glass">
+                    <i class="bi bi-patch-check-fill text-tf-success me-1"></i> Google Place Verified
+                  </span>
+                </div>
+              }
+            </div>
+          }
+
+          <!-- TAB 1: OVERVIEW -->
+          @if (activeTab() === 'overview') {
+            <div class="glass-card p-4 mb-4">
+              <h4 class="mb-3">About {{ destination()?.name }}</h4>
+              <p class="lead-text">{{ destination()?.description }}</p>
+
+              @if (destination()?.highlights && destination()!.highlights!.length > 0) {
+                <h5 class="mt-4 mb-2 text-tf-primary"><i class="bi bi-check-circle me-2"></i> Key Highlights</h5>
+                <div class="row g-2 mb-3">
+                  @for (h of destination()?.highlights; track h) {
+                    <div class="col-md-6">
+                      <div class="p-2 glass-card rounded-3 small">
+                        <i class="bi bi-star-fill text-warning me-2"></i> {{ h }}
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+
+              <h5 class="mt-4 mb-3"><i class="bi bi-tags text-tf-primary"></i> Category & Search Tags</h5>
+              <div class="d-flex flex-wrap gap-2">
+                @for (tag of destination()?.tags; track tag) {
+                  <span class="badge-tf badge-tf-info">#{{ tag }}</span>
+                }
+              </div>
+            </div>
+          }
+
+          <!-- TAB 2: ATTRACTIONS -->
+          @if (activeTab() === 'attractions') {
+            <div class="glass-card p-4 mb-4">
+              <h4 class="mb-3"><i class="bi bi-bank text-tf-warning me-2"></i> Famous Attractions in {{ destination()?.name }}</h4>
+              @if (attractions().length > 0) {
+                <div class="row g-3">
+                  @for (att of attractions(); track att.id) {
+                    <div class="col-md-6">
+                      <div class="glass-card p-3 h-100">
+                        <img [src]="att.image" [alt]="att.name" class="img-fluid rounded mb-2 attraction-thumb">
+                        <span class="badge-tf badge-tf-primary extra-small mb-1">{{ att.category }}</span>
+                        <h6 class="fw-bold mb-1">{{ att.name }}</h6>
+                        <p class="extra-small text-tf-secondary mb-2 line-clamp-2">{{ att.description }}</p>
+                        <a [routerLink]="['/attraction', att.id]" class="btn btn-sm btn-tf-outline w-100">
+                          View Details →
+                        </a>
+                      </div>
+                    </div>
+                  }
+                </div>
+              } @else {
+                <p class="text-tf-muted">Attractions catalog being updated for this destination.</p>
+              }
+            </div>
+          }
+
+          <!-- TAB 3: ACTIVITIES -->
+          @if (activeTab() === 'activities') {
+            <div class="glass-card p-4 mb-4">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h4 class="mb-0"><i class="bi bi-lightning-charge text-tf-accent"></i> Available Activities</h4>
+                <span class="text-tf-muted small">{{ destinationActivities().length }} activities</span>
+              </div>
+              @if (destinationActivities().length > 0) {
+                <div class="row g-3">
+                  @for (act of destinationActivities(); track act.id) {
+                    <div class="col-md-6">
+                      <app-activity-card [activity]="act" (addActivity)="addActivityToTrip($event)" />
+                    </div>
+                  }
+                </div>
+              } @else {
+                <p class="text-tf-muted">No custom activities listed for this destination yet.</p>
+              }
+            </div>
+          }
+
+          <!-- TAB 4: FOOD & CULTURE -->
+          @if (activeTab() === 'food') {
+            <div class="glass-card p-4 mb-4">
+              <h4 class="mb-3 text-tf-primary"><i class="bi bi-cup-hot me-2"></i> Local Cuisine & Delicacies</h4>
+              @if (destination()?.foodSpecialties && destination()!.foodSpecialties!.length > 0) {
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                  @for (food of destination()?.foodSpecialties; track food) {
+                    <span class="badge-tf badge-tf-glass">🍲 {{ food }}</span>
+                  }
+                </div>
+              }
+
+              @if (destination()?.localCulture && destination()!.localCulture!.length > 0) {
+                <h4 class="mb-3 text-tf-accent"><i class="bi bi-stars me-2"></i> Culture & Traditions</h4>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  @for (cult of destination()?.localCulture; track cult) {
+                    <span class="badge-tf badge-tf-info">✨ {{ cult }}</span>
+                  }
+                </div>
+              }
+            </div>
+          }
+
+          <!-- TAB 5: TRANSPORT & TIPS -->
+          @if (activeTab() === 'transport') {
+            <div class="glass-card p-4 mb-4">
+              <h4 class="mb-3 text-tf-primary"><i class="bi bi-signpost-split me-2"></i> How to Reach & Transportation</h4>
+              @if (destination()?.transportation) {
+                <ul class="list-unstyled d-grid gap-2 mb-4">
+                  <li><i class="bi bi-airplane text-tf-primary me-2"></i> <strong>Airport:</strong> {{ destination()?.transportation?.airport }}</li>
+                  <li><i class="bi bi-train-front text-tf-accent me-2"></i> <strong>Railway:</strong> {{ destination()?.transportation?.railway }}</li>
+                  <li><i class="bi bi-bus-front text-tf-warning me-2"></i> <strong>Road Route:</strong> {{ destination()?.transportation?.road }}</li>
+                  <li><i class="bi bi-taxi-front text-tf-success me-2"></i> <strong>Local Transport:</strong> {{ destination()?.transportation?.localTransport }}</li>
+                </ul>
+              }
+
+              @if (destination()?.travelTips && destination()!.travelTips!.length > 0) {
+                <h5 class="mt-4 mb-2 text-tf-warning"><i class="bi bi-lightbulb me-2"></i> Travel Tips & Advisory</h5>
+                <ul class="ps-3 text-tf-secondary small">
+                  @for (tip of destination()?.travelTips; track tip) {
+                    <li class="mb-1">{{ tip }}</li>
+                  }
+                </ul>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Sidebar Info -->
+        <div class="col-lg-4">
+          <div class="glass-card p-4 mb-4 sticky-top" style="top: 140px; z-index: 10;">
+            <h5 class="mb-3 border-bottom border-secondary border-opacity-25 pb-2">Trip Highlights & Budget</h5>
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-cash-stack"></i> Base Price / Person</span>
+              <span class="info-value price-text">₹{{ destination()?.pricePerPerson?.toLocaleString() }}</span>
+            </div>
+
+            @if (destination()?.estimatedBudget) {
+              <div class="p-2 glass-card rounded-3 my-2 small">
+                <strong class="d-block extra-small text-tf-muted mb-1">Estimated Tier Breakdown:</strong>
+                <div class="d-flex justify-content-between extra-small">
+                  <span>Budget: <strong>₹{{ destination()?.estimatedBudget?.budget?.toLocaleString() }}</strong></span>
+                  <span>Mid: <strong>₹{{ destination()?.estimatedBudget?.midRange?.toLocaleString() }}</strong></span>
+                </div>
+              </div>
+            }
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-star-fill text-warning"></i> Rating</span>
+              <span class="info-value">{{ destination()?.rating }} / 5 ({{ destination()?.reviewCount }} reviews)</span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label"><i class="bi bi-cloud-sun"></i> Best Season</span>
+              <span class="info-value">{{ destination()?.bestSeason }}</span>
+            </div>
+
+            @if (destination()?.idealDuration) {
+              <div class="info-row">
+                <span class="info-label"><i class="bi bi-clock"></i> Ideal Duration</span>
+                <span class="info-value">{{ destination()?.idealDuration }}</span>
+              </div>
+            }
+
+            @if (destination()?.elevation) {
+              <div class="info-row">
+                <span class="info-label"><i class="bi bi-graph-up-arrow"></i> Elevation</span>
+                <span class="info-value">{{ destination()?.elevation }}</span>
+              </div>
+            }
+
+            <div class="d-grid gap-2 mt-4">
+              <button class="btn-tf-primary w-100" (click)="addToTrip()">
+                <i class="bi bi-plus-lg"></i> Add Destination to Trip
+              </button>
+              <button class="btn-tf-outline w-100" (click)="buildTripNow()">
+                <i class="bi bi-rocket-takeoff"></i> Build Custom Trip
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Destinations -->
+      @if (relatedDestinations().length > 0) {
+        <div class="mt-5">
+          <h3 class="mb-4">You Might Also Like</h3>
+          <div class="row g-4">
+            @for (rel of relatedDestinations(); track rel.id) {
+              <div class="col-lg-3 col-md-6">
+                <app-destination-card [destination]="rel" (addToTrip)="addToTrip()" />
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Expense Calculator Modal -->
+    <app-expense-calculator-modal
+      [isOpen]="showCalcModal()"
+      [destination]="destination()"
+      (close)="closeCalculator()"
+    />
+  } @else {
+    <div class="container py-5">
+      <app-loading-spinner message="Loading destination details..." />
+    </div>
+  }
+</div>

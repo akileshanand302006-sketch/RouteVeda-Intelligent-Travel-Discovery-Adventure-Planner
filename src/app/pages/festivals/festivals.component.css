@@ -1,0 +1,64 @@
+.festivals-hero {
+  padding: 70px 0 40px;
+  margin-bottom: 2rem;
+}
+
+.festivals-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+.category-chip {
+  padding: 8px 18px;
+  border-radius: var(--tf-radius-full);
+  border: 1px solid var(--tf-border);
+  background: var(--tf-surface);
+  color: var(--tf-text-secondary);
+  font-weight: 500;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: var(--tf-transition);
+}
+
+.category-chip:hover,
+.category-chip.active {
+  background: var(--tf-gradient-primary);
+  color: white;
+  border-color: var(--tf-primary);
+}
+
+.fest-img-wrapper {
+  position: relative;
+  height: 200px;
+}
+
+.fest-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.glass-card:hover .fest-img {
+  transform: scale(1.06);
+}
+
+.month-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,31 @@
+.compare-hero {
+  padding: 70px 0 40px;
+  margin-bottom: 2rem;
+}
+
+.compare-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+.compare-table th,
+.compare-table td {
+  vertical-align: middle;
+  padding: 14px 16px;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.compare-img {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
