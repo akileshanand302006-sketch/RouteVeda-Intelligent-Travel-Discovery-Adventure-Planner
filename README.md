@@ -1,6 +1,10 @@
-🏕️ TripForge — Smart Adventure Trip Builder
+Here is the complete, properly formatted, and structured **`README.md`** content for **TripForge**:
 
-“Discover India. Design your journey. Create memories.”
+```markdown
+# 🏕️ TripForge — Smart Adventure Trip Builder
+
+> *“Discover India. Design your journey. Create memories.”*
+
 [![Angular](https://img.shields.io/badge/Angular-20%2B-DD0031.svg?logo=angular&logoColor=white)](https://angular.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
@@ -9,501 +13,292 @@
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-TripForge is a premium full-stack travel planning application built with Angular, Node.js, Express.js, PostgreSQL and PostGIS. It helps users discover destinations across India, explore attractions, build personalized itineraries, manage wishlists and receive travel recommendations through a modern Liquid Glass interface.
+---
 
-🌟 Features
-🗺️ Explore India — Discover destinations across 28 states and 8 Union Territories.
-🔎 Smart Search & Filtering — Search and filter by destination, state, category, activity, rating, budget and duration.
-🏛️ Tourist Attractions — Explore forts, temples, beaches, waterfalls, lakes, wildlife, heritage sites and more.
-🧭 Smart Trip Builder — Create trips with destinations, activities, dates, travelers, budget and itinerary order.
-💰 Budget Planning — Estimate trip expenses based on travelers, duration and selected destinations.
-❤️ Wishlist — Save destinations for future trips.
-👤 Personal Profiles — Manage profile, travel preferences, trips and personalized information.
-🧠 Recommendations — Suggest destinations based on preferences, interests and previous interactions.
-📍 Nearby Destinations — Find destinations within a selected radius using PostGIS.
-⭐ Reviews & Ratings — View and manage destination reviews.
-🏆 Achievements — Earn travel badges based on exploration activity.
-🕒 Real-Time Information — Live date and time with dynamic application state.
-☀️🌙 Light/Dark Theme — Premium theme switching with persistent preferences.
-📱 Responsive Design — Optimized for desktop, tablet and mobile.
-🔐 Authentication — Registration, login, logout, protected routes and user-specific data.
-🖼️ Authentic Destination Images
+**TripForge** is a premium full-stack travel planning platform built with **Angular**, **Node.js / Express**, **PostgreSQL**, and **PostGIS**. It helps travelers discover hidden gems across India, explore tourist attractions, build personalized day-by-day itineraries, calculate live budgets, manage wishlists, export professional PDF dossiers, and receive intelligent recommendations through a modern **Liquid Glass** interface.
 
-TripForge uses a dedicated image architecture instead of random stock images.
+---
 
-Wikimedia Commons
+## 🌟 Key Features
 
-Real destination photography is obtained through the Wikimedia Commons API.
+- 🗺️ **Explore India**: Discover curated destinations across all 28 states and 8 Union Territories.
+- 🔎 **Smart Search & Filtering**: Multi-dimensional filtering by destination, state, travel category, difficulty level, rating, and budget.
+- 🏛️ **Tourist Attractions**: Explore forts, temples, beaches, waterfalls, lakes, wildlife sanctuaries, and UNESCO heritage sites.
+- 🧭 **Smart Trip Builder**: 7-step interactive builder to pick destinations categorized by state, customize dates, add activities, and generate full day-by-day schedules.
+- 💰 **Live Budget & Expense Matrix**: Automated cost breakdown for accommodations, dining, transit, activities, and contingency funds.
+- 📄 **Detailed PDF Dossier Export**: Generate and download multi-page, formatted trip itineraries with packing checklists, budget tables, and emergency helplines.
+- ❤️ **Interactive Wishlist**: Save destinations instantly with reactive state sync.
+- 👤 **Personal Profiles & Travel Stats**: Track total trips created, destinations explored, bucket lists, and personal travel styles.
+- 🧠 **Smart Recommendations & Finder Quiz**: Intelligent suggestions based on user travel preferences and personality matches.
+- 📍 **PostGIS Geospatial Discovery**: Real-time radius queries to discover nearby attractions and destinations.
+- 🏆 **Achievement Badges**: Earn adventure milestones and badges based on travel planning activity.
+- ☀️🌙 **Liquid Glass Light / Dark Theme**: Premium glassmorphic design with persistent theme preferences and smooth micro-interactions.
+- 🔐 **User Authentication & Data Isolation**: Secure registration, login, JWT authentication, and isolated user data storage.
 
-Destination
-     ↓
-Wikimedia Commons API
-     ↓
-Relevant Image Search
-     ↓
-Original Destination Image
-     ↓
-ImageLoaderComponent
-     ↓
-TripForge UI
+---
 
-The application includes image loading, caching and fallback handling to improve reliability.
+## 🖼️ Authentic Imagery & Data Architecture
 
-Google Places API
+TripForge avoids generic stock photos by combining live APIs and curated datasets:
 
-The Google Places API (New) is used for place-specific information such as:
+```
+                  Destination Data
+                         │
+        ┌────────────────┴────────────────┐
+        ▼                                 ▼
+Wikimedia Commons API             Google Places API (New)
+        │                                 │
+Authentic Cultural Photos         Ratings, Coordinates & Place IDs
+        └────────────────┬────────────────┘
+                         ▼
+               ImageLoaderComponent
+                         ▼
+                   TripForge UI
+```
 
-Google Place ID
-Geographic information
-Ratings
-Maps information
-Place details
-Photos where applicable
+- **Wikimedia Commons API**: Authentic photography for regional delicacies, cultural festivals, and state monuments.
+- **Google Places API (New)**: Verified ratings, review counts, coordinates, and location metadata.
 
-The architecture combines PostgreSQL application data + Google Places information + Wikimedia imagery.
+---
 
-🎨 Premium UI/UX
+## 🎨 Premium Liquid Glass UI/UX
 
-TripForge is designed to look like a modern commercial travel platform rather than a traditional college project.
+- **Glassmorphism**: Backdrop blurs (`backdrop-filter: blur(16px)`), translucent surfaces, soft specular borders, and dynamic ambient glows.
+- **Adaptive Themes**:
+  - ☀️ **Light Theme**: Crisp frosted glass, luminous indigo accents, and soft atmospheric shadows.
+  - 🌙 **Dark Theme**: Deep slate glass surfaces with neon purple/blue edge highlights and high contrast typography.
 
-Liquid Glass Design
-Glassmorphism
-Backdrop blur
-Transparency
-Glow effects
-Soft shadows
-Gradient accents
-Animated cards
-Micro-interactions
-Floating controls
-Cinematic backgrounds
-Smooth transitions
-Themes
+---
 
-☀️ Light Theme
+## 📍 PostGIS Geospatial Capabilities
 
-Bright glass surfaces, soft shadows and subtle blue/purple atmospheric effects.
+```
+User Coordinates (Lat, Lng) ──➔ PostGIS ST_DWithin ──➔ Radius Search (50km / 100km) ──➔ Nearby Destinations
+```
 
-🌙 Dark Theme
+- Real geographic distance calculations using spatial indexes on PostGIS geometry columns.
+- Proximity-based exploration without client-side heavy distance calculations.
 
-Deep translucent surfaces, luminous borders and controlled purple/blue glow.
+---
 
-Both themes share the same component structure, spacing and design system.
+## 🧭 Trip Planning Workflow
 
-📍 PostGIS Geospatial Search
+```
+1. Explore Destinations / India 36
+        ↓
+2. Add to Trip Queue or Instant Save
+        ↓
+3. Smart Trip Builder (7-Step Wizard)
+   ├── Step 1: Trip Identity & Travelers
+   ├── Step 2: Pick Destinations (Categorized by State)
+   ├── Step 3: Select Start & End Dates (Auto-calculated Duration)
+   ├── Step 4: Choose Travel Style (Adventure, Nature, Luxury, etc.)
+   ├── Step 5: Select Curated Activities
+   ├── Step 6: Set Target Budget & Review Live Breakdown
+   └── Step 7: Finalize & Generate Itinerary
+        ↓
+4. Manage in "My Trips" Dashboard
+        ↓
+5. Download Detailed PDF Dossier
+```
 
-PostGIS provides real geographic functionality instead of calculating distances manually in JavaScript.
+---
 
-Example:
+## 🏗️ System Architecture
 
-User Location
-     ↓
-Latitude + Longitude
-     ↓
-PostGIS
-     ↓
-Radius Search
-     ↓
-Nearby Destinations
+```
+                                  TripForge Client
+                                 (Angular Frontend)
+                                         │
+                                   Angular Services
+                              (Signals & HttpClient)
+                                         │
+                                         ▼
+                                Node.js / Express API
+                               (REST Controllers & Auth)
+                                         │
+                        ┌────────────────┴────────────────┐
+                        ▼                                 ▼
+                PostgreSQL Database                PostGIS Extension
+             (Users, Trips, Wishlist)             (Spatial Geometries)
+                        │                                 │
+            ┌───────────┴───────────┐                     │
+            ▼                       ▼                     │
+    Google Places API       Wikimedia Commons             │
+      (Place Details)          (Photography)              │
+            └───────────────────────┬─────────────────────┘
+                                    ▼
+                         Rendered Travel Platform
+```
 
-For example, users can search for destinations within 50 km or 100 km of a selected location.
+---
 
-PostGIS features include:
+## 🗄️ Database Schema Overview
 
-Geographic coordinates
-Spatial indexes
-Distance calculations
-Radius searches
-Nearby destinations
-Location-based recommendations
-🧭 Trip Planning Workflow
-Login / Register
-       ↓
-Dashboard
-       ↓
-Explore India
-       ↓
-Select Destination
-       ↓
-View Details & Attractions
-       ↓
-Add to Wishlist / Trip
-       ↓
-Select Activities
-       ↓
-Set Dates & Travelers
-       ↓
-Calculate Budget
-       ↓
-Build Itinerary
-       ↓
-Save Trip
-       ↓
-My Trips
-⚛️ Angular Concepts Demonstrated
+The relational PostgreSQL schema includes:
 
-TripForge demonstrates practical modern Angular concepts:
+| Category | Tables |
+| :--- | :--- |
+| **Users & Profiles** | `users`, `profiles`, `user_preferences` |
+| **Geographic & Tourism** | `states`, `destinations`, `destination_images`, `attractions` |
+| **Activities & Culture** | `activities`, `destination_activities`, `foods`, `festivals` |
+| **Trips & Itineraries** | `trips`, `trip_destinations`, `trip_activities` |
+| **Engagement** | `wishlists`, `reviews`, `achievements`, `user_achievements`, `notifications` |
 
-Angular Components — Reusable UI components and pages.
-TypeScript — Strongly typed application development.
-Angular Signals — Reactive state management.
-Angular Services — API communication and business logic.
-Angular Router — SPA navigation and route parameters.
-Data Binding — Interpolation, property binding, event binding and two-way binding.
-Built-in Directives — Conditional rendering, iteration, dynamic classes and styles.
-Forms & Validation — Required, email, length, numeric and date validations.
-HTTP Client — Communication with the backend REST API.
-Route Guards — Protection of authenticated pages.
-Main Services
-AuthService
-DestinationService
-TripService
-WishlistService
-ProfileService
-ActivityService
-RecommendationService
-GooglePlacesService
-WikimediaImageService
-🏗️ System Architecture
-                    TripForge
-                        │
-                  Angular Frontend
-                        │
-                Angular Services
-                        │
-                     HttpClient
-                        │
-                 Node.js + Express
-                        │
-              ┌─────────┴─────────┐
-              │                   │
-        PostgreSQL             PostGIS
-              │                   │
-      Application Data      Spatial Queries
-              │
-       ┌──────┴──────┐
-       │             │
-Google Places    Wikimedia Commons
-       │             │
-Place Data        Images
-🗄️ Database
+---
 
-TripForge uses PostgreSQL as the primary application database and PostGIS for geographic operations.
+## 🛠️ Tech Stack
 
-Core Data
-users
-profiles
-user_preferences
+### Frontend
+- **Framework**: Angular (Standalone Components, Signals reactive model)
+- **Language**: TypeScript 5.x
+- **Routing**: Angular Router with lazy loading and scroll restoration
+- **Styling**: Vanilla CSS (Liquid Glass Tokens) + Bootstrap 5.3 utilities
+- **Document Generation**: `jspdf` for high-resolution PDF itinerary dossiers
 
+### Backend
+- **Runtime**: Node.js 20+
+- **Framework**: Express.js with TypeScript (`tsx`)
+- **Security**: JWT authentication, bcrypt password hashing, CORS, parameterized SQL
+- **Database Driver**: `pg` (node-postgres) with connection pooling
 
-states
-destinations
-destination_images
-attractions
+### Database & Spatial
+- **Database**: PostgreSQL 16+
+- **Spatial Engine**: PostGIS 3.x
 
+---
 
-activities
-destination_activities
+## 📁 Project Structure
 
-
-trips
-trip_destinations
-trip_activities
-
-
-wishlists
-reviews
-recently_viewed
-
-
-achievements
-user_achievements
-notifications
-
-PostgreSQL provides:
-
-Relational data management
-Foreign keys
-Constraints
-Transactions
-Indexing
-Search
-User data isolation
-
-PostGIS provides the geographic capabilities.
-
-🔐 Authentication & User Isolation
-
-TripForge provides:
-
-Registration
-Login
-Logout
-Password hashing
-Authentication middleware
-Protected routes
-Profile management
-User-specific trips
-User-specific wishlists
-User preferences
-
-Each user's private data is isolated from other users.
-
-User A
- ├── Trips
- ├── Wishlist
- ├── Preferences
- └── Reviews
-
-
-User B
- ├── Trips
- ├── Wishlist
- ├── Preferences
- └── Reviews
-🛠️ Tech Stack
-Frontend
-Angular
-TypeScript
-Angular Signals
-Angular Router
-Bootstrap
-HTML5
-CSS3 / SCSS
-Backend
-Node.js
-Express.js
-TypeScript
-REST API
-Database
-PostgreSQL
-PostGIS
-External APIs
-Google Places API (New)
-Wikimedia Commons API
-UI
-Liquid Glass
-Glassmorphism
-Responsive Design
-CSS Animations
-Micro-interactions
-📁 Project Structure
-TripForge/
+```
+tripforge/
+├── src/                          # Angular Frontend Application
+│   ├── app/
+│   │   ├── core/                 # Singleton services, guards, interceptors
+│   │   │   └── services/         # Trip, Auth, Destination, PDF, Food services
+│   │   ├── layout/               # Navbar (Liquid Glass capsule), Footer
+│   │   ├── models/               # Strongly typed TypeScript interfaces
+│   │   ├── pages/                # Page routed components
+│   │   │   ├── home/             # Main Dashboard & Interactive Overview
+│   │   │   ├── explore/          # Search & Multi-Filter Catalog
+│   │   │   ├── trip-builder/     # 7-Step Smart Trip Builder
+│   │   │   ├── my-trips/         # Saved Trips, Itineraries & PDF Export
+│   │   │   ├── destination-details/ # Deep Dive, Attractions & Maps
+│   │   │   ├── food-explorer/    # Regional Culinary Specialties
+│   │   │   └── festivals/        # Cultural Festival Calendar
+│   │   └── shared/               # Reusable UI components & directives
+│   ├── styles.css                # Global Design Tokens & Liquid Glass theme
+│   └── index.html                # Entry HTML with Outfit & Inter typography
 │
-├── client/
-│   └── src/
-│       ├── app/
-│       │   ├── components/
-│       │   ├── pages/
-│       │   ├── services/
-│       │   ├── guards/
-│       │   ├── directives/
-│       │   └── models/
-│       ├── assets/
-│       └── styles/
-│
-├── server/
+├── server/                       # Node.js Express REST API
 │   ├── src/
-│   │   ├── controllers/
-│   │   ├── services/
-│   │   ├── routes/
-│   │   ├── middleware/
-│   │   ├── seed/
-│   │   └── config/
-│   ├── migrations/
-│   └── package.json
+│   │   ├── controllers/          # Request handlers & DB queries
+│   │   ├── routes/               # API route definitions
+│   │   ├── middleware/           # Auth validation & error handling
+│   │   ├── config/               # DB connection & PostGIS initialization
+│   │   └── seed/                 # Database seeding engine
+│   └── migrations/               # SQL schema definitions
 │
-├── database/
-├── .env.example
-├── package.json
-└── README.md
-🗺️ Main Routes
-/                    → Dashboard
-/explore             → Explore India
-/destinations        → Destinations
-/destinations/:id    → Destination Details
-/attractions         → Tourist Attractions
-/discover            → Discovery Tools
-/planner             → Planner Tools
-/trips               → My Trips
-/wishlist            → Wishlist
-/profile             → Profile
-/login               → Login
-/register            → Registration
-/**                  → 404
-🚀 Installation
-1. Clone
+├── public/                       # Static Assets & JSON Datasets
+│   └── data/                     # destinations.json, food.json, festivals.json
+├── scripts/                      # Automated dataset generators
+└── package.json                  # Scripts & dependencies
+```
+
+---
+
+## 🔌 Core API Endpoints
+
+### 🔐 Authentication
+- `POST /api/auth/register` — Register a new traveler account
+- `POST /api/auth/login` — Authenticate and receive session
+- `POST /api/auth/logout` — End user session
+- `GET  /api/auth/me` — Get authenticated traveler profile
+
+### 🗺️ Destinations & Attractions
+- `GET  /api/destinations` — Get all destinations (with state & category filters)
+- `GET  /api/destinations/:id` — Get single destination details
+- `GET  /api/destinations/nearby` — Radius-based geospatial search via PostGIS
+- `GET  /api/attractions` — Get tourist landmarks and sites
+
+### 🧭 Trips & Itineraries
+- `GET    /api/trips` — Get current user's saved trips
+- `GET    /api/trips/:id` — Get specific trip itinerary
+- `POST   /api/trips` — Save newly built trip
+- `PUT    /api/trips/:id` — Update trip details or status
+- `DELETE /api/trips/:id` — Delete trip from database
+
+### 🍲 Discoveries & Culture
+- `GET  /api/foods` — Regional culinary specialties
+- `GET  /api/festivals` — Cultural festival calendar
+- `GET  /api/activities` — Adventure sports and curated experiences
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- **Node.js**: `v20.x` or later
+- **PostgreSQL**: `v16.x` or later with **PostGIS** extension installed
+
+### 2. Clone Repository
+```bash
 git clone https://github.com/YOUR_USERNAME/tripforge.git
 cd tripforge
-2. Install dependencies
-cd client
+```
+
+### 3. Install Dependencies
+```bash
 npm install
+```
 
-
-cd ../server
-npm install
-3. Create PostgreSQL database
-CREATE DATABASE tripforge_db;
-
-Enable PostGIS:
-
-CREATE EXTENSION IF NOT EXISTS postgis;
-4. Configure .env
-PORT=5000
-DATABASE_URL=postgresql://username:password@localhost:5432/tripforge_db
-JWT_SECRET=your_secret_key
-GOOGLE_PLACES_API_KEY=your_api_key
+### 4. Database Setup & Environment Variables
+Create `.env` in the root directory:
+```env
+PORT=3000
+DATABASE_URL=postgresql://postgres:password@localhost:5432/tripforge_db
+JWT_SECRET=your_jwt_super_secret_key
 CLIENT_URL=http://localhost:4200
-5. Run migrations
-npm run migrate
-6. Seed data
-npm run seed
-7. Validate database
-npm run validate-db
-8. Start backend
-npm run dev
-9. Start Angular
-cd client
+```
+
+Initialize the database in PostgreSQL:
+```sql
+CREATE DATABASE tripforge_db;
+\c tripforge_db
+CREATE EXTENSION IF NOT EXISTS postgis;
+```
+
+### 5. Run Migrations & Seed Data
+```bash
+# Seed all destinations, attractions, food, festivals, and demo accounts
+npm run db:seed
+```
+
+### 6. Start the Application
+```bash
+# Start Backend REST Server (Port 3000)
+npm run server
+
+# In another terminal, start Angular Development Server (Port 4200)
 npm start
+```
 
-Open:
+Visit **`http://localhost:4200`** in your browser.
 
-http://localhost:4200
-🔌 Core API Endpoints
-AUTH
-POST   /api/auth/register
-POST   /api/auth/login
-POST   /api/auth/logout
-GET    /api/auth/me
+---
 
+## 📄 License
 
-DESTINATIONS
-GET    /api/destinations
-GET    /api/destinations/:id
-GET    /api/destinations/search
-GET    /api/destinations/nearby
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
-
-TRIPS
-GET    /api/trips
-GET    /api/trips/:id
-POST   /api/trips
-PUT    /api/trips/:id
-DELETE /api/trips/:id
-
-
-WISHLIST
-GET    /api/wishlist
-POST   /api/wishlist
-DELETE /api/wishlist/:destinationId
-
-
-PROFILE
-GET    /api/profile
-PUT    /api/profile
-
-
-REVIEWS
-GET    /api/destinations/:id/reviews
-POST   /api/destinations/:id/reviews
-🔒 Security
-
-TripForge implements:
-
-Secure password hashing
-Authentication and authorization
-Protected API routes
-User data isolation
-Input validation
-Parameterized SQL queries
-CORS configuration
-Environment variables
-No database credentials in Angular
-No plaintext passwords
-🧪 Testing
-
-Major workflows include:
-
-✓ Registration / Login / Logout
-✓ Profile management
-✓ Destination search
-✓ State & category filtering
-✓ Nearby PostGIS search
-✓ Trip creation / editing / deletion
-✓ Wishlist
-✓ Reviews
-✓ Recommendations
-✓ Form validation
-✓ Pagination
-✓ Google Places integration
-✓ Wikimedia image loading
-✓ Light/Dark themes
-✓ Responsive design
-✓ User data isolation
-🎓 Academic & Resume Value
-
-TripForge demonstrates practical knowledge of:
-
-Frontend
-
-Angular architecture
-Components
-Signals
-Services
-Routing
-Forms
-Validation
-REST API integration
-Responsive UI
-
-Backend
-
-Node.js
-Express.js
-REST APIs
-Authentication
-Middleware
-Validation
-CRUD operations
-
-Database
-
-PostgreSQL
-Relational database design
-Normalization
-Foreign keys
-Constraints
-Transactions
-Indexing
-PostGIS
-Spatial queries
-
-Integration
-
-Google Places API
-Wikimedia Commons API
-Geospatial services
-🔮 Future Enhancements
-🤖 AI-powered itinerary generation
-🧠 AI travel assistant
-🌦️ Real-time weather integration
-🏨 Hotel & accommodation discovery
-🚆 Transportation recommendations
-🗺️ Interactive travel maps
-👥 Collaborative trip planning
-🔔 Smart travel notifications
-🌐 Multi-language support
-📱 Mobile application
-🛠️ Admin dashboard
-☁️ Cloud deployment
-📄 License
-
-This project is available under the MIT License.
+---
 
 <div align="center">
-🏕️ TripForge
-Explore • Plan • Discover • Travel
+
+**🏕️ TripForge**  
+*Explore • Plan • Discover • Travel*
 
 Built with Angular, Node.js, PostgreSQL & PostGIS
 
-</div> ```
+</div>
+```
