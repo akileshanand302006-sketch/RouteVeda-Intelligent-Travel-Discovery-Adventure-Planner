@@ -1,4 +1,4 @@
-🏕️ TripForge — Intelligent-Travel-Discovery-Adventure-Planner
+🏕️ RouteVeda — Smart Travel Discovery & Journey Planner
 
 “Discover India. Design your journey. Create memories.”
 
@@ -10,7 +10,7 @@
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3.svg?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-TripForge is a premium full-stack travel planning application built with Angular, Node.js, Express.js, PostgreSQL and PostGIS. It helps users discover destinations across India, explore attractions, build personalized itineraries, manage wishlists and receive travel recommendations through a modern Liquid Glass interface.
+RouteVeda is a premium full-stack travel planning application built with Angular, Node.js, Express.js, PostgreSQL and PostGIS. It helps users discover destinations across India, explore attractions, build personalized itineraries, manage wishlists and receive travel recommendations through a modern Liquid Glass interface.
 
 🌟 Features
 
@@ -46,7 +46,7 @@ TripForge is a premium full-stack travel planning application built with Angular
 
 🖼️ Authentic Destination Images
 
-TripForge uses a dedicated image architecture instead of random stock images.
+RouteVeda uses a dedicated image architecture instead of random stock images.
 
 Wikimedia Commons
 
@@ -62,7 +62,7 @@ Original Destination Image
      ↓
 ImageLoaderComponent
      ↓
-TripForge UI
+RouteVeda UI
 
 The application includes image loading, caching and fallback handling to improve reliability.
 
@@ -86,7 +86,7 @@ The architecture combines PostgreSQL application data + Google Places informatio
 
 🎨 Premium UI/UX
 
-TripForge is designed to look like a modern commercial travel platform rather than a traditional college project.
+RouteVeda is designed to look like a modern commercial travel platform rather than a traditional college project.
 
 Liquid Glass Design
 
@@ -182,7 +182,7 @@ My Trips
 
 ⚛️ Angular Concepts Demonstrated
 
-TripForge demonstrates practical modern Angular concepts:
+RouteVeda demonstrates practical modern Angular concepts:
 
 Angular Components — Reusable UI components and pages.
 
@@ -218,7 +218,7 @@ WikimediaImageService
 
 🏗️ System Architecture
 
-                    TripForge
+                    RouteVeda
                         │
                   Angular Frontend
                         │
@@ -242,7 +242,7 @@ WikimediaImageService
 
 🗄️ Database
 
-TripForge uses PostgreSQL as the primary application database and PostGIS for geographic operations.
+RouteVeda uses PostgreSQL as the primary application database and PostGIS for geographic operations.
 
 Core Data
 
@@ -290,7 +290,7 @@ PostGIS provides the geographic capabilities.
 
 🔐 Authentication & User Isolation
 
-TripForge provides:
+RouteVeda provides:
 
 Registration
 
@@ -380,7 +380,7 @@ Micro-interactions
 
 📁 Project Structure
 
-TripForge/
+RouteVeda/
 │
 ├── client/
 │   └── src/
@@ -430,8 +430,8 @@ TripForge/
 
 1. Clone the repository
 
-git clone https://github.com/YOUR_USERNAME/tripforge.git
-cd tripforge
+git clone https://github.com/YOUR_USERNAME/RouteVeda.git
+cd RouteVeda
 
 2. Install dependencies
 
@@ -443,7 +443,7 @@ npm install
 
 3. Create PostgreSQL database
 
-CREATE DATABASE tripforge_db;
+CREATE DATABASE routeveda_db;
 
 Enable PostGIS:
 
@@ -569,7 +569,7 @@ Major workflows include:
 
 🎓 Academic & Resume Value
 
-TripForge demonstrates practical knowledge of:
+RouteVeda demonstrates practical knowledge of:
 
 Frontend
 
@@ -667,7 +667,7 @@ This project is available under the MIT License.
 
 <div align="center">
 
-🏕️ TripForge
+🏕️ RouteVeda
 
 Explore • Plan • Discover • Travel
 
