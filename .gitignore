@@ -2,9 +2,14 @@
 
 # Compiled output
 /dist
+/dist-server
 /tmp
 /out-tsc
 /bazel-out
+
+# Local environment & secrets
+.env
+.env.local
 
 # Node
 /node_modules

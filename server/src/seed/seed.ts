@@ -9,7 +9,13 @@ export async function runSeed(): Promise<{ success: boolean; stats: Record<strin
   const stats: Record<string, number> = {};
 
   try {
-    const dataDir = path.join(process.cwd(), 'public', 'data');
+    const candidateDirs = [
+      path.join(process.cwd(), 'public', 'data'),
+      path.join(process.cwd(), '..', 'public', 'data'),
+      path.join(__dirname, '..', '..', '..', 'public', 'data'),
+      path.join(__dirname, '..', '..', 'public', 'data')
+    ];
+    const dataDir = candidateDirs.find(d => fs.existsSync(path.join(d, 'destinations.json'))) || path.join(process.cwd(), 'public', 'data');
 
     // 1. Seed States (28 States + 8 UTs)
     const statesPath = path.join(dataDir, 'states.json');
@@ -272,18 +278,44 @@ export async function runSeed(): Promise<{ success: boolean; stats: Record<strin
       console.log(`  ✅ Seeded ${actCount} Activities`);
     }
 
-    // 4. Seed Attractions
+    // 4. Seed Attractions (Optimized Batch Inserts)
     const attractionsPath = path.join(dataDir, 'attractions.json');
     if (fs.existsSync(attractionsPath)) {
       const attractions = JSON.parse(fs.readFileSync(attractionsPath, 'utf-8'));
       let attrCount = 0;
+      const batchSize = 50;
 
-      for (const attr of attractions) {
+      for (let i = 0; i < attractions.length; i += batchSize) {
+        const batch = attractions.slice(i, i + batchSize);
+        const valueClauses: string[] = [];
+        const params: any[] = [];
+        let p = 1;
+
+        for (const attr of batch) {
+          valueClauses.push(`($${p}, $${p+1}, $${p+2}, $${p+3}, $${p+4}, $${p+5}, $${p+6}, $${p+7}, $${p+8}, $${p+9}, $${p+10}, $${p+11}, $${p+12})`);
+          params.push(
+            attr.id,
+            attr.name,
+            typeof attr.destinationId === 'number' ? attr.destinationId : null,
+            attr.destinationName || null,
+            attr.stateId || null,
+            attr.state || attr.stateName || null,
+            attr.category || 'Sightseeing',
+            attr.description || null,
+            attr.image || null,
+            attr.rating || 4.5,
+            attr.entryFee || 'Free',
+            attr.timings || 'Open daily',
+            attr.highlights || []
+          );
+          p += 13;
+        }
+
         await client.query(
           `INSERT INTO attractions (
             id, name, destination_id, destination_name, state_id, state_name,
             category, description, image, rating, entry_fee, timings, highlights
-          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+          ) VALUES ${valueClauses.join(', ')}
           ON CONFLICT (id) DO UPDATE SET
             name = EXCLUDED.name,
             destination_id = EXCLUDED.destination_id,
@@ -298,41 +330,52 @@ export async function runSeed(): Promise<{ success: boolean; stats: Record<strin
             timings = EXCLUDED.timings,
             highlights = EXCLUDED.highlights,
             updated_at = CURRENT_TIMESTAMP`,
-          [
-            attr.id,
-            attr.name,
-            typeof attr.destinationId === 'number' ? attr.destinationId : null,
-            attr.destinationName || null,
-            attr.stateId || null,
-            attr.state || attr.stateName || null,
-            attr.category || 'Sightseeing',
-            attr.description || null,
-            attr.image || null,
-            attr.rating || 4.5,
-            attr.entryFee || 'Free',
-            attr.timings || 'Open daily',
-            attr.highlights || []
-          ]
+          params
         );
-        attrCount++;
+        attrCount += batch.length;
       }
       stats.attractions = attrCount;
       console.log(`  ✅ Seeded ${attrCount} Attractions`);
     }
 
-    // 5. Seed Foods
+    // 5. Seed Foods (Optimized Batch Inserts)
     const foodPath = path.join(dataDir, 'food.json');
     if (fs.existsSync(foodPath)) {
       await client.query('TRUNCATE TABLE foods CASCADE');
       const foods = JSON.parse(fs.readFileSync(foodPath, 'utf-8'));
       let foodCount = 0;
+      const batchSize = 50;
 
-      for (const f of foods) {
+      for (let i = 0; i < foods.length; i += batchSize) {
+        const batch = foods.slice(i, i + batchSize);
+        const valueClauses: string[] = [];
+        const params: any[] = [];
+        let p = 1;
+
+        for (const f of batch) {
+          valueClauses.push(`($${p}, $${p+1}, $${p+2}, $${p+3}, $${p+4}, $${p+5}, $${p+6}, $${p+7}, $${p+8}, $${p+9}, $${p+10}, $${p+11})`);
+          params.push(
+            f.id,
+            f.name,
+            typeof f.destinationId === 'number' ? f.destinationId : null,
+            f.stateId || null,
+            f.stateName || f.state || null,
+            f.type || f.category || 'Veg',
+            f.description || null,
+            f.type === 'Veg' || f.type === 'Sweet' || f.type === 'Beverage' || f.isVeg === true,
+            f.priceRange || '₹100 - ₹300',
+            f.popularPlacesToTry || f.mustTryAt || [],
+            f.image || null,
+            new Date()
+          );
+          p += 12;
+        }
+
         await client.query(
           `INSERT INTO foods (
             id, name, destination_id, state_id, state_name, category, description,
-            is_veg, price_range, must_try_at, image
-          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+            is_veg, price_range, must_try_at, image, created_at
+          ) VALUES ${valueClauses.join(', ')}
           ON CONFLICT (id) DO UPDATE SET
             name = EXCLUDED.name,
             destination_id = EXCLUDED.destination_id,
@@ -345,21 +388,9 @@ export async function runSeed(): Promise<{ success: boolean; stats: Record<strin
             must_try_at = EXCLUDED.must_try_at,
             image = EXCLUDED.image,
             updated_at = CURRENT_TIMESTAMP`,
-          [
-            f.id,
-            f.name,
-            typeof f.destinationId === 'number' ? f.destinationId : null,
-            f.stateId || null,
-            f.stateName || f.state || null,
-            f.type || f.category || 'Veg',
-            f.description || null,
-            f.type === 'Veg' || f.type === 'Sweet' || f.type === 'Beverage' || f.isVeg === true,
-            f.priceRange || '₹100 - ₹300',
-            f.popularPlacesToTry || f.mustTryAt || [],
-            f.image || null
-          ]
+          params
         );
-        foodCount++;
+        foodCount += batch.length;
       }
       stats.foods = foodCount;
       console.log(`  ✅ Seeded ${foodCount} Culinary Specialties`);
@@ -547,6 +578,127 @@ export async function runSeed(): Promise<{ success: boolean; stats: Record<strin
       }
       stats.trips = tripCount;
       console.log(`  ✅ Seeded ${tripCount} Saved Trips & Itineraries`);
+    }
+
+    // 9. Seed Experiences
+    const expPath = path.join(dataDir, 'experiences.json');
+    if (fs.existsSync(expPath)) {
+      const experiences = JSON.parse(fs.readFileSync(expPath, 'utf-8'));
+      let expCount = 0;
+      for (const e of experiences) {
+        await client.query(
+          `INSERT INTO experiences (
+            id, category, title, description, image, states, highlight_tag, popular_spots_count
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+          ON CONFLICT (id) DO UPDATE SET
+            category = EXCLUDED.category,
+            title = EXCLUDED.title,
+            description = EXCLUDED.description,
+            image = EXCLUDED.image,
+            states = EXCLUDED.states,
+            highlight_tag = EXCLUDED.highlight_tag,
+            popular_spots_count = EXCLUDED.popular_spots_count,
+            updated_at = CURRENT_TIMESTAMP`,
+          [
+            e.id,
+            e.category,
+            e.title,
+            e.description,
+            e.image,
+            e.states || [],
+            e.highlightTag || null,
+            e.popularSpotsCount || 0
+          ]
+        );
+        expCount++;
+      }
+      stats.experiences = expCount;
+      console.log(`  ✅ Seeded ${expCount} Experiences`);
+    }
+
+    // 10. Seed Itineraries
+    const itinPath = path.join(dataDir, 'itineraries.json');
+    if (fs.existsSync(itinPath)) {
+      const itineraries = JSON.parse(fs.readFileSync(itinPath, 'utf-8'));
+      let itinCount = 0;
+      for (const it of itineraries) {
+        await client.query(
+          `INSERT INTO itineraries (
+            id, title, subtitle, region, states, duration_days, travel_style,
+            estimated_budget_per_person, cover_image, destination_ids, destination_names,
+            highlights, day_by_day_plan
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+          ON CONFLICT (id) DO UPDATE SET
+            title = EXCLUDED.title,
+            subtitle = EXCLUDED.subtitle,
+            region = EXCLUDED.region,
+            states = EXCLUDED.states,
+            duration_days = EXCLUDED.duration_days,
+            travel_style = EXCLUDED.travel_style,
+            estimated_budget_per_person = EXCLUDED.estimated_budget_per_person,
+            cover_image = EXCLUDED.cover_image,
+            destination_ids = EXCLUDED.destination_ids,
+            destination_names = EXCLUDED.destination_names,
+            highlights = EXCLUDED.highlights,
+            day_by_day_plan = EXCLUDED.day_by_day_plan,
+            updated_at = CURRENT_TIMESTAMP`,
+          [
+            it.id,
+            it.title,
+            it.subtitle || null,
+            it.region || null,
+            it.states || [],
+            it.durationDays || 3,
+            it.travelStyle || 'Adventure',
+            it.estimatedBudgetPerPerson || 0,
+            it.coverImage || null,
+            it.destinationIds || [],
+            it.destinationNames || [],
+            it.highlights || [],
+            JSON.stringify(it.dayByDayPlan || [])
+          ]
+        );
+        itinCount++;
+      }
+      stats.itineraries = itinCount;
+      console.log(`  ✅ Seeded ${itinCount} Itineraries`);
+    }
+
+    // 11. Seed Notifications
+    const notifPath = path.join(dataDir, 'notifications.json');
+    if (fs.existsSync(notifPath)) {
+      const notifications = JSON.parse(fs.readFileSync(notifPath, 'utf-8'));
+      let notifCount = 0;
+      for (const n of notifications) {
+        const notifId = String(n.id);
+        await client.query(
+          `INSERT INTO notifications (
+            id, user_id, type, title, message, icon, timestamp, read, action_url
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+          ON CONFLICT (id) DO UPDATE SET
+            type = EXCLUDED.type,
+            title = EXCLUDED.title,
+            message = EXCLUDED.message,
+            icon = EXCLUDED.icon,
+            timestamp = EXCLUDED.timestamp,
+            read = EXCLUDED.read,
+            action_url = EXCLUDED.action_url`,
+          [
+            notifId,
+            '1',
+            n.type || 'system',
+            n.title,
+            n.message,
+            n.icon || 'bi-bell-fill',
+            n.timestamp || new Date().toISOString(),
+            Boolean(n.read),
+            n.actionUrl || null
+          ]
+        );
+        notifCount++;
+      }
+      stats.notifications = notifCount;
+      console.log(`  ✅ Seeded ${notifCount} Notifications`);
     }
 
     console.log('\n🎉 Database seeding completed with 100% data integrity!\n');

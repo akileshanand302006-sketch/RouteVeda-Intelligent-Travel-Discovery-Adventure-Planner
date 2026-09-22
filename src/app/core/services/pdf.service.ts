@@ -45,7 +45,7 @@ export class PdfService {
       doc.setTextColor(255, 255, 255);
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(15);
-      doc.text('TRIPFORGE • ADVENTURE TRAVEL DOSSIER', margin + 8, y + 9);
+      doc.text('ROUTEVEDA • ADVENTURE TRAVEL DOSSIER', margin + 8, y + 9);
 
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(8);
@@ -386,14 +386,14 @@ export class PdfService {
         doc.setTextColor(148, 163, 184);
         doc.setFont('helvetica', 'normal');
         doc.setFontSize(7.5);
-        doc.text('TripForge • Smart Adventure Travel Planner • www.tripforge.in', margin, pageHeight - 6);
+        doc.text('RouteVeda • Smart Adventure Travel Planner • www.routeveda.in', margin, pageHeight - 6);
         doc.text(`Page ${i} of ${totalPages}`, pageWidth - margin, pageHeight - 6, { align: 'right' });
       }
 
       // ========================================================
       // 8. TRIGGER BROWSER FILE DOWNLOAD
       // ========================================================
-      const sanitizedName = (trip.name || 'TripForge_Trip')
+      const sanitizedName = (trip.name || 'RouteVeda_Trip')
         .replace(/[^a-zA-Z0-9_-]/g, '_')
         .replace(/_+/g, '_');
       const filename = `${sanitizedName}_Itinerary.pdf`;

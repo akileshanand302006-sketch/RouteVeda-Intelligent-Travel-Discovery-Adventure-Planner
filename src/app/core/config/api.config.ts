@@ -1,30 +1,40 @@
+import { environment } from '../../../environments/environment';
+
 /**
- * TripForge REST API Configuration
+ * RouteVeda REST API Configuration
  * Connects Angular Services to the Node.js/Express PostgreSQL + PostGIS backend.
+ * Uses environment-based URLs:
+ * - Development: http://localhost:3000/api
+ * - Production:  https://routeveda-backend.onrender.com/api
  */
+const base = environment.apiUrl.replace(/\/+$/, '');
+
 export const API_CONFIG = {
-  baseUrl: 'http://localhost:3000/api',
+  baseUrl: base,
   endpoints: {
     auth: {
-      login: 'http://localhost:3000/api/auth/login',
-      register: 'http://localhost:3000/api/auth/register',
-      me: 'http://localhost:3000/api/auth/me',
-      profile: 'http://localhost:3000/api/auth/profile'
+      login: `${base}/auth/login`,
+      register: `${base}/auth/register`,
+      me: `${base}/auth/me`,
+      profile: `${base}/auth/profile`
     },
     destinations: {
-      base: 'http://localhost:3000/api/destinations',
-      search: 'http://localhost:3000/api/destinations/search',
-      nearby: 'http://localhost:3000/api/destinations/nearby'
+      base: `${base}/destinations`,
+      search: `${base}/destinations/search`,
+      nearby: `${base}/destinations/nearby`
     },
     states: {
-      base: 'http://localhost:3000/api/states'
+      base: `${base}/states`
     },
-    activities: 'http://localhost:3000/api/activities',
-    attractions: 'http://localhost:3000/api/attractions',
-    foods: 'http://localhost:3000/api/foods',
-    festivals: 'http://localhost:3000/api/festivals',
-    trips: 'http://localhost:3000/api/trips',
-    wishlist: 'http://localhost:3000/api/wishlist',
-    dashboard: 'http://localhost:3000/api/dashboard/stats'
+    activities: `${base}/activities`,
+    attractions: `${base}/attractions`,
+    foods: `${base}/foods`,
+    festivals: `${base}/festivals`,
+    trips: `${base}/trips`,
+    wishlist: `${base}/wishlist`,
+    dashboard: `${base}/dashboard/stats`,
+    experiences: `${base}/experiences`,
+    itineraries: `${base}/itineraries`,
+    notifications: `${base}/notifications`
   }
 };

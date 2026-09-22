@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
   activeTab = signal<'login' | 'register'>('login');
 
   // Sign In fields - defaults to Demo User 1 (Akilesh)
-  email = 'demo1@tripforge.com';
+  email = 'demo1@routeveda.com';
   password = 'password123';
   rememberMe = true;
   showPassword = signal<boolean>(false);
@@ -65,15 +65,15 @@ export class LoginComponent implements OnInit {
 
   quickFillUser(userNum: 1 | 2 | 3): void {
     if (userNum === 1) {
-      this.email = 'demo1@tripforge.com';
+      this.email = 'demo1@routeveda.com';
       this.password = 'password123';
       this.notificationService.showToastMessage('Loaded Demo User 1 (Akilesh Sharma)', 'info');
     } else if (userNum === 2) {
-      this.email = 'demo2@tripforge.com';
+      this.email = 'demo2@routeveda.com';
       this.password = 'password123';
       this.notificationService.showToastMessage('Loaded Demo User 2 (Priya Patel)', 'info');
     } else {
-      this.email = 'demo3@tripforge.com';
+      this.email = 'demo3@routeveda.com';
       this.password = 'password123';
       this.notificationService.showToastMessage('Loaded Demo User 3 (Rahul Verma)', 'info');
     }
@@ -122,7 +122,7 @@ export class LoginComponent implements OnInit {
     });
 
     if (success) {
-      this.notificationService.showToastMessage('🎉 Account created successfully! Welcome to TripForge.', 'success');
+      this.notificationService.showToastMessage('🎉 Account created successfully! Welcome to RouteVeda.', 'success');
       this.router.navigate(['/']);
     } else {
       this.notificationService.showToastMessage(

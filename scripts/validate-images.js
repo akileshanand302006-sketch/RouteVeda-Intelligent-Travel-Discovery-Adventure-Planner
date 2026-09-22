@@ -16,7 +16,7 @@ const states = JSON.parse(fs.readFileSync(statesPath, 'utf-8'));
 const googleMappings = fs.existsSync(googlePlacesPath) ? JSON.parse(fs.readFileSync(googlePlacesPath, 'utf-8')) : {};
 
 console.log('====================================================');
-console.log('🔍 TRIPFORGE — GOOGLE PLACES API (NEW) IMAGE AUDIT');
+console.log('🔍 RouteVeda — GOOGLE PLACES API (NEW) IMAGE AUDIT');
 console.log('====================================================\n');
 
 let errors = [];

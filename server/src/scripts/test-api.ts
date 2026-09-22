@@ -36,7 +36,7 @@ async function testApi() {
     const loginRes = await fetch('http://localhost:3000/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: 'demo1@tripforge.com', password: 'password123' })
+      body: JSON.stringify({ email: 'demo1@routeveda.com', password: 'password123' })
     });
     const loginData = await loginRes.json();
     console.log(`\n5. Auth Login Endpoint: ${loginRes.status === 200 && loginData.success ? '✅ PASS' : '❌ FAIL'} (Logged in as: ${loginData.data?.name})`);
@@ -71,6 +71,23 @@ async function testApi() {
     });
     const userTrips = await userTripsRes.json();
     console.log(`8. Fetch User Trips: ${userTripsRes.status === 200 && userTrips.data?.length > 0 ? '✅ PASS' : '❌ FAIL'} (${userTrips.count} trips found for user 1)`);
+
+    // 9. Experiences API
+    const expRes = await fetch('http://localhost:3000/api/experiences');
+    const expData = await expRes.json();
+    console.log(`\n9. Experiences Endpoint: ${expRes.status === 200 && expData.count === 6 ? '✅ PASS' : '❌ FAIL'} (${expData.count} experiences found)`);
+
+    // 10. Itineraries API
+    const itinRes = await fetch('http://localhost:3000/api/itineraries');
+    const itinData = await itinRes.json();
+    console.log(`10. Itineraries Endpoint: ${itinRes.status === 200 && itinData.count === 3 ? '✅ PASS' : '❌ FAIL'} (${itinData.count} itineraries found)`);
+
+    // 11. Notifications API
+    const notifRes = await fetch('http://localhost:3000/api/notifications', {
+      headers: { 'x-user-id': '1' }
+    });
+    const notifData = await notifRes.json();
+    console.log(`11. Notifications Endpoint: ${notifRes.status === 200 && notifData.count > 0 ? '✅ PASS' : '❌ FAIL'} (${notifData.count} notifications found)`);
 
     console.log('\n========================================================================');
     console.log('🎉 ALL REST API & POSTGIS SPATIAL ENDPOINTS WORKING PERFECTLY!');

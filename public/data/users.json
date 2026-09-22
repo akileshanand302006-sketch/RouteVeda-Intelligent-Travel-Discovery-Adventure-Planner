@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Akilesh Sharma",
-    "email": "demo1@tripforge.com",
+    "email": "demo1@routeveda.com",
     "password": "password123",
     "role": "user",
     "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&q=80",
@@ -27,7 +27,7 @@
   {
     "id": 2,
     "name": "Priya Patel",
-    "email": "demo2@tripforge.com",
+    "email": "demo2@routeveda.com",
     "password": "password123",
     "role": "user",
     "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&q=80",
@@ -52,7 +52,7 @@
   {
     "id": 3,
     "name": "Rahul Verma",
-    "email": "demo3@tripforge.com",
+    "email": "demo3@routeveda.com",
     "password": "password123",
     "role": "user",
     "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",

@@ -18,7 +18,13 @@ export async function runMigrations(): Promise<boolean> {
     const appliedRes = await client.query('SELECT version FROM schema_migrations');
     const appliedSet = new Set(appliedRes.rows.map(r => r.version));
 
-    const migrationsDir = __dirname;
+    const candidateDirs = [
+      __dirname,
+      path.join(process.cwd(), 'server', 'src', 'migrations'),
+      path.join(process.cwd(), 'src', 'migrations'),
+      path.join(__dirname, '..', '..', 'server', 'src', 'migrations')
+    ];
+    const migrationsDir = candidateDirs.find(d => fs.existsSync(d) && fs.readdirSync(d).some(f => f.endsWith('.sql'))) || __dirname;
     const files = fs.readdirSync(migrationsDir)
       .filter(f => f.endsWith('.sql'))
       .sort();

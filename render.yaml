@@ -1,0 +1,23 @@
+# Render Blueprint Specification for RouteVeda REST API Backend
+services:
+  - type: web
+    name: routeveda-backend
+    runtime: node
+    plan: free
+    region: ohio
+    buildCommand: "node ./node_modules/typescript/bin/tsc -p server/tsconfig.json"
+    startCommand: "node dist-server/index.js"
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: FRONTEND_URL
+        sync: false

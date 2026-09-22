@@ -2,9 +2,10 @@ import { Injectable, signal, computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../../models/user.model';
 import { StorageService } from './storage.service';
+import { API_CONFIG } from '../config/api.config';
 
 /**
- * AuthService handles authentication and registration for TripForge.
+ * AuthService handles authentication and registration for RouteVeda.
  */
 @Injectable({
   providedIn: 'root'
@@ -79,7 +80,7 @@ export class AuthService {
 
     try {
       const apiRes = await new Promise<any>((resolve, reject) => {
-        this.http.post<any>('http://localhost:3000/api/auth/login', { email: cleanEmail, password: cleanPassword }).subscribe({
+        this.http.post<any>(API_CONFIG.endpoints.auth.login, { email: cleanEmail, password: cleanPassword }).subscribe({
           next: res => resolve(res),
           error: err => reject(err)
         });
@@ -188,7 +189,7 @@ export class AuthService {
       });
 
       const demoMatch = demoUsers.find(u => u.email.toLowerCase() === cleanEmail);
-      if (demoMatch || cleanEmail === 'demo@tripforge.com') {
+      if (demoMatch || cleanEmail === 'demo@routeveda.com' || cleanEmail === 'demo@tripforge.com') {
         this._loginError.set('This email belongs to a demo account. Please sign in or use a different email.');
         this._isLoading.set(false);
         return false;
@@ -200,7 +201,7 @@ export class AuthService {
     // Try backend REST registration first
     try {
       const apiRes = await new Promise<any>((resolve, reject) => {
-        this.http.post<any>('http://localhost:3000/api/auth/register', {
+        this.http.post<any>(API_CONFIG.endpoints.auth.register, {
           name: cleanName,
           email: cleanEmail,
           password: cleanPassword,
@@ -236,7 +237,7 @@ export class AuthService {
       password: cleanPassword,
       role: 'user',
       avatar: `https://api.dicebear.com/7.x/bottts/svg?seed=${encodeURIComponent(cleanName)}`,
-      bio: 'Excited traveler exploring the diverse wonders of India with TripForge!',
+      bio: 'Excited traveler exploring the diverse wonders of India with RouteVeda!',
       phone: '',
       location: 'India',
       joinedDate: new Date().toISOString().split('T')[0],

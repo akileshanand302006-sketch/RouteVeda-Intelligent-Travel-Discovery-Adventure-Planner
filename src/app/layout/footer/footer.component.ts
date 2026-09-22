@@ -13,7 +13,7 @@ import { NotificationService } from '../../core/services/notification.service';
         <div class="row g-4">
           <div class="col-lg-4 col-md-6">
             <div class="footer-brand">
-              <h4 class="gradient-text"><i class="bi bi-compass"></i> TripForge</h4>
+              <h4 class="gradient-text"><i class="bi bi-compass"></i> RouteVeda</h4>
               <p>Forge your journey. Explore more. Travel smarter. Your ultimate adventure trip planning platform.</p>
               <div class="social-links">
                 <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
@@ -74,7 +74,7 @@ import { NotificationService } from '../../core/services/notification.service';
         </div>
         <hr class="footer-divider">
         <div class="footer-bottom">
-          <p>&copy; 2026 TripForge. Built with Angular.</p>
+          <p>&copy; 2026 RouteVeda. Built with Angular.</p>
           <p class="small text-tf-muted">Designed & Developed By Akilesh A</p>
         </div>
       </div>

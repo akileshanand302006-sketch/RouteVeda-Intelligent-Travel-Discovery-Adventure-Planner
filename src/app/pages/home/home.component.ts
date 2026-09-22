@@ -265,9 +265,9 @@ export class HomeComponent {
   ];
 
   readonly testimonials = [
-    { name: 'Rahul Verma', role: 'Adventure Traveler', text: 'TripForge made planning my Spiti Valley road trip effortless. The budget calculator saved me from overspending!', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
+    { name: 'Rahul Verma', role: 'Adventure Traveler', text: 'RouteVeda made planning my Spiti Valley road trip effortless. The budget calculator saved me from overspending!', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80' },
     { name: 'Sneha Iyer', role: 'Solo Explorer', text: 'The itinerary generator is brilliant. I planned a 5-day Kerala trip in under 10 minutes with perfect day-by-day plans.', avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80' },
-    { name: 'Amit Kapoor', role: 'Family Traveler', text: 'With 4 kids, trip planning was always chaotic. TripForge helped us create a structured, budget-friendly Rajasthan tour.', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80' }
+    { name: 'Amit Kapoor', role: 'Family Traveler', text: 'With 4 kids, trip planning was always chaotic. RouteVeda helped us create a structured, budget-friendly Rajasthan tour.', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80' }
   ];
 
   onAddToTrip(destination: Destination): void {

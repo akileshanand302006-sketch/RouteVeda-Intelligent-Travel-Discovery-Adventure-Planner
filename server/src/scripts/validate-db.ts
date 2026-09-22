@@ -52,19 +52,19 @@ export async function validateDatabase(): Promise<boolean> {
         SELECT 
           COUNT(*) as total,
           COUNT(geo_location) as with_geom,
-          COUNT(google_place_id) as with_google_id,
+          COUNT(place_id) as with_place_id,
           COUNT(CASE WHEN image IS NOT NULL AND image != '' THEN 1 END) as with_image
         FROM destinations;
       `);
       const destTotal = parseInt(destsRes.rows[0]?.total || '0', 10);
       const destGeom = parseInt(destsRes.rows[0]?.with_geom || '0', 10);
-      const destGoogle = parseInt(destsRes.rows[0]?.with_google_id || '0', 10);
+      const destPlaceId = parseInt(destsRes.rows[0]?.with_place_id || '0', 10);
       const destImage = parseInt(destsRes.rows[0]?.with_image || '0', 10);
 
       console.log(`\n📍 Destinations Validation:`);
       console.log(`   - Total Destinations: ${destTotal >= 247 ? '✅ PASS' : '❌ FAIL'} (${destTotal}/247)`);
       console.log(`   - PostGIS Geometries: ${destGeom >= 240 ? '✅ PASS' : '❌ FAIL'} (${destGeom}/${destTotal})`);
-      console.log(`   - Google Place IDs: ${destGoogle >= 240 ? '✅ PASS' : '❌ FAIL'} (${destGoogle}/${destTotal})`);
+      console.log(`   - Place IDs: ${destPlaceId >= 240 ? '✅ PASS' : '❌ FAIL'} (${destPlaceId}/${destTotal})`);
       console.log(`   - Verified Images: ${destImage === destTotal && destTotal > 0 ? '✅ PASS' : '❌ FAIL'} (${destImage}/${destTotal})`);
       if (destTotal < 247) allPassed = false;
 
@@ -76,7 +76,10 @@ export async function validateDatabase(): Promise<boolean> {
           (SELECT COUNT(*) FROM foods) as foods_count,
           (SELECT COUNT(*) FROM festivals) as festivals_count,
           (SELECT COUNT(*) FROM users) as users_count,
-          (SELECT COUNT(*) FROM trips) as trips_count;
+          (SELECT COUNT(*) FROM trips) as trips_count,
+          (SELECT COUNT(*) FROM experiences) as experiences_count,
+          (SELECT COUNT(*) FROM itineraries) as itineraries_count,
+          (SELECT COUNT(*) FROM notifications) as notifications_count;
       `);
       const c = countsRes.rows[0] || {};
       console.log(`\n📦 Entity Datasets Validation:`);
@@ -84,6 +87,9 @@ export async function validateDatabase(): Promise<boolean> {
       console.log(`   - Activities: ${parseInt(c.activities_count || '0', 10) >= 48 ? '✅ PASS' : '❌ FAIL'} (${c.activities_count} items)`);
       console.log(`   - Culinary Foods: ${parseInt(c.foods_count || '0', 10) >= 100 ? '✅ PASS' : '❌ FAIL'} (${c.foods_count} items)`);
       console.log(`   - Festivals: ${parseInt(c.festivals_count || '0', 10) >= 15 ? '✅ PASS' : '❌ FAIL'} (${c.festivals_count} items)`);
+      console.log(`   - Experiences: ${parseInt(c.experiences_count || '0', 10) >= 5 ? '✅ PASS' : '❌ FAIL'} (${c.experiences_count} items)`);
+      console.log(`   - Itineraries: ${parseInt(c.itineraries_count || '0', 10) >= 2 ? '✅ PASS' : '❌ FAIL'} (${c.itineraries_count} items)`);
+      console.log(`   - Notifications: ${parseInt(c.notifications_count || '0', 10) >= 5 ? '✅ PASS' : '❌ FAIL'} (${c.notifications_count} items)`);
       console.log(`   - Seed Users: ${parseInt(c.users_count || '0', 10) >= 3 ? '✅ PASS' : '❌ FAIL'} (${c.users_count} accounts)`);
       console.log(`   - Demo Trips: ${parseInt(c.trips_count || '0', 10) >= 1 ? '✅ PASS' : '❌ FAIL'} (${c.trips_count} trips)`);
 

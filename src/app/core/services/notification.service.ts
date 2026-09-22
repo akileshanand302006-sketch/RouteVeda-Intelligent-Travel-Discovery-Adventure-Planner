@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { AppNotification, NotificationType } from '../../models/notification.model';
 import { StorageService } from './storage.service';
 import { AuthService } from './auth.service';
+import { API_CONFIG } from '../config/api.config';
+import { map, catchError, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +14,7 @@ export class NotificationService {
   private readonly storage = inject(StorageService);
   private readonly authService = inject(AuthService);
 
+  private readonly API_URL = API_CONFIG.endpoints.notifications;
   private readonly NOTIFICATIONS_URL = 'data/notifications.json';
 
   private readonly _notifications = signal<AppNotification[]>([]);
@@ -45,16 +48,19 @@ export class NotificationService {
   }
 
   loadUserNotifications(userId: number | string): void {
-    const saved = this.storage.getUserData<AppNotification[]>(userId, 'notifications', []);
-    if (saved && saved.length > 0) {
-      this._notifications.set(saved);
-      return;
-    }
-
     this._isLoading.set(true);
-    this.http.get<AppNotification[]>(this.NOTIFICATIONS_URL).subscribe({
+    this.http.get<any>(this.API_URL, {
+      headers: { 'x-user-id': String(userId) }
+    }).pipe(
+      map(res => (res && res.data) ? res.data : (Array.isArray(res) ? res : [])),
+      catchError(() => {
+        const saved = this.storage.getUserData<AppNotification[]>(userId, 'notifications', []);
+        if (saved && saved.length > 0) return of(saved);
+        return this.http.get<AppNotification[]>(this.NOTIFICATIONS_URL);
+      })
+    ).subscribe({
       next: (notifications: AppNotification[]) => {
-        const sorted = [...notifications].sort((a, b) =>
+        const sorted = [...(notifications || [])].sort((a, b) =>
           new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
         );
         this._notifications.set(sorted);

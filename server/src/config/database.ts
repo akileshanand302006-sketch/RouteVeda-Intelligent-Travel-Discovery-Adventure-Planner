@@ -5,8 +5,22 @@ import path from 'path';
 // Load environment variables
 dotenv.config({ path: path.join(process.cwd(), '.env') });
 
+const isRemotePostgres = Boolean(
+  process.env.DATABASE_URL &&
+  (process.env.DATABASE_URL.includes('neon.tech') ||
+   process.env.DATABASE_URL.includes('render.com') ||
+   process.env.DATABASE_URL.includes('sslmode=require') ||
+   process.env.NODE_ENV === 'production')
+);
+
 const poolConfig = process.env.DATABASE_URL
-  ? { connectionString: process.env.DATABASE_URL, connectionTimeoutMillis: 2500 }
+  ? {
+      connectionString: process.env.DATABASE_URL,
+      ssl: isRemotePostgres ? { rejectUnauthorized: false } : undefined,
+      connectionTimeoutMillis: 10000,
+      idleTimeoutMillis: 30000,
+      max: 10
+    }
   : {
       host: process.env.DB_HOST || 'localhost',
       port: parseInt(process.env.DB_PORT || '5432', 10),
@@ -15,7 +29,7 @@ const poolConfig = process.env.DATABASE_URL
       password: process.env.DB_PASSWORD || 'postgres',
       max: 20,
       idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 2500,
+      connectionTimeoutMillis: 10000,
     };
 
 export const pool = new Pool(poolConfig);
