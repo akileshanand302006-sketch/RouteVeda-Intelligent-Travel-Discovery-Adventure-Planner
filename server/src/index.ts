@@ -6,7 +6,7 @@ const app = createApp();
 
 async function startServer() {
   console.log('========================================================================');
-  console.log('🚀 TRIPFORGE NODE.JS / EXPRESS REST API SERVER');
+  console.log('🚀 ROUTEVEDA NODE.JS / EXPRESS REST API SERVER');
   console.log('========================================================================\n');
 
   const dbStatus = await checkDatabaseConnection();
@@ -19,7 +19,7 @@ async function startServer() {
   }
 
   const server = app.listen(PORT, () => {
-    console.log(`\n📡 TripForge REST API running on http://localhost:${PORT}`);
+    console.log(`\n📡 RouteVeda REST API running on http://localhost:${PORT}`);
     console.log(`   - Health check: http://localhost:${PORT}/api/health`);
     console.log(`   - Destinations: http://localhost:${PORT}/api/destinations`);
     console.log(`   - States:       http://localhost:${PORT}/api/states`);

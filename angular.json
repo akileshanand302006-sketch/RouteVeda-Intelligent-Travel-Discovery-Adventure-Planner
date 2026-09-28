@@ -7,7 +7,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "tripforge": {
+    "routeveda": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -86,10 +86,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tripforge:build:production"
+              "buildTarget": "routeveda:build:production"
             },
             "development": {
-              "buildTarget": "tripforge:build:development"
+              "buildTarget": "routeveda:build:development"
             }
           },
           "defaultConfiguration": "development"

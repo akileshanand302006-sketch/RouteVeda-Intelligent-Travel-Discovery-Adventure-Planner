@@ -170,7 +170,7 @@ Add the following environment variables in Render under **Environment**:
 4. Configure Build settings:
    - **Base directory**: Leave blank (root)
    - **Build command**: `node ./node_modules/@angular/cli/bin/ng.js build --configuration production` (or `npm run build:prod`)
-   - **Publish directory**: `dist/tripforge/browser`
+   - **Publish directory**: `dist/routeveda/browser`
 5. Click **Deploy RouteVeda**.
 
 ---
@@ -181,7 +181,7 @@ Netlify automatically recognizes `netlify.toml` in the root:
 ```toml
 [build]
   command = "node ./node_modules/@angular/cli/bin/ng.js build --configuration production"
-  publish = "dist/tripforge/browser"
+  publish = "dist/routeveda/browser"
 
 [[redirects]]
   from = "/*"
@@ -290,7 +290,7 @@ Test the live application end-to-end:
 | Issue | Cause | Solution |
 |---|---|---|
 | **Render Web Service Fails to Start** | Missing `DATABASE_URL` or SSL error | Ensure `DATABASE_URL` is set in Render environment and includes `sslmode=require`. |
-| **Angular 404 on Refresh (Netlify)** | Missing SPA redirect rule | Ensure `public/_redirects` with `/* /index.html 200` exists. Verify publish directory is `dist/tripforge/browser`. |
+| **Angular 404 on Refresh (Netlify)** | Missing SPA redirect rule | Ensure `public/_redirects` with `/* /index.html 200` exists. Verify publish directory is `dist/routeveda/browser`. |
 | **CORS Policy Error in Browser Console** | Backend does not allow Netlify origin | Update `FRONTEND_URL` in Render environment to match your exact Netlify domain (including `https://`). |
 | **Database Migration Timeout** | Neon cold start latency | `database.ts` is pre-configured with 10-second connection timeout (`connectionTimeoutMillis: 10000`). |
 | **Login Error 401** | Invalid credentials or unseeded database | Ensure demo accounts are seeded via `npm run db:seed`. Default demo account: `demo1@routeveda.com` / `password123`. |

@@ -2,7 +2,7 @@
 
 [build]
   command = "node ./node_modules/@angular/cli/bin/ng.js build --configuration production"
-  publish = "dist/tripforge/browser"
+  publish = "dist/routeveda/browser"
 
 # SPA Routing: Redirect all routes to index.html with 200 HTTP status
 [[redirects]]

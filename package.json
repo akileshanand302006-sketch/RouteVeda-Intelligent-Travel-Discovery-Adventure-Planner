@@ -1,5 +1,5 @@
 {
-  "name": "tripforge",
+  "name": "routeveda",
   "version": "0.0.0",
   "scripts": {
     "ng": "node ./node_modules/@angular/cli/bin/ng.js",
