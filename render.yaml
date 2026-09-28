@@ -5,8 +5,8 @@ services:
     runtime: node
     plan: free
     region: ohio
-    buildCommand: "node ./node_modules/typescript/bin/tsc -p server/tsconfig.json"
-    startCommand: "node dist-server/index.js"
+    buildCommand: "npm run server:build"
+    startCommand: "npm run server:start"
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
