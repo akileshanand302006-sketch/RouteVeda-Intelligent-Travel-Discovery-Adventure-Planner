@@ -14,21 +14,39 @@ import { Component, input } from '@angular/core';
   `,
   styles: [`
     .loading-container { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 2rem; }
-    .spinner-wrapper { position: relative; width: 64px; height: 64px; margin-bottom: 1rem; }
+    .spinner-wrapper {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 1.25rem;
+      background: var(--glass-bg-soft);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 30px var(--glass-shadow-glow), inset 0 1px 1.5px var(--glass-highlight);
+    }
     .spinner {
-      width: 64px; height: 64px;
-      border: 3px solid var(--tf-border-light);
-      border-top: 3px solid var(--tf-primary);
+      position: absolute;
+      inset: 4px;
+      border: 3px solid transparent;
+      border-top: 3px solid var(--accent-primary);
+      border-right: 3px solid rgba(124, 58, 237, 0.4);
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
     .spinner-icon {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.5rem; color: var(--tf-primary);
+      font-size: 1.6rem;
+      color: var(--accent-primary);
       animation: pulse 2s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .loading-text { color: var(--tf-text-secondary); font-size: 0.95rem; font-weight: 500; }
+    .loading-text { color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; }
     @keyframes spin { to { transform: rotate(360deg); } }
   `]
 })

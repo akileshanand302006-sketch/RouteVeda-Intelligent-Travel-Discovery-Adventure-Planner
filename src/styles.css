@@ -1,126 +1,158 @@
 /* ============================================================
-   RouteVeda – Global Design System
-   Premium glassmorphism travel theme with light/dark modes
+   RouteVeda – Global Liquid Glass Design System
+   iOS 18 / visionOS-inspired Spatial Glass with Light & Dark Modes
    ============================================================ */
 
 /* ---- CSS Custom Properties (Design Tokens) ---- */
 :root,
 [data-theme="light"] {
-  /* Primary palette */
+  /* Phase 1: Reusable Design System Tokens */
+  --glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.54) 100%);
+  --glass-bg-strong: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.85) 100%);
+  --glass-bg-soft: rgba(255, 255, 255, 0.42);
+  --glass-border: rgba(255, 255, 255, 0.82);
+  --glass-border-subtle: rgba(148, 163, 184, 0.22);
+  --glass-highlight: rgba(255, 255, 255, 0.98);
+  --glass-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.03);
+  --glass-shadow-hover: 0 24px 50px -10px rgba(15, 23, 42, 0.12), 0 0 25px rgba(99, 102, 241, 0.2);
+  --glass-shadow-glow: 0 0 35px rgba(99, 102, 241, 0.35);
+  --glass-blur: 24px;
+  --glass-saturation: 180%;
+  --glass-reflection: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, transparent 60%);
+
+  --accent-primary: #6366f1;
+  --accent-secondary: #f59e0b;
+  --accent-cyan: #06b6d4;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+
+  --surface-radius: 20px;
+  --card-radius: 18px;
+  --button-radius: 14px;
+
+  --transition-fast: 0.16s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-medium: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Backward Compatible RouteVeda Palette */
   --tf-primary: #6366f1;
   --tf-primary-light: #818cf8;
   --tf-primary-dark: #4f46e5;
   --tf-primary-rgb: 99, 102, 241;
 
-  /* Accent */
   --tf-accent: #f59e0b;
   --tf-accent-light: #fbbf24;
   --tf-accent-rgb: 245, 158, 11;
 
-  /* Success / Warning / Danger */
   --tf-success: #10b981;
   --tf-warning: #f59e0b;
   --tf-danger: #ef4444;
-  --tf-info: #3b82f6;
+  --tf-info: #0ea5e9;
 
-  /* Surfaces */
-  --tf-bg: #f8fafc;
-  --tf-bg-secondary: #f1f5f9;
-  --tf-surface: rgba(255, 255, 255, 0.88);
+  /* Surfaces mapped to Glass System */
+  --tf-bg: transparent;
+  --tf-bg-secondary: transparent;
+  --tf-surface: var(--glass-bg-strong);
   --tf-surface-hover: rgba(255, 255, 255, 0.98);
-  --tf-surface-glass: rgba(255, 255, 255, 0.72);
+  --tf-surface-glass: var(--glass-bg);
 
-  /* Text */
-  --tf-text: #0f172a;
-  --tf-text-secondary: #475569;
-  --tf-text-muted: #94a3b8;
-  --tf-text-inverse: #ffffff;
+  --tf-text: var(--text-primary);
+  --tf-text-secondary: var(--text-secondary);
+  --tf-text-muted: var(--text-muted);
+  --tf-text-inverse: var(--text-inverse);
 
-  /* Borders */
-  --tf-border: rgba(148, 163, 184, 0.3);
-  --tf-border-light: rgba(148, 163, 184, 0.18);
+  --tf-border: var(--glass-border-subtle);
+  --tf-border-light: rgba(148, 163, 184, 0.14);
 
-  /* Shadows */
-  --tf-shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
-  --tf-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --tf-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
-  --tf-shadow-glow: 0 0 25px rgba(99, 102, 241, 0.35);
+  --tf-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+  --tf-shadow: var(--glass-shadow);
+  --tf-shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.12);
+  --tf-shadow-glow: var(--glass-shadow-glow);
 
-  /* Glass */
-  --tf-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.52) 100%);
-  --tf-glass-border: rgba(255, 255, 255, 0.6);
-  --tf-glass-blur: 24px;
+  --tf-glass-bg: var(--glass-bg);
+  --tf-glass-border: var(--glass-border);
+  --tf-glass-blur: var(--glass-blur);
 
-  /* Gradients */
-  --tf-gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+  --tf-gradient-primary: linear-gradient(135deg, #6366f1 0%, #7c3aed 50%, #9333ea 100%);
   --tf-gradient-accent: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
-  --tf-gradient-hero: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(30, 41, 59, 0.55) 100%);
-  --tf-gradient-card: linear-gradient(145deg, rgba(255,255,255,0.92) 0%, rgba(241,245,249,0.85) 100%);
+  --tf-gradient-hero: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(241, 245, 249, 0.75) 100%);
+  --tf-gradient-card: var(--glass-bg);
 
-  /* Navbar */
-  --tf-navbar-bg: rgba(255, 255, 255, 0.85);
-  --tf-navbar-text: #0f172a;
+  --tf-navbar-bg: var(--glass-bg-strong);
+  --tf-navbar-text: var(--text-primary);
 
-  /* Cards */
-  --tf-card-bg: rgba(255, 255, 255, 0.9);
-  --tf-card-border: rgba(148, 163, 184, 0.2);
+  --tf-card-bg: var(--glass-bg);
+  --tf-card-border: var(--glass-border);
 
-  /* Radius */
   --tf-radius-sm: 8px;
   --tf-radius: 12px;
-  --tf-radius-lg: 16px;
-  --tf-radius-xl: 24px;
+  --tf-radius-lg: var(--card-radius);
+  --tf-radius-xl: var(--surface-radius);
   --tf-radius-full: 9999px;
 
-  /* Transitions */
-  --tf-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --tf-transition-fast: all 0.15s ease;
-  --tf-transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --tf-transition: var(--transition-medium);
+  --tf-transition-fast: var(--transition-fast);
+  --tf-transition-slow: var(--transition-slow);
 }
 
 [data-theme="dark"],
 .theme-dark {
-  /* Surfaces */
-  --tf-bg: #090d16;
-  --tf-bg-secondary: #0f172a;
-  --tf-surface: rgba(20, 30, 52, 0.72);
+  /* Phase 1: Reusable Design System Tokens (Dark Theme) */
+  --glass-bg: linear-gradient(135deg, rgba(18, 26, 48, 0.65) 0%, rgba(9, 14, 28, 0.52) 100%);
+  --glass-bg-strong: linear-gradient(135deg, rgba(24, 34, 62, 0.82) 0%, rgba(13, 19, 36, 0.72) 100%);
+  --glass-bg-soft: rgba(14, 20, 38, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-highlight: rgba(255, 255, 255, 0.28);
+  --glass-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.65), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --glass-shadow-hover: 0 28px 60px -10px rgba(0, 0, 0, 0.75), 0 0 35px rgba(99, 102, 241, 0.3);
+  --glass-shadow-glow: 0 0 35px rgba(99, 102, 241, 0.4);
+  --glass-blur: 28px;
+  --glass-saturation: 190%;
+  --glass-reflection: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, transparent 60%);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-inverse: #090d16;
+
+  /* Surfaces mapped to Glass System */
+  --tf-bg: transparent;
+  --tf-bg-secondary: transparent;
+  --tf-surface: var(--glass-bg-strong);
   --tf-surface-hover: rgba(28, 42, 74, 0.85);
-  --tf-surface-glass: rgba(18, 26, 47, 0.58);
+  --tf-surface-glass: var(--glass-bg);
 
-  /* Text */
-  --tf-text: #f8fafc;
-  --tf-text-secondary: #cbd5e1;
-  --tf-text-muted: #94a3b8;
-  --tf-text-inverse: #090d16;
+  --tf-text: var(--text-primary);
+  --tf-text-secondary: var(--text-secondary);
+  --tf-text-muted: var(--text-muted);
+  --tf-text-inverse: var(--text-inverse);
 
-  /* Borders */
-  --tf-border: rgba(255, 255, 255, 0.12);
-  --tf-border-light: rgba(255, 255, 255, 0.08);
+  --tf-border: var(--glass-border);
+  --tf-border-light: var(--glass-border-subtle);
 
-  /* Shadows & Ambient Glows */
   --tf-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-  --tf-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
-  --tf-shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(99, 102, 241, 0.15);
-  --tf-shadow-glow: 0 0 35px rgba(99, 102, 241, 0.35);
+  --tf-shadow: var(--glass-shadow);
+  --tf-shadow-lg: 0 24px 65px rgba(0, 0, 0, 0.75), 0 0 30px rgba(99, 102, 241, 0.2);
+  --tf-shadow-glow: var(--glass-shadow-glow);
 
-  /* Liquid Glass System */
-  --tf-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
-  --tf-glass-border: rgba(255, 255, 255, 0.14);
-  --tf-glass-blur: 28px;
+  --tf-glass-bg: var(--glass-bg);
+  --tf-glass-border: var(--glass-border);
+  --tf-glass-blur: var(--glass-blur);
 
-  /* Gradients */
   --tf-gradient-primary: linear-gradient(135deg, #6366f1 0%, #7c3aed 50%, #9333ea 100%);
   --tf-gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
-  --tf-gradient-hero: linear-gradient(135deg, rgba(9, 13, 22, 0.82) 0%, rgba(15, 23, 42, 0.65) 100%);
-  --tf-gradient-card: linear-gradient(145deg, rgba(22, 32, 56, 0.72) 0%, rgba(12, 18, 34, 0.62) 100%);
+  --tf-gradient-hero: linear-gradient(135deg, rgba(9, 13, 24, 0.85) 0%, rgba(13, 19, 36, 0.72) 100%);
+  --tf-gradient-card: var(--glass-bg);
 
-  /* Navbar */
-  --tf-navbar-bg: linear-gradient(135deg, rgba(30, 41, 59, 0.78) 0%, rgba(15, 23, 42, 0.65) 100%);
-  --tf-navbar-text: #f8fafc;
+  --tf-navbar-bg: linear-gradient(135deg, rgba(22, 32, 56, 0.85) 0%, rgba(12, 18, 34, 0.78) 100%);
+  --tf-navbar-text: var(--text-primary);
 
-  /* Cards */
-  --tf-card-bg: linear-gradient(145deg, rgba(22, 32, 56, 0.72) 0%, rgba(12, 18, 34, 0.62) 100%);
-  --tf-card-border: rgba(255, 255, 255, 0.1);
+  --tf-card-bg: var(--glass-bg);
+  --tf-card-border: var(--glass-border);
 }
 
 /* ---- Global Reset & Base ---- */
@@ -137,25 +169,33 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: var(--tf-bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: transparent !important;
   color: var(--tf-text);
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .page-container {
   min-height: 100vh;
-  padding-top: 124px;
+  padding-top: 110px;
   padding-bottom: 60px;
   position: relative;
-  background: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(99, 102, 241, 0.12), transparent 70%), var(--tf-bg);
+  background: transparent !important;
   box-sizing: border-box;
 }
 
-[data-theme="dark"] .page-container {
-  background: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(99, 102, 241, 0.18), transparent 70%), var(--tf-bg);
+/* Allow scenic background & Three.js canvas to breathe through */
+.bg-tf, .bg-tf-secondary {
+  background-color: transparent !important;
+}
+
+.bg-tf-surface {
+  background-color: var(--glass-bg-soft) !important;
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation)) !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -180,47 +220,78 @@ img {
   height: auto;
 }
 
-/* ---- Liquid Glass & Aurora Design Tokens ---- */
+/* ---- Liquid Glass & Spatial Surfaces ---- */
 .glass {
-  background: var(--tf-glass-bg);
-  backdrop-filter: blur(var(--tf-glass-blur));
-  -webkit-backdrop-filter: blur(var(--tf-glass-blur));
-  border: 1px solid var(--tf-glass-border);
-  border-radius: var(--tf-radius);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--surface-radius);
+  box-shadow: inset 0 1px 1px 0 var(--glass-highlight), var(--glass-shadow);
 }
 
-.glass-card {
-  background: var(--tf-card-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--tf-card-border);
-  border-radius: var(--tf-radius-lg);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), inset 0 1px 1px 0 rgba(255, 255, 255, 0.22);
-  transition: var(--tf-transition);
+.glass-card,
+.dashboard-tool-card,
+.liquid-glass-card {
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--card-radius);
+  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow);
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+  overflow: hidden;
 }
 
-.glass-card:hover {
-  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18), 0 0 25px rgba(var(--tf-primary-rgb), 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
-  transform: translateY(-5px);
-  border-color: rgba(var(--tf-primary-rgb), 0.4);
+/* Specular Light Reflection following pointer coordinates */
+.glass-card::before,
+.dashboard-tool-card::before,
+.liquid-glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    480px circle at var(--mouse-x, 50%) var(--mouse-y, 0%),
+    rgba(255, 255, 255, 0.14),
+    transparent 65%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.glass-card:hover::before,
+.dashboard-tool-card:hover::before,
+.liquid-glass-card:hover::before {
+  opacity: 1;
+}
+
+.glass-card:hover,
+.dashboard-tool-card:hover,
+.liquid-glass-card:hover {
+  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow-hover);
+  transform: translateY(-5px) scale(1.008);
+  border-color: rgba(99, 102, 241, 0.4);
 }
 
 .glass-strong {
-  background: var(--tf-surface);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid var(--tf-glass-border);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), inset 0 1px 1px 0 rgba(255, 255, 255, 0.28);
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(28px) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(28px) saturate(var(--glass-saturation));
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), 0 24px 60px rgba(0, 0, 0, 0.25);
 }
 
 .liquid-glass-panel {
-  background: var(--tf-surface-glass);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid var(--tf-glass-border);
-  border-radius: var(--tf-radius-xl);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  background: var(--glass-bg);
+  backdrop-filter: blur(28px) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(28px) saturate(var(--glass-saturation));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--surface-radius);
+  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow);
 }
 
 /* ---- Gradient Utilities ---- */
@@ -257,7 +328,7 @@ img {
 .btn-tf-primary {
   background: var(--tf-gradient-primary);
   color: white;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   padding: 12px 28px;
   border-radius: var(--tf-radius-full);
   font-weight: 600;
@@ -268,7 +339,10 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px rgba(var(--tf-primary-rgb), 0.3);
+  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.45), 0 8px 24px rgba(var(--tf-primary-rgb), 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  min-height: 44px;
 }
 
 .btn-tf-primary:hover {
@@ -304,11 +378,11 @@ img {
 }
 
 .btn-tf-glass {
-  background: var(--tf-glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
   color: var(--tf-text);
-  border: 1px solid var(--tf-glass-border);
+  border: 1px solid var(--glass-border);
   padding: 10px 24px;
   border-radius: var(--tf-radius-full);
   font-weight: 500;
@@ -317,6 +391,8 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  box-shadow: inset 0 1px 1px 0 var(--glass-highlight), 0 4px 16px rgba(0, 0, 0, 0.06);
+  min-height: 44px;
 }
 
 .btn-tf-glass:hover {
@@ -1387,4 +1463,27 @@ img {
   background: rgba(15, 23, 42, 0.55);
   border-color: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(20px);
+}
+
+
+/* ============================================================
+   ACCESSIBILITY: REDUCED MOTION SUPPORT
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .glass-card:hover,
+  .dashboard-tool-card:hover,
+  .btn-tf-primary:hover,
+  .btn-tf-glass:hover,
+  .btn-tf-accent:hover {
+    transform: none !important;
+  }
 }

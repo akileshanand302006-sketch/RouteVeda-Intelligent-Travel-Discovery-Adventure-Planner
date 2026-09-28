@@ -4,12 +4,20 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { ToastComponent } from './shared/components/toast/toast.component';
 import { LightboxModalComponent } from './shared/components/lightbox-modal/lightbox-modal.component';
+import { TravelBackgroundComponent } from './layout/travel-background/travel-background.component';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent, ToastComponent, LightboxModalComponent],
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    FooterComponent,
+    ToastComponent,
+    LightboxModalComponent,
+    TravelBackgroundComponent
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

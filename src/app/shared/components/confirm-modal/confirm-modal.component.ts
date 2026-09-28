@@ -25,21 +25,24 @@ import { Component, input, output } from '@angular/core';
   styles: [`
     .modal-backdrop {
       position: fixed; inset: 0; z-index: 9999;
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(4px);
+      background: rgba(4, 7, 16, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       display: flex; align-items: center; justify-content: center;
       padding: 1rem;
     }
     .modal-card {
-      background: var(--tf-surface);
-      backdrop-filter: blur(20px);
-      border: 1px solid var(--tf-glass-border);
-      border-radius: var(--tf-radius-lg);
-      padding: 2rem;
+      background: var(--glass-bg-strong);
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+      border: 1px solid var(--glass-border);
+      border-radius: var(--card-radius);
+      padding: 2.2rem;
       text-align: center;
-      max-width: 420px;
+      max-width: 440px;
       width: 100%;
-      box-shadow: var(--tf-shadow-lg);
+      box-shadow: 0 24px 60px var(--glass-shadow-glow), inset 0 1.5px 2px var(--glass-highlight);
+      color: var(--text-primary);
     }
     .modal-icon {
       width: 64px; height: 64px;

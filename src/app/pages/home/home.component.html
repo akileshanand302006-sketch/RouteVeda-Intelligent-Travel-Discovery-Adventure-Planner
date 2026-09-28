@@ -1,5 +1,5 @@
 <!-- HERO SECTION -->
-<section class="hero-section hero-overlay" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=1920&q=80')">
+<section class="hero-section hero-liquid-glass">
   <div class="container">
     <div class="hero-content animate-fade-in-up text-center max-w-800 mx-auto">
       <span class="hero-badge mb-3"><i class="bi bi-compass-fill text-tf-primary"></i> India Travel Planner</span>
@@ -119,7 +119,7 @@
           @for (mod of getModulesByCategory(cat); track mod.id) {
             <div class="col-lg-3 col-md-6">
               <a [routerLink]="mod.route" class="text-decoration-none d-block h-100">
-                <div class="glass-card dashboard-tool-card h-100 p-4 d-flex flex-column">
+                <div class="glass-card dashboard-tool-card h-100 p-4 d-flex flex-column" appLiquidGlassPointer>
                   <div class="d-flex justify-content-between align-items-start mb-3">
                     <div class="tool-icon-box" [style.color]="mod.accentColor" [style.background]="'rgba(' + (mod.accentColor.includes('primary') ? '99, 102, 241' : (mod.accentColor.includes('success') ? '16, 185, 129' : (mod.accentColor.includes('warning') ? '245, 158, 11' : (mod.accentColor.includes('danger') ? '239, 68, 68' : '59, 130, 246')))) + ', 0.12)'">
                       <i [class]="'bi ' + mod.icon + ' fs-4'"></i>
@@ -155,7 +155,7 @@
 
     <div class="row g-4">
       <div class="col-lg-4 col-md-6">
-        <div class="glass-card p-4 h-100 region-box" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80')">
+        <div class="glass-card p-4 h-100 region-box" appLiquidGlassPointer style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80')">
           <span class="badge-tf badge-tf-primary mb-2">North India</span>
           <h3 class="text-white fw-bold">Himalayas & Royal Empires</h3>
           <p class="small text-white-50">Himachal, Uttarakhand, Kashmir, Ladakh, Rajasthan, Delhi, UP, Punjab.</p>
@@ -164,7 +164,7 @@
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="glass-card p-4 h-100 region-box" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80')">
+        <div class="glass-card p-4 h-100 region-box" appLiquidGlassPointer style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80')">
           <span class="badge-tf badge-tf-accent mb-2">South India</span>
           <h3 class="text-white fw-bold">Temples, Backwaters & Coffee Hills</h3>
           <p class="small text-white-50">Tamil Nadu, Kerala, Karnataka, Goa, Andhra Pradesh, Telangana, Andaman.</p>
@@ -173,7 +173,7 @@
       </div>
 
       <div class="col-lg-4 col-md-6">
-        <div class="glass-card p-4 h-100 region-box" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80')">
+        <div class="glass-card p-4 h-100 region-box" appLiquidGlassPointer style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&q=80')">
           <span class="badge-tf badge-tf-warning mb-2">North East India</span>
           <h3 class="text-white fw-bold">Rhinos, Root Bridges & Tea Estates</h3>
           <p class="small text-white-50">Assam, Meghalaya, Sikkim, Nagaland, Arunachal, Manipur, Mizoram, Tripura.</p>

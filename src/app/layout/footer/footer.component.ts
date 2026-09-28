@@ -82,22 +82,36 @@ import { NotificationService } from '../../core/services/notification.service';
   `,
   styles: [`
     .tf-footer {
-      background: var(--tf-bg-secondary);
-      border-top: 1px solid var(--tf-border-light);
+      background: var(--glass-bg-soft);
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+      border-top: 1px solid var(--glass-border);
       padding: 4rem 0 2rem;
-      margin-top: 4rem;
+      margin-top: 5rem;
+      box-shadow: 0 -12px 36px var(--glass-shadow);
+      position: relative;
     }
     .footer-brand h4 { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800; margin-bottom: 12px; }
-    .footer-brand p { color: var(--tf-text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
+    .footer-brand p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px; }
     .social-links { display: flex; gap: 12px; }
     .social-links a {
       width: 38px; height: 38px; border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      background: var(--tf-surface); border: 1px solid var(--tf-border-light);
-      color: var(--tf-text-secondary); font-size: 1rem;
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      color: var(--text-secondary); font-size: 1rem;
+      box-shadow: 0 4px 12px var(--glass-shadow);
       transition: all 0.3s ease;
     }
-    .social-links a:hover { background: var(--tf-primary); color: white; border-color: var(--tf-primary); transform: translateY(-3px); }
+    .social-links a:hover {
+      background: var(--accent-primary);
+      color: white;
+      border-color: var(--accent-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    }
     h6 { font-weight: 700; margin-bottom: 16px; color: var(--tf-text); font-size: 1rem; }
     .footer-links { list-style: none; padding: 0; }
     .footer-links li { margin-bottom: 8px; }

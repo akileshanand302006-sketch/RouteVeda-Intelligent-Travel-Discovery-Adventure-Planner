@@ -1,4 +1,4 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, AfterViewInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DestinationService } from '../../core/services/destination.service';
 import { ActivityService } from '../../core/services/activity.service';
@@ -16,6 +16,8 @@ import { WishlistService } from '../../core/services/wishlist.service';
 import { AchievementService } from '../../core/services/achievement.service';
 
 import { ExpenseCalculatorModalComponent } from '../../shared/components/expense-calculator-modal/expense-calculator-modal.component';
+import { LiquidGlassPointerDirective } from '../../shared/directives/liquid-glass-pointer.directive';
+import { MotionService } from '../../core/services/motion.service';
 import { signal } from '@angular/core';
 
 export interface DashboardModule {
@@ -33,11 +35,12 @@ export interface DashboardModule {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, DestinationCardComponent, ExpenseCalculatorModalComponent],
+  imports: [RouterLink, DestinationCardComponent, ExpenseCalculatorModalComponent, LiquidGlassPointerDirective],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+  private readonly motionService = inject(MotionService);
   readonly destinationService = inject(DestinationService);
   readonly activityService = inject(ActivityService);
   readonly stateService = inject(StateService);
@@ -283,5 +286,12 @@ export class HomeComponent {
   closeCalculator(): void {
     this.showCalcModal.set(false);
     this.selectedDestForCalc.set(null);
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.motionService.animateHero('.hero-title, .hero-tagline, .hero-badge, .hero-metrics-strip');
+      this.motionService.animateCardEntrance('.dashboard-tool-card, .featured-trip-card');
+    }, 100);
   }
 }
