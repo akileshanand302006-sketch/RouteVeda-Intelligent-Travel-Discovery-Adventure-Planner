@@ -158,7 +158,7 @@ Add the following environment variables in Render under **Environment**:
 | `DATABASE_URL` | `postgresql://neondb_owner:***@ep-wandering-fog-b4yqc5yk-pooler.c-6.us-east-2.aws.neon.tech/neondb?sslmode=require` | Pooled Neon PostgreSQL connection string |
 | `JWT_SECRET` | `generate-random-64-character-string` | Secret key for signing JWT tokens |
 | `JWT_EXPIRES_IN` | `7d` | Token validity duration |
-| `FRONTEND_URL` | `https://YOUR-SITE.netlify.app` | Netlify frontend URL for CORS |
+| `FRONTEND_URL` | `https://routeveda.netlify.app` | Netlify frontend URL for CORS |
 
 ---
 
@@ -200,9 +200,9 @@ RouteVeda uses dynamic CORS validation in `server/src/app.ts`:
 - In **production**: Allows `FRONTEND_URL` and any Netlify preview deploy (`*.netlify.app`).
 
 Once your Netlify site is live:
-1. Copy the Netlify URL (e.g. `https://routeveda-tripplanner.netlify.app`).
+1. Copy the Netlify URL (e.g. `https://routeveda.netlify.app`).
 2. Go to **Render Dashboard** → `routeveda-backend` → **Environment**.
-3. Set `FRONTEND_URL` to `https://routeveda-tripplanner.netlify.app`.
+3. Set `FRONTEND_URL` to `https://routeveda.netlify.app`.
 4. Click **Save Changes**. Render will automatically redeploy with the updated CORS policy.
 
 ---
