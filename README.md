@@ -2,7 +2,7 @@
 
 # 🏕️ RouteVeda
 
-### Smart Travel Discovery & Journey Planner
+### Intelligent Travel Discovery & Adventure Planner
 
 **Discover India. Design Your Journey. Create Memories.**
 
