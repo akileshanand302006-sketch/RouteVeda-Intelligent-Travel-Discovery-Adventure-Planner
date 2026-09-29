@@ -12,11 +12,6 @@
   </a>
 </p>
 
-<p>
-  <a href="https://routeveda.netlify.app">
-    <img src="https://img.shields.io/badge/%F0%9F%97%BA%EF%B8%8F%20LAUNCH%20LIVE%20APP-routeveda.netlify.app-00B894?style=for-the-badge&logo=googlechrome&logoColor=white" alt="RouteVeda Live Application">
-  </a>
-</p>
 
 <br>
 
