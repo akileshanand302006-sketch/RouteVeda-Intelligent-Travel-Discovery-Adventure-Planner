@@ -1085,6 +1085,5 @@ Built with ❤️ using
 
 <br><br>
 
-**🌐 [https://routeveda.netlify.app](https://routeveda.netlify.app)**
 
 </div>
