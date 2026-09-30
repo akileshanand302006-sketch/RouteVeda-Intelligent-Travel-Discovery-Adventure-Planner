@@ -75,26 +75,41 @@
 }
 
 .auth-tabs {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--tf-border-light);
+  background: var(--glass-bg-soft);
+  backdrop-filter: blur(18px) saturate(var(--glass-saturation));
+  -webkit-backdrop-filter: blur(18px) saturate(var(--glass-saturation));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--tf-radius-full);
+  padding: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 1px var(--glass-highlight);
 }
 
 .tab-btn {
-  border: none;
+  border: 1px solid transparent;
   background: transparent;
-  padding: 8px 16px;
+  padding: 9px 20px;
   border-radius: var(--tf-radius-full);
   color: var(--tf-text-secondary);
   font-weight: 600;
   font-size: 0.88rem;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tab-btn:hover {
+  color: var(--tf-primary);
+  background: rgba(var(--tf-primary-rgb), 0.08);
 }
 
 .tab-btn.active {
-  background: var(--tf-gradient-primary);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(var(--tf-primary-rgb), 0.3);
+  background: var(--tf-gradient-primary) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.55), 0 4px 16px rgba(var(--tf-primary-rgb), 0.4) !important;
 }
 
 .input-wrapper {
