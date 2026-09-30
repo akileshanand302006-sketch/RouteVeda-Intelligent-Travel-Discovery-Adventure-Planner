@@ -110,9 +110,10 @@
 
     @for (cat of categories; track cat) {
       <div class="mb-5 animate-fade-in-up">
-        <div class="d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-secondary border-opacity-25">
-          <h4 class="mb-0 fw-bold text-tf-primary">{{ cat }}</h4>
-          <span class="badge-tf badge-tf-glass small">{{ getModulesByCategory(cat).length }} Modules</span>
+        <div class="category-header-glass mb-4">
+          <div class="cat-glow-dot"></div>
+          <h4>{{ cat }}</h4>
+          <span class="badge-tf badge-tf-primary small">{{ getModulesByCategory(cat).length }} Modules</span>
         </div>
 
         <div class="row g-4">
@@ -127,10 +128,10 @@
                     <span [class]="'badge-tf ' + mod.badgeClass">{{ mod.badge }}</span>
                   </div>
 
-                  <h5 class="fw-bold mb-2 text-tf">{{ mod.title }}</h5>
-                  <p class="small text-tf-secondary mb-3 flex-grow-1">{{ mod.description }}</p>
+                  <h5 class="fw-bold mb-2 tool-card-title">{{ mod.title }}</h5>
+                  <p class="small tool-card-desc mb-3 flex-grow-1">{{ mod.description }}</p>
 
-                  <div class="d-flex align-items-center text-tf-primary fw-semibold small mt-auto pt-2 border-top border-secondary border-opacity-25">
+                  <div class="d-flex align-items-center tool-card-action fw-bold small mt-auto pt-2 border-top">
                     <span>Open Module</span>
                     <i class="bi bi-arrow-right ms-auto"></i>
                   </div>

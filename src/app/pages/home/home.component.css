@@ -150,18 +150,69 @@
   transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
   border-radius: var(--card-radius);
   cursor: pointer;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
-  border: 1px solid var(--glass-border);
-  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(246, 250, 255, 0.72) 100%) !important;
+  backdrop-filter: blur(36px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(210%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.90) !important;
+  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, 1.0), 0 16px 36px -8px rgba(15, 23, 42, 0.10) !important;
   overflow: hidden;
 }
 
+[data-theme="dark"] .dashboard-tool-card,
+.theme-dark .dashboard-tool-card {
+  background: linear-gradient(135deg, rgba(22, 32, 58, 0.84) 0%, rgba(11, 16, 32, 0.75) 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.22), 0 20px 48px -10px rgba(0, 0, 0, 0.65) !important;
+}
+
 .dashboard-tool-card:hover {
-  transform: translateY(-6px) scale(1.012);
-  border-color: rgba(99, 102, 241, 0.45);
-  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow-hover);
+  transform: translateY(-7px) scale(1.015);
+  border-color: rgba(99, 102, 241, 0.55) !important;
+  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, 1.0), 0 24px 50px -8px rgba(99, 102, 241, 0.25), 0 0 24px rgba(99, 102, 241, 0.15) !important;
+}
+
+.tool-card-title {
+  color: #0f172a !important;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800 !important;
+  font-size: 1.18rem !important;
+  letter-spacing: -0.01em;
+  margin-top: 0.25rem;
+}
+
+[data-theme="dark"] .tool-card-title,
+.theme-dark .tool-card-title {
+  color: #ffffff !important;
+}
+
+.tool-card-desc {
+  color: #1e293b !important;
+  font-weight: 500 !important;
+  font-size: 0.90rem !important;
+  line-height: 1.55 !important;
+}
+
+[data-theme="dark"] .tool-card-desc,
+.theme-dark .tool-card-desc {
+  color: #cbd5e1 !important;
+}
+
+.tool-card-action {
+  color: #4f46e5 !important;
+  font-weight: 700 !important;
+  border-color: rgba(148, 163, 184, 0.25) !important;
+  transition: all 0.2s ease;
+}
+
+.dashboard-tool-card:hover .tool-card-action {
+  color: #6366f1 !important;
+  padding-left: 5px;
+}
+
+[data-theme="dark"] .tool-card-action,
+.theme-dark .tool-card-action {
+  color: #a5b4fc !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 .tool-icon-box {
@@ -172,15 +223,15 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.9), 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 .dashboard-tool-card:hover .tool-icon-box {
   transform: scale(1.14) rotate(4deg);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 22px rgba(99, 102, 241, 0.25);
 }
 
 /* Region Box */
@@ -192,8 +243,8 @@
   flex-direction: column;
   justify-content: flex-end;
   border-radius: var(--card-radius);
-  border: 1px solid var(--glass-border);
-  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25), inset 0 1.5px 2px rgba(255, 255, 255, 0.4);
   transition: transform var(--transition-medium), box-shadow var(--transition-medium);
   overflow: hidden;
   position: relative;
@@ -201,24 +252,57 @@
 
 .region-box:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow-hover);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), inset 0 1.5px 2px rgba(255, 255, 255, 0.6);
 }
 
 /* Step Cards */
 .step-card {
   padding: 2.25rem 1.75rem;
   position: relative;
-  background: var(--glass-bg);
-  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
-  border: 1px solid var(--glass-border);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(246, 250, 255, 0.72) 100%) !important;
+  backdrop-filter: blur(36px) saturate(210%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(210%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.90) !important;
   border-radius: var(--card-radius);
-  box-shadow: inset 0 1px 1.5px 0 var(--glass-highlight), var(--glass-shadow);
+  box-shadow: inset 0 1.5px 2px 0 rgba(255, 255, 255, 1.0), 0 16px 36px -8px rgba(15, 23, 42, 0.10) !important;
   transition: transform var(--transition-medium);
+}
+
+[data-theme="dark"] .step-card,
+.theme-dark .step-card {
+  background: linear-gradient(135deg, rgba(22, 32, 58, 0.84) 0%, rgba(11, 16, 32, 0.75) 100%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.2), 0 20px 48px rgba(0, 0, 0, 0.65) !important;
 }
 
 .step-card:hover {
   transform: translateY(-5px);
+}
+
+.step-card h5 {
+  color: #0f172a !important;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800 !important;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+[data-theme="dark"] .step-card h5,
+.theme-dark .step-card h5 {
+  color: #ffffff !important;
+}
+
+.step-card p {
+  color: #1e293b !important;
+  font-weight: 500;
+  font-size: 0.90rem;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+[data-theme="dark"] .step-card p,
+.theme-dark .step-card p {
+  color: #cbd5e1 !important;
 }
 
 .step-number {

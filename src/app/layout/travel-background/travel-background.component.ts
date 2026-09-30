@@ -68,10 +68,14 @@ import { ThemeService } from '../../core/services/theme.service';
       background-size: cover;
       background-position: center 30%;
       background-repeat: no-repeat;
-      filter: saturate(1.1) contrast(1.04);
+      filter: saturate(1.06) contrast(1.0) brightness(1.06);
       animation: scenicDrift 90s ease-in-out infinite alternate;
       will-change: transform;
       transition: opacity 0.8s ease, filter 0.8s ease;
+    }
+
+    .dark-mode .scenic-travel-layer {
+      filter: saturate(1.1) contrast(1.12) brightness(0.68);
     }
 
     @keyframes scenicDrift {
@@ -87,11 +91,11 @@ import { ThemeService } from '../../core/services/theme.service';
       transition: background 0.6s ease;
     }
 
-    /* Light Theme Atmosphere: Pure transparent crystal depth, letting scenic landscape & 3D space shine */
+    /* Light Theme Atmosphere: Luminous alpine mist over lower forest, keeping Himalayan peaks & 3D space clear */
     .atmospheric-tint-layer {
       background:
-        radial-gradient(ellipse 90% 55% at 50% 15%, rgba(255, 255, 255, 0.08) 0%, transparent 65%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(235, 245, 255, 0.08) 100%);
+        radial-gradient(ellipse 95% 65% at 50% 12%, rgba(255, 255, 255, 0.18) 0%, rgba(240, 246, 255, 0.38) 50%, rgba(225, 238, 252, 0.65) 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(245, 250, 255, 0.22) 28%, rgba(235, 245, 255, 0.55) 65%, rgba(225, 238, 252, 0.78) 100%);
     }
 
     /* Dark Theme Atmosphere: Rich deep nocturnal obsidian with warm indigo/amber undertones */
@@ -112,7 +116,7 @@ import { ThemeService } from '../../core/services/theme.service';
       position: absolute;
       border-radius: 50%;
       filter: blur(100px);
-      opacity: 0.28;
+      opacity: 0.22;
       animation: orbFloat 25s ease-in-out infinite alternate;
       will-change: transform, opacity;
       pointer-events: none;
@@ -120,24 +124,24 @@ import { ThemeService } from '../../core/services/theme.service';
     }
 
     .orb-primary {
-      top: 12%;
-      left: 8%;
+      top: 15%;
+      left: 6%;
       width: 45vw;
       height: 45vw;
       max-width: 550px;
       max-height: 550px;
-      background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, rgba(124, 58, 237, 0.12) 60%, transparent 80%);
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(124, 58, 237, 0.08) 60%, transparent 80%);
       animation-duration: 28s;
     }
 
     .orb-accent {
-      bottom: 18%;
-      right: 5%;
-      width: 40vw;
-      height: 40vw;
-      max-width: 480px;
-      max-height: 480px;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(234, 88, 12, 0.08) 60%, transparent 80%);
+      bottom: 24%;
+      right: 6%;
+      width: 36vw;
+      height: 36vw;
+      max-width: 440px;
+      max-height: 440px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, rgba(234, 88, 12, 0.04) 60%, transparent 80%);
       animation-duration: 32s;
       animation-delay: -5s;
     }
@@ -149,13 +153,13 @@ import { ThemeService } from '../../core/services/theme.service';
       height: 35vw;
       max-width: 420px;
       max-height: 420px;
-      background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, rgba(59, 130, 246, 0.08) 60%, transparent 80%);
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.20) 0%, rgba(59, 130, 246, 0.06) 60%, transparent 80%);
       animation-duration: 36s;
       animation-delay: -10s;
     }
 
     .dark-mode .glow-orb {
-      opacity: 0.42;
+      opacity: 0.40;
     }
 
     @keyframes orbFloat {
