@@ -87,11 +87,11 @@ import { ThemeService } from '../../core/services/theme.service';
       transition: background 0.6s ease;
     }
 
-    /* Light Theme Atmosphere: Crisp, visionOS morning mist, preserves scenic depth */
+    /* Light Theme Atmosphere: Pure transparent crystal depth, letting scenic landscape & 3D space shine */
     .atmospheric-tint-layer {
       background:
-        radial-gradient(ellipse 95% 70% at 50% 12%, rgba(244, 248, 255, 0.58) 0%, rgba(232, 242, 255, 0.72) 55%, rgba(220, 234, 248, 0.84) 100%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(224, 238, 252, 0.82) 100%);
+        radial-gradient(ellipse 90% 55% at 50% 15%, rgba(255, 255, 255, 0.08) 0%, transparent 65%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(235, 245, 255, 0.08) 100%);
     }
 
     /* Dark Theme Atmosphere: Rich deep nocturnal obsidian with warm indigo/amber undertones */
